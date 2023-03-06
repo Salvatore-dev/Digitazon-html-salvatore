@@ -10,6 +10,7 @@ body{
     /* padding:0; */
 }
 
+
 nav img:first-child{
     width: 9rem;
 }
@@ -43,7 +44,13 @@ nav{
 }
 
 .container div:last-child{
-    background-color:rgb(226, 177, 103);
+    background-color:rgb(209, 58, 159);
+    float:left;
+    width: 70%;
+}
+
+.container div:nth-child(2){
+    background-color:rgb(53, 168, 124);
     float:left;
     width: 70%;
 }
@@ -53,3 +60,22 @@ nav{
     content:"";
     display: block;
 }
+
+#eccezione1 {
+    width: 20%;
+}
+
+#eccezione2 {
+    width: 50%;
+}
+
+h4 {
+    font-size: large;
+    float: left;
+}
+
+h5 {
+    font-size: large;
+    float: right;
+}
+
