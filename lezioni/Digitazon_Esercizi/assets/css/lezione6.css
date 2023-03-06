@@ -1,0 +1,94 @@
+html {
+    /* border: 1px solid; */
+}
+
+* {
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+ul li {
+    float: left;
+    width: 100px;
+    padding: 10px;
+    background-color: aqua;
+    margin-right: 10px;
+    text-align: center;
+}
+
+ul li:last-of-type {
+    background-color: gray;
+}
+
+.ul-blue {
+    background-color: blue;
+}
+
+h1 {
+    background-color: green;
+}
+
+h1::before {
+    content: "Articolo: ";
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    /* display: block; */
+}
+
+h1::before::selection {
+    background-color: aqua;
+}
+
+h1::after {
+    content: "!";
+}
+
+#txt::first-letter {
+    font-size: 30px;
+    color: green;
+}
+
+::selection {
+    background-color: lightgreen;
+    color: blueviolet;
+}
+
+#box-container {
+    margin-top: 100px;
+    background-color: gray;
+    width: 500px;
+    /* height: 100px;
+    overflow: hidden; */
+}
+
+.clearfix::after {
+    clear: both;
+    display: block;
+    content: "";
+}
+
+#box-container .box {
+    width: 100px;
+    height: 100px;
+    float: left;
+    padding: 10px;
+   overflow: hidden;
+   /* box-sizing: content-box; */
+}
+
+#box-container .box:nth-child(even) {
+    background-color: red;
+    color:aqua;
+}
+
+#box-container .box:nth-child(odd) {
+    background-color: blue;
+    color:aqua;
+}

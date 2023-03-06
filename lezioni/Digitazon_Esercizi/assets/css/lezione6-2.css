@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#chessboard-container {
+    padding: 20px;
+    background-color: pink;
+}
+
+#chess-board {
+    /* width: 800px;
+    height: 800px; */
+    width: fit-content;
+    height: fit-content;
+    border: 10px solid;
+}
+
+.row::after, .clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    float: left;
+    padding: 10px;
+}
+
+/* righe pari */
+.row:nth-child(even) .cell:nth-child(even) {
+    background-color: #317991;
+}
+
+.row:nth-child(even) .cell:nth-child(odd) {
+    background-color: #2c3133;
+}
+
+/* righe dispari */
+.row:nth-child(odd) .cell:nth-child(even) {
+    background-color: #2c3133;
+}
+
+.row:nth-child(odd) .cell:nth-child(odd) {
+    background-color: #317991;
+}
+
+nav {
+    margin: 40px 0;
+    background-color: lightgrey;
+    padding: 1rem;
+}
+
+nav div {
+    float: left;
+    margin-right: 10px;
+    /* background-color: #317991; */
+}
+
+nav div a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #2c3133;
+    padding: 20px;
+    display: block;
+    /* width: 100px; */
+    /* box-sizing: content-box; */
+}
+
+nav div a:hover {
+    background-color: #317991;
+}
+
+nav div:last-of-type {
+    float: right;
+    margin-right: 0;
+}
+
+#articles  {
+    background-color: lightgrey;
+    margin-bottom: 40px;
+}
+
+#articles .article-container {
+    float: left;
+    width: 33.33333%;
+    text-align: center;
+    padding: 20px;
+}
+
+#articles .article-container:nth-child(1) {
+    background-color: aqua;
+}
+
+#articles .article-container:nth-child(2) {
+    background-color: red;
+}
+
+#articles .article-container:nth-child(3) {
+    background-color: green;
+}
+
+footer {
+    background-color: lightgray;
+    width: 400px;
+}
+
+footer .footer-left,
+footer .footer-right {
+    float: left;
+    height: 100px;
+    text-align: center;
+    line-height: 100px;
+    padding: 0 20px;
+}
+
+footer .footer-left {
+    width: 20%;
+}
+
+footer .footer-right {
+    width: 80%;
+    background-color: #2c3133;
+    color: white;
+}
