@@ -1,0 +1,26 @@
+
+* {
+    box-sizing: border-box;
+}
+
+#box1 .img-heder-left,
+#box1 .img-heder-rigt {
+    float: left;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    background-position: center;
+    background-size: cover;
+}
+
+.bg-logo {
+    background-image: url(images/logo_1.jpeg);
+}
+
+.bg-menu {
+    background-image: url(images/dropdown-menu-icon-0.jpg);
+}
+article {
+    background-color: aquamarine;
+    margin-top: 30px;
+}
