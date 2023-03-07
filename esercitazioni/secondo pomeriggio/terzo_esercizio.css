@@ -2,6 +2,7 @@
 .section {
     border: 5px solid red;
     margin-left: 15px;
+    margin-bottom: 30px;
     
 }
 
@@ -31,6 +32,14 @@ h1 {
 
 .upper {
     background-color: blue;
+    display: block;
+}
+.upper span {
+    text-align: start;
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 25px;
+    margin-left: 2.1rem;
 }
 
 .bottom {
@@ -62,4 +71,17 @@ table td {
 tbody {
     background-color: beige;
 }
+ 
+/* #clearfix::after {
+    clear: both;
+    display: block;
+    content: "";
+} */
 
+#card {
+    text-align: left;
+    clear: both;
+    background-color: brown;
+    margin-top: 50px;
+    display: block;
+}
