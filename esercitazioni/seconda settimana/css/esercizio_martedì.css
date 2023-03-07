@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+.left-section {
+    background-color: aqua;
+    float: left;
+    width: 60%;
+    border-right:1px solid black;
+    padding: 1rem;
+}
+
+.left-section img{
+    width: 170px;
+    padding: 1rem;
+}
+
+.left-section div{
+    /* margin-top: 4rem;
+    margin-bottom: 0.4rem;  */
+    padding: 0.3rem 1rem;
+}
+
+.left-section::after {
+    display: block;
+    clear: both;
+    content: "";
+}
+.right-section {
+    background-color: lightgreen;
+    float: right;
+    width: 40%;
+    padding: 1rem;
+}
+
+.right-section div img {
+    float: left;
+    width: 5rem;
+    padding: 1rem;
+}
+
+.right-section::after {
+    display: block;
+    clear: both;
+    content: "";
+}
