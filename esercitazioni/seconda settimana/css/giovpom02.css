@@ -1,0 +1,54 @@
+main > div:first-child{
+    display: flex;
+    flex-direction: column;
+    border-right: 2px solid black;
+}
+
+header {
+    display: flex;
+    align-items: center;
+}
+
+header div:last-child{
+    margin-left: auto;
+}
+
+ol{
+    list-style: none;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+.news-detail{
+    border: 2px solid black;
+    margin:1rem ;
+}
+
+div h2{
+    margin:1rem;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.images img{
+    width: 150px;
+    padding: 1rem;
+}
+
+.brand-details{
+    border: 2px solid black;
+    display: flex;
+    margin: 1rem;
+}
+
+.brand-details .brand{
+    border-right: 2px solid black;
+    font-weight: bold;
+}

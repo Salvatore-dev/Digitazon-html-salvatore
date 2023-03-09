@@ -1,0 +1,61 @@
+header {
+    display: flex;
+}
+
+header div:last-child {
+    margin-left: auto;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    /* width: 50%; */
+}
+
+.news-detail {
+    /* width: 70%; */
+    width: 1000px;
+
+}
+.news-detail  {
+    border: 2px solid black;
+    margin: 1rem 0;
+    
+}
+
+.images {    
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    /* padding: auto; */
+    
+}
+
+            
+.images img {  
+    padding: 1rem; 
+    width: 25%;
+    /* padding: 5px; */
+}
+
+ol {
+    list-style: none;
+}
+
+.brand-details {
+    display: flex;
+    border: 2px solid black;
+    /* background-color: aqua; */
+}
+.description {
+    margin-left: auto;
+    border-left: 2px solid black;
+    padding: 1rem;
+    
+}
+.brand span {
+    display: block;
+    padding: 2rem;
+    font-weight: bold;
+
+}
