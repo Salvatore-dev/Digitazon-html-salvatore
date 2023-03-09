@@ -1,0 +1,106 @@
+div .products li a{
+    color: black;
+  }
+  
+  div .products li a:visited {
+    color: black;
+  }
+  div .products li:nth-child(2) a {
+    color: red;
+  }
+   
+    div .products li:nth-child(2) a:visited {
+    color: red;
+  }
+  div .products li:nth-child(1) a {
+    color: #ffd700;
+  }
+  div .products li:nth-child(1) a:visited {
+    color: #ffd700;
+  }
+
+
+  .movies-quotes span span:first-of-type {
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  span {
+    font-style: oblique;
+  }
+
+/* qui suggerimento-vedi meglio: sbagliavo la sintassi... quando ci sono i due punti */
+  .movies-quotes span:nth-child(even)::after {
+    content: "\00BB";
+  }
+  
+  .movies-quotes span:nth-child(even) span:first-child::after {
+    content: "\00AB";
+  } 
+
+  /* fine suggerimento */
+
+input:checked + span::after{
+  content:"❤";
+}
+
+
+  /* span ::before:nth-child(even) {
+    content: "1";
+  }
+
+    span::before {
+        content: "2";
+  } */
+
+  button:hover{
+    opacity: 0.0;
+  }
+
+  
+    /* display:none; */
+    
+
+
+  /* .products li a {
+  color: black;
+  text-decoration: none;
+}
+
+.products a[href="/the-one-ring"] {
+  color: gold; 
+}
+
+.products a[href="/melange"]{
+  color: red;
+}
+
+.movies-quotes span:nth-child(even)::after {
+  content: "\00BB";
+}
+
+.movies-quotes span:nth-child(even) span:first-child::after {
+  content: "\00AB";
+
+} 
+
+span {
+  font-style:oblique;
+}
+
+span:first-child {
+  font-weight:bold; 
+  font-style:normal; 
+}
+
+input:checked + span::after{
+  content:"❤";
+}
+
+input[type="checkbox"]:checked + span:after{
+  content:"❤";
+}
+
+button:hover{
+  display:none;
+} */
