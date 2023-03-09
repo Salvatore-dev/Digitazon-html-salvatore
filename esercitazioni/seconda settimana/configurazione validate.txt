@@ -1,0 +1,14 @@
+https://html-validate.org/usage/index.html
+
+
+{
+    "extends": ["html-validate:recommended"],
+    "rules": {
+        "no-trailing-whitespace": "error (mettere "off" o "warn")"
+    }
+    
+}
+
+mettere il file ".htmlvalidate.json" nella cartella padre
+
+in VSCode

@@ -1,0 +1,60 @@
+header {
+  display: flex;
+}
+header div:nth-child(3) {
+  /* https://www.w3.org/TR/css-flexbox-1/#auto-margins */
+  margin-left: auto;
+}
+header span {
+  padding: 5px;
+}
+
+.lesson-details {
+  display: flex;
+  border: 1px solid gray;
+}
+.lesson-topic {
+  font-weight: bold;
+}
+.lesson-topic, .lesson-detail {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid gray;
+  padding: 5px;
+}
+
+/* utility classes */
+.flex-grow-1 { flex-grow: 1 }
+.flex-grow-2 { flex-grow: 2 }
+.flex-grow-3 { flex-grow: 3 }
+
+
+header {
+  display: flex;
+}
+header div:nth-child(3) {
+  /* https://www.w3.org/TR/css-flexbox-1/#auto-margins */
+  margin-left: auto;
+}
+header span {
+  padding: 5px;
+}
+
+.lesson-details {
+  display: flex;
+  border: 1px solid gray;
+}
+.lesson-topic {
+  font-weight: bold;
+}
+.lesson-topic, .lesson-detail {
+  display: flex;
+  align-items: center;
+  border-right: 1px solid gray;
+  padding: 5px;
+}
+
+/* utility classes */
+.flex-grow-1 { flex-grow: 1 }
+.flex-grow-2 { flex-grow: 2 }
+.flex-grow-3 { flex-grow: 3 }
