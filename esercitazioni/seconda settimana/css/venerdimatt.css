@@ -1,0 +1,68 @@
+li {
+    list-style-type: none;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid purple;
+  }
+  .logo {
+    width: 100px;
+  }
+  .sections > ol {
+    display: flex;
+  }
+  .sections > ol > li {
+    padding: 10px;
+  }
+  .sections > ol > li, .enroll {
+    font-size: 20px;
+  }
+  
+  .center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  img {
+    width: 150px;
+    margin: 10px;
+    cursor: pointer;
+  }
+  
+  .sentences > span {
+    display: block;
+    padding: 10px;
+  }
+  
+  div.center > div > span {
+    display: none;
+  }
+  
+  .photo-1:hover ~ div > .sentence-1  {
+    display: initial;
+  }
+  .photo-2:hover ~ div > .sentence-2  {
+    display: initial;
+  }
+  .photo-3:hover ~ div > .sentence-3  {
+    display: initial;
+  }
+  .photo-4:hover ~ div > .sentence-4  {
+    display: initial;
+  }
+  .photo-5:hover ~ div > .sentence-5  {
+    display: initial;
+  }
+  .photo-6:hover ~ div > .sentence-6  {
+    display: initial;
+  }
+  .photo-7:hover ~ div > .sentence-7  {
+    display: initial;
+  }
+  
+  
+  

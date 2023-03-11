@@ -1,0 +1,36 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.box_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    /* border-bottom: 2px solid black; */
+}
+
+/* header img {
+    width: 25px;
+    background-color: aqua;
+} */
+.box_search {
+    display: flex;
+    border: 1px solid blue;
+    padding: 2px;
+    /* background-color: darkgoldenrod; */
+    width: 600px;
+}
+.images
+
+.list_header {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+  
+    
+}
+.list_header li {
+    padding: 7px;
+
+}
