@@ -10,10 +10,15 @@
     /* border-bottom: 2px solid black; */
 }
 
-/* header img {
+.box_header  img {
     width: 25px;
-    background-color: aqua;
-} */
+}
+
+.images_header2 img {
+    width: 150px;
+}
+
+
 .box_search {
     display: flex;
     border: 1px solid blue;
@@ -21,16 +26,44 @@
     /* background-color: darkgoldenrod; */
     width: 600px;
 }
-.images
+
 
 .list_header {
     display: flex;
     align-items: center;
     list-style-type: none;
-  
-    
+      
 }
 .list_header li {
     padding: 7px;
+}
 
+.title_main {
+    /* background-color: aqua; */
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    border-bottom: 1px solid black;
+    
+}
+.title_main h1 {
+    font-size: large;
+    margin-bottom: 0%;
+}
+
+
+.title_main a {
+    /* background-color: aquamarine; */
+    margin-left: auto;
+    display: block;
+    text-decoration: none;
+    /* margin-bottom: 0%; */
+}
+.title_main li {
+    padding: 5px;
+    list-style-type: none;
+    /* background-color: aquamarine; */
+}
+.title_main li:nth-last-child(n+2) {
+    background-color: aquamarine;
 }
