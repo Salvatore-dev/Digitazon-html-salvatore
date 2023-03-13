@@ -1,5 +1,5 @@
 * {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .box_header{
@@ -64,6 +64,9 @@
     list-style-type: none;
     /* background-color: aquamarine; */
 }
-.title_main li:nth-last-child(n+2) {
+.title_main li:nth-child(n+4) {
     background-color: aquamarine;
+    margin-left: auto;
+    justify-content: flex-end;
+    
 }
