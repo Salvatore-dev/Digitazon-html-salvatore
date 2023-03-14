@@ -1,0 +1,131 @@
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid black;
+    flex-wrap: wrap;
+}
+
+header > a img {
+    width: 50%;
+    margin: 0;
+}
+
+.center_header {
+    display: flex;
+   align-items: center;
+}
+.center_header > input {
+    width: 350px;
+    height: 30px;
+}
+.center_header > button {
+    height: 30px;
+    background-color: greenyellow;
+}
+.center_header > button:hover {
+    background-color: rgb(152, 224, 16);
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+.log_in {
+    display: flex;
+    align-items: flex-end;
+    width: 20%;
+}
+
+.log_in > input {
+    background-color: yellow;
+}
+
+.log_in > input:hover {
+    background-color: rgb(175, 175, 1);
+}
+
+.reg input {
+    background-color: red;
+}
+
+.reg input:hover {
+    background-color: rgb(161, 2, 2);
+}
+
+.body_images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 100px;
+    align-items: flex-end;
+}
+
+.prova {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 250px;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* border-radius: 10%;
+    border: 1px solid blueviolet; */
+    padding: 10px;
+}
+
+.prova input {
+    background-color: greenyellow;
+}
+.prova input:hover {
+    background-color: rgb(152, 224, 16);
+}
+.colonna_carrello {
+    border: 1px solid red;
+    border-radius: 10px;
+    width: 200px;
+    height: fit-content;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sub_totale {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.sub_totale > h3 {
+    font-weight: bold;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 0;
+}
+.sub_totale p {
+    font-style: oblique;
+    text-align:center;
+    margin: 0 0 5px;
+}
+
+.sub_totale p:nth-last-of-type(2) {
+    font-weight: bold;
+}
+.sub_totale > input {
+    background-color: rgb(152, 224, 16);
+}
+.sub_totale > input:hover {
+    background-color:rgb(20, 190, 4) ;
+}
+.in_carrello {
+    display: flex;
+    flex-direction: column;  
+}
+
+.in_carrello > input {
+    background-color: rgb(255, 115, 0);
+}
+
+.in_carrello > input:hover {
+    background-color: red;
+}
