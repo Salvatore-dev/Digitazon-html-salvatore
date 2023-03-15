@@ -3,9 +3,10 @@
 header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     border-bottom: 2px solid black;
     flex-wrap: wrap;
+    padding-bottom: 20px;
 }
 
 header > a img {
@@ -36,6 +37,7 @@ main {
     display: flex;
     align-items: flex-end;
     width: 20%;
+    /* padding-bottom: 13px; */
 }
 
 .log_in > input {
