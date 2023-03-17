@@ -1,0 +1,220 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+body {
+    display: flex;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: black;
+    width: 15%;
+    align-items: flex-start;
+}
+header > a img {
+    width: 100%;
+}
+.upper-list a {
+    color: aliceblue;
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.upper-list a:hover {
+    opacity: 1;
+}
+.upper-list a > p {
+    padding-left: 7px;
+}
+.upper-list li {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+.upper-list img {
+    width: 30px;
+}
+.bottom-list li {
+    padding-bottom: 10px;
+    list-style-type: none;
+}
+.bottom-list a {
+    color: grey;
+    font-size: small;
+    text-decoration: none;
+}
+.button-linguages a {
+    color: aliceblue;
+    opacity: 0.7;
+    text-decoration: none;
+    font-size: medium;
+    display: flex;
+    align-items: center;
+    border: 2px solid gray;
+    width: 120px;
+    justify-content: center;
+    border-radius: 20px;
+    margin-left: 40%;
+}
+.button-linguages a:hover {
+    opacity: 1;
+}
+.button-linguages img {
+    width: 25%;
+}
+.button-linguages p {
+    padding-left: 7px;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 5;
+}
+.top-main {
+    display: flex;
+    flex-direction: column;
+    background-image: url(https://tse3.explicit.bing.net/th?id=OIP.nxb4RPIUCoXMOT8JgsQ6lAHaDe&pid=Api&P=0);
+    background-size: cover;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.bar-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.freccette {
+    background-color: black;
+}
+
+.freccette img {
+    width: 30px;
+    padding: 10px;
+}
+.links-main {
+    display: flex;
+    align-items: center 
+}
+
+.links-main ul {
+    display: flex;
+    align-items: center;
+}
+.links-main ul:last-of-type li:first-child {
+    border-left: 1px solid white;
+    padding-left: 10px;
+
+}
+.links-main li {
+    list-style: none;
+    padding: 10px;
+}
+.links-main a {
+    /* color: aliceblue; */
+    color: aliceblue;
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.links-main a:hover {
+    opacity: 1;
+}
+
+.links-main ul li input {
+    background-color: rgb(31, 221, 31);
+    border-radius: 30px;
+    height: 40px;
+    width: 90px;
+}
+.links-main ul li input:hover {
+    background-color: rgb(91, 230, 91);
+    transform: scale(1.2);
+    transition: 0.5s;
+   
+}
+.description-top {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.description-top p {
+    color: white;
+}
+.description-top img {
+    width: 17px;
+}
+.description-top p:nth-child(2) {
+    font-size: 65px;
+    font-weight: bold;
+    margin: 0%;
+}
+
+.seleziona-brani {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzdLSiZ0cD00bhB8ktCu3MBHIQ6Mj99StxvymZfMbUU1bKcE6GZ3ixhCGQy2L1KWgGIIk&usqp=CAU);
+    background-size: cover;
+}
+
+
+.seleziona-brani > ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 600px;
+}
+.seleziona-brani > ul img {
+    width: 55px;
+}
+
+.seleziona-brani > ul li p {
+    padding-left: 15px;
+}
+.seleziona-brani > ul > li:nth-child(2n+1) {
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.preferiti-artista {
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+}
+
+
+.preferiti-artista a img {
+    width: 150px;
+}
+.preferiti-artista > ul li {
+    list-style-type: none;
+    padding-bottom: 10px;
+}
+
+.preferiti-artista > ul img {
+    width: 30px;
+}
+
+.preferiti-artista > ul a {
+    text-decoration: none;
+}
+.preferiti-artista > ul li:nth-child(2n+1) {
+    font-size: smaller;
+    font-style: oblique;
+}
+
+.preferiti-artista > ul li:nth-child(2n) {
+    font-weight: bold;
+}
