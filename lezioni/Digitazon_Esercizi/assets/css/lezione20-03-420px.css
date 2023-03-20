@@ -1,0 +1,16 @@
+#mobile-ham {
+    display: none;
+}
+
+nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: initial;
+    text-align: left;
+    display: flex;
+}
+
+nav .menu-left {
+    flex-direction: row;
+    gap: 15px;
+}
