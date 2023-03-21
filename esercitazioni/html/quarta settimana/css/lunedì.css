@@ -48,3 +48,43 @@ main {
     width: 100%;
     padding: 1rem;
 }
+
+@media screen and (min-width: 680px) {
+    header {
+        display: flex;
+    }
+    .logo {
+        display: none;
+    }
+    .links-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .links-header a {
+        width: 25%;
+        text-decoration: none;
+    }
+    main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .text-body {
+        width: 50%;
+        display: flex;
+        align-items: space-between;
+        flex-direction: column;
+    }
+    .text-body p {
+        padding: 1rem;
+    }
+    .img-body {
+        order: -1;
+        width: 50%;
+    }
+    .img-body img {
+        width: 100%;
+    }
+}
