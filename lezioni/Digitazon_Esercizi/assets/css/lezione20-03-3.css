@@ -12,10 +12,11 @@ html, body {
 :root {
     --app-blue: #03a1fc;
     --app-blue-2: #027dc4;
+    --container-padding: 1rem 0.5rem;
 }
 
 #top-header {
-    padding: 1rem 0.5rem;
+    padding: var(--container-padding);
     border-bottom: 2px solid var(--app-blue);
 }
 
@@ -78,7 +79,7 @@ img {
     background-color: var(--app-blue);
     display: flex;
     flex-direction: column;
-    padding: 1rem 0.5rem;
+    padding: var(--container-padding);
     color: #dae5eb;
     gap: 30px;
 }

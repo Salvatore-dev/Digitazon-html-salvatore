@@ -1,0 +1,83 @@
+* {
+    box-sizing: border-box;
+
+}
+
+html, body {
+    margin:0;
+    padding: 0;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+header {
+    display: flex;
+    background-color: darksalmon;
+    justify-content: space-between;
+}
+
+main {
+    display: flex;
+    background-color: aquamarine;
+}
+
+.sidebar {
+    display: flex;
+    background-color: darkgoldenrod;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 25%;
+}
+
+.center {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: beige;
+}
+.bar-center {
+    display: flex;
+    justify-content: space-around;
+    background-color: ghostwhite;
+}
+
+.box-center {
+    display: flex;
+    flex-direction: row;
+}
+.box-center div {
+    width: 20%;
+    background-color: dimgrey;
+}
+
+.bottom-center {
+    background-color: darkseagreen;
+    display: flex;
+    flex-direction: column;
+}
+.bottom-center :nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+
+}
+ .feeds {
+    background-color: pink ;
+ }
+
+ .contacts {
+    background-color: lightgreen;
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+ }
+
+ .bar-contacts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ }
+
+ .list-contacts {
+    display: flex;
+    flex-direction: column;
+ }
