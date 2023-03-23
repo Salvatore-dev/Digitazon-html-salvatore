@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            border: 2px solid;
+            height: 200px;
+            margin: 10px 0;
+        }
+
+        .cont2 {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #box {
+            width: 100px; height: 100px; background-color: blue;
+            position: relative;
+            top: 100px; left: 200px;
+        }
+
+        .fl {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            position: relative;
+        }
+
+        .fl:nth-child(even) {
+            top: -25px;
+        }
+
+        .fl:nth-child(odd) {
+            top: 25px;
+        }
+
+        .fl1 {
+            left: 50px;
+            background-color: red;
+            z-index: 2;
+        }
+
+        .fl2 {
+            z-index: 1;
+        }
+
+        .text {
+            font-size: 30px;
+        }
+
+        header {
+            background-color: aquamarine;
+            padding: 3rem 0;
+            text-align: center;
+            position: fixed;
+            top: 0; left: 0;
+            z-index: 3;
+            width: 100%;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        main {
+            margin-top: 10rem;
+        }
+
+        footer {
+            padding: 0.5rem 0;
+            background-color: lightgray;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>app title</h1>
+    </header>
+
+   <main>
+        <div class="container">
+            <div id="box"></div>
+        </div>
+    
+        <div class="container cont2">
+            <div class="fl fl1"></div>
+            <div class="fl fl2"></div>
+            <div class="fl"></div>
+            <div class="fl"></div>
+            <div class="fl"></div>
+            <div class="fl"></div>
+        </div>
+    
+        <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum ducimus nemo optio accusamus ipsam eaque corporis odio perspiciatis quam. Cupiditate iure et ipsam totam facere sunt minima? Facilis, quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero enim voluptatem assumenda? Aliquid, veniam provident eos, voluptatum minus, aperiam tempore facilis voluptate non voluptates consequuntur exercitationem corporis ipsam ratione.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque sed hic error libero at soluta, eius expedita provident fugit doloribus perspiciatis iusto recusandae architecto, quia placeat praesentium fugiat quo ab?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit porro itaque iusto illum officia nihil minus commodi error quasi voluptatum maxime nostrum deleniti suscipit rerum sequi quae voluptate, nesciunt natus.
+        </div>
+    
+        <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum ducimus nemo optio accusamus ipsam eaque corporis odio perspiciatis quam. Cupiditate iure et ipsam totam facere sunt minima? Facilis, quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero enim voluptatem assumenda? Aliquid, veniam provident eos, voluptatum minus, aperiam tempore facilis voluptate non voluptates consequuntur exercitationem corporis ipsam ratione.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque sed hic error libero at soluta, eius expedita provident fugit doloribus perspiciatis iusto recusandae architecto, quia placeat praesentium fugiat quo ab?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit porro itaque iusto illum officia nihil minus commodi error quasi voluptatum maxime nostrum deleniti suscipit rerum sequi quae voluptate, nesciunt natus.
+        </div>
+    
+        <div class="text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum ducimus nemo optio accusamus ipsam eaque corporis odio perspiciatis quam. Cupiditate iure et ipsam totam facere sunt minima? Facilis, quaerat.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut vero enim voluptatem assumenda? Aliquid, veniam provident eos, voluptatum minus, aperiam tempore facilis voluptate non voluptates consequuntur exercitationem corporis ipsam ratione.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque sed hic error libero at soluta, eius expedita provident fugit doloribus perspiciatis iusto recusandae architecto, quia placeat praesentium fugiat quo ab?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit porro itaque iusto illum officia nihil minus commodi error quasi voluptatum maxime nostrum deleniti suscipit rerum sequi quae voluptate, nesciunt natus.
+        </div>
+   </main>
+
+   <footer>
+    Copyright Riccardo
+   </footer>
+    
+</body>
+</html>

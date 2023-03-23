@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --color1: #1b25b3;
+            --width1: 2rem;
+            --borderValue: 5px solid red;
+        }
+
+        /* mobile + all others */
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+
+        #box3 {
+            width: var(--width1);
+            background-color: var(--color1);
+            height: 100px;
+            border: var(--borderValue)
+        }
+
+        /* desktop */
+        /* >= 680px */
+        @media (min-width: 680px) {
+            #box {
+                background-color: blue;
+            }
+        }
+
+        /* artificial mobile */
+        /* <= 680px */
+        @media (max-width: 680px) {
+            #box2 {
+                background-color: pink;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="box"></div>
+
+    <div id="box2"></div>
+
+    <div id="box3"></div>
+
+</body>
+</html>
