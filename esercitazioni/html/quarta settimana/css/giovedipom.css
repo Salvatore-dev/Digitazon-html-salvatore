@@ -195,6 +195,7 @@ main {
     display: flex;
     justify-content: space-between;
     border-top: 1px solid var(--font-links);
+    margin-top: 0.5rem;
 }
 .bottom-principal > div > div {
     display: flex;
@@ -230,13 +231,20 @@ main {
     display: flex;
     flex-direction: column;
     margin-left: 0.5rem;
+    
 }
 .colonn-one {
+    padding: 0.5rem;
     border: 1px solid var(--font-links);
     border-radius: 10px;
     margin-bottom: 2rem;
 }
-
+.colonn-one > .bottom-principal {
+    padding-top: 1rem;
+}
+.colonn-one > .top-section {
+    border-bottom: none;
+}
 .colonn-one > .bottom-principal > div:first-child a {
     font-size: large;
 }
