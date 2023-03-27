@@ -56,6 +56,7 @@ header button {
 }
 main {
     display: flex;
+    align-items: stretch;
 }
 
 .section-one {
