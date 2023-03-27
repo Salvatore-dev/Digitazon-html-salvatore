@@ -56,8 +56,14 @@ header button {
 }
 main {
     display: flex;
+    align-items: stretch;
 }
-
+ html {
+    background-color: var(--back-color-bar);
+ }
+section  * {
+    border-radius: 10px;
+}
 .section-one {
     background-color: var(--back-color-bar);
     display: flex;
@@ -112,7 +118,6 @@ main {
 
 .search {
     width: 100%;
-    border-radius: 20px;
     height: 2rem;
     border: none;
     background-color: white;
@@ -201,6 +206,7 @@ main {
     rgb(154, 223, 145), rgb(186, 233, 202), rgb(230, 235, 230) );
 }
 
+
 .messages {
     margin-left: 5rem;
     margin-right: 1rem;
@@ -240,3 +246,4 @@ main {
     height: 2rem;
     font-size: large;
 } 
+
