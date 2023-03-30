@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ex 1:
+creare una variabile che contenga il seguente array
+[ 40, 50, 60, 70 ]
+crea l'algoritmo necessario per stampare in output:
+70
+60
+50
+40
+
+Ex 2:
+creare una variabile che contenga il seguente array
+[ 'mario', 'luigi', 'peach', 'daisy' ]
+stampare in output tutti i valori dell'array che NON terminano con la lettera 'o'
+
+Ex 3:
+creare una variabile che contenga il seguente array
+[ 'mario', 'luigi', 'peach', 'daisy' ]
+stampare in output:
+DY
+PH
+LI
+MO
+(la prima e l'ultima lettera di ogni valore dell'array in senso invertito)
+
+Ex 4:
+creare una variabile che contenga il seguente array
+[ 'mario', 'stefania', 'luca', lee' ]
+stampare in output SOLO il nome più lungo tra quelli presenti nell'array (se i valori dell'array cambiano, anche il risultato cambia senza alterare l'algoritmo)
+
+Ex 5:
+creare una variabile che contenga il seguente array
+[17, 5, 87, 14]
+stampa in output la somma totale di tutti i numeri contenuti nell'array nella modalità più modulare.
+    </p>
+    <p>
+        Ex 1:
+        creare una variabile che contenga il seguente array
+        [ 40, 50, 60, 70 ]
+        crea l'algoritmo necessario per stampare in output:
+        70
+        60
+        50
+        40
+    </p>
+
+    <script>
+        let an1 = [40, 50, 60, 70]
+        console.log(an1);
+        for (
+            let i = 0;
+            i < an1.length;
+            i = i+1
+        ){
+            console.log( an1[i]);
+        }
+
+        let an2 = ['mario', 'luigi', 'peach', 'daisy']
+        console.log(an2);
+        for(
+            let i = an2.length-1;
+            i >= 0;
+            i = i-1
+        ) {
+            console.log(an2[i]);
+            console.log( (an2[i].charAt(0) + an2[i].charAt(an2[i].length-1)).toLocaleUpperCase() );
+        }
+
+    </script>
+
+    <p>
+        Ex 2:
+creare una variabile che contenga il seguente array
+[ 'mario', 'luigi', 'peach', 'daisy' ]
+stampare in output tutti i valori dell'array che NON terminano con la lettera 'o'
+    </p>
+
+    <script>
+        let ex2 = ['mario', 'luigi', 'peach', 'daisy']
+        console.log(ex2);
+
+        for (
+            let i = 0;
+            i <ex2.length;
+            i++
+        ){
+            if (ex2[i].charAt(ex2[i].length -1) !='o'){
+                console.log(ex2[i]);
+            }
+        }
+
+
+
+    </script>
+
+    <p>
+        Ex 4:
+creare una variabile che contenga il seguente array
+[ 'mario', 'stefania', 'luca', lee' ]
+stampare in output SOLO il nome più lungo tra quelli presenti nell'array (se i valori dell'array cambiano, anche il risultato cambia senza alterare l'algoritmo)
+    </p>
+
+    <script>
+
+        let ex4 = ['mariolone', 'luigino', 'peach', 'daisyn']
+        console.log(ex4);
+
+        for (
+            let i = 0;
+            i < ex4.length;
+            i++
+         )
+        {
+            let res1
+            let res2
+            let tot
+           if (ex4[0].length > ex4[1].length){
+            res1 = ex4[0]
+
+           } else {
+            if( ex4[0].length == ex4[1].length) {
+                res1 = ex4[0] + ' ' + ex4[1]
+            } else {
+                res1 = ex4[1]
+            }
+           }
+           
+           if (ex4[2].length > ex4[3].length){
+            res2 = ex4[2]
+
+           } else {
+            if( ex4[2].length == ex4[3].length) {
+                res2 = ex4[2] + ' ' + ex4[3]
+            } else {
+                res2 = ex4[3]
+            }
+           }
+
+
+           if (res1.length > res2.length) {
+            tot = res1
+           } else {
+            if (res1.length == res2.length){
+                tot = res1 + ' ' + res2;
+            } else {
+                tot = res2
+            }
+           }
+
+           console.log( tot); 
+
+        }
+
+        
+            /* il risultato di questo esercizio 
+            soddisfa il mandato se 
+            occorre una sola parola piu lunga. se si verifica 
+            una uguaglianza di parole in uno degli if principali,
+            esse vengono stampate in output insieme. 
+            Quest'ultima occorrenza falsifica 
+            il risultato perche le due parole uguali insieme 
+            vengono contate come una sola stringa, quindi 
+            se c'e nel secondo confronto un 
+            una parola piu lunga in assoluta rispetto alle 
+            altre ma meno rispetto alla somma delle due piu 
+            lunghe nell'altro confronto allora essa non compare. 
+            rivedi..... */
+       
+
+    </script>
+
+    <script>
+        let prova = ['mariolone', 'luigino', 'peach', 'daisyn']
+        console.log(prova);
+
+        let ccurrentMaxLenght = prova[0].length
+        let currentName = prova[0]
+
+        for ( 
+            let i = 1;
+            i <= prova.length -1;
+            i++
+
+        ) {
+            if (prova[i].length > ccurrentMaxLenght) {
+                ccurrentMaxLenght = prova[i].length
+                currentName = prova[i]
+            }
+        }
+
+        console.log(currentName);
+
+    
+    </script>
+
+
+</body>
+</html>

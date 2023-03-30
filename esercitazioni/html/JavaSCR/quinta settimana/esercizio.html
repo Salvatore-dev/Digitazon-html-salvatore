@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let a = 'Cappuccino'
+        let b = 'Corriere'
+        let string = 'La stringa piu lunga e :'
+        let string1 = 'Le due stringhe sono uguali'
+
+
+        if ( a.length > b.length ) {
+            console.log ( string + ' ' + a + ' ' + a.length)
+        } else if (a.length < b.length) {
+            console.log ( string + ' ' + b + ' ' + b.length)
+        } else {
+            console.log (string1)
+        }
+
+        // la soluzione sottostante consente di scrivere il testo in una sola parte e quindi il codice diventa maggiormente controllabile quando cambia il valore delle variabili
+
+        let x = 'Repubblica piu tre'
+        let y = 'Repubblica piu 1'
+        let mes1 = 'la stringa piu corta e:'
+        let mes2 = 'le due stringhe sono uguali' 
+        let space = ' '
+
+        let mesx
+
+        console.log(x);
+        console.log(y);
+
+        if (x.length < y.length) {
+            mesx = mes1 + space + x
+        } else if (x.length > y.length) {
+            mesx = mes1 + space +  y
+        } else {
+            mesx = mes2
+        }
+
+        console.log( space + mesx);
+
+
+
+    </script>
+</body>
+</html>

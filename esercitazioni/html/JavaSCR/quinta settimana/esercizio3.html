@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        
+        #ex5 { 
+            background-color: aqua;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 10px;
+
+        }
+        .prov {
+            background-color: burlywood;
+            width: fit-content;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <p>
+        // ex 3
+        // crea due variabili x e y con valori a piacere.
+        // se x è minore o uguale a y, stampa green.
+        // in quel contesto se y è uguale a zero, stampa red.
+        // se è maggiore di y, stampa blue
+
+    </p>
+
+    <p>
+        // ex 4
+        // date due variabili con valori 'kiwi' e 'banana', stampa in output
+        // il seguente risultato (la prima e la terza lettera della prima string 
+        concatenata ad un underscore e alla seconda stringa maiuscola):
+        // kw_BANANA
+    </p>
+    <script>
+        let x = 78
+        let y = 33
+
+        console.log(x , y);
+
+        if (x <= y) {
+            if (y == 0) {
+                console.log("red");
+            } else {
+                console.log('green');
+            }
+        } else {
+            console.log ('blue')
+        }
+
+        let word1 = 'kiwi'
+        let word2 = 'banana'
+
+        let = string = word1.charAt (0) + word1.charAt (2)
+
+        const unsc = '_'
+        let upper = word2.toLocaleUpperCase()
+
+        console.log( string );
+        console.log ( string + unsc + upper)
+
+    </script>
+
+    <p>
+        // ex 5
+        // crea un complesso di controlli condizionali a piacere per stampare in output un risultato, a patto di utilizzare:
+        // almeno un else-if, almeno un if innestato, almeno una comparazione per valore di stringa
+
+    </p>
+    <p class="prov"></p>
+    <p id="ex5"></p>
+
+    <script>
+        let a = 55000
+        let b = -20
+        let result
+        let result1
+
+        console.log( a );
+        console.log (b);
+
+        let somma = a + b
+        let molt = a*b
+        let sott = a-b
+        let div = a/b
+
+        console.log(molt);
+        console.log(div);
+        console.log(somma);
+        console.log(sott);
+
+        if (b==0) {
+            result = molt
+        } else {
+            result = div
+        }
+
+        console.log(result);
+
+        if (a>b) {
+            if (somma >= 100) {
+                result1 = sott
+            } else {
+                result1 = molt
+            }
+        } else {
+            if (b != 0) {
+                result1 = div
+            } else {
+                result1 = sott
+            }
+        }
+
+        console.log(result1);
+
+        const elBox = document.getElementById ('ex5')
+        const elBox2 = document.getElementsByClassName ('prov')
+        elBox.innerHTML = result
+        elBox2.innerHTML = result1
+
+
+    </script>
+</body>
+</html>
