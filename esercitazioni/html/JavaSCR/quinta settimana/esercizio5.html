@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quinto esercizio</title>
+</head>
+<body>
+
+    <p>
+        esercizi 30/03
+
+Nota: PRIMA DEL CODICE, REALIZZARE GLI ALGORITMI IN STEP NEI COMMENTI, CHE DEVONO ESSERE VISIBILI NEL CODICE DELL'ESERCIZIO
+
+Ex 1: 
+dato un array di 4 stringhe a piacere, stampare ogni valore stringa invertito (es 'ciao' diventa 'oaic', ...)
+
+Ex 2:
+dato un array di 10 numeri a piacere, stampare quanti sono i numeri positivi, quelli negativi, quelli dispari e quelli pari (per trovare il resto di una divisione utilizzare l'operatore %)
+
+Ex 3:
+dato un array di 3 stringhe a piacere, stampare quante di queste stringhe iniziano con il valore 'a' e terminano con il valore '_'
+
+Ex 4:
+data una stringa a piacere, 
+SE questa contiene una vocale, un underscore, un dollaro e un numero, stampare 'password OK', altrimenti, stampare 'password NOT OK'
+
+Ex 5:
+dato un array di 5 valori ETEROGENEI a piacere, stabilire:
+- quante stringhe ci sono
+- quanti numeri ci sono
+- quanti booleani ci sono
+- qual è il tipo di dato maggiormente presente nell'array
+    </p>
+
+    <script>
+        /* Ex 1: 
+    dato un array di 4 stringhe a piacere, stampare 
+    ogni valore stringa invertito 
+    (es 'ciao' diventa 'oaic', ...)
+        /*
+
+        // algoritmo
+        // creare un array con 4 stringhe
+        //creare un ciclo che parta da zero fino alla fine array
+        // per ogni ricorrenza far stampare la stringa al contrario
+        //comando stampa ad ogni ricorrenza del ciclo */
+
+        let lista1 = ['carriera', 'domani', 'giovanni', 'sole', 'roma']
+
+        for (let i =0;
+            i <= lista1.length -1;
+            i++ ) {
+                //console.log(lista1[i]);
+                let stringaInvertita = ''
+
+                for ( let j = lista1[i].length -1;
+                    j >=0;
+                    j--) {
+                        stringaInvertita += lista1[i].charAt(j) /* al posto di charAt[j]*/
+                    }
+                
+                console.log(stringaInvertita);
+            } 
+            
+    </script>
+
+    <script>
+        //Ex 2: dato un array di 10 numeri a piacere, 
+        //stampare quanti sono i numeri positivi, 
+        //quelli negativi, quelli dispari e quelli pari 
+        //(per trovare il resto di una divisione utilizzare 
+        //l'operatore %)
+
+        //algoritmo
+        //creare l'array con 10 numeri con caratteristiche menzionate
+        //creare variabili numeriche come contatori ( 4 diverse)
+        //creare il ciclo crescente
+        //all'interno del ciclo sviluppiamo 2 if uno per i pari/dispari 
+        //e altro positivi/negativi
+        // in ogni if incrementare il contatore corrispondente
+        //stampa risultati
+
+        let numbers = [5, 1035, -25, -30, 3444, -159, -27, -154, 889, -71]
+
+        let positive = 0
+        let negative = 0
+        let even = 0
+        let odd =0
+
+        for (
+            let i = 0;
+            i <= numbers.length -1;
+            i++
+        ){ 
+            if (numbers[i] >= 0){
+                positive += 1
+            }else {
+                negative +=1
+            }
+            if (numbers[i] % 2 == 0){
+                even += 1
+            }else {
+                odd +=1
+            }
+        }
+
+        console.log( 'i positivi sono ' + positive);
+        console.log('i negativi sono ' +  negative);
+        console.log('i pari sono ' +  even);
+        console.log('i dispari sono ' +  odd);
+
+    </script>
+    <script>
+        // Ex 3:dato un array di 3 stringhe a piacere, stampare quante di queste stringhe iniziano con il valore 'a' e terminano con il valore '_'*/
+        
+        //algoritmo
+        //creare l'array
+        //creare il contatore delle occorrenze elementi array
+        //creare ciclo crescente
+        //creare un if che ci permette di contare le occorrenze 
+        // utilizzando un operatore logico : && 
+
+        let stringhe = ['ciao', 'amic_', 'aiul_', 'casa', 'al_']
+        let contatore = 0
+
+        for (let i = 0; i <= stringhe.length -1; i++) {
+            if (stringhe[i].charAt(0) == 'a' && stringhe[i].charAt(stringhe[i].length -1) == '_'){
+                contatore +=1
+            }
+        }
+        console.log(contatore);
+        
+
+
+    </script>
+</body>
+</html>

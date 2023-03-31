@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <script>
+
+         /* Ex 3
+                crea una funzione 'xRayArray' che prende in 
+                ingresso un array e mi stampa:
+                - la lunghezza dell'array
+                - se l'array contiene SOLO numeri o meno
+                - se l'array è vuoto
+                - se è un array oppure un altro tipo di dato
+                La funzione NON restituisce nessun valore.
+                Chiamare la funzione con i seguenti valori:
+                - [10, 20, 30]
+                - []
+                - ['ciao', 100]
+                - 'ciao' 
+        */  
+                let a = [10, 20, 30,]
+                let b = ['ciao', 100, 10, 39]
+                let c = []
+                let d = 'ciao'
+
+                function array(x) {
+                    if (typeof x != "object") {
+                        return 'non e un array'
+                    } 
+                    
+                    else {
+                        let width = 'la lunghezza dell;array e: ' + x.length
+                        if (x.length == 0) { 
+                            return 'la lunghezza dell array e: ' + x.length + ' quindi e vuoto'
+                        }
+                        for (let i = 0; i < x.length; i++) {
+
+                            if (typeof x[i] == "number" ) {
+                                res = ' e inoltre qui ci sono solo numeri'
+                            } else { 
+                                
+                                res = ' e inoltre qui ci sono stringhe'
+                            }
+                            return width + res
+                        }  
+                    }    
+                }
+                console.log(array(a));
+                console.log(array(b));
+                console.log(array(c));
+                console.log(array(d));
+     </script>
+</body>
+</html>
