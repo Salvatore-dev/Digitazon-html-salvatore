@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 3
+creare una funzione makeElement, che prende in ingresso una 
+stringa che identifica il tipo di elemento HTML da generare, 
+una stringa che identifica il suo id, una stringa che identifica il suo contenuto, 
+e un booleano che indica se chiudere o meno il tag 
+(false indica un tag a chiusura implicita, true a chiusura esplicita)
+La funzione restituisce la stringa formattata correttamente che 
+rappresenta un elemento HTML. In fase di chiamata, stamparla in console.
+Usare i seguenti valori:
+
+makeElement('input', 'myInput', '', false)  ->  <input id="myInput">
+makeElement('div', 'box', 'javascript', true)  -> <div id="box">javascript</div>
+        */
+
+        function makeElement(type, id, content, values) {
+           
+            function makeType1(type) {
+                let t1= '<' + type + ' ';  
+                return t1
+            }
+
+            function makeId(id) {
+                let ind = 'id=\"'+ id +'\"'
+                return ind
+            }
+
+            function makeContent(content) {
+                let cont = '>' + content + '<'
+                return cont 
+            }
+
+            let a = makeType1(type)
+            let b = makeId(id)
+            let c = makeContent(content)
+            let t2 = '>'
+            let result = ''
+
+            if (values == false) {
+                result = a + b + t2
+            } else {
+                result = a + b + c + type + t2
+            }
+            
+            console.log(result);
+      
+        }
+
+        makeElement('input', 'myInput', '', false)
+        makeElement('div', 'box', 'javascript', true)
+        makeElement('p', 'paragraf', 'lorem ipsum', true)
+        makeElement('img', 'image1', 'logo', false)
+
+    </script>
+</body>
+</html>

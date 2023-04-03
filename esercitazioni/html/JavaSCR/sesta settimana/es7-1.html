@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /* 
+        Ex 1
+                creare la funzione selector, che accetta una stringa 
+                in ingresso è in grado di stabilire se è un selettore 
+                CSS valido (selettore semplice, senza annidamenti), tra:
+                - selettore di id
+                - selettore di classe
+                - selettore di un elemento tra div, span e img
+                Se lo è, restituisce true, altrimenti false.
+                In fase di chiamata, stampare un apposito messaggio in ouput, 
+                per ognuna delle seguenti chiamate:
+                selector('#myDiv')  -> è un selettore valido, di id
+                selector('.myDiv')  -> è un selettore valido, di classe
+                selector('div')          -> è un selettore valido, di elemento div
+                selector('paperino')  -> non è un selettore valido
+                selector('ul')               -> non è un selettore valido (non è div, span o img)
+                ----------------
+        */
+
+        // algoritmo
+        // creare la funzione, subito dopo un selettore condizionale che mi da valore true se
+        // sono le parole cercate, altrimenti false
+        //associare i log previsti per i casi true
+
+        function selector (string) {
+            console.log(string);
+            console.log('___________________');
+            let a =''
+            a=string
+            let b = a.charAt(0);
+            if (b == '#' || b == '.' || a == 'div' || a == 'span' || a == 'img') { console.log(true);
+                
+            } else {console.log(false); console.log(a + ' non e un selettore valido');}
+
+            if (b == '#') {console.log(a + ' e un selettore id valido');}
+            if (b == '.') {console.log(a + ' e un selettore di classe valido');}
+            if (a == 'div' || a == 'span' || a == 'img') {console.log(a + ' e un selettore valido di ' + a);}
+    
+        }
+
+        selector ('#myDiv')
+        selector ('.myDiv')
+        selector ('div')
+        selector ('paperino')
+        selector ('ul')
+        selector ('10')
+
+
+    </script>
+    
+</body>
+</html>

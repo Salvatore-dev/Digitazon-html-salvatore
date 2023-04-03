@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        /* 
+         Ex 2
+                creare una funzione checkArray che 
+                prende in ingresso un array 
+                di N numeri e stampa:
+                - quanti sono pari
+                - quanti sono dispari
+                - se contiene il numero 10
+                - se è un array o meno
+                chiamare con:
+                checkArray([90, 78, 45, 34])
+                checkArray([0, 0, 0])
+                checkArray([10])
+                checkArray(10)
+                ----------------
+        */
+
+        // algoritmo
+        //creare la funzione e le chimate
+        //verifica se e un array
+        //creare un ciclo nel quale
+            //si contano i pari
+            //si contano i dispari (creare variabili contatori)
+            //si verifica se esiste il n. 10
+
+            function checkArray(narr) {
+                if (typeof narr == "object") {
+                    let pari = 0
+                    let dispari = 0
+                    let res = 'nell/array :' + narr + ' ci sono '
+                    for (let i = 0; i < narr.length; i++) {
+                        if (narr[i] %2 ==0){
+                            pari+=1
+                        }else{
+                            dispari += 1
+                        }
+
+                        if (narr[i] == 10){console.log('qui che anche il numero 10');}
+                    }
+                    console.log(res + pari + ' numeri pari');
+                    console.log( res + dispari + ' numeri dispari');
+                    console.log('/////////////////////////////////');
+                } else {
+                    console.log(narr + ' non e un array');
+                }
+
+                
+            }
+
+            checkArray([90, 78, 45, 34])
+            checkArray([0, 0, 0, 5, 10, 33])
+            checkArray([10])
+            checkArray(10)
+            checkArray('ciao')
+            checkArray( ['ciao', 'hello'])
+
+
+    </script>
+</body>
+</html>

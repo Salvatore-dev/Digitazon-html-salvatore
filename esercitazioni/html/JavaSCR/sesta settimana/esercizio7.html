@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+            NOTA: creare un file per ogni esercizio
+
+                Ex 1
+                creare la funzione selector, che accetta una stringa 
+                in ingresso è in grado di stabilire se è un selettore 
+                CSS valido (selettore semplice, senza annidamenti), tra:
+                - selettore di id
+                - selettore di classe
+                - selettore di un elemento tra div, span e img
+                Se lo è, restituisce true, altrimenti false.
+                In fase di chiamata, stampare un apposito messaggio in ouput, 
+                per ognuna delle seguenti chiamate:
+                selector('#myDiv')  -> è un selettore valido, di id
+                selector('.myDiv')  -> è un selettore valido, di classe
+                selector('div')          -> è un selettore valido, di elemento div
+                selector('paperino')  -> non è un selettore valido
+                selector('ul')               -> non è un selettore valido (non è div, span o img)
+                ----------------
+                Ex 2
+                creare una funzione checkArray che prende in ingresso un array di N numeri e stampa:
+                - quanti sono pari
+                - quanti sono dispari
+                - se contiene il numero 10
+                - se è un array o meno
+                chiamare con:
+                checkArray([90, 78, 45, 34])
+                checkArray([0, 0, 0])
+                checkArray([10])
+                checkArray(10)
+                ----------------
+                Ex 3
+                creare una funzione makeElement, che prende in ingresso una 
+                stringa che identifica il tipo di elemento HTML da generare, 
+                una stringa che identifica il suo id, una stringa che identifica il suo contenuto, 
+                e un booleano che indica se chiudere o meno il tag (false indica un tag a chiusura 
+                implicita, true a chiusura esplicita)
+                La funzione restituisce la stringa formattata correttamente che 
+                rappresenta un elemento HTML. In fase di chiamata, stamparla in console.
+                Usare i seguenti valori:
+                <!-- 
+                     makeElement('input', 'myInput', '', false)  -> <input id="myInput">
+                makeElement('div', 'box', 'javascript', true)  -> <div id="box">javascript</div>
+                [12:42]
+                 -->
+                ----------------
+                Ex 4
+                creare una funzione treeStr che prende 
+                in ingresso una stringa che deve avere una lunghezza 
+                superiore pari e superiore a 4 e stampa la seguente formattazione in output:
+
+                treeStr('javascript') 
+                            s
+                        s c
+                        a s c r
+                    v a s c r i
+                a v a s c r i p
+                j a v a s c r i p t
+
+                ----------------
+                Ex 5
+                Creare una funzione makeMatrix, che prende in ingresso un array 
+                di 10 numeri a piacere compresi tra 1 e 10, e restituisce una 
+                matrice composta da due array, uno in cui ci sono tutti i numeri 
+                pari o superiori a 6, uno in cui ci sono tutti i numeri inferiori a 6.
+                Con la matrice restituita, stampare la media dei numeri pari o 
+                superiori a 6 del primo array e
+                 la media dei numeri inferiori a 6 del secondo array.
+    </p>
+    
+</body>
+</html>

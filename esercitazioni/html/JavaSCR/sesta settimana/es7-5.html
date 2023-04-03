@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         Ex 5
+                Creare una funzione makeMatrix, che prende in ingresso un array 
+                di 10 numeri a piacere compresi tra 1 e 10, 
+                e restituisce una matrice composta da due array,
+                uno in cui ci sono tutti i numeri pari o superiori a 6, 
+                uno in cui ci sono tutti i numeri inferiori a 6.
+
+                Con la matrice restituita, stampare la media dei numeri pari o 
+                superiori a 6 del primo array e
+                 la media dei numeri inferiori a 6 del secondo array.
+        
+        */
+
+        // creare un arrya di 10 numeri
+        //creare una funzione
+        //creare due array vuoti
+        //creare un ciclo che crea due array
+        // poi creare una funzione che calcola la media
+        // chiamre i valori dei due array trovati con la funzione "media"
+        //stampare i risultati
+
+
+
+        let numbers = [3,2,7,2,5,6,10,8,5,10]
+
+            function makeMatrix(matrixnumbers) {
+                console.log('questa e la matrice originale: '+ numbers);
+                let a =[]
+                let b =[]
+                for (let i = 0; i < numbers.length; i++) {
+                    let oneNum = numbers[i]
+                    if(typeof oneNum == "number" && oneNum %2 == 0 || oneNum > 6) {
+                        a.push (oneNum)
+                    }
+                    if (typeof oneNum == "number" && oneNum < 6 ) {
+                        b.push (oneNum)    
+                        }
+                }
+
+                let array1 = 'questo e l\' array con i numeri pari o superiori a sei: ' + a;
+                let array2 = 'questo e l\' array con i numeri inferiori a sei: ' + b;
+
+                    function makeMedia(arrayNum) {
+                        let result = 0
+                        let a = 0
+                        for (let i = 0; i < arrayNum.length; i++) {
+                            a+= arrayNum[i]
+                            result = a / arrayNum.length
+                        }
+                        return result
+                    }
+
+                    let media1 = ' la media di questi numeri e:' + makeMedia (a)
+                    let media2 = ' la media di questi numeri e: ' + makeMedia (b)
+
+                    console.log(array1 + media1);
+                    console.log(array2 + media2);
+                
+            }
+
+            
+
+            makeMatrix(numbers)
+
+
+    </script>
+</body>
+</html>

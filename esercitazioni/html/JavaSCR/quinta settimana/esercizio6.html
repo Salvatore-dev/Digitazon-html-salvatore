@@ -216,22 +216,23 @@
                function array(x) {
                    if (typeof x != "object") {
                        return 'non e un array'
-                   } 
-                   else {
-                       let width = 'la lunghezza dell;array e: ' + x.length
+                   } else {
+                       let width = 'la lunghezza dell array e: ' + x.length
                        if (x.length == 0) { 
-                           return 'la lunghezza dell array e: ' + x.length + ' quindi e vuoto'
-                       }
-                       for (let i = 0; i < x.length; i++) {
+                           console.log('la lunghezza dell array e: ' + x.length + ' quindi e vuoto'); 
+                       } else {
+                            for (let i = 0; i < x.length; i++) {
 
-                           if (typeof x[i] == "number" ) {
-                               res = ' e inoltre qui ci sono solo numeri'
-                           } else { 
-                               
-                               res = ' e inoltre qui ci sono stringhe'
-                           }
-                           return width + res
-                       }  
+                                if (typeof x[i] == "number" ) {
+                                    res = ' e inoltre qui ci sono solo numeri'
+                                } else { 
+                                    
+                                    res = ' e inoltre qui ci sono stringhe'
+                                }
+                                return width + res
+                            }  
+                       }
+                       
                    }    
                }
                console.log(array(a));
@@ -262,8 +263,8 @@
         //polindroma antrimenti mi dice che non lo e
 
         function isPalindrome(word) {
-            let w1 = ' '
-            let w2 = ' '
+            let w1 = ''
+            let w2 = ''
             for (let i = 0; i < word.length; i++) {
                 w1 += word[i];
                 
@@ -286,6 +287,59 @@
         isPalindrome ('anna')
         isPalindrome ('itopinonavevanonipoti')
         isPalindrome ('ugo')
+
+        console.log('---------------------------------------');
+
+    </script>
+
+    <script>
+
+        /*  Ex 5
+                creare una funzione 'evenInMatrix' che mi restituisce un 
+                contatore che tiene traccia di tutti i
+                 numeri pari presenti in una matrice passata in ingresso 
+                 (controllare tutti gli array di un array).
+                Chiamare la funzione con i seguenti valori:
+                - 
+                [
+                [1, 3, 3],
+                [2, 3, 3],
+                [4, 9, 8]
+                ]
+                - 
+                [
+                [2, 1, 6],
+                [3, 4, -10],
+                [9, 9, 240]
+                ] 
+                */
+
+        let m = [
+                [1, 3, 3],
+                [2, 3, 3],
+                [4, 9, 8]
+                ]
+
+        let p =  [
+                [2, 1, 6],
+                [3, 4, -10],
+                [9, 9, 240]
+                ]
+
+                function evenInMatrix(matrix) {
+                    for (let i = 0; i < matrix.length; i++) {
+                        console.log('di questa matrice: ' + matrix[i] + ' i numeri pari sono:')
+                        for (let j = 0; j < matrix[i].length; j++) {
+                            if (matrix[i][j] % 2 == 0) {
+                            console.log(matrix[i][j]);
+                            } 
+                        }
+                    }
+                }
+
+                evenInMatrix (m)
+                evenInMatrix (p)
+        
 
     </script>
 
