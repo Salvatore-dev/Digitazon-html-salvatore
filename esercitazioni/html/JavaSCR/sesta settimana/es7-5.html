@@ -33,13 +33,14 @@
 
 
         let numbers = [3,2,7,2,5,6,10,8,5,10]
+        let numbers1 = [29,33,1,4,53,20,88,]
 
             function makeMatrix(matrixnumbers) {
-                console.log('questa e la matrice originale: '+ numbers);
+                console.log('questa e la matrice originale: '+ matrixnumbers);
                 let a =[]
                 let b =[]
-                for (let i = 0; i < numbers.length; i++) {
-                    let oneNum = numbers[i]
+                for (let i = 0; i < matrixnumbers.length; i++) {
+                    let oneNum = matrixnumbers[i]
                     if(typeof oneNum == "number" && oneNum %2 == 0 || oneNum > 6) {
                         a.push (oneNum)
                     }
@@ -72,6 +73,7 @@
             
 
             makeMatrix(numbers)
+            makeMatrix(numbers1)
 
 
     </script>

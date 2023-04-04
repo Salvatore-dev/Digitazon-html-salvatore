@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Ex 1
+creare una funzione compareMap che accetta in ingresso due mappe.
+La funzione restituisce true SE le due mappe sono mappe, 
+SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
+Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata,
+ e due mappe uguali nella seconda chiamata
+-----------------------------------------------------------
+Ex 2
+creare una funzione compareSet che accetta in ingresso due set.
+La funzione restituisce true SE i due set sono set, SE hanno lo stesso numero di elementi 
+e  gli stessi valori. 
+Testare il funzionamento di compareSet passando due set diversi nella prima chiamata, e due set uguali nella seconda chiamata
+-----------------------------------------------------------
+Ex 3
+realizzare la funzione uniqueArray che prende in ingresso un array e rimuove tutti gli elementi duplicati, restituendo un nuovo array privo quindi di valori duplicati.
+Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] e stampare in output il nuovo valore
+-----------------------------------------------------------
+Ex 4
+realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+- name, lastname, rates 
+dove name e lastname sono stringhe e rates è un array di 5 numeri
+assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+Richiamare questa funzione passando le due mappe create precedentemente
+-----------------------------------------------------------
+    </p>
+
+    <script>
+
+        const map1 = new Map ()
+        const map2 = new Map ()
+
+        map1.set('animale', 'cane')
+        map1.set ('cosa', 'quaderno')
+        map1.set ('citta', 'roma')
+
+        map2.set('animale', 'cavallo')
+        map2.set ('cosa', 'martello')
+        map2.set ('citta', 'torino')
+
+        console.log(map1);
+        // con get richiamo il valore della keyword
+        console.log(map1.get('citta'));
+
+        //con has verifico se esiste la kword, mi da un booleano
+        console.log(map1.has('citta'));
+
+        //sotto ho creato una funzione prova, v e k sono inverititi, come soluzione ho stampato i valori
+        //poi ho riciamato la funzione nel foreach
+
+        function iteration (v, k) {
+            let a = ''
+            let b = ''
+            a = 'questo e la key: ' + k +' e questa e il valore ' + v
+            console.log(a);
+            console.log(v);
+        }
+
+        map1.forEach (iteration)
+
+        //console.log(map2);
+
+        let mapx = [map1, map2]
+        console.log(mapx);
+
+        const sommamappe = new Map([[map1],[map2]])
+
+        console.log(sommamappe);
+
+
+
+    </script>
+    
+</body>
+</html>
