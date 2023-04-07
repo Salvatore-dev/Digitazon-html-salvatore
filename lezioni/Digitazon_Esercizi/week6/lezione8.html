@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function treeStr(s){
+            let space=' '
+            let meta= s.length/2
+            let parola = []
+            let piramid=[]
+            
+            if(s.length>=4){ 
+                for (let i = 0; i < s.length; i++) {
+                    parola.push(s[i])
+                }
+                piramid.push(parola)
+
+                for (let i = 0; i < meta; i++) {
+                    let parola2 = []
+                    for(let j = 0; j < parola.length; j++) {
+                        parola2[j] = parola[j]
+                    }
+
+                    for(let j = 0; j < i; j++) {
+                        parola2[j] = ' '
+                    }
+                    //parola2[i] = ' '
+                    let iend = (parola2.length)-(i+1)
+                    //parola2[iend] = ' '
+                    for(let j = s.length-1; j >= s.length - i; j--) {
+                        parola2[j] = ' '
+                    }
+
+                    piramid.push(parola2)
+                }
+                
+                // console.log('piramid:');
+                // for(let i = 0; i < piramid.length; i++) {
+                //     console.log(piramid[i]);
+                // }
+
+                for(let j = piramid.length - 1; j > 0; j--) {
+                    let str = ''
+                    for(let k = 0; k < piramid[j].length; k++) {
+                        str += piramid[j][k]
+                    }
+                    console.log(str);
+                    console.log(  );
+                }
+                
+            }else{
+                console.log('la stringa non è formata da 4 o piu caratteri') 
+                }
+            }
+
+            treeStr('javascript');
+    </script>
+    
+</body>
+</html>

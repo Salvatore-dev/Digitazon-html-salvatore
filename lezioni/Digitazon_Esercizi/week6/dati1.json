@@ -1,0 +1,15 @@
+[
+    {
+        "username": "Luigi Verdi",
+        "email": "lverdi@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    },
+
+    {
+        "username": "Peach Pink",
+        "email": "ppink@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    }
+]

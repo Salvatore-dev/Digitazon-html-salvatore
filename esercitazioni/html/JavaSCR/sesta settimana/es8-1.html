@@ -67,6 +67,59 @@ e due mappe uguali nella seconda chiamata
 
         
     </script>
+
+    <script>
+        // Ex 1
+    // creare una funzione compareMap che accetta in ingresso due mappe.
+    // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
+    // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
+    // -----------------------------------------------------------
+    //fatto da giada
+{
+    function compareMap(map1,map2){
+        let test='ok'
+
+        if(map1 instanceof Map && map2 instanceof Map){
+            if (map1.size == map2.size){
+                // console.log(map1.forEach(compareKeyValue));
+
+                function compareKeyValue(v,k){
+                    if(!map2.has(k)){
+                        test='noKey'
+                        return
+                    }else if(map2.has(k) && map2.get(k) != v){
+                        test='noVal'
+                        return
+                    }
+                }   
+                map1.forEach(compareKeyValue)
+
+                if(test=='ok'){
+                    return true
+                }else if (test=='noKey'){
+                    return 'le mappe non hanno le stesse chiavi'
+                }else if (test=='noVal'){
+                    return 'le mappe non hanno gli stessi valori per le stesse chiavi'
+                }
+            }else{
+                return 'le mappe non hanno lo stesso numero di elementi';
+            }
+        }else{
+            return 'i dati non sono entrambi mappe';
+        }  
+    }
+    
+    let map1=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pasticcio']])
+    let map2=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pasticcio']])
+    let map3=new Map([['Luigi','Verdi'],['Mario','Rossi']])
+    let map4=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Pietro','Pasticcio']])
+    let map5=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pistacchio']])
+    console.log(compareMap(map1,map5))
+}
+
+
+
+    </script>
     
 </body>
 </html>
