@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        const users = new Map ()
+
+        users.set ('nome', 'Giovanni')
+        users.set ('cognome', 'Rastrelli')
+        users.set ('eta', 30)
+
+        console.log(users);
+
+        const users2 = new Map ([
+            ['nome', 'Michele'],
+            ['cognome', 'Giordano'],
+            ['eta', 26]
+        ])
+        console.log(users2);
+
+        const users3 = new Map ([
+            ['colori', 'verde'],
+            ['animali', 'cane'],
+            ['utensile', 'martello']
+        ])
+        console.log(users3);
+
+        function checkMap(v, k) {
+            console.log(k);
+            console.log(v);
+            if (users2.has(k)) {
+                console.log(' la chiave c\'e');
+            }else{
+                console.log('la chiave non c\'e');
+            }
+            if (users2.get(k) == v){
+                console.log('i valori corrispondono');
+            } else {
+                console.log('i valori non corrispondono');
+            }
+        }
+        users.forEach(checkMap)
+    </script>
+
+    <script>
+        const set = new Set ()
+
+        set.add(20)
+        set.add(2)
+        set.add(10)
+        set.add(40)
+        set.add(3)
+        set.add(5)
+        set.add(3)
+        set.add(9)
+        console.log(set);
+
+        
+    </script>
+    
+</body>
+</html>
