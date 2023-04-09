@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         Ex 1
+--------------------------------------------------------------------
+creare una funzione formatDate che, presi in ingresso un numero, una stringa e un numero, stampi una data formattata.
+Il primo numero rappresenta l'anno, la stringa il nome del mese e il secondo numero il giorno.
+es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023"
+        */
+
+        //algoritmo
+        //creo una data con variabili y m d
+        //creo che prende in ingresso  i dati indicati che restituisce subito y e d come ingresso alla data. 
+        //per il mese all-interno della funzione creo una seconfa funzione che ha al suo interno un arrai con i nomi del mese e attravero un for verifica la corrispondenza del mese che confronta con il 'mese' in gresso alla prima funzione e mi restituisce lindice della corrispondenza piu 1
+
+        
+        let anno = 1933
+        let mese = 'aprile'
+        let giorno = 13
+
+     formatDate (anno, mese, giorno)
+
+         function formatDate(anno, mese, giorno) {
+            let y = anno
+            let d = giorno
+            let m = mese
+            let mesi =['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+
+            for (let i = 0; i < mesi.length; i++) {
+                if (mese== mesi[i]){
+                    m = i + 1
+                } 
+            }
+            //console.log(y);
+            //console.log(d);
+            //console.log(m);
+            const data = new Date (y, m, d)
+            //console.log(data);
+            const res = data.getDate() + '-' + data.getMonth() + '-' + data.getFullYear(); 
+            console.log(data);
+            console.log(res);
+         }
+
+    </script>
+</body>
+</html>

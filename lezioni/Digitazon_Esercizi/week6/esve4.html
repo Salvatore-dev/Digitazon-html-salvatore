@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 4
+--------------------------------------------------------------------
+dato il seguente JSON:
+
+[
+    {
+        "name": "mario",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "luigi",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "wario",
+        "active": false,
+        "feat": {
+            "role": "antagonist"
+        }
+    },
+    {
+        "name": "yoshi",
+        "active": false,
+        "feat": {
+            "role": "protagonist"
+        }
+    }
+]
+creare una funzione getInfo che, preso in ingresso l'array di oggetti ottenuto dal JSON, mi dice:
+- quanti protagonisti ci sono nell'array
+- quanti protagonisti attivi ci sono nell'array
+- quanti antagonisti ci sono nell'array
+[12:26]
+        */
+
+        //creo una stringa del file json
+        // creo la funzione che prende in ingressol'array di oggetto
+        //creo tre contatori diversi per le tre ricorrenze cercate
+
+
+        const jason = 
+        `
+        [
+    {
+        "name": "mario",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "luigi",
+        "active": true,
+        "feat": {
+            "role": "protagonist"
+        }
+    },
+    {
+        "name": "wario",
+        "active": false,
+        "feat": {
+            "role": "antagonist"
+        }
+    },
+    {
+        "name": "yoshi",
+        "active": false,
+        "feat": {
+            "role": "protagonist"
+        }
+    }
+]
+        `
+        const array = JSON.parse (jason)
+        console.log(array);
+        getInfo(array)
+
+        function getInfo(a) {
+            let protagonisti = 0
+            let protattivi = 0
+            let antagonisti = 0
+            for (let i = 0; i < a.length; i++) {
+                if (a[i].feat.role == 'protagonist')
+                {++protagonisti}
+                if (a[i].feat.role == 'antagonist') {++antagonisti}
+                if (a[i].feat.role == 'protagonist' && a[i].active) {
+                    ++protattivi
+                }
+            }
+
+            console.log('i protagonisti sono: ' + protagonisti);
+            console.log('i protagonisti attivi sono: ' + protattivi);
+            console.log('gli antagonisti sono: ' + antagonisti);
+            
+        }
+    </script>
+</body>
+</html>

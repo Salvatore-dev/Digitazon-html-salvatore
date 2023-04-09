@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        /*
+        Ex 2
+creare una funzione compareSet che accetta in ingresso due set.
+La funzione restituisce true SE i due set sono set, SE hanno lo stesso numero di elementi 
+e  gli stessi valori. 
+Testare il funzionamento di compareSet passando due set diversi nella prima chiamata, e due set uguali nella seconda chiamata
+-----------------------------------------------------------
+        */
+
+        //algoritmo
+        //creare de set e la funzione che accetta in ingresso i due set
+        //creare nella funzione un controllo condizionale che da true se le condizioni sono soddisfatte
+        //creare qualche set per testare
+
+        const s1 = new Set()
+        s1.add( 2 )
+        s1.add( 10 )
+        s1.add( 23 )
+        s1.add( 32 )
+        s1.add( 55 )
+        console.log(s1);
+
+        const s2 = new Set()
+        s2.add( 2 )
+        s2.add( 10 )
+        s2.add( 23 )
+        s2.add( 32 )
+        s2.add( 56 )
+        console.log(s2);
+        
+        const s3 = new Set (['ciao', 3,40, 'casa'])
+
+        console.log(s3);
+        //fino a qui ho crato i set richiesti
+
+        console.log(s1.size);
+        compareSet (s1, s2)
+
+        function compareSet(v1, v2) {
+            if (v1 instanceof Set && v2 instanceof Set) {
+                console.log('le variabili in ingresso sono set');
+                if ( v1.size == v2.size){
+                    console.log('i due set sono della stessa lunghezza');
+
+                    let contatore = 0
+
+                    function verifocovalori (v) {
+                        if (v2.has (v)){
+                            console.log('i due set hanno gli stessi valori');
+                        } else {
+                            console.log('i due set hanno valori diversi');
+                        }
+                    }
+                    v1.forEach(verifocovalori)
+                }
+                
+            } else {
+                return false
+            }
+            
+        }
+
+    </script>
+</body>
+</html>

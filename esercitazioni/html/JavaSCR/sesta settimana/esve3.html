@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 3
+--------------------------------------------------------------------
+creare una funzione getDateDay che prende in ingresso una data formattata nel formato americano visto a lezione e restituisce il giorno della settimana relativo, in parola.
+Chiamare la funzione con 3 date a piacere.
+es: getDateDay('2023-05-17')  -> 'mercoledì'
+[12:26]
+        */
+
+        //algoritmo
+        // creare una data 
+        // creare funzione che prende in gresso una data, prende il getday
+        // confronto il get ricevuo con l'indice di un array dei giorni della settimana
+        //verifco l 'indice con un ciclo, se corrisponde passo il valore corrispondente'
+        //restituico il risultato
+
+        const data = new Date ('1929-09-05')
+        console.log(data);
+        let result = getDateDay(data)
+        console.log(result);
+    
+
+        function getDateDay(param) {
+            let a =param.getDay ()
+            //console.log(a);
+            let week = ['domenica','lunedi', 'martedi', 'mercoledi', 'giovedi', 'venerdi', 'sabato'];
+            let res = ''
+            for (let i = 0; i < week.length; i++) {
+                if(a==i) {
+                    res = week[i]
+                }  
+            }
+            return res 
+        }
+
+    </script>
+</body>
+</html>
