@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 4
+realizzare due istanze di Map che rappresentano due studenti che abbiano la seguente struttura:
+- name, lastname, rates 
+dove name e lastname sono stringhe e rates è un array di 5 numeri
+assegnare valori a piacere per ogni chiave, es mario rossi 4, 5, 6, 4, 3 e luigi verdi 8, 7, 4, 9, 9
+creare la funzione bestStudent, che prende in ingresso due mappe che rappresentano uno studente, e restituisce il nome e il cognome dello studente che ha la media voto migliore tra i due.
+Richiamare questa funzione passando le due mappe create precedentemente
+-----------------------------------------------------------
+        */
+
+        // creare le due mappe che rappresentano i dati degli studenti
+
+        const student1 = new Map ([
+            ['name', 'Roberto'],
+            ['lastname', 'Savona'],
+            ['rate', [6,5,7,9,4]]
+        ])
+        console.log(student1);
+
+        const student2 = new Map ([
+            ['name', 'Michele'],
+            ['lastname', 'Coriandolo'],
+            ['rate', [3,6,9,8,9]]
+        ])
+        console.log(student2);
+    </script>
+</body>
+</html>

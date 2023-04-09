@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 3
+realizzare la funzione uniqueArray che prende in ingresso un array e rimuove tutti gli elementi duplicati, restituendo un nuovo array privo quindi di valori duplicati.
+Chiamare la funzione con il valore [10, 'ciao', 20, 'ciao', 'javascript', 10] e stampare in output il nuovo valore
+-----------------------------------------------------------
+        */
+
+        //creare l'array indicato
+        //creare una funzione che prende l'array creato, con un ciclio crea un set che non prendendo valori doppi li elimina. dal set creare un nuovo array che viene restituito senza doppi
+
+        let ar1 = [10, 'ciao', 20, 'ciao', 'javascript', 10];
+        console.log(ar1);
+        let ar2 = ['casa', 20,3,45, 1, 1,1, 2, 2, 45, 'casa', 'giovanni'];
+        console.log(ar2);
+
+        function uniqueArray(a) {
+            if (!Array.isArray(a)) { return false}
+            else {
+                const s = new Set ()
+                for (let i = 0; i < a.length; i++) {
+                    s.add (a[i])    
+                }
+                //console.log(s);
+                let res = []
+                function makeArray(v) {
+                    res.push (v)
+                }
+                s.forEach(makeArray)
+                //console.log(res);
+                return res
+            }
+        }
+
+        uniqueArray (ar1)
+        let prov = uniqueArray (ar2)
+        console.log(prov);
+        
+
+    </script>
+</body>
+</html>
