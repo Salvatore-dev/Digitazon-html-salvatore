@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    #prov {
+        background-color: rgb(236, 6, 6);
+        height: 50px;
+        width: 50px;
+        color: black;
+        text-align: center;
+        font-weight: bold;
+    }    
+    </style>
+</head>
+<body>
+    <div id="prov">ciao</div>
+    <div id="box"></div>
+    <script>
+        /*
+        Ex 4
+creare una mappa che rappresenta 5 stili CSS a piacere e stamparla in output.
+Creare la funzione showCSS che prende in ingresso la precedente mappa e stampa tutti i suoi elementi.
+---------------------------------------------------------------
+        */
+
+        //algoritmo
+
+        const styles = new Map ([
+            ['background-color', 'orange'],
+            ['color', 'black'],
+            ['text-aligh', 'center'],
+            ['width', '100px'],
+            ['height', '100px'],
+
+        ])
+
+        console.log(styles);
+        let counter = 0
+        function showCSS(v,k) {
+            
+            ++counter
+            console.log(counter);
+            console.log(k);
+            console.log(v);
+            console.log('----------------------------');
+            return
+            
+            
+        }
+
+        let result = styles.forEach(showCSS)
+
+        let bub = document.getElementById('box')
+        
+        bub.innerHTML = 'eccomi'
+        bub.style.backgroundColor = styles.get('background-color')
+        bub.style.color = styles.get('color')
+        bub.style.width = styles.get('width')
+        bub.style.height = styles.get('height')
+        bub.style.textAlign = styles.get('text-align')
+
+        //console.log(result);
+    </script>
+    
+</body>
+</html>

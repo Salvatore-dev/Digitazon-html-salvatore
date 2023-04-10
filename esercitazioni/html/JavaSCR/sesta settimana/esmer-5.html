@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+        Ex 5
+creare una funzione cmpArr che prende in ingresso 2 array e restituisce:
+1 se il primo ha dimensioni maggiori del secondo
+-1 se il secondo ha dimensioni maggiori del primo
+0 se hanno dimensioni uguali
+Testare in output il comportamento di tutte e 3 le casistiche.
+---------------------------------------------------------------
+        */
+
+        let animals1 =['tigre', 'cavallo', 'scimmia', 'cervo', 'gatto', 'canarino'];
+        let animals2 =['leone', 'zebra', 'aquila', 'giraffa', 'cammello'];
+
+        console.log(animals1 , animals2);
+
+        function cmpArr(array1, array2) {
+            let cont1 = 0
+            for (let i = 0; i < array1.length; i++) {
+                cont1++
+            }
+
+            let cont2 = 0
+            for (let i = 0; i < array2.length; i++) {
+                cont2++
+            }
+            if (cont1>cont2) {return 1}
+            if (cont1<cont2) {return -1}
+            if (cont1 == cont2) {return 0}
+        }
+
+        let result = cmpArr (animals1, animals2)
+        console.log(result);
+    </script>
+    
+</body>
+</html>
