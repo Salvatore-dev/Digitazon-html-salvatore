@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        /*
+         Ex 1
+creare la funzione diffArray che prende in ingresso due array.
+Gli array dovranno contenere da 3 a 8 numeri.
+All'interno della funzione trovare il numero più grande del primo array e il numero più piccolo del secondo array.
+La funzione restituisce la differenza tra il primo numero e il secondo. 
+Stampare il risultato in output.
+---------------------------------------------------------------
+        */
+
+        //algoritmo
+        //creare i due arrau e inpostare la funzione con ingresso dei due array
+        //creare controlli condizionali che mi dicono se sono entrambi array o meno, poi se sono delle dimensioni richieste
+        //crare due cicli che rispettivamente per i due array mi calcoal il numero maggiore e minore
+        //restituire il risultato richiesto
+
+       let array1 = [2,3,44,5,75,2,2];
+       let array2 = [54,56,7574465,544,21444];
+       let array3 = [2,3];
+       let array4 = [2,355555,454,546,2,2,3,3765,2];
+
+       function diffArray(a1,a2) {
+            if (!(a1 instanceof Array && a2 instanceof Array)) {return false};
+            if (a1.length < 3 || a1.length >8) {return false};
+            if (a2.length < 3 || a2.length >8) {return false};
+            let max =a1 [0]
+            let min = a2 [0]
+                for (let i = 1; i < a1.length; i++) {
+                    if (a1[i] >= max)  {
+                        max = a1[i]
+                    }
+                }
+                for (let i = 1; i < a2.length; i++) {
+                    if (a2[i] <= min)  {
+                        min = a2[i]
+                    }
+                }
+                //console.log(max);
+                //console.log(min);
+                let res = max - min
+                return res
+       }
+
+       
+
+       let res = diffArray (array1, array2);
+
+       console.log('il risultato e: '+ res);
+
+
+    </script>
+    
+</body>
+</html>

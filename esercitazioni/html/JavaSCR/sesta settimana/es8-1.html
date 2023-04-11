@@ -19,8 +19,19 @@ e due mappe uguali nella seconda chiamata
 -----------------------------------------------------------
         */
 
+        //algoritmo
+        //creo le mappe che mi servono
+        //creo una funzione che prende due mappe, subito faccio dei controlli per soddisfare le condizioni iniziali
+        //creare una seconda funzione che confronta le key e i value una mappa con quella di ingresso
+        
+
         const mappa1 = new Map ();
-        const mappa2 = mappa1;
+        const mappa2 = new Map ([
+            ['nome', 'giovanni'],
+            ['eta', 10],
+            ['hobbies', 'coding']
+        ])
+
         const mappa3 = new Map ()
 
         mappa1.set ('nome', 'giovanni')
@@ -34,32 +45,32 @@ e due mappe uguali nella seconda chiamata
         console.log(mappa2);
         console.log(mappa3);
 
-        function compareMappe(p, q) {
-            console.log(p);
-            console.log(q);
+        function compareMappe(map1, map2) {
+            console.log(map1);
+            console.log(map2);
+            let test = 'ok'
 
-            if (p instanceof Map == false || q instanceof Map == false ) {
-                console.log('non sono entrambe mappe');
-            }else {
-                console.log('sono entrambe mappe');
-                if (p.size == q.size) {console.log('le mappe hanno la stessa grandezza');
-
-                function (params) {
-                    
-                }
-                 
-
-
-
-
-                }else{console.log('queste sono mappe di grandezza diversa');} 
-
-            }
-
+            if (map1 instanceof Map == false || map2 instanceof Map == false ) {return 'non sono entrambe mappe'};
+            if (map1.size != map2.size) {return 'le mappe non hanno la stessa size'}
             
+            
+            function verificaKeysValue(v,k) {
+                if (!map2.has(k)) {test = 'no-key'}
+                else {if (map2.get(k) != v) {test = 'no-value'}}
+                return     
+            }
+            map1.forEach (verificaKeysValue)
+
+            let result = 'il risultato del test e il seguente: ' + test
+
+            return result
         }
 
-        compareMappe (mappa1, mappa2)
+        let provo = 2
+
+        let res = compareMappe (mappa1, mappa2);
+        console.log(res);
+        
 
 
 
@@ -68,8 +79,8 @@ e due mappe uguali nella seconda chiamata
         
     </script>
 
-    <script>
-        // Ex 1
+    <p>
+        <!--  // Ex 1
     // creare una funzione compareMap che accetta in ingresso due mappe.
     // La funzione restituisce true SE le due mappe sono mappe, SE hanno lo stesso numero di elementi e per le stesse chiavi, gli stessi valori. 
     // Testare il funzionamento di compareMap passando due mappe diverse nella prima chiamata, e due mappe uguali nella seconda chiamata
@@ -116,10 +127,7 @@ e due mappe uguali nella seconda chiamata
     let map5=new Map([['Luigi','Verdi'],['Mario','Rossi'],['Ciccio','Pistacchio']])
     console.log(compareMap(map1,map5))
 }
-
-
-
-    </script>
-    
+ -->
+    </p>
 </body>
 </html>

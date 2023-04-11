@@ -20,20 +20,61 @@ Richiamare questa funzione passando le due mappe create precedentemente
         */
 
         // creare le due mappe che rappresentano i dati degli studenti
+        //creare una funzione che accetta due mappe, prendo i rispettivi valori della kiave rate e ne calcolo la media
 
         const student1 = new Map ([
             ['name', 'Roberto'],
             ['lastname', 'Savona'],
-            ['rate', [6,5,7,9,4]]
+            ['rate', [6,8,3,7,9]]
         ])
-        console.log(student1);
+        //console.log(student1);
 
         const student2 = new Map ([
             ['name', 'Michele'],
             ['lastname', 'Coriandolo'],
             ['rate', [3,6,9,8,9]]
         ])
-        console.log(student2);
+        //console.log(student2);
+
+        function bestStudent(m1, m2) {
+            let voti1 = m1.get('rate');
+            let voti2 = m2.get('rate');
+            //console.log(voti1);
+            //console.log(voti2);
+
+                    function makemedia(entryarray) {
+                        let somma = 0
+                        for (let i = 0; i < entryarray.length; i++) {
+                            somma += entryarray[i]
+                        }
+                        let media = somma / entryarray.length;
+                        return media
+                    }
+
+            let mediam1 = makemedia (voti1);
+            let mediam2 = makemedia (voti2)
+            //console.log(mediam1);
+            //console.log(mediam2);
+            let s ='lo studente che ha la media piu alta e: '
+
+            if (mediam1 == mediam2) {
+                return 'i due studenti hanno la stessa media'
+            } else {
+                let a =''
+                if (mediam1 > mediam2) {
+                    a = s + m1.get ('name') + ' ' + m1.get ('lastname');
+                    return a
+                } 
+                if (mediam1 < mediam2) {
+                    a = s + m2.get ('name') + ' ' + m2.get ('lastname');
+                    return a
+                } 
+            }
+
+        }
+
+        let result = bestStudent (student1, student2);
+        console.log(result);
     </script>
 </body>
 </html>
