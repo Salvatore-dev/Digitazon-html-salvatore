@@ -57,5 +57,30 @@
                 evenInMatrix (b)
         
      </script>
+
+     <script>
+        {
+            let a = [[1], [2], [3], [4]]
+            let e = [1, 2, 3, 4]
+
+
+            let b = [...a]
+
+            console.log(b);
+            console.log(cont([1], [2], [3], [4]));
+            function cont(...params) {
+                let result = []
+                result.push(...params)
+                return result
+            }
+
+            console.log(a);
+            let c = ['c', 'b']
+
+            let d = e.concat(c)
+            console.log(d);
+        }
+        
+     </script>
 </body>
 </html>
