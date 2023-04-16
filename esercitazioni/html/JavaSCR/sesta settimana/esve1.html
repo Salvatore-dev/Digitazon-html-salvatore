@@ -22,8 +22,8 @@ es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023"
         //per il mese all-interno della funzione creo una seconfa funzione che ha al suo interno un arrai con i nomi del mese e attravero un for verifica la corrispondenza del mese che confronta con il 'mese' in gresso alla prima funzione e mi restituisce lindice della corrispondenza piu 1
 
         
-        let anno = 1933
-        let mese = 'aprile'
+        let anno = 1998
+        let mese = 'gennaio'
         let giorno = 13
 
      formatDate (anno, mese, giorno)
@@ -36,18 +36,22 @@ es: formatDate(2023, 'maggio', 17)   stampa "17-05-2023"
 
             for (let i = 0; i < mesi.length; i++) {
                 if (mese== mesi[i]){
-                    m = i + 1
+                    m = i
                 } 
             }
             //console.log(y);
             //console.log(d);
-            //console.log(m);
+            console.log(m);
             const data = new Date (y, m, d)
             //console.log(data);
-            const res = data.getDate() + '-' + data.getMonth() + '-' + data.getFullYear(); 
+            const res = data.getDate() + '-' + (data.getMonth()+1) + '-' + data.getFullYear(); 
             console.log(data);
             console.log(res);
          }
+
+         const date2 = new Date ('2021-03-21')
+
+         console.log(date2);
 
     </script>
 </body>

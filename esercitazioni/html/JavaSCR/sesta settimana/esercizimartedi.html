@@ -57,25 +57,29 @@ Richiamare questa funzione passando le due mappe create precedentemente
 
         //sotto ho creato una funzione prova, v e k sono inverititi, come soluzione ho stampato i valori
         //poi ho riciamato la funzione nel foreach
+        //come si construisce un contatore in un con un foreach?
 
+        let cont = 0
         function iteration (v, k) {
+            
             let a = ''
-            let b = ''
-            a = 'questo e la key: ' + k +' e questa e il valore ' + v
+            a = 'questo e la key: ' + k +' e questa e il valore: ' + v
             console.log(a);
-            console.log(v);
+            let c = ++cont
+            return c
         }
+
+        let a = map2.forEach (iteration)
+        console.log(a);
 
         map1.forEach (iteration)
 
-        //console.log(map2);
+
 
         let mapx = [map1, map2]
         console.log(mapx);
 
-        const sommamappe = new Map([[map1],[map2]])
-
-        console.log(sommamappe);
+     
 
 
 
