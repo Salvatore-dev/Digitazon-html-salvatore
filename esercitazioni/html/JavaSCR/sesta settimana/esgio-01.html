@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        Ex 1
+Dato il seguente JSON:
+[
+    {
+        "fullname": "Yoshi", "rate": [4, 5, 4, 6]
+    },
+    {
+        "fullname": "Wario", "rate": [4, 9, 6, 7]
+    },
+    {
+        "fullname": "Toad", "rate": [8, 9, 9, 8]
+    }
+]
+salvarlo in un template string, parsarlo con l'apposita strategia e stabilire algoritmicamente chi è lo studente migliore e chi è il peggiore.
+----------------------------------------------------------------------
+        */
+
+        const prendojason= 
+        `
+[
+    {
+        "fullname": "Yoshi", "rate": [4, 5, 4, 6]
+    },
+    {
+        "fullname": "Wario", "rate": [4, 9, 6, 7]
+    },
+    {
+        "fullname": "Toad", "rate": [8, 9, 9, 8]
+    }
+]
+        `
+        const array1 = JSON.parse(prendojason)
+        console.log(array1);
+
+        //fino a qui sono ruiscito a trasfromare un array di tre oggetti
+
+        function comparestudents(params) {
+            console.log(params[0].rate);
+            //console.log(params[0].fullname);
+            let s1 = params[0].rate;
+            let media1= makemedia(s1);
+            let studentbest = params[0].fullname
+            
+            for (let i = 1; i < params.length; i++) { 
+                if (makemedia(params[i].rate) > media1) {
+                    studentbest = params[i].fullname;
+                    media1 = makemedia(params[i].rate) 
+                }
+               //da continuare sono arrivato 
+                
+            }
+            console.log(studentbest);
+            console.log(media1);
+            function makemedia(entryarray) {
+                        let somma = 0
+                        for (let i = 0; i < entryarray.length; i++) {
+                            somma += entryarray[i]
+                        }
+                        let media = somma / entryarray.length;
+                        return media
+                    }
+
+          
+        }
+
+        comparestudents(array1)
+    </script>
+</body>
+</html>

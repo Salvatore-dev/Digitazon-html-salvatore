@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        
+        let a = 'HehEProVA'
+        console.log(a);
+        console.log(a[1]);
+        let n = 0
+        let vocals = ['a', 'e', 'i', 'o', 'u']
+        a=a.toLowerCase()
+        for (let i = 0; i < vocals.length; i++) {
+            for (let j = 0; j< a.length; j++){
+                if (vocals[i] == a[j]){
+                    ++n
+                }
+            }
+        }
+        console.log(n);
+
+        /*/let b = 'kjkasjdlksajdlkjaeein'
+        for (let i = 0; i < b.length; i++) {
+            console.log(b.charAt(i));
+            
+        }*/
+
+        function addUpFromNumber(n) {
+            let som =0
+                if (n > 0){
+                    for (let i =0; i<= n; i++){
+                        som += i 
+                    }
+                }
+                return som
+        }
+        console.log(addUpFromNumber(4));
+
+        console.log('---------------------------------');
+
+        //llll
+        function countUndefinedKeys(obj) {
+            let n = 0
+            let a = Object.values(obj);
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == null || a[i] == undefined) {
+                    ++n
+                }
+            }
+            return n
+        }
+        const ue = {
+            nama: 'calciatore',
+            color: 'red',
+            rate: '',
+            giacca: null,
+
+
+        }
+        console.log(Object.values(ue));
+
+        console.log(countUndefinedKeys(ue));
+
+    </script>
+    
+</body>
+</html>
