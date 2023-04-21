@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        #students {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        #students .student {
+            background-color: lightblue;
+            padding: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="students"></div>
+
+    <script>
+
+        // step 1: costruiamo la stringa JSON che simula un file/contenuto JSON
+        // che rappresenta un array di oggetti e ogni oggetto rappresenta uno studente
+        const jsonStr = `
+        [
+            {
+                "id": 1,
+                "name": "Mario",
+                "lastname": "Rossi",
+                "rate": [7, 4, 5]
+            },
+
+            {
+                "id": 2,
+                "name": "Luigi",
+                "lastname": "Verdi",
+                "rate": [7, 8, 6, 9]
+            },
+
+            {
+                "id": 3,
+                "name": "Peach",
+                "lastname": "Peach",
+                "rate": [7, 4, 5]
+            },
+
+            {
+                "id": 4,
+                "name": "Yoshi",
+                "lastname": "Verdi",
+                "rate": [7, 4, 7, 7]
+            },
+
+            {
+                "id": 5,
+                "name": "Wario",
+                "lastname": "Neri",
+                "rate": [5, 4, 3]
+            }
+        ]
+        `
+
+        // step 2
+        // convertiamo la stringa json in oggetto js (array di oggetti)
+        const jsonObj = JSON.parse( jsonStr.trim() )
+
+        // step 3
+        // recuperiamo l'elemento con id 'students' dal dom
+        const elStudents = document.getElementById('students')
+
+        // itero sull'array di oggetti recuperato da JSON
+        jsonObj.forEach(function( el ) {
+
+            // creo un elemento div
+            const elStudent = document.createElement('div')
+
+            // calcolo la media voti dello studente corrente
+            let avg = 0
+            
+            /*
+            for(let i = 0; i < el.rate.length; i++) {
+                avg = avg + el.rate[i]
+            }
+            avg = avg / el.rate.length
+            */
+        })
