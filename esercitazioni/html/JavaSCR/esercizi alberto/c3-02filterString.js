@@ -13,13 +13,29 @@
 // ritornare "abba"
 
 // algoritmo
-//
+// creo la funzione filterString
+// creo variabile RESULT  che poi restituisco alla fine
+
+
 // scompongo il problema
-// mi serve una funzione SELECT che mi stampa le lettere di una parola solo se sono ugauli ad una lettera che passo come parametro
+// la funzione in entrata prende in ingresso una lettera e mi restituisce un booleano
+//  creo un ciclo che prende parte da zero fino STR.LENGTH
+//      in un inf come condizione insersco la funzione FUNX alla quale passo STR[i]
+//      quando FUNX da true (da notare che non controllo il risultato della funzione / il test probabilemte immegtte due fuznione diverse una da che true e altra false)
+//      ammesso che dia true / nel corpo della funione aggiungoa result STR[i]
+//       restituisco return
+//      else 
+//      (quindi false) / nel corpo della funzione aggiungo a result
+
+//parte parziale ma fuznionante
+// mi serve una funzione SELECT che mi stampa le lettere di una parola 
+// solo se sono ugauli ad una lettera che passo come parametro
 // una funzione select che mi prende una stringa e una lettera
 //  dato RESULT come stringa vuota che poi restituisco
 //  con un for che parte da 0 per la lunghezza di string - 1 
 //      se arr di i == 'lettera' allora aggingo a result la lettera trovata
+
+/*
 
 function select(string, l) {
     let result = ''
@@ -45,21 +61,23 @@ function Delete(string, l) {
 console.log(Delete('cabbac', 'a'));
 let ttt = 'ciao'
 let fun = l=>l
+*/
+console.log(filterString(l => l == 'a', 'abba'));
 
-filterString(fun('d'), 'abba');
  
 function filterString(funx, str) {
-    if (funx == 'c') {
-        console.log(str);
-        
-    } else {
-        console.log(str + 'qui');
+    let result = ''
+    for (let i = 0; i < str.length; i++) {
+        if (funx(str[i])){
+            result += str[i]
+        }
     }
+    return result
     
 
-   
+}
 
-    
+    /*
 
 
     function Delete(string, l) {
@@ -77,5 +95,6 @@ function filterString(funx, str) {
         return result
         
     }
-}
+    */
+
 

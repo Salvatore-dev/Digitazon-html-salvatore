@@ -115,5 +115,58 @@
 }
 
 let s = 'ciao a tutti'
-let r = s.split()
+let r = s.split(' ')
 console.log(r);
+
+{
+    let a = 23
+    let b = 2
+    let c
+
+    function somandAss(a, b) {
+        c = a+b
+        b = c * a
+        return b
+    }
+
+   
+    console.log(b);
+    console.log(somandAss(a,b));
+    console.log(b);
+    console.log(c);
+    let tt = ar(1,2,3);
+
+    function ar(a,b,c) {
+         return arguments
+        
+    }
+    console.log(tt[2]);
+}
+
+{
+    let fun = l => l != l
+    //console.log(!funx('s'));
+
+    console.log(arguments[0]);
+    let stringa = 'abbasd'
+    
+    console.log(provo(fun, stringa));
+
+    function provo(funx, str) {
+        let result = ''
+        for (let i = 0; i < str.length; i++) {
+            if (funx(str[i] )) {
+                result += str[i]
+                
+            }
+        }
+        return result
+        
+    }
+}
+
+/* for (let i = 0; i < string.length; i++) {
+    if (string[i]==l){
+        result += string[i]
+    }
+}*/

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        function Book( title, author, genre ) {
+            this.title = title
+            this.author = author
+            this.genre = genre
+
+            this.printInfo = function() {
+                console.log( 
+                    `Titolo: ${this.title} | Autore: ${this.author} | Genere: ${this.genre}` 
+                );
+            }
+        }
+
+        const b1 = new Book('Il vecchio e il mare', 'ernest hemingway', 'avventura')
+        const b2 = new Book('Intelligenza emotiva', 'daniel goleman', 'psicologia')
+
+        console.log( b1.title )
+        console.log( b2.author )
+
+        b1.printInfo()
+
+        class Book2 {
+            constructor(title, author, genre) {
+                this.title = title
+                this.author = author
+                this.genre = genre
+            }
+
+            printInfo() {
+                console.log( 
+                    `Titolo: ${this.title} | Autore: ${this.author} | Genere: ${this.genre}` 
+                );
+            }
+        }
+
+        const b3 = new Book2('Impara Javascript', 'luigi verdi', 'programmazione')
+        b3.printInfo()
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="user_id">
+    <button id="hello">saluta</button>
+
+    <script>
+        let currentId = 1
+
+        function makeUser( n ) {
+            return { 
+                id: currentId++, 
+                name: n,
+                sayHello: function() {
+                    console.log( 
+                        `Ciao, sono l'utente con id #${this.id} e mi chiamo ${this.name}`
+                     )
+                }  
+            }
+        }
+
+        const users = [
+            makeUser('mario rossi'), 
+            makeUser('luigi verdi'), 
+            makeUser('daisy yellow'),
+            makeUser('peach pink')
+        ]
+
+        users.forEach(function(user) {
+            //user.sayHello()
+        })
+        
+        // questa funzione recupera e restituisce un utente avente un id
+        // id: number  ->  user || undefined
+        function getUserById( id ) {
+            for(let i = 0; i < users.length; i++) {
+                if( users[i].id == id )
+                    return users[i]
+            }
+        }
+
+        const elUserId = document.getElementById('user_id')
+        document.getElementById('hello').addEventListener('click', function() {
+            const id = parseInt(elUserId.value)
+
+            try {
+                const user = getUserById(id)
+                user.sayHello()
+            }
+            catch(err) {
+                console.log( 'Errore!' )
+            }
+        })
+    </script>
+    
+</body>
+</html>
