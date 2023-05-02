@@ -39,8 +39,8 @@ amano ~
 //alla fine della fuzione se non enetra in nessuna della condizioni restituisco che la stringa non e pazza
 
 
-let str = 'soosja'
-str.startsWith()
+let str = 'Lui e pazzo'
+console.log(CrazyString(str));
 function CrazyString(string) {
     if (string.includes('Church') || string.includes ('mare')) {
         return 'la stringa non è pazza'
@@ -48,7 +48,7 @@ function CrazyString(string) {
     if (string.includes('Cthulhu')) {
         return 'la stringa è pazza'
     }
-    if (!string.includes('Lui') || !string.includes('Lei') || !string.includes('Egli') || !string.includes('Ella')) {
+    if (!string.includes('Lui') && !string.includes('Lei') && !string.includes('Egli') && !string.includes('Ella')) {
         return 'la stringa è pazza'
     }
     if (string.endsWith('?!?')) {
