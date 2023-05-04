@@ -63,17 +63,22 @@ function spendLess(string) {
     console.log('-----------------');
     console.log(arr3);
     console.log('-----------------------------'); //controllo ok
+    let arr4 = sommArr(arr3)
+    console.log(arr4);
+    console.log('----------------------'); // controllo ok qui ottengo le somme dei valori numerici per ogni reparto
 
     let arrObj =[]
-    for (let i = 0; i < arr3.length; i++) {
+    for (let i = 0; i < arr4.length; i++) {
         let obj ={
             Reparto: '',
             Spese: []
         }
-        if (typeof arr3[i] == 'string') {
-            obj.Reparto = arr3[i]
-        } else {
-            obj.Spese.push(arr3[i])
+        if (typeof arr4[i] === 'string') {
+            obj.Reparto = arr4[i]
+        } 
+        if (typeof arr4[i] === 'number'){
+            obj.Spese.push(arr4[i])
+            
         }
         arrObj.push(obj)
     }
@@ -90,6 +95,22 @@ function spendLess(string) {
             }
         }
         return res
+    }
+    function sommArr(array) {
+        let result =[]
+        let x = 0
+            for (let i = array.length -1; i >=0; i--) {
+                
+                if (typeof array[i] == 'number') {
+                    x += array[i]
+                }
+                if (typeof array[i] == 'string') {
+                    result.push(array[i])  
+                    result.push(x)
+                    x = 0 
+                }
+            }
+        return result
     }
 
 
@@ -161,26 +182,39 @@ function spendLess(string) {
 // console.log(somArr([10,25,30]));
     
 // sotto problema : devo sommare i numeri delle spese prima di passarli all'oggetto
-// 
+// partendo dalla fine dell'array riesco a fare l'operazione cercata
 
-let arr3 = ['ciao', 20, 30, 'dopo', 20, 40, 'ancora', 30, 24]
+let arr3 = ['ciao', 20, 30, 'dopo', 20, 40, 'ancora', 30, 24] // ok ho fatto
 let d =[]
 let x = 0
-d.push(arr3[0])  
-for (let i = 1; i < arr3.length; i++) {
-    
-    if (typeof arr3[i] == 'string') {
-        d.push(arr3[i])  
-    
-    }
-    if (typeof arr3[i] == 'string' && i >=1) {
-        d.push(x)
-        x = 0 
-    }
+for (let i = arr3.length -1; i >=0; i--) {
      
     if (typeof arr3[i] == 'number') {
         x += arr3[i]
     }
+    if (typeof arr3[i] == 'string') {
+        d.push(arr3[i])  
+        d.push(x)
+        x = 0 
+    
+    }
    
 }
 console.log(d);
+
+function sommArr(array) {
+    let result =[]
+    let x = 0
+        for (let i = array.length -1; i >=0; i--) {
+            
+            if (typeof array[i] == 'number') {
+                x += array[i]
+            }
+            if (typeof array[i] == 'string') {
+                result.push(array[i])  
+                result.push(x)
+                x = 0 
+            }
+        }
+    return result
+}
