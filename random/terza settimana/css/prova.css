@@ -1,0 +1,173 @@
+
+
+header {
+    display: flex;
+    border: 1px solid blueviolet;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    padding-bottom: 10px;
+}
+
+header  > a > img {
+    width: 250px;
+    border-radius: 30px;
+    border: 2px solid blueviolet;
+}
+
+
+.center_header {
+    display: flex;
+    /* width: 500px; */
+}
+
+.center_header > input {
+    width: 400px;
+    height: 40px;
+    align-items: last baseline;
+}
+
+.log_in {
+    display: flex;
+}
+
+.description {
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+    /* background-color: aqua; */
+    font-style: oblique;
+    text-align: center;
+}
+
+.carrello {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: fit-content;
+    align-items: center;
+    border: 2px solid rgb(126, 120, 120);
+    margin-bottom: 100px;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    background-color: rgb(87, 159, 218);
+    visibility: hidden;
+}
+.carrello button {
+    color: yellow;
+    font-size: large;
+    font-weight: bold;
+    height: 50px;
+    padding 70px;
+    background-color: red;
+    align-content: center;
+    border-radius: 20px;
+    width: 70%;
+}
+
+.images {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    /* background-color: azure; */
+    flex-direction: column;
+}
+
+
+.images img {
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.nascondi_2 > label {
+    background-color: aqua;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+.nascondi_2 > input {
+    width: 100px;
+    opacity: 0;
+    margin-bottom: 20px;
+}
+
+.nascondi_2 > input:checked + .carrello {
+    visibility: visible;
+}
+
+
+.carota .bastone {
+    border-radius: 30px;
+    margin: 10px;
+}
+.carota {
+    background-color: aqua;
+    border: 5px solid burlywood;
+}
+
+.bastone {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px
+}
+
+/* general sibling combinator */
+.tilde a ~ span { 
+    color: red;
+  }
+  /* il tilde conbina il primo e tutte le occorrenze del secondo */
+  
+  /* adjacent sibling combinator */
+ .tilde a + span {
+    color: green;
+  }
+
+.link_bar {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 5px solid black;
+    padding-left: 0%;
+    /* background-color: beige; */
+}
+
+
+.link_bar li {
+    list-style-type: none;
+    width: 25%;
+    padding: 5px;
+    /* background-color: azure; */
+}
+
+.link_bar a {
+    background-color: rgb(215, 184, 4);
+    padding: 5px;
+    display: block;
+    margin-bottom: 2px;
+    /* width: 70px; */
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid blue;
+    font-size: large;
+}
+
+
+
+.nascondi > label {
+    background-color: yellowgreen;
+    cursor: pointer;
+    border: 1px solid red;
+    border-radius: 5px;
+} 
+
+.box_meeting {
+    visibility: hidden;
+}
+
+.nascondi > input {
+    width: 100px;
+    opacity: 0;
+}
+
+.nascondi > input:checked + .box_meeting {
+    visibility: visible;
+}

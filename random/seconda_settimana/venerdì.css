@@ -1,0 +1,55 @@
+
+header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rebeccapurple;
+    align-items: center;
+    margin: 0 2rem 1.5rem;
+}
+
+.logo {
+    width: 120px;
+    height: auto;
+
+}
+
+ol {
+    display: flex;
+    /* align-items: center;
+    justify-content: space-between; */
+}
+
+li {
+    list-style-type: none;
+    padding: 1.5rem;
+    color: black;
+    
+}
+
+/* .enroll {
+    display: flex;
+} */
+
+.center {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.center img {
+    width: 12%;
+    padding: 5px;
+
+}
+
+.sentences span {
+    display: block;
+}
+
+ div span {
+    display: none;
+ }
+ .logo:hover ~ div > .sentence-1 {
+    display: initial;
+
+ }

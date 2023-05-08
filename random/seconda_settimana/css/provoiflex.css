@@ -1,0 +1,20 @@
+
+section{
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    
+}
+
+section .several {
+    margin-left: 50px;
+
+}
+
+.several:nth-child(even) {
+    background-color: darkgreen;
+}
+
+.several:last-of-type {
+    /* background-color: brown; */
+}

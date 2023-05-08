@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const m1 = new Map ()
+        m1.set ('nome', 'giacomo')
+        m1.set ('cose', 'armadio')
+        m1.set ('animale', 'cane')
+
+        const m2 = new Map ()
+        m2.set ('citta', 'napoli')
+        m2.set ('auto', 'fiat')
+        m2.set ('colori', 'verde')
+
+        let m3 = m1
+
+        console.log(m1);
+        console.log(m2);
+
+        let a = ''
+        let b = ''
+        let a1 = ''
+        let b1 = ''
+
+        function itera(v, k) {
+            a +=k + ' '
+            b +=v + ' '   
+        }
+        function itera1(v, k) {
+            a1 +=k + ' '
+            b1 +=v + ' '   
+        }
+
+        m3.forEach(itera)
+        console.log(a);
+        console.log(b);
+        m1.forEach(itera1)
+        console.log(a1);
+        console.log(b1);
+
+        if (a==a1) {console.log('le due mappe hanno le stesse keyword');}
+        else {console.log('le mappe hanno keywords diverse');}
+
+
+    </script>
+</body>
+</html>

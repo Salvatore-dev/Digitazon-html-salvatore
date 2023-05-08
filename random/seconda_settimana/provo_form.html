@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provo i form</title>
+    <link rel="stylesheet" href="css/provo_form.css">
+</head>
+
+<body>
+    <form action="https://lazys.requestcatcher.com/" method="get">
+        <div class="controls">
+
+            <label for="id">User ID:</label>
+            <input type="text" id="id" name="id">
+
+            <input type="reset" value="Reset">
+            <input type="submit" value="Submit">
+
+        </div>
+    </form>
+
+    <form action="https://lazys.requestcatcher.com/" method="get">
+        <p>Audio settings:</p>
+
+        <div>
+            <input type="range" id="volume" name="volume" min="0" max="11">
+            <label for="volume">Volume</label>
+        </div>
+
+        <div>
+            <input type="range" id="cowbell" name="cowbell" min="0" max="100" value="90" step="10">
+            <label for="cowbell">Cowbell</label>
+        </div>
+
+    </form>
+    <form class="images_1" action="https://lazys.requestcatcher.com/" method="get">
+        <p>Sign in to your account:</p>
+
+        <div>
+            <label for="userId">User ID</label>
+            <input type="text" id="userId" name="userId">
+        </div>
+
+        <input type="image" id="image" alt="Login" src="../random_assets/images/hqdefault.jpg">
+    </form>
+
+    <form action="http://www.foo.com" method="GET">
+        <div>
+          <label for="say">What greeting do you want to say?</label>
+          <input name="say" id="say" value="Hi" />
+        </div>
+        <div>
+          <label for="to">Who do you want to say it to?</label>
+          <input name="to" id="to" value="Mom" />
+        </div>
+        <div>
+          <button>Send my greetings</button>
+        </div>
+      </form>
+
+      <form action="https://lazys.requestcatcher.com/" method="POST">
+        <div>
+          <label for="say">What greeting do you want to say?</label>
+          <input name="say" id="say" value="Hi" />
+        </div>
+        <div>
+          <label for="to">Who do you want to say it to?</label>
+          <input name="to" id="to" value="Mom" />
+        </div>
+        <div>
+          <button>Send my greetings</button>
+        </div>
+      </form>
+
+</body>
+
+</html>

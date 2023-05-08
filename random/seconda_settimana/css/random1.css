@@ -1,0 +1,36 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    /* display: flex; */
+}
+
+header {
+    /* display: flex; */
+    background-color: #7fffd4;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    /* justify-content: space-between; */
+}
+
+header a {
+    border: 1px solid red;
+    padding: 1rem;
+
+}
+.primo a {
+    background-color: brown;
+    /* margin-left:  auto; */
+    /* align-items: center; */
+}
+.secondo a {
+    background-color: cornsilk;
+    /* margin-left: auto; */
+}
+
+/* main p:nth-child(1) {
+    background-color: darkgoldenrod;
+    display: block
+    border: 1px solid black;
+} */

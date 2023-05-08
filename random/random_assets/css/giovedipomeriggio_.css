@@ -1,0 +1,144 @@
+html {
+    font-size: 16px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    margin-top: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+#title {
+    text-align: center;
+    background-color: rgb(74, 151, 192);
+    color: white;
+    padding: 1rem;
+}
+
+#title h1 {
+    margin: 0;
+    color: red;
+}
+
+#page-header nav {
+    background-color: rgb(208, 71, 71);
+    padding: 1rem;
+}
+
+#page-header nav ul {
+    background-color: rgb(1, 19, 13);
+    list-style-type:  none;
+    padding: 0;
+    margin: auto;
+    font-size: 0;
+    width: 520px;
+    height: 50px;
+    
+}
+
+#page-header nav ul li {
+    display: inline-block;
+    width: 104px;
+    height: 50px;
+    background-color: rgb(184, 168, 198);
+    text-align: center;
+    font-size: 1rem;
+}
+
+#page-header nav ul li a {
+    text-decoration: none;
+    color: black;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    display: block;
+    padding: auto;
+    /* background-color: blanchedalmond; */
+
+    /* background-color: pink; */
+
+   }   
+#page-header nav ul li:hover {
+    background-color: rgb(144, 10, 247);
+}
+
+
+
+
+
+#section-top div {
+    background-color: blueviolet;
+    padding: 1rem;
+}
+
+/* qui lo stile delle card */
+#sect-card {
+    margin-top: 1rem;
+    padding:  0 1rem;
+}
+
+.card {
+    background-color: blue;
+    padding: 0.7rem;
+    width: 350px;
+    border: 1px solid red;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+}
+
+.card-titles {
+
+    font-size: 1.2rem;
+
+    background-color: azure;
+}
+
+.card-image {
+
+    height: 200px;
+    background-color: black;
+    background-position: center top;
+    background-size: cover;
+    margin-top: auto0.6rem;
+    border: 1px solid red;
+}
+
+.img-ken {
+    background-image: url(../images/ken_image.jpg);
+}
+
+.img-rei {
+    background-image: url(../images/rei_image.jpg);
+}
+
+.card-content {
+    margin-top: 0.6rem;
+}
+.card-content div:nth-child(1) {
+
+        display:  inline-block;
+        width: 60%;
+}
+
+.card-content div:nth-child(2) {
+    background-color: red;
+    /* height: auto;
+    display: inline-block; */
+}
+
+.card-content div:nth-child(2) ul {
+    border-color: black;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+card-footer {
+    margin-top: 0.6rem;
+    text-transform: uppercase;
+    text-align: left;
+    border-top: 1px solid gray;
+    padding-top:  0.3rem;
+}

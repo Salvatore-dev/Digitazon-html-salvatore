@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossario</title>
+    <link rel="stylesheet" href="random_assets/css/glossario.css">
+
+</head>
+<!-- scrivere per ogni tag visto fino ad ora il suo utilizzo e fornire un esempio -->
+
+<body>
+    <h1>h1 serve per dare un intestazione</h1>
+    <h2>h2 serve per dare un intestazione più piccola rispetto a h1</h2>
+
+
+    <p>p, serve per scrivere un paragrafo, un testo, può contenere sotto paragrafi</p>
+
+    <div> una parte generica di una pagina, può essere un contenitore di altro</div>
+    <!-- riscrivo quello che si scrive online -->
+
+    <div>
+        <h3>div</h3>
+        <hr> 
+        <span> è un contenitore genirico, un elemento di blocco, cioè di tipo block level element</span>
+        <pre>
+            <code>
+                &ltdiv>
+                    &lt;main>
+                        &ltarticle>
+                            &lth1>Glossario&lt/h1>
+                        &lt;/article>
+                        &lt;button>
+                            Cliccami
+                        &lt;button>
+                    &lt/main>
+                &lt/div>
+            </code>
+        </pre>
+    </div>
+
+    <pre>
+        <h3>body</h3>
+        <hr>
+        <span> è il corpo del documento, la parte visibile</span>
+        <code>
+            &ltbody>
+                &ltdiv>
+
+                    &lt;main>
+                        &ltarticle>
+                            &lth1>Glossario&lt/h1>  
+                        &lt;/article>
+                                &lt;button>
+                                    Cliccami
+                                &lt;button>
+                    &lt/main>
+                &lt/div>
+            &lt/body>
+        </code>
+    </pre>
+    <div>
+        <h3>span</h3>
+        <hr>
+        <span> è un contenitore generico di tipo in line</span>
+        <pre>
+            <code>
+                &ltbody>
+                    &ltdiv>
+                        &lt;main>
+                            &ltarticle>
+                                &lth1>Glossario&lt/h1>  
+                             &lt;/article>
+                            &lt;button>
+                                    Cliccami
+                            &lt;button>
+                        &lt/main>
+                    &lt/div>
+                &lt/body>
+            </code>
+        </pre>
+    </div>
+
+            <div>
+                <h3>section</h3>
+                <hr>
+                <span>il section è un contenitore semantico che indica una sezione</span>
+                <pre>
+                    <code>
+                        &ltsection>
+                            &ltdiv>
+                                &lt;main>
+                                    &ltarticle>
+                                        &lth1>Glossario&lt/h1>  
+                                    &lt;/article>
+                                    &lt;button>
+                                        Cliccami
+                                    &lt;button>
+                                &lt/main>
+                            &lt/div>
+                        &lt/secion>  
+                    </code>
+                </pre>
+            </div>
+            <div>
+                 <h2>Button</h2>
+                <hr>
+                <button type="button">clicca</button>
+                <button type="button">♥</button>
+                <p>questo è un tag per creare un bottone cliccabile sulla pagina</p>
+
+
+            </div>
+                <div class="input">
+                    <h2>tag: Input</h2>
+                    <hr>
+                    <p>si tratta di un tag utilizzato per creare delle interazione con il server. <br> per creare dei
+                        incontrolli interattivi <br> funziona insieme a delle specifiche che individuano il tipo di
+                        controllo-relazione che si vuole creare</p>
+                    <label for="name">Nome da 7 a 10 caratteri</label>
+                    <input type="text" id="name" requised minlength="7" maxlength="10">
+                    <br>
+                    <hr>
+                </div>
+
+                <div class="input_button">
+                    <input type="button" value="clicaci sopra e scopri">
+                    <p>al tag input se si aggiunge " type="button" si crea un bottone che può essere stilizzato con il
+                        css: <br> si possono applicare attributi al pulsante stesso, e anche con l'uso delle pseudo
+                        classi :hover :active determinare rispettivamente lo stile del pulsante visitato o in stato di
+                        pressione</p>
+                    <hr>
+                </div>
+
+                <div class="input_checkbox">
+                    <fieldset>
+                        <legend>Scegli il pilota di F1 che preferisci</legend>
+                        <div>
+                            <input type="checkbox" id="Senna" name="Senna">
+                            <label for="Senna">Senna</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="Prost" name="Prost">
+                            <label for="Prost">Prost</label>
+                        </div>
+                    </fieldset>
+                    <p>Questo tag ha una sintassi specifica: si una un tag "fieldset" che funge da contenitore; <br> un
+                        tag "legend" che riporta la scritta descrittiva della selezione in linea con la cornice <br>poi
+                        si creano un "div" per ogni casella che si vuole creare con il solito tag "lebel" (vedi il mio
+                        html) <br></p><hr>
+                </div>
+                <div class="color">
+                    <h3>color</h3>
+                    <p>Scegli il tuo colore:</p>
+                    <div>
+                        <input type="color" id="cars" name="cars"
+                            value="#ff00ff">
+                        <label for="cars">Cars</label>
+                    </div>
+                    <div>
+                        <input type="color" id="bycicle" name="bycile"
+                                value="#ffff00">
+                        <label for="bycicle">Bycicle</label>
+                    </div>
+                    <p>con il type "color si creano questi selettori di colori. i colori si impostano nel codice html attraverso i valori esadecimali <a href="https://toolset.mrw.it/html/colori-del-web.html">colori</a>. <br>
+                     ci sono attributi come "for" e "id" che si richiamano a vicenda e "name" (che devo vedere bene a che serve)</p>
+                     <hr>
+                </div>
+                <div>
+                    <label for="start">Scegli la tua data:</label>
+
+                    <input type="date" id="start" name="trip-start"
+                        value="1977-04-21"
+                        min="1970-01-01" max="2023-12-31">
+                        <p>qui abbimo il type "date" un selettore di date, nel css si puo impostare il display block e il font per il label </p>
+                        <hr>
+                </div>
+                <div>
+                    <label for="meeting-time">Scegli il momento del tuo appuntamento:</label>
+
+                        <input type="datetime-local" id="meeting-time"
+                            name="meeting-time" value="2018-06-12T19:30"
+                        min="2018-06-07T00:00" max="2018-06-14T00:00">
+                </div>
+
+                <div>
+                    <h2>Label-Select-Option</h2><hr>
+                    <p>il Tag label si riferisce a una intestazione che si affianca ad un elemento interattivo, come in questo caso al select, grazie all'associazione tra "for" di label e  "id" dell'elemento da associare
+                        <br>
+                        il tag "selelct" crea un menu di opzioni (option) che si caricano a tendina. Nel tag "option" si inseriscono le varie possbilità, si attribuisce anche un "value" che identifica e dovrebbe servire alla validazione della del valore inserito
+                    </p>
+                    <label for="pet-select">Scegli una parola:</label>
+
+                    <select id="pet-select">
+                        <option value="">--Scrivi qui--</option>
+                        <option value="casa">casa</option>
+                        <option value="cat">Cat</option>
+                        <option value="hamster">Hamster</option>
+                        <option value="parrot">Parrot</option>
+                        <option value="spider">Spider</option>
+                        <option value="goldfish">Goldfish</option>
+                        <option value="auto">auto</option>
+                    </select>
+                </div>
+                <div class="collegamento">
+                    <h1>Tag "a"</h1>
+                    <hr>
+                    <a href="https://flexboxfroggy.com/#it" target="blank">Cliccami</a>
+                    <p>crea il link, che cliccando rimanda in questo caso a una pagina esterna. <br>volendo si puo collegare, attraverso un id e un # a un punto della pagina presente <br> volendo si puó collegare l'id ald una sezione particolare della pagina, si possono creare diversi link che rimandano a sezioni particolari. <br> </p>
+                </div>
+
+
+                <div>
+                    <h1>Proviamo una Media Query - "screen"</h1>
+                    <hr>
+                    <nav class="prova-media">
+                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
+                        <a href="#">About</a>
+                        <a href="#">Span</a>
+                    </nav>
+                    <p> continua....</p>
+                </div>
+
+                <hr>
+                <h1>Gradient</h1>
+                <p>questa propieta css si applica in questo caso al background del div sottostante <br>
+                    continua...
+                </p>
+
+                <div id="gradiend">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet repellendus fugit repellat placeat, consequuntur animi magnam alias voluptas. Deleniti natus sit explicabo tempora in nisi repellat fugiat sed aliquam quam!
+                </div>
+
+
+
+
+
+</body>
+
+</html>
