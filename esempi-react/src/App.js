@@ -1,3 +1,4 @@
+import { Fetch } from './components/fetch';
 import logo from './logo.svg';
 import './App.css';
 
@@ -18,6 +19,7 @@ function App() {
           Learn React
         </a>
       </header>
+      <Fetch />
     </div>
   );
 }
