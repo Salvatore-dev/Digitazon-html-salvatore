@@ -1,0 +1,16 @@
+Semplice: scrivere un componente che rappresenti un input text, quando l'input e' vuoto oppure ha dentro solo dei numeri, oppure solo della punteggiatura, deve avere il bordo rosso.
+Quando la pagina carica non deve subito partire dal rosso, ma arrivarci solo dopo che l'utente ha scritto qualcosa.
+
+Meno semplice: scrivere un componente che rappresenti una TODO list prendendo gli elementi della lista da questo endpoint: https://jsonplaceholder.typicode.com/todos
+Ogni componente deve avere una checkbox, se la checkbox viene flaggata il componente finisce in fondo alla lista e diventa piu' opaco
+
+Terzo : Utilizzo di librerie non viste in classe: si richiede di creare una applicazione React che sfrutti React Router.
+A sinistra deve esserci un menu di navigazione, e in centro il dettaglio del componente attuale, quando cliccate una voce del menu a sx, il dettaglio cambia.
+
+quarto (difficile):  scrivere un applicazione frontend che interroghi le api di gpt3, basta che ci sia la possibilita' di scrivere una domanda e ottenere una risposta. (come difficolta viene dopo il terzo)
+
+quinto (piu facile): Scrivere una applicazione che si avvicini piu' possibile al concetto di "ruota della fortuna", quindi deve esserci una "ruota" (che puo' anche non avere l'aspetto di una ruota, basta che si vedano diversi valori selezionati di volta in volta... per arrivare ad uno solo finale), e deve esserci uno storico dei valori usciti.
+
+sesto (per usare useeffect) @Student si richiede di creare un componente che sia la versione estremamente semplificata di una riga di Excel. Si devono creare n input dove n e' una prop, ogni qualvolta un input cambia si deve salvare nello stato:
+ * il numero totale di celle che hanno un valore al loro interno
+ * un array con tutti i valori nelle celle
