@@ -1,5 +1,5 @@
-.App {
- /* text-align: center;*/
+/* .App {
+ text-align: center;
 }
 
 .App-logo {
@@ -35,5 +35,20 @@
   to {
     transform: rotate(360deg);
   }
+} */
+/* 
+.container {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
+.casella {
+  border: 1px solid;
+  padding: 10px;
+  width: 40px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+} */

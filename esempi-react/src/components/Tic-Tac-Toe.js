@@ -27,6 +27,13 @@ export function Board() { // questo e l'elemtno che poi esporto
         setXIsNext(!xisNext) // risetto il bouleano ogni click alternando dunqu i segni
     }
 
+    function Reset () {
+        if (calculateWinner(squares)) {
+            setSquares(Array(9).fill(null)) 
+        }
+        
+    }
+
     const winner = calculateWinner(squares); // richiamo la funzione e assegno il suo valore alla variabile (vedi infondo per leggere la dichiarazione della funzione)
     let status;
     if (winner) {
@@ -53,12 +60,15 @@ export function Board() { // questo e l'elemtno che poi esporto
                 <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
                 <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
             </div>
+            <button onClick={Reset} >Reset</button>
         </>
 
 
     )
 
+
 }
+
 
 function calculateWinner(squares) {
     const lines = [
@@ -79,7 +89,8 @@ function calculateWinner(squares) {
         }
 
     }
-
+    // console.log(a);
+    // console.log(b);
+    // console.log(c);
     return null;
-
 }

@@ -14,3 +14,13 @@ quinto (piu facile): Scrivere una applicazione che si avvicini piu' possibile al
 sesto (per usare useeffect) @Student si richiede di creare un componente che sia la versione estremamente semplificata di una riga di Excel. Si devono creare n input dove n e' una prop, ogni qualvolta un input cambia si deve salvare nello stato:
  * il numero totale di celle che hanno un valore al loro interno
  * un array con tutti i valori nelle celle
+
+
+ ecco altri esercizi
+Semplice: scrivere un pulsante non cliccabile, quando l'utente ci arriva quasi sopra (come potete programmare questo "quasi"?) il pulsante si sposta in un punto random della pagina.
+
+
+Meno semplice: scrivere un componente che rappresenti un post su un forum, ci deve essere il post iniziale e sotto tutti i commenti.
+Il componente deve prendere in ingresso un id che e' l'id del post e da li generare tutto il codice html richiesto.
+Utilizzare questo url per prendere il post https://jsonplaceholder.typicode.com/posts/1
+Utilizzare questo url per prendere i commenti di un post https://jsonplaceholder.typicode.com/posts/1/comments 
