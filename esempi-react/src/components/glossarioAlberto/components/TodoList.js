@@ -4,7 +4,7 @@
 
 import { useState, useEffect } from 'react'
 
-export function TodoList() {
+export default function TodoList() {
   const [todos, setTodos] = useState([])
 
   useEffect(() => {

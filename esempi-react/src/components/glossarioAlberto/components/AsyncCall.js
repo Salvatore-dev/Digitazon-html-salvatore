@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 
-export function AsyncCall() {
+export default function AsyncCall() {
   const [products, setProducts] = useState([])
 
   useEffect(() => {

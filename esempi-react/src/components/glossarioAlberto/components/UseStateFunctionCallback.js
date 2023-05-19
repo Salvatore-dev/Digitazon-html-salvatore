@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 
-export function UseStateFunctionCallback() {
+export default function UseStateFunctionCallback() {
   const [content, setContent] = useState('')
   const [sum, setSum] = useState(0)
   const [ok, setOk] = useState(false)

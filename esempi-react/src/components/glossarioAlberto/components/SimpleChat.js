@@ -22,7 +22,7 @@ function Chat({ messages }) {
   )
 }
 
-export function SimpleChat() {
+export default function SimpleChat() {
   let [messages, setMessages] = useState([])
 
   function send(id, mex) {

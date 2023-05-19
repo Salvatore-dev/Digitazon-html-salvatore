@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export function UseStateAsyncNature() {
+export default function UseStateAsyncNature() {
   const [checked, setChecked] = useState(false)
 
   // use useEffect to avoid this problem

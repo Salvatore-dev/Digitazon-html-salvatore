@@ -1,7 +1,7 @@
 // Example of a possible refactoring on fetch as a component
 // not really useful but as an example
 
-export function RefactoringFetch() {
+export default function RefactoringFetch() {
 
     return (
       <div className="container">
@@ -10,6 +10,7 @@ export function RefactoringFetch() {
           url="https://fakestoreapi.com/products/categories"
           onFetched={(products) => console.log(products)}
         />
+        <p>vedi console</p>
       </div>
     )
   }

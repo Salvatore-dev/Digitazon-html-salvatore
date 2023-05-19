@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-export function DynamicInputs({ n = 5 }) {
+export default function DynamicInputs({ n = 5 }) {
   const tmpState = Array(n).fill('')
   const [values, setValues] = useState(tmpState)
   const filtered = values.filter(d => d != '')

@@ -17,7 +17,7 @@ import { useState } from 'react'
 //   )
 // }
 
-export function WhyUseState() {
+export default function WhyUseState() {
 
   // 1) useState
   const [count, setCount] = useState(0)

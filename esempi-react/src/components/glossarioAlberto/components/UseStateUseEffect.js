@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-export function UseStateUseEffect() {
+export default function UseStateUseEffect() {
   const [count, setCount] = useState(0)
 
   function onClick() {

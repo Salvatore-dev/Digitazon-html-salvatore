@@ -1,6 +1,6 @@
 // cleaner implementation with map over for loop
 
-export function WhyLoopingWithMap() {
+export default function WhyLoopingWithMap() {
     const arr = [1, 2, 3, 4, 5, 6]
   
     // 1st way

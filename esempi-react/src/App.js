@@ -7,31 +7,20 @@ import {TodoList} from './components/TodoList'
 import {ImputRed} from './components/borderRed'
 import {Chat} from './components/Chat'
 import { ImputHookCopy } from './components/HooksCopy';
+import ChatGpt from './esercizi/esercizioChatGpt'
 import { ImputHook } from './components/Hooks';
 import { Fetch } from './components/fetch';
 import logo from './logo.svg';
-import './App.css';
-import './simulazione-Esame/Router/Simil-simulazione.css'
+//import './components/glossarioAlberto/All.css'
+//import './App.css';
+//import './simulazione-Esame/Router/Simil-simulazione.css'
 import { SimulazioneEsameReact } from './simulazione-Esame/App-simulazione'
 import Simulazione  from './simulazione-Esame/Router/App-simulazione copy'
+import Glossario from './components/glossarioAlberto/HomeIndex' 
 
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
       {/* <Fetch /> */}
       {/* <ImputHook /> */}
       {/* <ImputHookCopy /> */}
@@ -40,9 +29,11 @@ function App() {
       {/* < TodoList /> */}
       {/* <Board /> */}
       {/* <SimulazioneEsameReact /> */}
-      <Simulazione/>
+      {/* <Simulazione/> */}
       {/* <RoutadellaFortuna/> */}
       {/* <DubleAsync /> */}
+      {/* <Glossario/> */}
+      <ChatGpt />
       {/* <SimilFetch url={'https://fakestoreapi.com/products/categories'} callback={(jason)=> console.log(jason)} /> */}
     </div>
   );

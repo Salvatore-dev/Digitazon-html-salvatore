@@ -14,7 +14,7 @@ function Category({ category }) {
   )
 }
 
-export function ProductColumns() {
+export default function ProductColumns() {
   const [categories, setCategories] = useState([])
 
   useEffect(() => {

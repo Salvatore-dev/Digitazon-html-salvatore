@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export function TooManyReRenders() {
+export default function TooManyReRenders() {
   const [which, setWhich] = useState(0)
 
   return (

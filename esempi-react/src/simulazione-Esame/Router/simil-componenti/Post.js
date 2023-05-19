@@ -10,7 +10,7 @@ export function Post({ id }) {
             setPost(json)
         }
         fetchpost()
-    }, [])
+    }, [id])
     //console.log(post);
 
     const [comments, setComments] = useState([])
@@ -21,7 +21,7 @@ export function Post({ id }) {
             setComments(json)
         }
         fetchcomments()
-    }, [])
+    }, [id])
 
     console.log(comments);
     return (

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 
-export function UseStateUseEffectWhy() {
+export default function UseStateUseEffectWhy() {
   const [inputA, setInputA] = useState('')
   const [inputB, setInputB] = useState('')
   const [ok, setOk] = useState()

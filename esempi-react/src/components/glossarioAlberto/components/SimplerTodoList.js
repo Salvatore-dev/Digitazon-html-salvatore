@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 
-export function SimplerTodoList() {
+export default function SimplerTodoList() {
   const [todo, setTodo] = useState('')
   const [todos, setTodos] = useState([])
 
