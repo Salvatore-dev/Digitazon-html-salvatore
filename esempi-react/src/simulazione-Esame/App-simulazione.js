@@ -1,4 +1,4 @@
-
+import "./Simulazione.css"
 import { Post } from "./componenti/Post";
 
 import { useState, useEffect } from "react";

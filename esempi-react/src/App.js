@@ -11,16 +11,16 @@ import ChatGpt from './esercizi/esercizioChatGpt'
 import { ImputHook } from './components/Hooks';
 import { Fetch } from './components/fetch';
 import logo from './logo.svg';
-//import './components/glossarioAlberto/All.css'
 //import './App.css';
-//import './simulazione-Esame/Router/Simil-simulazione.css'
 import { SimulazioneEsameReact } from './simulazione-Esame/App-simulazione'
 import Simulazione  from './simulazione-Esame/Router/App-simulazione copy'
 import Glossario from './components/glossarioAlberto/HomeIndex' 
+import Inputs from './esercizi/esercizioInputs'
+import EsameThirdModule from './Esame-react/EsameReact'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       {/* <Fetch /> */}
       {/* <ImputHook /> */}
       {/* <ImputHookCopy /> */}
@@ -33,7 +33,9 @@ function App() {
       {/* <RoutadellaFortuna/> */}
       {/* <DubleAsync /> */}
       {/* <Glossario/> */}
-      <ChatGpt />
+      {/* <ChatGpt /> */}
+      {/* <Inputs /> */}
+      <EsameThirdModule />
       {/* <SimilFetch url={'https://fakestoreapi.com/products/categories'} callback={(jason)=> console.log(jason)} /> */}
     </div>
   );

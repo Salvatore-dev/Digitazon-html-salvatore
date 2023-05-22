@@ -22,16 +22,18 @@ const ChatGpt = () => {
             temperature: 0.1
         });
         let chatGptAnswer = completion.data.choices[0].message
-        if (chatGptAnswer.content.includes('https://www.youtube.com%27%29/')) {
+
+        if (chatGptAnswer.content.includes('https://www.youtube.com')) {
             let splitted = chatGptAnswer.content.split(' ')
             let link = ''
             splitted.forEach(el => {
-                if (el.includes('https://www.youtube.com%27%29/')) link = el.replace('watch?v=', 'embed/')
+                if (el.includes('https://www.youtube.com/')) link = el.replace('watch?v=', 'embed/')
             });
             if (link.charAt(link.length - 1) === '.') link = link.slice(0, -1)
             setVideo(link)
         }
         setResponse(chatGptAnswer)
+        console.log(video);
     }
 return (
         <>
@@ -51,7 +53,9 @@ return (
                 <div className="chatGpt assistant" >{response.role}</div>
                 <div className="chatGpt response" >{response.content}</div>
             </div>
-            {video && (
+            <div style={{backgroundColor: "blue"}}>
+
+                {video && (
                 <iframe
                     width="600"
                     height="400"
@@ -59,6 +63,8 @@ return (
                     title="youtubeVideo"
                 ></iframe>
             )}
+            </div>
+            
         </>
     )
 }
