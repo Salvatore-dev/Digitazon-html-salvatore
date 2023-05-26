@@ -17,6 +17,7 @@ import Simulazione  from './simulazione-Esame/Router/App-simulazione copy'
 import Glossario from './components/glossarioAlberto/HomeIndex' 
 import Inputs from './esercizi/esercizioInputs'
 import EsameThirdModule from './Esame-react/EsameReact'
+import TestComponent from './esercizi/testComponent'
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
       {/* <ChatGpt /> */}
       {/* <Inputs /> */}
       <EsameThirdModule />
+      {/* <TestComponent /> */}
       {/* <SimilFetch url={'https://fakestoreapi.com/products/categories'} callback={(jason)=> console.log(jason)} /> */}
     </div>
   );

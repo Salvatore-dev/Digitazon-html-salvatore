@@ -40,6 +40,12 @@ html, body {
 .box-home img {
     width: 250px;
 }
+
+.pageProducts{
+    font-display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 .box-category{
     display: flex;
     flex-direction: column;
@@ -66,5 +72,7 @@ li {
 a {
     text-decoration: none;
     align-items: center;
+    color: black;
+    font-size: small;
 
 }

@@ -12,7 +12,6 @@ import Carrello from "./Carrello";
             <div className="search">
                 <input type="text" value={text} onChange={(e) => setText(e.target.value)} />
                 <button onClick={() => setInput(text)}>Cerca</button>
-
             </div>
         );
     }
@@ -38,7 +37,7 @@ import Carrello from "./Carrello";
             <nav className="navBar">
                 <ul>
                     {categories.map((e) => (
-                        <li><Link to={`/category/${e}`}>{e.toUpperCase()}</Link></li>
+                        <li><Link to={`/category/${e}`}>{e}</Link></li>
                     ))}
                 </ul>
             </nav>

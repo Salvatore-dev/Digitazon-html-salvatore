@@ -1,21 +1,22 @@
 import { useEffect, useState } from 'react';
 
-export default function PageCategory({category}) {
+export default function TestComponent({category = "tops"}) {
 
-    const [categoria, setCategoria] = useState([])
+    const [list, setList] = useState([])
     useEffect(() => {
         async function fetchproduct() {
-            let res = await fetch(`https://dummyjson.com/products/category/${category}`)
+            let res = await fetch(`https://dummyjson.com/products/category/smartphones`)
             let json = await res.json() 
             const {products} = json
-            setCategoria(products)
+            setList(products)
         }
         fetchproduct()
-    }, [category])
-
+    }, [])
+    console.log(list);
     return(
-        <div className='pageProducts'>
-            {categoria.map((e)=>(
+        <>
+            ciao
+            {list.map((e)=>(
                 <div className='box-category' >
                     <h4>{e.brand}</h4>
                     <h6>{e.title}</h6>
@@ -25,7 +26,7 @@ export default function PageCategory({category}) {
 
                 </div>
             ))}
-        </div>
+        </>
     )
     
 }
