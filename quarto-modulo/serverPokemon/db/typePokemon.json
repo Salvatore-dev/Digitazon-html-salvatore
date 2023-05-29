@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "type": "Grass"
+    },
+    {
+        "id": 2,
+        "type": "Fire"
+    },
+    {
+        "id": 3,
+        "type": "Water"
+    },
+    {
+        "id": 4,
+        "type": "Bug"
+    },
+    {
+        "id": 5,
+        "type": "Normal"
+    },
+    {
+        "id": 6,
+        "type": "Electric"
+    },
+    {
+        "id": 7,
+        "type": "Rock"
+    },
+    {
+        "id": 8,
+        "type": "Ground"
+    },
+    {
+        "id": 9,
+        "type": "Fly"
+    },
+    {
+        "id": 10,
+        "type": "Poison"
+    }
+]

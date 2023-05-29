@@ -1,8 +1,10 @@
-const express = require('express')
+import express  from 'express'
 const app = express()
 const port = 3000
+import  bodyParser from 'body-parser'
+app.use(bodyParser.json())
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => {n
   res.send('Hello World!')
 })
 
