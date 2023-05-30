@@ -41,9 +41,7 @@ export const get = (req, res) => {
 }
 
 export const getAll = (req, res) => {
-  // deve restituire solo i cancelled = true
-
-  let 
+  // deve restituire solo i cancelled = false
 
   res.send(users)
 }
