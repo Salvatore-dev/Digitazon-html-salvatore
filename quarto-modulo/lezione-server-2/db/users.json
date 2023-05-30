@@ -1,0 +1,44 @@
+{
+  "1": {
+    "name": "John",
+    "surname": "Smith",
+    "cancelled": false,
+    "hobbeis": "soccer"
+  },
+  "2": {
+    "name": "Marie",
+    "surname": "Curie",
+    "cancelled": false,
+    "hobbeis": "soccer"
+  },
+  "3": {
+    "name": "Alexander",
+    "surname": "Hamilton",
+    "cancelled": true,
+    "hobbeis": "soccer"
+  },
+  "4": {
+    "name": "Ada",
+    "surname": "Lovelace",
+    "cancelled": false,
+    "hobbeis": "soccer"
+  },
+  "5": {
+    "name": "Albert",
+    "surname": "Einstein",
+    "cancelled": true,
+    "hobbeis": "soccer"
+  },
+  "6": {
+    "name": "Jane",
+    "surname": "Goodall",
+    "cancelled": false,
+    "hobbeis": "soccer"
+  },
+  "7": {
+    "name": "Nelson",
+    "surname": "Mandela",
+    "cancelled": false,
+    "hobbeis": "soccer"
+  }
+}
