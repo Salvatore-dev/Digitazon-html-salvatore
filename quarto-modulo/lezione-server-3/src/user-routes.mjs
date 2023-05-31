@@ -5,6 +5,8 @@ import axios from "axios"
 
 const DB_PATH = './db/users.json'
 
+const myServerKey = "Salvo"
+
 let NEXT = Object
   .keys(users)
   .reduce((biggest, id) => {
@@ -29,7 +31,7 @@ export const create = async (req, res) => {
       return {}
     }
   }
-
+  console.log(req.headers);
   let result = await callUser(NEXT)
   users[NEXT] = { ...req.body, ...result }
 
@@ -72,36 +74,64 @@ export const search = (req, res) => {
 }
 
 export const update = async (req, res) => {
-  let user = users[req.params.id]
-  if (user) {
-    let newUser = { ...user, ...req.body }
-    users[req.params.id] = newUser
-    await fs.writeFile(DB_PATH, JSON.stringify(users, null, '  '))
-    res.send(newUser)
-  } else {
+
+  if (req.headers.authorization === myServerKey) {
+      let user = users[req.params.id]
+    if (user) {
+      let newUser = { ...user, ...req.body }
+      users[req.params.id] = newUser
+      await fs.writeFile(DB_PATH, JSON.stringify(users, null, '  '))
+      res.send(newUser)
+    } else {
+      res
+        .status(200)
+        .send({
+          data: {},
+          error: true,
+          message: 'user not found'
+        })
+    }
+  } else{
     res
-      .status(200)
-      .send({
-        data: {},
-        error: true,
-        message: 'user not found'
-      })
+    .status(401)
+    .send({
+      data: {},
+          error: true,
+          message: "Sorry, you don't have authorization"
+    })
   }
+  
 }
 
 export const remove = async (req, res) => {
-  let user = users[req.params.id]
-  if (user) {
-    delete users[req.params.id]
-    await fs.writeFile(DB_PATH, JSON.stringify(users, null, '  '))
-    res.status(200).end()
-  } else {
+
+
+  //console.log(req.headers.authorization);
+
+  if (req.headers.authorization === myServerKey) {
+      let user = users[req.params.id]
+    if (user) {
+      delete users[req.params.id]
+      await fs.writeFile(DB_PATH, JSON.stringify(users, null, '  '))
+      res.status(200).end()
+    } else {
+      res
+        .status(200)
+        .send({
+          data: {},
+          error: true,
+          message: 'user not found'
+        })
+    }
+
+  }else{
     res
-      .status(200)
-      .send({
-        data: {},
-        error: true,
-        message: 'user not found'
-      })
+    .status(401)
+    .send({
+      data: {},
+          error: true,
+          message: "Sorry, you don't have authorization"
+    })
   }
+  
 }
