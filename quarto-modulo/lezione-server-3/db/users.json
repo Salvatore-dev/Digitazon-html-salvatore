@@ -1,0 +1,79 @@
+{
+  "1": {
+    "name": "Emma",
+    "surname": "Davis",
+    "username": "Gioco45"
+  },
+  "2": {
+    "name": "Michael",
+    "surname": "Smith",
+    "username": "mor_2314",
+    "email": "morrison@gmail.com",
+    "password": "83r5^_",
+    "address": "kilcoole, Lovers Ln, 7267"
+  },
+  "3": {
+    "name": "Raffael",
+    "surname": "White",
+    "username": "kevinryan",
+    "email": "kevin@gmail.com",
+    "password": "kev02937@",
+    "address": "Cullman, Frances Ct, 86"
+  },
+  "4": {
+    "name": "Rovert",
+    "surname": "Room",
+    "username": "donero",
+    "email": "don@gmail.com",
+    "password": "ewedon",
+    "address": "San Antonio, Hunters Creek Dr, 6454"
+  },
+  "5": {
+    "name": "Sophia",
+    "surname": "Lee",
+    "username": "derek",
+    "email": "derek@gmail.com",
+    "password": "jklg*_56",
+    "address": "san Antonio, adams St, 245"
+  },
+  "6": {
+    "name": "Daniel",
+    "surname": "Clark",
+    "username": "david_r",
+    "email": "david_r@gmail.com",
+    "password": "3478*#54",
+    "address": "el paso, prospect st, 124"
+  },
+  "7": {
+    "name": "Matthew",
+    "surname": "Taylor",
+    "username": "snyder",
+    "email": "miriam@gmail.com",
+    "password": "f238&@*$",
+    "address": "fresno, saddle st, 1342"
+  },
+  "8": {
+    "name": "Olivia",
+    "surname": "Anderson",
+    "username": "hopkins",
+    "email": "william@gmail.com",
+    "password": "William56$hj",
+    "address": "mesa, vally view ln, 1342"
+  },
+  "9": {
+    "name": "Michael",
+    "surname": "Johnson",
+    "username": "kate_h",
+    "email": "kate@gmail.com",
+    "password": "kfejk@*_",
+    "address": "miami, avondale ave, 345"
+  },
+  "10": {
+    "name": "David",
+    "surname": "Brown",
+    "username": "jimmie_k",
+    "email": "jimmie@gmail.com",
+    "password": "klein*#%*",
+    "address": "fort wayne, oak lawn ave, 526"
+  }
+}

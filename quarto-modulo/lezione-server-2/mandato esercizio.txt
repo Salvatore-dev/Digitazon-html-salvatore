@@ -1,0 +1,14 @@
+Fare in modo che le delete non cancellino mai i record dai database.
+Prevedere un attributo in piu' per ogni risorsa, ad esempio "cancelled",
+
+che permetta di ignorare la risorsa per ogni chiamata successiva.
+
+Ad esempio
+
+{
+  name: "Marie, surname: "Curie", cancelled: true
+}
+
+id: 1
+GET /users/1
+{ error: true, message: 'user not found', data: {}}
