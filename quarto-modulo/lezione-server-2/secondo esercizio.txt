@@ -1,6 +1,6 @@
  Partendo dal server che abbia almeno le rotte dell'utente:
 
- * quando viene creato un utente tramite POST si deve fare una GET a questo indirizzo https://fakestoreapi.com/users/1, utilizzando l'id corretto, e completare tutti i campi dell'oggetto utente con cio' che si trova nella risposta dell'API.
+ * quando viene creato un utente tramite POST si deve fare una GET a questo indirizzo https://fakestoreapi.com/users/1, utilizzando l'id corretto, e completare tutti i campi dell'oggetto utente con cio' che si trova nella risposta dell'API. (fatto)
 
 Se l'utente con quell'id non c'e' nelle fakestoreapi semplicemente lo lasciate con i dati che ha POSTato l'utente, quindi per come abbiamo visto fino ad ora solo con name e username
 
