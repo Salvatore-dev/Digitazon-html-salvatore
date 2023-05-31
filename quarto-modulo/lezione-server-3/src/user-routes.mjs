@@ -1,6 +1,8 @@
 import fs from 'node:fs/promises'
 import users from '../db/users.json' assert { type: 'json' }
 
+import axios from "axios"
+
 const DB_PATH = './db/users.json'
 
 let NEXT = Object
@@ -12,6 +14,30 @@ export const create = async (req, res) => {
   NEXT++
   users[NEXT] = req.body
 
+
+  async function callUser (id) {
+    let response = await axios.get(`https://fakestoreapi.com/users/${id}`)
+    return response.data
+  }
+
+   let UpData = await callUser(NEXT)
+   //console.log(prova);
+  
+ 
+
+    let upUser = {
+     "username" : UpData.username,
+     "email" : UpData.email,
+     "password" : UpData.password,
+     "address" : UpData.address.city + ", " + UpData.address.street + ", " + UpData.address.number
+   }
+
+  users[NEXT] = { ...users[NEXT], ...upUser }
+   
+   
+
+   
+ 
   // never use sync, go the async way
   // fs.writeFileSync(DB_PATH, JSON.stringify(users, null, '  '))
 

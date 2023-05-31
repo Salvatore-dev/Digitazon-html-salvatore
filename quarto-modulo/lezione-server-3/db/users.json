@@ -1,0 +1,50 @@
+{
+  "1": {
+    "name": "John",
+    "surname": "Smith"
+  },
+  "2": {
+    "name": "Marie",
+    "surname": "Curie"
+  },
+  "3": {
+    "name": "Carlo",
+    "surname": "Rossi"
+  },
+  "4": {
+    "name": "Carlo",
+    "surname": "Rossini"
+  },
+  "5": {
+    "name": "Giovanni",
+    "surname": "Rossini"
+  },
+  "6": {
+    "name": "Carlo",
+    "surname": "Bianche"
+  },
+  "7": {
+    "name": "Carlo",
+    "surname": "Bianchini"
+  },
+  "8": {
+    "name": "Carlo",
+    "surname": "Bianchini"
+  },
+  "9": {
+    "name": "Michael",
+    "surname": "Nigio",
+    "username": "kate_h",
+    "email": "kate@gmail.com",
+    "password": "kfejk@*_",
+    "address": "miami, avondale ave, 345"
+  },
+  "10": {
+    "name": "Michele",
+    "surname": "Nigione",
+    "username": "jimmie_k",
+    "email": "jimmie@gmail.com",
+    "password": "klein*#%*",
+    "address": "fort wayne, oak lawn ave, 526"
+  }
+}
