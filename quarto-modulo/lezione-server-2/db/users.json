@@ -3,42 +3,45 @@
     "name": "John",
     "surname": "Smith",
     "cancelled": false,
-    "hobbeis": "soccer"
+    "address": "",
+    "hobbies": "manga"
   },
   "2": {
     "name": "Marie",
     "surname": "Curie",
     "cancelled": false,
-    "hobbeis": "soccer"
+    "address": "",
+    "hobbies": ""
   },
   "3": {
     "name": "Alexander",
     "surname": "Hamilton",
-    "cancelled": true,
-    "hobbeis": "soccer"
+    "cancelled": true
   },
   "4": {
     "name": "Ada",
     "surname": "Lovelace",
     "cancelled": false,
-    "hobbeis": "soccer"
+    "address": "",
+    "hobbies": ""
   },
   "5": {
     "name": "Albert",
     "surname": "Einstein",
-    "cancelled": true,
-    "hobbeis": "soccer"
+    "cancelled": true
   },
   "6": {
     "name": "Jane",
     "surname": "Goodall",
     "cancelled": false,
-    "hobbeis": "soccer"
+    "address": "",
+    "hobbies": ""
   },
   "7": {
     "name": "Nelson",
     "surname": "Mandela",
     "cancelled": false,
-    "hobbeis": "soccer"
+    "address": "",
+    "hobbies": ""
   }
 }
