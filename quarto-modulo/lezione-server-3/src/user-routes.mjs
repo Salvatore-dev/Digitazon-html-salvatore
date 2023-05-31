@@ -14,34 +14,38 @@ export const create = async (req, res) => {
   NEXT++
   users[NEXT] = req.body
 
+  console.log("\n" + NEXT + "\n");
 
   async function callUser (id) {
-    let response = await axios.get(`https://fakestoreapi.com/users/${id}`)
-    return response.data
+    const response = await axios.get(`https://fakestoreapi.com/users/${id}`)
+    const UpData = response.data
+    //console.log("\n" + JSON.stringify(UpData, null, '  ') + "\n");
+    if (UpData) {
+          let upUser = {
+          "username" : UpData.username,
+          "email" : UpData.email,
+          "password" : UpData.password,
+          "address" : UpData.address.city + ", " + UpData.address.street + ", " + UpData.address.number
+        }
+         return upUser
+      } else {
+        return {}
+      }
   }
 
-   let UpData = await callUser(NEXT)
-   //console.log(prova);
-  
- 
+   let result = await callUser(NEXT)
 
-    let upUser = {
-     "username" : UpData.username,
-     "email" : UpData.email,
-     "password" : UpData.password,
-     "address" : UpData.address.city + ", " + UpData.address.street + ", " + UpData.address.number
-   }
-
-  users[NEXT] = { ...users[NEXT], ...upUser }
+   console.log(result);
    
-   
-
-   
+    users[NEXT] = { ...users[NEXT], ...result }
+    console.log(users[NEXT]);
  
   // never use sync, go the async way
   // fs.writeFileSync(DB_PATH, JSON.stringify(users, null, '  '))
 
   await fs.writeFile(DB_PATH, JSON.stringify(users, null, '  '))
+
+  console.log(users[NEXT]);
   res
     .status(201)
     .send({
