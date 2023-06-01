@@ -9,12 +9,17 @@ app.use(bodyParser.json()) //va insieme al precedente
 import * as user from './user-routes.mjs' // si importano tutti gli elementi dal path e si da loro il nome user attraverso "as"
 import * as todo from './todo-routes.mjs' // come sopra da file diverso
 
+
 app.get('/users', user.getAll) // chiamata get (read) si danno due parametri, una path (la rotta, che e una convensione, l'indirizzo dove si fa quella chiamata), e la funzione getAll che legata all'import "as user"
 app.get('/users/search', user.search)
 app.get('/users/:id', user.get) // in particolare vedere il path, :id e considerata una variabile, si accede al percorso users/{id} dove id è un numero che corrisponde all'elemento con id desiderato
 app.put('/users/:id', user.update) // chiamatu put (update) si aggiorna un elemento che si trova la path specifico, contrassegnato con id
 app.delete('/users/:id', user.remove) // chiamata delete (delete), si cancella l'elemento associato alla rotta specifica
 app.post('/users', user.create) // chiamata post (create) , crea un elemento nuovo nella risorsa users, in questo caso esiste necessita di assegnare un id nuovo ed univoco, lastid + 1 (per questo vedi implementazione della funzione create)
+
+app.post('/users/registred', user.signIn)
+//app.get('/users/registred/login', user.logIn) // sto pensando a una query string { ..?username="pinco"&password="pallino"}
+
 
 // ecco dunque un esempio di CRUD (C = create [post]; R = read[get]; U = update[put]; D = delete [delete])
 
