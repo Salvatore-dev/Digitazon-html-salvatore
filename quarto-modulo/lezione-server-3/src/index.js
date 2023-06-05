@@ -18,7 +18,8 @@ app.delete('/users/:id', user.remove) // chiamata delete (delete), si cancella l
 app.post('/users', user.create) // chiamata post (create) , crea un elemento nuovo nella risorsa users, in questo caso esiste necessita di assegnare un id nuovo ed univoco, lastid + 1 (per questo vedi implementazione della funzione create)
 
 app.post('/users/registred', user.signIn)
-//app.get('/users/registred/login', user.logIn) // sto pensando a una query string { ..?username="pinco"&password="pallino"}
+app.get('/users/registred/login', user.logIn) // sto pensando a una query string { ..?username="pinco"&password="pallino"}
+app.get('/users/registred/:id/session', user.getSessionUser)
 
 
 // ecco dunque un esempio di CRUD (C = create [post]; R = read[get]; U = update[put]; D = delete [delete])

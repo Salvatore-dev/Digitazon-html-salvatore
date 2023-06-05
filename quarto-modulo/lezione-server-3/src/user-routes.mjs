@@ -144,85 +144,141 @@ export const remove = async (req, res) => {
 
 /// esercizio 2
 
-export const signIn = async (req, res) => {
+export const signIn = async (req, res) => { // distinguere singUp e signIn // piu indicato signUp
   IdSign++
 
-  // DB_PATH_SIGN
+  const addUser = {
+    logged: false
+  }
 
-  // usersSign // nome oggetto
+  let UsersNames = Object.values(usersSign).map(us => us.username) // cosi ottengo un array di username // in questo codice faccio 2 cicli si puo migliorare vedei riga 159 // magari posso usare una filter // oppure ordinare l'array ma ... // creare una mappa (oggetto dove ci sono solo gli username{"username": true}) che contiene solo chiavi che sono username che ha come chiavi lo username e tenere sincronizzati gli elementi serve per velocizzare la ricerca quindi il controllo dell'esistenza username
 
-  // abbiamo un id di riferimento
-  // dobbiamo tener conto dello stesso username se e uguale restituire un messaggio che specifica il problema
+  //console.log("\n" + UsersNames + "\n");
+  //console.log(UsersNames.includes(req.body.username));
 
-  // se l'utente e gia registrato? 
-
-  //console.table(Object.values(usersSign)[0].username);
-
-  let UsersNames = Object.values(usersSign)
-
-  console.log("\n" + UsersNames + "\n");
-
-  if (UsersNames.length > 0) {
-    for (let i = 0; i < UsersNames.length; i++) {
-      const usName = UsersNames[i].username
-      // console.log("\n" + usName + "\n");
-      // console.log("\n" + typeof usName + "\n");
-      // console.log("\n" + req.body + "\n");
-
-      if (!usName == req.body.username) {
-        usersSign[IdSign] = { ...req.body }
-        res
-        .status(200)
-        .send({
-          message : "utente creato"
-        })
-        await fs.writeFile(DB_PATH_SIGN, JSON.stringify(usersSign, null, '  '))
-      }
-    }
-    console.log(usersSign[IdSign]);
-
+  if (!UsersNames.includes(req.body.username)) {
+    usersSign[IdSign] = { ...req.body, ...addUser }
     res
-      .send(UsersNames)
-      .status(203)
-  // } else{
-  //   usersSign[IdSign] = { ...req.body }
-  //   res
-  //   .status(202)
-  //   .send({
-  //     message : "utente creato"
-  //   })
-
-  //   await fs.writeFile(DB_PATH_SIGN, JSON.stringify(usersSign, null, '  '))
-  // }
+      .status(201)
+      .send({
+        data: {
+          id: IdSign // informazione utile da restituire l'utente
+        },
+        message: "utente creato"
+      })
+    await fs.writeFile(DB_PATH_SIGN, JSON.stringify(usersSign, null, '  '))
+  } else {
+    res
+      .status(409) // da 406 a 409 ... vedi differenze 409 la risorsa gia esiste
+      .send({
+        error: true,
+        message: "unsername gia presente, per favore riprova"
+      })
+  }
 }
 
 // DB_PATH_SIGN
 
-  // usersSign // nome oggetto
+// usersSign // nome oggetto
 
-  // export const logIn = async (req, res) => {
+export const logIn = async (req, res) => { // questa funzione si occupa del login di un utente ok
 
-  //   let query = req.query
+  let query = req.query // mi prendo il contenuto della query, ci sono due parametri, username e passaword
+  //console.log(query);
+  const Keys = Object.keys(usersSign) // ottengo un array di chiavi dell'oggetto usersSign, sono id, necessari per l'identificazione dell utente
+  let dataToComplete = { // salvo la parte dati mancante la struttura dell'oggetto necessaria poi per il confronto // parte della soluzione che ho trovato un po vacillante, perche devo stare non devo accettare cambiamenti struttura dati che alterino il risultato del confronto
+    logged: false
+  }
+  const toFind = JSON.stringify({ ...req.query, ...dataToComplete }) // ripristino un userSign
+  //console.log(JSON.stringify(usersSign[Keys[3]]) === toFind); // verifico allo users specifico se viene letta la corrispondenza ok
+  //console.log(JSON.stringify(toFind));
+  //console.log(JSON.stringify(usersSign[Keys[3]]).includes(JSON.stringify(query.password))); // con includes non risponde come dovrebbe, se inserisco .password va bene ma se metto semplicemente query non va. si potrebbe implementare il controllo con due include username e passaword legati da &&, ma ho scelto altra strada
+  //console.log(JSON.stringify(query));
 
-  //   let filter = Object.values(usersSign)
-  //     .filter(n =>n.username === query.username && n.password === query.password)
+  let checkUser = Object.values(usersSign)
+    .filter(n => n.username === query.username && n.password === query.password) // verifico se nella query esiste lo username e la password altrimento ho un array vuoto
+  // console.log('---------------------');
+  // console.log(checkUser);
+  // console.log('---------------------');
 
-  //     console.log(filter);
+  // trovo l'id dellutente che si e loggato
+  let result = false // variabile dove ho memoria dell'id se user in elenco, parte da false
+  for (let i = 0; i < Keys.length; i++) { // itero su oggetto partendo da array di chiavi
+    const el = JSON.stringify(usersSign[Keys[i]]) // memorizzo i dati di uno user in una stringa
+    if (el === toFind) {
+      result = Keys[i] // confrontando le due stringhe se sono unguali mi prendo la chiave del users loggato altrimenti rimane false
+    }
+  }
+  //console.log(result);
+  if (result) { // 
+    usersSign[result].logged = true // essegno true a logged se trovo la chiave
+    await fs.writeFile(DB_PATH_SIGN, JSON.stringify(usersSign, null, '  ')) // procedo con la modifica del file
+    res
+      .status(200)
+      .send({
+        message: "utente loggato"
+      })
+  } else {
+    if (checkUser.length > 0) { // nel caso l'utente e gia loggato allora trovo la corrispondenza nei valori conun array che contiente l'oggetto username e password
+      res
+        .status(200)
+        .send({
+          message: "Sei gia loggato"
+        })
+    } else { // altrimenti rimane solo la possibilita che password o username siano sbagliati
+      res
+        .status(401) // non autorizzato
+        .send({
+          error: true,
+          message: "Spiacente, inserici username o password corretti"
+        })
+    }
+  }
 
-  //     if (filter.length>0) {
-  //       res
-  //       .status(200)
-  //       .send(
-  //         filter
-  //       )
-  //     } else {
-  //       res
-  //       .status(200)
-  //       .send({
-  //         message: "immetti username o password corretti"
-  //       })
-  //     }
-      
+}
 
+// DB_PATH_SIGN
 
-  // } 
+// usersSign // nome oggetto
+
+export const getSessionUser = async (req, res) => {
+
+  //console.log(req.params);
+  const user = usersSign[req.params.id]
+
+  //console.log(user);
+
+  // creo una funzione che mi slogga lutente
+  async function noLogged() {
+    user.logged = false
+    const result = { ...usersSign, ...user }
+    await fs.writeFile(DB_PATH_SIGN, JSON.stringify(result, null, '  '))
+
+  }
+  if (user) {
+    if (user.logged === true) {
+      setTimeout(noLogged, 60000)
+      res
+        .status(200)
+        .send({
+          data: { user },
+          message: "utente in sessione"
+        })
+    } else {
+      res
+        .status(200)
+        .send({
+          data: {},
+          error: true,
+          message: "utente non in sessione"
+        })
+    }
+  } else {
+    res
+      .status(200)
+      .send({
+        message: "utente inesistente"
+      })
+
+  }
+}
