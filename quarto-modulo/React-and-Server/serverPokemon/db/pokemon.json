@@ -1,0 +1,212 @@
+[
+    {
+        "id": 1,
+        "name": "Bulbasaur",
+        "evolution": "Ivysaur",
+        "image": "https://img.pokemondb.net/artwork/avif/bulbasaur.avif",
+        "typePokemon": 1
+    },
+    {
+        "id": 2,
+        "name": "Ivysaur",
+        "evolution": "Venusaur",
+        "image": "https://img.pokemondb.net/artwork/avif/ivysaur.avif",
+        "typePokemon": 1
+    },
+    {
+        "id": 3,
+        "name": "Venusaur",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/venusaur.avif",
+        "typePokemon": 1
+    },
+    {
+        "id": 4,
+        "name": "Charmander",
+        "evolution": "Charmeleon",
+        "image": "https://img.pokemondb.net/artwork/avif/charmander.avif",
+        "typePokemon": 2
+    },
+    {
+        "id": 5,
+        "name": "Charmeleon",
+        "evolution": "Charizard",
+        "image": "https://img.pokemondb.net/artwork/avif/charmeleon.avif",
+        "typePokemon": 2
+    },
+    {
+        "id": 6,
+        "name": "Charizard",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/charizard.avif",
+        "typePokemon": 2
+    },
+    {
+        "id": 7,
+        "name": "Squirtle",
+        "evolution": "Wartortle",
+        "image": "https://img.pokemondb.net/artwork/avif/squirtle.avif",
+        "typePokemon": 3
+    },
+    {
+        "id": 8,
+        "name": "Wartortle",
+        "evolution": "Blastoise",
+        "image": "https://img.pokemondb.net/artwork/avif/wartortle.avif",
+        "typePokemon": 3
+    },
+    {
+        "id": 9,
+        "name": "Blastoise",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/blastoise.avif",
+        "typePokemon": 3
+    },
+    {
+        "id": 10,
+        "name": "Caterpie",
+        "evolution": "Metapod",
+        "image": "https://img.pokemondb.net/artwork/avif/caterpie.avif",
+        "typePokemon": 4
+    },
+    {
+        "id": 11,
+        "name": "Metapod",
+        "evolution": "Butterfree",
+        "image": "https://img.pokemondb.net/artwork/avif/metapod.avif",
+        "typePokemon": 4
+    },
+    {
+        "id": 12,
+        "name": "Butterfree",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/butterfree.avif",
+        "typePokemon": 10
+    },
+    {
+        "id": 13,
+        "name": "Weedle",
+        "evolution": "Kakuna",
+        "image": "https://img.pokemondb.net/artwork/avif/weedle.avif",
+        "typePokemon": 4
+    },
+    {
+        "id": 14,
+        "name": "Kakuna",
+        "evolution": "Beedrill",
+        "image": "https://img.pokemondb.net/artwork/avif/kakuna.avif",
+        "typePokemon": 4
+    },
+    {
+        "id": 15,
+        "name": "Beedrill",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/beedrill.avif",
+        "typePokemon": 4
+    },
+    {
+        "id": 16,
+        "name": "Pidgey",
+        "evolution": "Pidgeotto",
+        "image": "https://img.pokemondb.net/artwork/avif/pidgey.avif",
+        "typePokemon": 9
+    },
+    {
+        "id": 17,
+        "name": "Pidgeotto",
+        "evolution": "Pidgeot",
+        "image": "https://img.pokemondb.net/artwork/avif/pidgeotto.avif",
+        "typePokemon": 9
+    },
+    {
+        "id": 18,
+        "name": "Pidgeot",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/pidgeot.avif",
+        "typePokemon": 9
+    },
+    {
+        "id": 19,
+        "name": "Rattata",
+        "evolution": "Raticate",
+        "image": "https://img.pokemondb.net/artwork/avif/rattata.avif",
+        "typePokemon": 5
+    },
+    {
+        "id": 20,
+        "name": "Raticate",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/raticate.avif",
+        "typePokemon": 5
+    },
+    {
+        "id": 21,
+        "name": "Spearow",
+        "evolution": "Fearow",
+        "image": "https://img.pokemondb.net/artwork/avif/spearow.avif",
+        "typePokemon": 9
+    },
+    {
+        "id": 22,
+        "name": "Fearow",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/fearow.avif",
+        "typePokemon": 9
+    },
+    {
+        "id": 23,
+        "name": "Ekans",
+        "evolution": "Arbok",
+        "image": "https://img.pokemondb.net/artwork/avif/ekans.avif",
+        "typePokemon": 10
+    },
+    {
+        "id": 24,
+        "name": "Arbok",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/arbok.avif",
+        "typePokemon": 10
+    },
+    {
+        "id": 25,
+        "name": "Pikachu",
+        "evolution": "Raichu",
+        "image": "https://img.pokemondb.net/artwork/avif/pikachu.avif",
+        "typePokemon": 6
+    },
+    {
+        "id": 26,
+        "name": "Raichu",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/raichu.avif",
+        "typePokemon": 6
+    },
+    {
+        "id": 27,
+        "name": "Sandshrew",
+        "evolution": "Sandslash",
+        "image": "https://img.pokemondb.net/artwork/avif/sandshrew.avif",
+        "typePokemon": 8
+    },
+    {
+        "id": 28,
+        "name": "Sandslash",
+        "evolution": null,
+        "image": "https://img.pokemondb.net/artwork/avif/sandslash.avif",
+        "typePokemon": 8
+    },
+    {
+        "id": 29,
+        "name": "Nidoran♀️",
+        "evolution": "Nidorina",
+        "image": "https://img.pokemondb.net/artwork/avif/nidoran-f.avif",
+        "typePokemon": 7
+    },
+    {
+        "id": 30,
+        "name": "Nidorina",
+        "evolution": "Nidoqueen",
+        "image": "https://img.pokemondb.net/artwork/avif/nidorina.avif",
+        "typePokemon": 7
+    }
+]

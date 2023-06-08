@@ -1,0 +1,30 @@
+{
+  "results": [],
+  "errors": [],
+  "info": {
+    "ENDPOINT_VERSION": "2.8"
+  },
+  "validversions": [
+    "CEI2008",
+    "DRB",
+    "LUZZI",
+    "NABRE",
+    "NVBSE",
+    "VGCL",
+    "BLPD"
+  ],
+  "validversions_fullname": {
+    "CEI2008": "Conferenza Episcopale Italiana|2008|it",
+    "DRB": "Douay–Rheims Challoner Revision|1752|en",
+    "LUZZI": "Riveduta - Luzzi|1924|it",
+    "NABRE": "New American Bible - Revised Edition|2011|en",
+    "NVBSE": "Nova Vulgata - Bibliorum Sacrorum Editio|1979|la",
+    "VGCL": "Vulgata Clementina|1592|la",
+    "BLPD": "Libro del Pueblo de Dios|2015|es"
+  },
+  "copyrightversions": [
+    "CEI2008",
+    "NABRE",
+    "BLPD"
+  ]
+}

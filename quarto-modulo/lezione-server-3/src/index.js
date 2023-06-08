@@ -1,6 +1,9 @@
 import express from 'express'  // qui si importa la libreria express, si usa una sintassi diversa rispetto alla default, (require) vedi jsonpack si inseririsce il type module
 const app = express()
-const port = 3000
+const port = 8000
+
+import cors from "cors"
+app.use(cors())
 
 import bodyParser from 'body-parser' // si importa questa libreria per parsare le stringhe nei post e nei put, si installa poi in terminale npm install body-parser
 app.use(bodyParser.json()) //va insieme al precedente
