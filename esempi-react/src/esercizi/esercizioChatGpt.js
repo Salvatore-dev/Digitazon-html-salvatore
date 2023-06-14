@@ -2,7 +2,8 @@ import { useState } from "react"
 import { Configuration, OpenAIApi } from "openai";
 //import './chatGpt.css';
 
-
+// import * as dotenv from 'dotenv' // nel caso abbimo un fil .env, installare anche npm install dotenv
+// dotenv.config();
 const Key = process.env.REACT_APP_API_KEY_CHAT_GPT
 
 const configuration = new Configuration({
@@ -14,6 +15,7 @@ const ChatGpt = () => {
     const [request, setRequest] = useState('')
     const [response, setResponse] = useState({})
     const [video, setVideo] = useState('')
+    
     async function chatGptRequest() {
         setVideo('')
         const completion = await openai.createChatCompletion({
