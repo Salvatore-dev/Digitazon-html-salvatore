@@ -1,0 +1,12 @@
+[
+  {
+    "id_articolo":1,
+    "titolo":"titolo 1",
+    "testo":"cioa ciao ciao"
+  },
+  {
+    "id_articolo":2,
+    "titolo":"titolo 2",
+    "testo":"Contenuto articolo 2"
+  }
+]

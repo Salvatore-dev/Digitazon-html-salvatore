@@ -1,0 +1,26 @@
+GET http://localhost:8000/lista_articoli
+
+
+###
+GET http://localhost:8000/articolo/1
+
+
+###
+POST http://localhost:8000/scrivi_articolo
+Content-Type: application/json
+
+{
+  "id_articolo": 2,
+  "titolo": "titolo 1",
+  "testo": "cioa ciao ciao"
+}
+
+###
+GET http://localhost:8000/leggi_articolo
+Content-Type: application/json
+
+{
+  "id_articolo": 2,
+  "titolo": "titolo 1",
+  "testo": "cioa ciao ciao"
+}
