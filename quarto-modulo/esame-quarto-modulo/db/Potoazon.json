@@ -1,0 +1,197 @@
+{
+  "vacanza_a_Roma": {
+    "name": "vacanza_a_Roma",
+    "photos": [
+      {
+        "nome": "foto1.jpg",
+        "data_creazione": "16/06/2023",
+        "hashtags": [
+          "#mare",
+          "#sunset",
+          "#vacanza"
+        ]
+      },
+      {
+        "nome": "foto2.jpg",
+        "data_creazione": "15/06/2023",
+        "hashtags": [
+          "#montagna",
+          "#neve",
+          "#paesaggio"
+        ]
+      },
+      {
+        "nome": "foto3.jpg",
+        "data_creazione": "14/06/2023",
+        "hashtags": [
+          "#città",
+          "#architettura",
+          "#notte"
+        ]
+      },
+      {
+        "nome": "foto4.jpg",
+        "data_creazione": "13/06/2023",
+        "hashtags": [
+          "#natura",
+          "#bosco",
+          "#sole"
+        ]
+      },
+      {
+        "nome": "foto5.jpg",
+        "data_creazione": "12/06/2023",
+        "hashtags": [
+          "#animale",
+          "#cane",
+          "#gioco"
+        ]
+      },
+      {
+        "nome": "foto6.jpg",
+        "data_creazione": "11/06/2023",
+        "hashtags": [
+          "#arte",
+          "#pittura",
+          "#colori"
+        ]
+      },
+      {
+        "nome": "foto7.jpg",
+        "data_creazione": "10/06/2023",
+        "hashtags": [
+          "#fiori",
+          "#primavera",
+          "#bellezza"
+        ]
+      },
+      {
+        "nome": "foto8.jpg",
+        "data_creazione": "09/06/2023",
+        "hashtags": [
+          "#sport",
+          "#tennis",
+          "#competizione"
+        ]
+      },
+      {
+        "nome": "foto9.jpg",
+        "data_creazione": "08/06/2023",
+        "hashtags": [
+          "#cibo",
+          "#pizza",
+          "#delizioso"
+        ]
+      },
+      {
+        "nome": "foto10.jpg",
+        "data_creazione": "07/06/2023",
+        "hashtags": [
+          "#viaggio",
+          "#avventura",
+          "#esplorazione"
+        ]
+      }
+    ],
+    "hashtags": [
+      "#mare",
+      "#sunset",
+      "#vacanza"
+    ],
+    "data-creazione": "16/6/2023"
+  },
+  "gloria-di-altri-tempi": {
+    "name": "gloria-di-altri-tempi",
+    "photos": [
+      null,
+      {
+        "nome": "foto2.jpg",
+        "data_creazione": "15/06/2023",
+        "hashtags": [
+          "#montagna",
+          "#neve",
+          "#paesaggio"
+        ]
+      },
+      {
+        "nome": "foto3.jpg",
+        "data_creazione": "14/06/2023",
+        "hashtags": [
+          "#città",
+          "#architettura",
+          "#notte"
+        ]
+      },
+      {
+        "nome": "foto4.jpg",
+        "data_creazione": "13/06/2023",
+        "hashtags": [
+          "#natura",
+          "#bosco",
+          "#sole"
+        ]
+      },
+      {
+        "nome": "foto5.jpg",
+        "data_creazione": "12/06/2023",
+        "hashtags": [
+          "#animale",
+          "#cane",
+          "#gioco"
+        ]
+      },
+      {
+        "nome": "foto6.jpg",
+        "data_creazione": "11/06/2023",
+        "hashtags": [
+          "#arte",
+          "#pittura",
+          "#colori"
+        ]
+      },
+      {
+        "nome": "foto7.jpg",
+        "data_creazione": "10/06/2023",
+        "hashtags": [
+          "#fiori",
+          "#primavera",
+          "#bellezza"
+        ]
+      },
+      {
+        "nome": "foto8.jpg",
+        "data_creazione": "09/06/2023",
+        "hashtags": [
+          "#sport",
+          "#tennis",
+          "#competizione"
+        ]
+      },
+      {
+        "nome": "foto9.jpg",
+        "data_creazione": "08/06/2023",
+        "hashtags": [
+          "#cibo",
+          "#pizza",
+          "#delizioso"
+        ]
+      },
+      {
+        "nome": "foto10.jpg",
+        "data_creazione": "07/06/2023",
+        "hashtags": [
+          "#viaggio",
+          "#avventura",
+          "#esplorazione"
+        ]
+      }
+    ],
+    "hashtags": [
+      "#mare",
+      "#sunset",
+      "#vacanza"
+    ],
+    "data-creazione": "12/12/2012",
+    "note": "mi sono divertito"
+  }
+}
