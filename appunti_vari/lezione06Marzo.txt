@@ -1,0 +1,546 @@
+                          INDICE
+1. Oggetti letterali e differenze tra questi oggetti e le mappe ( sottili ma ci sono).   
+2. Come questi oggetti vengono utilizzati per comporre la specifica JASON ( che è un formato di interscambio dati).
+3. Le date.
+                   
+                      PREMESSE
+Possiamo utilizzare due tipi di dato nuovi(sd) che mi permettono di potenziare il comportamento nativo del Javascript, sono le mappe e i set.
+Ho a disposizione anche i letterali oggetti che sono di fatto la stessa cosa delle mappe più alcune differenze ma mi permettono di andare a salvare all'interno della variabile una struttura che ha per chiavi delle stringhe e per valori dei valori. Come un array solo che al posto dei numeri ha le stringhe.
+
+
+
+<script>
+
+Da w3School : https://www.w3schools.com/js/js_objects.asp
+
+ESEMPIO da w3School:
+salvo nella variabile car tramite graffe una struttura composta da tre proprietà type model e color.
+(In javscript tutto è un oggetto).
+
+
+const car = {type:"Fiat", model:"500", color:"white"};
+                          
+          ESEMPIO da Riccardo:                      
+        const obj = {
+            
+            name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py']
+Questa è la stessa identica cosa che facevo con le mappe ma in questo caso non c'è un costruttore ma ho direttamente il letterale. Ricordo che il lettrale è la sintassi che definisce il tipo di dato all'interno del linguaggio di programmazione, se sono numeri sarà un letterale numerico, se sono ' aaaa  ' sono stringhe se è la keyword true o false sono booleani se ho le [] sono degli array se ho le {} sono degli oggeti. Ovviamente le graffe sono anche quelle che vanno a creare un nuovo blocco di codice ma ovviamente in questo caso ho la sintassi degli oggetti e creao l'oggetto. 
+Come accedo ai valori della mia struttura con il PUNTO (.)
+
+        console.log( obj.name + ' ' + obj.lastname );
+
+Ad esempio il console.log , da qualche parte avrò l'oggetto console che avrà al suo interno il metodo log , infatti io all'interno dell'oggetto posso creare dei metodi ovvero delle proprietà che hanno al loro interno delle funzioni!  
+
+const obj = {
+          // proprietà
+        name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py'],
+            age: 40,
+            
+            // metodi
+            greet: function() {
+                console.log('ciao')
+                }
+
+I metodi non sono altro che delle proprietà che hanno una fuznione come valore.
+
+Io posso andare a richiamre greet tramite l'oggetto in cui è definito quindi farò: 
+
+obj.greet()  e mi stamperà console.log('ciao').
+
+        STRUTTURA DELL'OGGETTO
+
+{
+    proprietà : valore1,
+    proprietà : valore2,
+    proprietà : valore3,
+}
+
+posso mettere quante proprietà voglio e così costruisco il mio oggetto. Il valore può essere qualsiasi cosa, un oggetto, un array, un valore.
+
+
+------------------------------------
+ 
+COME METTERE DEGLI OGGETTI COME PROPRIETA' DEI VALORI DEGLI OGGETTI.
+
+const obj = {
+            name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py'],
+            age: 40,
+            
+            // metodi
+            greet: function() {
+                console.log('ciao');
+            }
+            }
+
+Posso mettere un sotto oggetto :
+
+/ proprietà
+
+const obj = {
+        name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py'],
+            age: 40,
+            
+            // metodi
+            greet: function() {
+                console.log('ciao');
+            },
+
+            // sotto oggetti
+            colors: {
+                first: 'blue',
+                second: 'green'
+            }
+        }
+
+console.log(obj);
+
+Per accedere (un pò come un array di array ) alle proprietà devo accedere alle proprietà COLORS:
+
+console.log(obj.colors.first + ' ' + obj.colors.second);
+
+ 
+ 
+         
+------------------------------------
+Un oggetto dentro un oggetto è accessibile con il . non posso arrivarci in altro modo (name space come con le sottocartelle e l'uso delle / / ). 
+Vedi linea LINK1
+
+// proprietà
+
+            const obj = {
+            name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py'],
+            age: 40,
+            
+            // metodi
+            greet: function() {
+                console.log('ciao');
+            },
+
+            // oggetti
+ Questo è il nome del oggetto  --->      colors: {
+                first: 'blue',
+                second: 'green'
+            }
+        }
+
+        console.log(obj);
+
+linea LINK1       
+ console.log( obj.name + ' ' + obj.lastname );
+Similitudine con array:
+[
+    [n,n,n,n,n], collezione 0
+    [n,n,n,n,n] collezione 1 
+]
+Per indicare il numero uso l'INDICE
+Per indicare l'oggetto gli do un nome (indice), potrei avere anche delle funzioni o dei sotto oggetti. 
+
+Dove abita la persona?
+
+person {
+    name: string,
+    lastname: string,
+    age: number,
+    fn1: functiona address: {
+        city: string,
+        cap: number,
+        id: number,
+        country: 
+            name:string,
+            id:number
+      }
+     }
+    }
+
+person.address.country.name
+
+Questa è la path che ho per giungere in tutte le locazioni del mio oggetto.
+-----------------------------------
+
+Da dentro le funzioni posso andare a prendere i valori delle proprietà definite nell'oggetto
+
+Se volessi scrivere ciao sono Luigi Verdi? C'è la keyword THIS che rappresenta l'oggetto corrente, che è l'oggetto in cui è definita questa funzione, in questo caso 'obj' . 
+
+const obj = {
+            name: 'Luigi',
+            lastname: 'Verdi',
+            skills: ['js', 'php', 'py'],
+            age: 40,
+            
+            // metodi
+            greet: function() {
+                console.log('ciao, sono ' + this.name + ' ' + this.lastname);
+            },
+
+            // oggetti
+ Questo è il nome del oggetto  --->      colors: {
+                first: 'blue',
+                second: 'green'
+            }
+        }
+
+        console.log(obj);
+
+
+        obj.greet()
+
+        console.log(
+            obj.colors.first + ' ' + obj.colors.second
+        );
+------------------------------------
+Ricorda: l'unico tipo di dato che ti permettono di creare una AZIONE sono le funzioni.
+
+nomeoggetto.AZIONE
+nomeoggetto.funzione
+p1.printfullname
+
+const p1 = {
+            name: 'Mario',
+            lastname: 'Rossi',
+metodo --> printFullname: function() {
+                console.log('ciao, sono ' + this.name + ' ' + this.lastname)
+            }
+        }
+
+const p2 = {
+            name: 'Luigi',
+            lastname: 'Verdi',
+metodo --> printFullname: function() {
+                console.log('ciao, sono ' + this.name + ' ' + this.lastname)
+            }
+        }
+
+p1.printFullname() ---> stampa Mario Rossi
+
+p2.printFullname() ----> Stampa Luigi Verdi
+
+Se nel consol.log tocco i dati della struttura mi serve il this altrimenti se metto una stringa di merda no.
+
+
+  function fn( o ) {
+            o.printFullname()
+    }
+
+fn( p1 ) -->  stampa MR
+fn( p2 ) -->  stampa LV
+
+
+console.log( 'Queste sono le info di ' + o.name );
+
+Posso fare anche questo:
+
+function fn( o ) {
+o.printFullname()
+console.log( 'Queste sono le info di ' + o.name );
+
+console.log('--------------------');
+}
+
+fn( p1 ) Queste sono le info di M ...
+fn( p2 ) Queste sono le info di L ...
+
+Per richiamare una proprietà devo avere un contesto. Ho il contesto.proprietà, il contesto è l'oggetto e se è un oggetto avrà le sue proprietà.
+
+La funzione prende un oggetto, questo oggetto implica che abbia un metodo name un metodo printfull name segui:
+
+fn( p1 ) 
+fn( p2 )
+
+Come argomenti ho delle costanti che sono una struttura compatibile con la funzione (che fa azioni) che ho creato, le caratteristiche  es. di p1 sono che ha nomi, cognomi etc e la funzione che è uno scheletro aggiunge una stringa li dove sono presenti nomi e cognomi che scelgo.
+
+FINE TEORIA OGGETTI.
+
+______________________________________
+               
+
+                  JASON 
+ Come posso creare un file Jason?
+ Un file jason è un descrittore di dati. 
+ Posso scambiare dati dal client al server e viceversa.
+ Se mando una mail, clicco send..invito al server un oggetto javascript con delle proprietà con dei valori inseriti dall'utente. Come scambio dal front end - al back end con dei fil jason.. che sono degli oggetti javascript.
+ E' un formato di interscambio dati LEGGERO. 
+ E' auto descrittore.
+
+ ESEMPIO DI STRUTTURA JASON: 
+
+ non sono altro che degli oggetti javascript vai alla pagina DATI1.JASON.
+
+ SCRIVO QUI LA PAGINA .json:
+
+ [
+    {
+        "username": "Luigi Verdi",
+        "email": "lverdi@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    },
+
+    {
+        "username": "Peach Pink",
+        "email": "ppink@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    }
+]
+
+Con questo file passo dei dati da una orgine all'altra.
+
+Si comporta come un oggetto ma con delle regole sintattiche più restrittive ad esempio le stringhe devono essere per forza con le virgolette DOPPIE.
+
+Nell'oggetto che ho creato non ci sono variabili, l'oggetto contiene sono la struttura  del dato, cosi quando leggo da un programma lo leggo e vado a recuperare dal dato la mia struttura, non è linguaggio di programmazione mi serve solo per scrivere dati. 
+        
+Cosa vuol dire array di oggetti?
+Esempio:
+
+
+const ol = {x:10 , y:20}
+const o2 = {x:40 , y:20}
+const arr= []
+
+const arr= [ o1, o2]
+arr.forEach(function (el)) {
+    console.log(el.x + el.y)
+}
+
+Significa che nell'array posso mettere tutti i dati e se lo posso fare posso creare quello che ho scritto sopra.
+Se voglio iterarlo faccio array foreach gli passo una funziona che prende un elemento corrente che è un oggetto e faccio la somma dei suoi valori.
+Cosa vuol dire el?
+El è il PARAMETRO, quindi ogni volta questa funzione viene chiamata per tutti gli elementi degli array ed el è l'alias che uso per richiamarli, se avessi 100000 di dati ....mi serve un alias. 
+
+Questo serve per metterne mille :
+
+const arr= [ o1, o2 ... o1000]
+
+--------------------------------------
+
+Devo avere all'interno del mio linguaggio di programmazione la capacità di ANALIZZARE-SCOMPPORRE la mia struttura... PARSING.
+
+JSON.pare()
+
+Devo prendere una stringa che è in codice .json e questo riesce a riprodurla in rappresentazione oggetto javascript. Mi serve la stringa che rappresenta il jason e non un file. 
+POSSO aprire il file recuperare il contenuto e passarlo al JSON.pare() solo così funziona. Però non si fa lato front-end. L'unica cosa che posso fare è rappresentare l'oggetto sotto forma di stringa. 
+Quello che scrivo in jason mi va a descrivere un dato io ho un array di due oggetti.
+
+Il jason che ho incollato è un esempio. Questo jason dice io ti descrivo l'oggetto dei contatti che hai ottenuto (esempio).
+
+Se voglio vedere gli errori del jason lo passo nel validatore JSON.interno
+Se faccio la prova e sostituisco le virgolette doppio con quelle normali (stringhe) mi da errore.
+
+
+ [
+    {
+        "username": "Luigi Verdi",
+        "email": "lverdi@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    },
+
+    {
+        "username": "Peach Pink",
+        "email": "ppink@gmail.com",
+        "message": "testo testo testo...",
+        "selectedColors": ["blue", "green", "red"]
+    }
+
+ ]
+
+Posso creare le stringhe solo con le virgolette doppie e non posso applicare le funzioni come valori solo vaori standart, oggetti, array, booleani, stringhe, numeri. Non è un linguaggio di programmazione è un agglomerato di dati.
+
+--------------------------------------
+Questo agglomerato di dati come lo utilizzo con il mio oggeto...
+Per capire...
+PROVO A SCIMMIOTTARE UN LINGUAGGIO BACK-END PER CAPIRE COME FUNZIONA L'OGGETTO , FACENDO CREDERE A JAVASCPRIT CHE L'OGGETTO NON E' ALL'INTERNO DI UN FILE MA DI UNA STRINGA.
+
+Però! Le stringhe in javascript hanno una limitazione :
+
+se scrivo
+
+
+let s1 = 'ciao
+
+
+'}
+
+Qui ho un problema andando a capo,il letterale stringa deve essere per forza sulla stessa linea, sono costretto a scompattare la stringa per avere dei dati.
+
+  let x = 10
+  let s1 = `ciao ${x}`
+  
+  console.log(s1)
+
+
+Se io ho molte variabili però :
+
+const ol = {x:10 , y:20}
+const o2 = {x:40 , y:20}
+const arr= []
+
+const arr= [ o1, o2]
+arr.forEach(function (el)) {
+    console.log(el.x + el.y) <--- + e spazio
+}
+
+Come in questo caso dovrei scompattare.
+
+Qual'è la soluzione?
+Uso una funzionalitè moderna di javascript che si chiama template string che mi permettno di inglobare all'interno della mia stringa tutti i dati (i tipi?) che voglio e mi permettono di creare anche delle stringhe multilinea.
+
+BACK TICK : ALT+96
+
+<script>
+
+
+let x = 10
+let s1 = `ciao ${x}`
+
+const o = {
+name: 'Riccardo',
+lastname: 'Degni'
+        }
+
+console.log( `ciao, mi chiamo: ${o.name} ${o.lastname}` );
+
+Sono andato ad interpolare le variabili all'interno della mia stringa, grazie al dollaro + graffe.
+E' una sintassi obbligatoria.
+
+
+SINTASSI 
+
+${variabile}
+
+Esempio:
+posso fare le stringhe multilinea...
+Adesso passo con PARSE il contenuto di jason string.
+
+const jsonString = 
+        `
+        [
+            {
+                "username": "Luigi Verdi",
+                "email": "lverdi@gmail.com",
+                "message": "testo testo testo...",
+                "selectedColors": ["blue", "green", "red"]
+            },
+
+            {
+                "username": "Peach Pink",
+                "email": "ppink@gmail.com",
+                "message": "testo testo testo...",
+                "selectedColors": ["blue", "green", "red"]
+            }
+        ]
+        `
+
+const jsonObj = JSON.parse( jsonString )
+console.log( jsonObj[1].username );
+
+ORA HO OTTENUTO UNA RAPPRESENTAZIONE IN JAVASCRIPT, TRASFORMAZIONE IN OGGETTO JAVSCRIPT.
+
+Quindi se mi mandano un jason col metodo parse me lo trasformo in oggetto javsript.
+
+PRENDI QUALCOSA ANALIZZALO TRASFORMALO CONVERTILO PER OTTENERE QUALCOSA, FAI PRIMA A DIRE PARSE.
+
+Per il momento sò che la stringa può accettare delle variabili INTERPOLARE.
+
+
+
+SINTASSI 
+
+JASON(scrittoin maiuscolo).parse 
+
+ESEMPIO DI ESERCIZIO : " PARSA UNA STRINGA JASON E FAI UN CALCOLO ".
+
+Dal server arriva una descrizione di dati in questo modo:
+
+        {
+            "backgroundColor": "#32a852",
+            "color": "white",
+            "width": "300px",
+            "height": "100px",
+            "textAlign": "center"
+        }
+
+Io faccio la mia parte in forma di stringa javascript:
+       
+(passaggi)
+        const jsonStr = 
+        `
+        {
+            "backgroundColor": "#32a852",
+            "color": "white",
+            "width": "300px",
+            "height": "100px",
+            "textAlign": "center"
+        }
+        `
+prendo il parse della stringa:
+
+   const jsonObj = JSON.parse( jsonStr ) 
+   
+Cose l'oggetto generato sulla base dell'oggetto jason?
+
+   console.log( jsonObj );
+
+Da questo oggetto e da questo parsing cosa posso fare?
+   
+    ....
+    ....
+    ....
+
+    <div id="box"></div>
+
+    <script>
+        const jsonStr = 
+        `
+        {
+            "backgroundColor": "#32a852",
+            "color": "white",
+            "width": "300px",
+            "height": "100px",
+            "textAlign": "center"
+        }
+        `
+
+        const jsonObj = JSON.parse( jsonStr )
+
+        console.log( jsonObj );
+
+        const box = document.getElementById('box')
+
+Accedo alle sue variabili:
+
+        box.style.backgroundColor = jsonObj.backgroundColor
+
+        (la stessa identica cosa la faccio per gli altri stili)
+
+
+        box.style.color = jsonObj.color
+        box.style.width = jsonObj.width
+        box.style.height = jsonObj.height
+        box.style.textAlign = jsonObj.textAlign
+
+
+        Verifico che il colore sia bianco:
+
+        box.innerHTML = `sono un contenuto ${x}`
+
+        e se volessi mettere dentro una variabile?
+
+        const x = 'Javascript'
+        box.innerHTML = `sono un contenuto ${x}`
+
+        Se nel JASON vado a dargli altre caratteristiche? mi basta modificare le proprietà delle variabili a cui accedo.
+
+QUESTO E' L'ESEMPIO DI COME BACK END E FRONT END SI SCAMBIANO I DATI.
+
+    </script>

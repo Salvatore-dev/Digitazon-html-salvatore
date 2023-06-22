@@ -1,0 +1,610 @@
+{
+  "Lamentazioni": {
+    "metaNumberBook": 30,
+    "Lam1": {
+      "empty": true,
+      "data": []
+    },
+    "Lam2": {
+      "empty": true,
+      "data": []
+    },
+    "Lam3": {
+      "empty": true,
+      "data": []
+    },
+    "Lam4": {
+      "empty": true,
+      "data": []
+    },
+    "Lam5": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Baruc": {
+    "metaNumberBook": 31,
+    "Bar1": {
+      "empty": true,
+      "data": []
+    },
+    "Bar2": {
+      "empty": true,
+      "data": []
+    },
+    "Bar3": {
+      "empty": true,
+      "data": []
+    },
+    "Bar4": {
+      "empty": true,
+      "data": []
+    },
+    "Bar5": {
+      "empty": true,
+      "data": []
+    },
+    "Bar6": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Ezechiele": {
+    "metaNumberBook": 32,
+    "Ez1": {
+      "empty": true,
+      "data": []
+    },
+    "Ez2": {
+      "empty": true,
+      "data": []
+    },
+    "Ez3": {
+      "empty": true,
+      "data": []
+    },
+    "Ez4": {
+      "empty": true,
+      "data": []
+    },
+    "Ez5": {
+      "empty": true,
+      "data": []
+    },
+    "Ez6": {
+      "empty": true,
+      "data": []
+    },
+    "Ez7": {
+      "empty": true,
+      "data": []
+    },
+    "Ez8": {
+      "empty": true,
+      "data": []
+    },
+    "Ez9": {
+      "empty": true,
+      "data": []
+    },
+    "Ez10": {
+      "empty": true,
+      "data": []
+    },
+    "Ez11": {
+      "empty": true,
+      "data": []
+    },
+    "Ez12": {
+      "empty": true,
+      "data": []
+    },
+    "Ez13": {
+      "empty": true,
+      "data": []
+    },
+    "Ez14": {
+      "empty": true,
+      "data": []
+    },
+    "Ez15": {
+      "empty": true,
+      "data": []
+    },
+    "Ez16": {
+      "empty": true,
+      "data": []
+    },
+    "Ez17": {
+      "empty": true,
+      "data": []
+    },
+    "Ez18": {
+      "empty": true,
+      "data": []
+    },
+    "Ez19": {
+      "empty": true,
+      "data": []
+    },
+    "Ez20": {
+      "empty": true,
+      "data": []
+    },
+    "Ez21": {
+      "empty": true,
+      "data": []
+    },
+    "Ez22": {
+      "empty": true,
+      "data": []
+    },
+    "Ez23": {
+      "empty": true,
+      "data": []
+    },
+    "Ez24": {
+      "empty": true,
+      "data": []
+    },
+    "Ez25": {
+      "empty": true,
+      "data": []
+    },
+    "Ez26": {
+      "empty": true,
+      "data": []
+    },
+    "Ez27": {
+      "empty": true,
+      "data": []
+    },
+    "Ez28": {
+      "empty": true,
+      "data": []
+    },
+    "Ez29": {
+      "empty": true,
+      "data": []
+    },
+    "Ez30": {
+      "empty": true,
+      "data": []
+    },
+    "Ez31": {
+      "empty": true,
+      "data": []
+    },
+    "Ez32": {
+      "empty": true,
+      "data": []
+    },
+    "Ez33": {
+      "empty": true,
+      "data": []
+    },
+    "Ez34": {
+      "empty": true,
+      "data": []
+    },
+    "Ez35": {
+      "empty": true,
+      "data": []
+    },
+    "Ez36": {
+      "empty": true,
+      "data": []
+    },
+    "Ez37": {
+      "empty": true,
+      "data": []
+    },
+    "Ez38": {
+      "empty": true,
+      "data": []
+    },
+    "Ez39": {
+      "empty": true,
+      "data": []
+    },
+    "Ez40": {
+      "empty": true,
+      "data": []
+    },
+    "Ez41": {
+      "empty": true,
+      "data": []
+    },
+    "Ez42": {
+      "empty": true,
+      "data": []
+    },
+    "Ez43": {
+      "empty": true,
+      "data": []
+    },
+    "Ez44": {
+      "empty": true,
+      "data": []
+    },
+    "Ez45": {
+      "empty": true,
+      "data": []
+    },
+    "Ez46": {
+      "empty": true,
+      "data": []
+    },
+    "Ez47": {
+      "empty": true,
+      "data": []
+    },
+    "Ez48": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Daniele": {
+    "metaNumberBook": 33,
+    "Dn1": {
+      "empty": true,
+      "data": []
+    },
+    "Dn2": {
+      "empty": true,
+      "data": []
+    },
+    "Dn3": {
+      "empty": true,
+      "data": []
+    },
+    "Dn4": {
+      "empty": true,
+      "data": []
+    },
+    "Dn5": {
+      "empty": true,
+      "data": []
+    },
+    "Dn6": {
+      "empty": true,
+      "data": []
+    },
+    "Dn7": {
+      "empty": true,
+      "data": []
+    },
+    "Dn8": {
+      "empty": true,
+      "data": []
+    },
+    "Dn9": {
+      "empty": true,
+      "data": []
+    },
+    "Dn10": {
+      "empty": true,
+      "data": []
+    },
+    "Dn11": {
+      "empty": true,
+      "data": []
+    },
+    "Dn12": {
+      "empty": true,
+      "data": []
+    },
+    "Dn13": {
+      "empty": true,
+      "data": []
+    },
+    "Dn14": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Osea": {
+    "metaNumberBook": 34,
+    "Os1": {
+      "empty": true,
+      "data": []
+    },
+    "Os2": {
+      "empty": true,
+      "data": []
+    },
+    "Os3": {
+      "empty": true,
+      "data": []
+    },
+    "Os4": {
+      "empty": true,
+      "data": []
+    },
+    "Os5": {
+      "empty": true,
+      "data": []
+    },
+    "Os6": {
+      "empty": true,
+      "data": []
+    },
+    "Os7": {
+      "empty": true,
+      "data": []
+    },
+    "Os8": {
+      "empty": true,
+      "data": []
+    },
+    "Os9": {
+      "empty": true,
+      "data": []
+    },
+    "Os10": {
+      "empty": true,
+      "data": []
+    },
+    "Os11": {
+      "empty": true,
+      "data": []
+    },
+    "Os12": {
+      "empty": true,
+      "data": []
+    },
+    "Os13": {
+      "empty": true,
+      "data": []
+    },
+    "Os14": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Gioele": {
+    "metaNumberBook": 35,
+    "Gl1": {
+      "empty": true,
+      "data": []
+    },
+    "Gl2": {
+      "empty": true,
+      "data": []
+    },
+    "Gl3": {
+      "empty": true,
+      "data": []
+    },
+    "Gl4": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Amos": {
+    "metaNumberBook": 36,
+    "Am1": {
+      "empty": true,
+      "data": []
+    },
+    "Am2": {
+      "empty": true,
+      "data": []
+    },
+    "Am3": {
+      "empty": true,
+      "data": []
+    },
+    "Am4": {
+      "empty": true,
+      "data": []
+    },
+    "Am5": {
+      "empty": true,
+      "data": []
+    },
+    "Am6": {
+      "empty": true,
+      "data": []
+    },
+    "Am7": {
+      "empty": true,
+      "data": []
+    },
+    "Am8": {
+      "empty": true,
+      "data": []
+    },
+    "Am9": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Abdia": {
+    "metaNumberBook": 37,
+    "Abd1": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Giona": {
+    "metaNumberBook": 38,
+    "Gn1": {
+      "empty": true,
+      "data": []
+    },
+    "Gn2": {
+      "empty": true,
+      "data": []
+    },
+    "Gn3": {
+      "empty": true,
+      "data": []
+    },
+    "Gn4": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Michea": {
+    "metaNumberBook": 39,
+    "Mi1": {
+      "empty": true,
+      "data": []
+    },
+    "Mi2": {
+      "empty": true,
+      "data": []
+    },
+    "Mi3": {
+      "empty": true,
+      "data": []
+    },
+    "Mi4": {
+      "empty": true,
+      "data": []
+    },
+    "Mi5": {
+      "empty": true,
+      "data": []
+    },
+    "Mi6": {
+      "empty": true,
+      "data": []
+    },
+    "Mi7": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Naum": {
+    "metaNumberBook": 40,
+    "Na1": {
+      "empty": true,
+      "data": []
+    },
+    "Na2": {
+      "empty": true,
+      "data": []
+    },
+    "Na3": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Abacuc": {
+    "metaNumberBook": 41,
+    "Ab1": {
+      "empty": true,
+      "data": []
+    },
+    "Ab2": {
+      "empty": true,
+      "data": []
+    },
+    "Ab3": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Sofonia": {
+    "metaNumberBook": 42,
+    "Sof1": {
+      "empty": true,
+      "data": []
+    },
+    "Sof2": {
+      "empty": true,
+      "data": []
+    },
+    "Sof3": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Aggeo": {
+    "metaNumberBook": 43,
+    "Ag1": {
+      "empty": true,
+      "data": []
+    },
+    "Ag2": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Zaccaria": {
+    "metaNumberBook": 44,
+    "Zc1": {
+      "empty": true,
+      "data": []
+    },
+    "Zc2": {
+      "empty": true,
+      "data": []
+    },
+    "Zc3": {
+      "empty": true,
+      "data": []
+    },
+    "Zc4": {
+      "empty": true,
+      "data": []
+    },
+    "Zc5": {
+      "empty": true,
+      "data": []
+    },
+    "Zc6": {
+      "empty": true,
+      "data": []
+    },
+    "Zc7": {
+      "empty": true,
+      "data": []
+    },
+    "Zc8": {
+      "empty": true,
+      "data": []
+    },
+    "Zc9": {
+      "empty": true,
+      "data": []
+    },
+    "Zc10": {
+      "empty": true,
+      "data": []
+    },
+    "Zc11": {
+      "empty": true,
+      "data": []
+    },
+    "Zc12": {
+      "empty": true,
+      "data": []
+    },
+    "Zc13": {
+      "empty": true,
+      "data": []
+    },
+    "Zc14": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Malachia": {
+    "metaNumberBook": 45,
+    "Ml1": {
+      "empty": true,
+      "data": []
+    },
+    "Ml2": {
+      "empty": true,
+      "data": []
+    },
+    "Ml3": {
+      "empty": true,
+      "data": []
+    }
+  }
+}

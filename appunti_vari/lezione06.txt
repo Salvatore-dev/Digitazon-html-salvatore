@@ -1,0 +1,43 @@
+<div id="add">add to set</div>
+    <input type="text" id="set-value">
+
+<script>
+
+Creo new Set che in questo caso è vuoto 
+        const s1 = new Set()
+        console.log( s1 ); ---> come primo step ottengo un set vuoto che ha una size di zero, la size sarebbe come la lenth dell'array solo che nel caso dell strutture dato come SET e Map si chiama size.
+        aggiungo .add (dalla riga 11)
+
+        s1.add( 10 )
+        s1.add( 20 )
+        s1.add( 30 )
+        s1.add( 40 )
+        s1.add( 40 )
+        s1.add( 40 )
+
+        console.log( s1 ); 
+        console.log( s1.size );
+        console.log( s1.has(30) );
+
+        function iterateOverSet(v) {
+            console.log( v );
+        }
+
+        if( s1 instanceof Set )
+            s1.forEach( iterateOverSet )
+
+        s1.delete(20)
+        console.log( s1 );
+        console.log( typeof s1 );
+
+        let s2 = new Set([30, 40, 'ciao', 'x', 'ciao'])
+        console.log( s2 );
+
+        //let count = 1
+        const setValue = document.getElementById('set-value')
+        document.getElementById('add').addEventListener('click', function() {
+            //s2.add( 'nuovo valore ' + count++ )
+            s2.add( setValue.value )
+            console.log( s2 );
+        })
+</script>

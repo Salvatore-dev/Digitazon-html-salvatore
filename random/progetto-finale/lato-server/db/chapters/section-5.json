@@ -1,0 +1,801 @@
+{
+  "Cantico": {
+    "metaNumberBook": 25,
+    "Ct1": {
+      "empty": true,
+      "data": []
+    },
+    "Ct2": {
+      "empty": true,
+      "data": []
+    },
+    "Ct3": {
+      "empty": true,
+      "data": []
+    },
+    "Ct4": {
+      "empty": true,
+      "data": []
+    },
+    "Ct5": {
+      "empty": true,
+      "data": []
+    },
+    "Ct6": {
+      "empty": true,
+      "data": []
+    },
+    "Ct7": {
+      "empty": true,
+      "data": []
+    },
+    "Ct8": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Sapienza": {
+    "metaNumberBook": 26,
+    "Sap1": {
+      "empty": true,
+      "data": []
+    },
+    "Sap2": {
+      "empty": true,
+      "data": []
+    },
+    "Sap3": {
+      "empty": true,
+      "data": []
+    },
+    "Sap4": {
+      "empty": true,
+      "data": []
+    },
+    "Sap5": {
+      "empty": true,
+      "data": []
+    },
+    "Sap6": {
+      "empty": true,
+      "data": []
+    },
+    "Sap7": {
+      "empty": true,
+      "data": []
+    },
+    "Sap8": {
+      "empty": true,
+      "data": []
+    },
+    "Sap9": {
+      "empty": true,
+      "data": []
+    },
+    "Sap10": {
+      "empty": true,
+      "data": []
+    },
+    "Sap11": {
+      "empty": true,
+      "data": []
+    },
+    "Sap12": {
+      "empty": true,
+      "data": []
+    },
+    "Sap13": {
+      "empty": true,
+      "data": []
+    },
+    "Sap14": {
+      "empty": true,
+      "data": []
+    },
+    "Sap15": {
+      "empty": true,
+      "data": []
+    },
+    "Sap16": {
+      "empty": true,
+      "data": []
+    },
+    "Sap17": {
+      "empty": true,
+      "data": []
+    },
+    "Sap18": {
+      "empty": true,
+      "data": []
+    },
+    "Sap19": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Siracide": {
+    "metaNumberBook": 27,
+    "Sir1": {
+      "empty": true,
+      "data": []
+    },
+    "Sir2": {
+      "empty": true,
+      "data": []
+    },
+    "Sir3": {
+      "empty": true,
+      "data": []
+    },
+    "Sir4": {
+      "empty": true,
+      "data": []
+    },
+    "Sir5": {
+      "empty": true,
+      "data": []
+    },
+    "Sir6": {
+      "empty": true,
+      "data": []
+    },
+    "Sir7": {
+      "empty": true,
+      "data": []
+    },
+    "Sir8": {
+      "empty": true,
+      "data": []
+    },
+    "Sir9": {
+      "empty": true,
+      "data": []
+    },
+    "Sir10": {
+      "empty": true,
+      "data": []
+    },
+    "Sir11": {
+      "empty": true,
+      "data": []
+    },
+    "Sir12": {
+      "empty": true,
+      "data": []
+    },
+    "Sir13": {
+      "empty": true,
+      "data": []
+    },
+    "Sir14": {
+      "empty": true,
+      "data": []
+    },
+    "Sir15": {
+      "empty": true,
+      "data": []
+    },
+    "Sir16": {
+      "empty": true,
+      "data": []
+    },
+    "Sir17": {
+      "empty": true,
+      "data": []
+    },
+    "Sir18": {
+      "empty": true,
+      "data": []
+    },
+    "Sir19": {
+      "empty": true,
+      "data": []
+    },
+    "Sir20": {
+      "empty": true,
+      "data": []
+    },
+    "Sir21": {
+      "empty": true,
+      "data": []
+    },
+    "Sir22": {
+      "empty": true,
+      "data": []
+    },
+    "Sir23": {
+      "empty": true,
+      "data": []
+    },
+    "Sir24": {
+      "empty": true,
+      "data": []
+    },
+    "Sir25": {
+      "empty": true,
+      "data": []
+    },
+    "Sir26": {
+      "empty": true,
+      "data": []
+    },
+    "Sir27": {
+      "empty": true,
+      "data": []
+    },
+    "Sir28": {
+      "empty": true,
+      "data": []
+    },
+    "Sir29": {
+      "empty": true,
+      "data": []
+    },
+    "Sir30": {
+      "empty": true,
+      "data": []
+    },
+    "Sir31": {
+      "empty": true,
+      "data": []
+    },
+    "Sir32": {
+      "empty": true,
+      "data": []
+    },
+    "Sir33": {
+      "empty": true,
+      "data": []
+    },
+    "Sir34": {
+      "empty": true,
+      "data": []
+    },
+    "Sir35": {
+      "empty": true,
+      "data": []
+    },
+    "Sir36": {
+      "empty": true,
+      "data": []
+    },
+    "Sir37": {
+      "empty": true,
+      "data": []
+    },
+    "Sir38": {
+      "empty": true,
+      "data": []
+    },
+    "Sir39": {
+      "empty": true,
+      "data": []
+    },
+    "Sir40": {
+      "empty": true,
+      "data": []
+    },
+    "Sir41": {
+      "empty": true,
+      "data": []
+    },
+    "Sir42": {
+      "empty": true,
+      "data": []
+    },
+    "Sir43": {
+      "empty": true,
+      "data": []
+    },
+    "Sir44": {
+      "empty": true,
+      "data": []
+    },
+    "Sir45": {
+      "empty": true,
+      "data": []
+    },
+    "Sir46": {
+      "empty": true,
+      "data": []
+    },
+    "Sir47": {
+      "empty": true,
+      "data": []
+    },
+    "Sir48": {
+      "empty": true,
+      "data": []
+    },
+    "Sir49": {
+      "empty": true,
+      "data": []
+    },
+    "Sir50": {
+      "empty": true,
+      "data": []
+    },
+    "Sir51": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Isaia": {
+    "metaNumberBook": 28,
+    "Is1": {
+      "empty": true,
+      "data": []
+    },
+    "Is2": {
+      "empty": true,
+      "data": []
+    },
+    "Is3": {
+      "empty": true,
+      "data": []
+    },
+    "Is4": {
+      "empty": true,
+      "data": []
+    },
+    "Is5": {
+      "empty": true,
+      "data": []
+    },
+    "Is6": {
+      "empty": true,
+      "data": []
+    },
+    "Is7": {
+      "empty": true,
+      "data": []
+    },
+    "Is8": {
+      "empty": true,
+      "data": []
+    },
+    "Is9": {
+      "empty": true,
+      "data": []
+    },
+    "Is10": {
+      "empty": true,
+      "data": []
+    },
+    "Is11": {
+      "empty": true,
+      "data": []
+    },
+    "Is12": {
+      "empty": true,
+      "data": []
+    },
+    "Is13": {
+      "empty": true,
+      "data": []
+    },
+    "Is14": {
+      "empty": true,
+      "data": []
+    },
+    "Is15": {
+      "empty": true,
+      "data": []
+    },
+    "Is16": {
+      "empty": true,
+      "data": []
+    },
+    "Is17": {
+      "empty": true,
+      "data": []
+    },
+    "Is18": {
+      "empty": true,
+      "data": []
+    },
+    "Is19": {
+      "empty": true,
+      "data": []
+    },
+    "Is20": {
+      "empty": true,
+      "data": []
+    },
+    "Is21": {
+      "empty": true,
+      "data": []
+    },
+    "Is22": {
+      "empty": true,
+      "data": []
+    },
+    "Is23": {
+      "empty": true,
+      "data": []
+    },
+    "Is24": {
+      "empty": true,
+      "data": []
+    },
+    "Is25": {
+      "empty": true,
+      "data": []
+    },
+    "Is26": {
+      "empty": true,
+      "data": []
+    },
+    "Is27": {
+      "empty": true,
+      "data": []
+    },
+    "Is28": {
+      "empty": true,
+      "data": []
+    },
+    "Is29": {
+      "empty": true,
+      "data": []
+    },
+    "Is30": {
+      "empty": true,
+      "data": []
+    },
+    "Is31": {
+      "empty": true,
+      "data": []
+    },
+    "Is32": {
+      "empty": true,
+      "data": []
+    },
+    "Is33": {
+      "empty": true,
+      "data": []
+    },
+    "Is34": {
+      "empty": true,
+      "data": []
+    },
+    "Is35": {
+      "empty": true,
+      "data": []
+    },
+    "Is36": {
+      "empty": true,
+      "data": []
+    },
+    "Is37": {
+      "empty": true,
+      "data": []
+    },
+    "Is38": {
+      "empty": true,
+      "data": []
+    },
+    "Is39": {
+      "empty": true,
+      "data": []
+    },
+    "Is40": {
+      "empty": true,
+      "data": []
+    },
+    "Is41": {
+      "empty": true,
+      "data": []
+    },
+    "Is42": {
+      "empty": true,
+      "data": []
+    },
+    "Is43": {
+      "empty": true,
+      "data": []
+    },
+    "Is44": {
+      "empty": true,
+      "data": []
+    },
+    "Is45": {
+      "empty": true,
+      "data": []
+    },
+    "Is46": {
+      "empty": true,
+      "data": []
+    },
+    "Is47": {
+      "empty": true,
+      "data": []
+    },
+    "Is48": {
+      "empty": true,
+      "data": []
+    },
+    "Is49": {
+      "empty": true,
+      "data": []
+    },
+    "Is50": {
+      "empty": true,
+      "data": []
+    },
+    "Is51": {
+      "empty": true,
+      "data": []
+    },
+    "Is52": {
+      "empty": true,
+      "data": []
+    },
+    "Is53": {
+      "empty": true,
+      "data": []
+    },
+    "Is54": {
+      "empty": true,
+      "data": []
+    },
+    "Is55": {
+      "empty": true,
+      "data": []
+    },
+    "Is56": {
+      "empty": true,
+      "data": []
+    },
+    "Is57": {
+      "empty": true,
+      "data": []
+    },
+    "Is58": {
+      "empty": true,
+      "data": []
+    },
+    "Is59": {
+      "empty": true,
+      "data": []
+    },
+    "Is60": {
+      "empty": true,
+      "data": []
+    },
+    "Is61": {
+      "empty": true,
+      "data": []
+    },
+    "Is62": {
+      "empty": true,
+      "data": []
+    },
+    "Is63": {
+      "empty": true,
+      "data": []
+    },
+    "Is64": {
+      "empty": true,
+      "data": []
+    },
+    "Is65": {
+      "empty": true,
+      "data": []
+    },
+    "Is66": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Geremia": {
+    "metaNumberBook": 29,
+    "Ger1": {
+      "empty": true,
+      "data": []
+    },
+    "Ger2": {
+      "empty": true,
+      "data": []
+    },
+    "Ger3": {
+      "empty": true,
+      "data": []
+    },
+    "Ger4": {
+      "empty": true,
+      "data": []
+    },
+    "Ger5": {
+      "empty": true,
+      "data": []
+    },
+    "Ger6": {
+      "empty": true,
+      "data": []
+    },
+    "Ger7": {
+      "empty": true,
+      "data": []
+    },
+    "Ger8": {
+      "empty": true,
+      "data": []
+    },
+    "Ger9": {
+      "empty": true,
+      "data": []
+    },
+    "Ger10": {
+      "empty": true,
+      "data": []
+    },
+    "Ger11": {
+      "empty": true,
+      "data": []
+    },
+    "Ger12": {
+      "empty": true,
+      "data": []
+    },
+    "Ger13": {
+      "empty": true,
+      "data": []
+    },
+    "Ger14": {
+      "empty": true,
+      "data": []
+    },
+    "Ger15": {
+      "empty": true,
+      "data": []
+    },
+    "Ger16": {
+      "empty": true,
+      "data": []
+    },
+    "Ger17": {
+      "empty": true,
+      "data": []
+    },
+    "Ger18": {
+      "empty": true,
+      "data": []
+    },
+    "Ger19": {
+      "empty": true,
+      "data": []
+    },
+    "Ger20": {
+      "empty": true,
+      "data": []
+    },
+    "Ger21": {
+      "empty": true,
+      "data": []
+    },
+    "Ger22": {
+      "empty": true,
+      "data": []
+    },
+    "Ger23": {
+      "empty": true,
+      "data": []
+    },
+    "Ger24": {
+      "empty": true,
+      "data": []
+    },
+    "Ger25": {
+      "empty": true,
+      "data": []
+    },
+    "Ger26": {
+      "empty": true,
+      "data": []
+    },
+    "Ger27": {
+      "empty": true,
+      "data": []
+    },
+    "Ger28": {
+      "empty": true,
+      "data": []
+    },
+    "Ger29": {
+      "empty": true,
+      "data": []
+    },
+    "Ger30": {
+      "empty": true,
+      "data": []
+    },
+    "Ger31": {
+      "empty": true,
+      "data": []
+    },
+    "Ger32": {
+      "empty": true,
+      "data": []
+    },
+    "Ger33": {
+      "empty": true,
+      "data": []
+    },
+    "Ger34": {
+      "empty": true,
+      "data": []
+    },
+    "Ger35": {
+      "empty": true,
+      "data": []
+    },
+    "Ger36": {
+      "empty": true,
+      "data": []
+    },
+    "Ger37": {
+      "empty": true,
+      "data": []
+    },
+    "Ger38": {
+      "empty": true,
+      "data": []
+    },
+    "Ger39": {
+      "empty": true,
+      "data": []
+    },
+    "Ger40": {
+      "empty": true,
+      "data": []
+    },
+    "Ger41": {
+      "empty": true,
+      "data": []
+    },
+    "Ger42": {
+      "empty": true,
+      "data": []
+    },
+    "Ger43": {
+      "empty": true,
+      "data": []
+    },
+    "Ger44": {
+      "empty": true,
+      "data": []
+    },
+    "Ger45": {
+      "empty": true,
+      "data": []
+    },
+    "Ger46": {
+      "empty": true,
+      "data": []
+    },
+    "Ger47": {
+      "empty": true,
+      "data": []
+    },
+    "Ger48": {
+      "empty": true,
+      "data": []
+    },
+    "Ger49": {
+      "empty": true,
+      "data": []
+    },
+    "Ger50": {
+      "empty": true,
+      "data": []
+    },
+    "Ger51": {
+      "empty": true,
+      "data": []
+    },
+    "Ger52": {
+      "empty": true,
+      "data": []
+    }
+  }
+}

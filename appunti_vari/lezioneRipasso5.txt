@@ -1,0 +1,313 @@
+<script>
+ 
+RIPASSO
+
+Riccardo: sia mappa che set sono due strutture dati , ci permettono di immagazzinare N dati. Esse non sono dati lineari o scalari come booleani stringhe e mammata. Fondamentalmente quello che differenzia la mappa dai set sono le caratteristiche di utilizzo e anche le caratteristiche strutturali in cui andiamo e con cui andiamo ad immagazzinare i dati all'interno delle strutture dati.La mappa è una sequenza di entry che sono delle coppie chiave-valore, posso andare ad agire sia sulla chiave che sul valore. La chiave ed il valore possono essere di dati eterogenei. Infatti abbiamo utilizzato le strighe come chiavi.
+
+I SET contrariamente che sono molto simili agli array vanno ad immagazzinare i dati con un indice numerico incrementale su cui noi però non abbiamo controllo , anche perchè l'ordine di inserimento all'interno degli elementi all'interno dei set non lo decidiamo viene smistato attraverso un algoritmo che decide il linguaggio di programmazione (non mi interessa?) il set è fatto per migliorare le prestazioni degli array perchè mi permette di andare ad immagazzinare solo valori univci e valori che posso iterare in massa tramite il metodo forEach. Quindi sono tre strutture diverse array(è malleabile e posso aumentarlo e diminuirlo  come grandezza e vale anche per le mappe e per i set, posso avere dei duplicati, valori eterogenei ed un API dedicati al lavoro con gli array ( insieme di metodi!) le mappe e i set sono strutture dato che vanno a variare questo comportamento, nel caso delle mappe aggiungo le chiavi che sono impostabili da noi e nel caso dei set impedisco la produzione di valori duplicati ). 
+
+CREARE UNA MAPPA
+La mappa è una classe!
+Tutto in giavascript è una classe:
+L'esempio qui sotto è la creazione di un array (tutto è una classe):
+
+-creo un array di dimensioni 10 il cui contenuto sono tutti 4
+.fill--> è un metodo dell'array per riempirlo
+- anche qui utilizzo l'operatore new insieme al costruttore Array
+Questo modo di fare peggiora le performance , la dimensione dell'array è fissa.
+Posso utilizzare semplicemente le quadre vuote [] ed è questo il modo di produrre gli array.
+
+        const a1 = [] // new Array(10).fill(4) .fill
+        console.log( a1 );
+
+QUANDO PRODUCO UNA MAPPA O UN OGGETTO UTILIZZO UN COSTRUTTORE.
+IL COSTRUTTORE E':
+
+        // STEP 1 la produzione di una Map vuota
+        const m1 = new Map()
+
+La riempio e utilizzo il suo metodo .set
+Perchè .set per le mappe? perchè setto una entry. Invece .add nei set sta per aggiungo una entry (un elemento). Di fatto producono una nuova entry all'interno della struttura dati.
+
+        // STEP 2 impostazione delle sue entry (elementi)
+
+ In questo caso mi serve la chiave e metto tutte le chievi che voglio ('name','lastname' (in questo caso))
+
+        m1.set( 'name', 'Luigi' )
+        m1.set( 'lastname', 'Verdi' )
+        m1.set( 'skills', ['js', 'php', 'py'] )
+
+        // STEP 3 stampa
+        console.log( m1 );
+
+Come faccio ad andare ad accedere ai valori degli array?
+Nota bene: se gli passo il mouse di sopra sulla riga 'link1' (in fase di lavoro) mi dice il dettaglio sull'utilizzo della funzione in particolare usa un parametro key (dammi la chiave) e mi restituisce il valore, perchè è una funzione delle mappe, e so che la funzione può orendere in ingresso dei valori oppure produrre in uscita  dei valori oppure no. Il metodo get prende in ingresso la chiave e produce in uscita il valore conseguente che corrisponde alla chiave. Se gli metto una chiave che non esiste mi da Undefined. Per confrontare i valori di due mappa uso il metodo .get .
+             
+             
+link1   // 4 recupero uso .get
+        console.log( m1.get('lastname') );
+
+        
+
+        // 5 controllo presenza di una chiave 
+           lo faccio modularizzando (uso una variabile) e uso .has
+
+        const keyToFind = 'lastname'
+        if( m1.has(keyToFind) )
+            console.log( m1.get(keyToFind) );
+        else
+            console.log( 'la chiave ' +keyToFind+ ' non esiste in questa mappa' );
+
+E queste erano le funzionalità della mappa.
+------------------------------------------------------
+Un altro modo per andare a recuperare una mappa.
+
+            // INIZIALIZZAZIONE CON SETTING
+        Gli passo in fase di creazione dei valori.
+        Come gli passo le accoppiate chiave-valori, gli passo un valore che contiene un sotto array che raprresentano le coppie delle mie chiavi-valori che sono le mie entry [riga link2] (gli passo un array che contiene 3 sotto array cosi prende sempre un solo parametro, l'array di array, so che mi aspetto un argomento che è un array che contiene N array). Dentro faccio chiave - valore,il primo argomento del sotto-array è la chiave il secondo è il valore. Cosi non devo usare mille volte il metodo set.
+
+link2       const m2 = new Map([
+            ['height', '100px'],
+            ['width', '300px'],
+            ['background-color', 'blue']
+        ])
+        m2.set('color', 'green') --> comunque posso andare ad aggiungere, sempre in ordine.
+
+        console.log( m2 );
+
+UN ALTRA OPERAZIONE- POSSO FARE IN MODO CHE I DATI DI UNA MAPPA INTERAGISCANO CON UN ELEMENTO.
+
+        const box = document.getElementById('box')
+        box.style.width = m2.get('width')
+        box.style.height = m2.get('height')
+        box.style.color = m2.get('color')
+        box.style.backgroundColor = m2.get('background-color')
+
+ULTIMA OPERAZIONE CHE POSSO FARE CON LA MAPPA E' IL FOAREACH!
+E' un metodo e come ogni metodo può prendere in ingresso uno o N parametri e può restituire in uscita una valore.
+FoarEach prende in ingresso il parametro funzione ma non produce in uscita valori, si limita ad iterare. Cosa fa? Richiama la funzione che prende come parametro per ogni entry presente nella mappa. Quindi significa che questa funzione che viene passata a forEach (javascrip lo impliica) abbia due paramentri che rappresentano valore v e k (in questo ordine), valore  e chiave.
+
+        const esempio = new Map([
+        ['name', 'Luigi'] --- luigi name
+        ['lastname', 'Verdi'] --- verdi lastname
+        [ 'skills', ['js', 'php', 'py'] ] --- array skils
+        ])
+A forEach passo una funzione che viene richiamata ad ogni interazione e questa funzione per avere senso in questa iterazione avrà accesso valore e chiave di  ogni valroe chiave della mappa.
+   | .
+   | |
+   . |
+Esempio.
+
+Nell'esempio qui sotto vedrò che PER OGNI iterazione mi darà chiave/valore/trattini.
+
+    
+        function m2Fn(v, k) {
+            console.log( mapCounter++ ); 
+            console.log( k );            chiave
+            console.log( v );            valore
+            console.log('------------'); ------
+        }
+
+        m2.forEach( m2Fn )
+
+E' come un for, mi richiama queste istruzioni per ogni elemento della mappa!
+
+
+  //Creo un contatore 
+
+let mapCounter = 0
+        function m2Fn(v, k) {
+            console.log( mapCounter++ ); 
+            console.log( k );            
+            console.log( v );            
+            console.log('------------'); 
+        }
+Gergo: una funzione all'interno di un'altra funzione si chiama CALLBACK.
+
+        m2.forEach( m2Fn )
+
+
+Operatore di incremento:
+Parto da zero , ++ quanto è ? è zero alla prima 
+iterazione, ma stampa 1 alla seconda.
+Perchè? 
+Operatore di post incremento x++
+Operatore di pre incremento ++X
+
+let x = 1 
+console.log( x + 1) stampa 2
+
+se faccio
+cosole.log( x++) stampa 1 qui prendo il valore di x e nella successiva istruzione (stampa) utilizzo il valore incrementato
+console.log( x) stampa 2
+
+se volessi incrementarlo ma prendere il valore nel momento dell'utilizzo cosa devo fare? Se c'è un operatore di post incremento devo utilizzare un operatore di pre incremento.
+
+console.log(++x) stampa 2
+console.log(x)
+
+
+cosa stampa?
+let x =1
+cosole.log( x++ + x) ----> 3
+Perchè?
+let x =1
+console.log( x++ + x)
+Passo per passo..-
+x = 1 
+x++ è uguale a ( 1 + ) l'altro ( + ) incrementa il secondo addendo X ---> il risultato è 3
+
+
+Esercizio con operatore di post incremento
+        
+let x = 10
+console.log( x-- )
+Teoria - quando c'è il -- o il ++ è come se ci fosse scritto prendi X e poi fai X uguale X meno 1. Sono istruzioni che do alla X :
+
+x / e poi fai x = x - 1 ---> console.log(x--) = 10
+                             console.log(x)   =  9
+
+ci sono dei casi in cui quello che scrivo non è quello che appare come in questo caso, prendo il valore di X e il valore di X viene decrementato di UNO cosi quando lo riutilizzo è 9.
+
+Cosa fa X++ in background?
+X++ sono due istruzioni
+Si chiama POST incremento 
+Prima lo prende e poi lo incrementa 
+PRE incremento è il contrario 
+
+console.log(++x) ---> 11
+
+console.log (x++) ---> 10
+
+Mie deduzioni: in console.log posso modificare il un valore di una variabile 
+mi prendo il dato in memoria e mi imposto la modifica,e se stampo lo stesso dato in base a come lo stampo risente delle modifiche che imposto all'inizio. 
+
+       es. let au = 10 --------|
+                               |
+       console.log(au++) = questo rimane 10
+       console.log(au) = questo mi da 11 perchè ho modificato il valore di AU.
+
+        let a = 15
+        let b = --a + 5
+        let c = ++b
+
+        Stampando C console.log( c ); cosa è? 20
+
+        Come cambia la variabile a?
+        In a è 15
+        In b è 14
+        In c? 15
+
+        
+MA QUELLO CHE HO SCRITTO SU E' GIUSTO? SI CAPISCE?
+        
+    
+        // ----------------------
+
+        let x = -4
+        let y = x++ - 4 - x
+        let z = y++ + y
+
+        console.log( --z + z++ );
+
+        let x = -4
+        let y = -4 -4 -(-4+1) = -5
+        let z = -5 + (-5+1) = -9
+         console.log( --z + z++ ); (-10) + (-10) = -20
+          Dopo il - 10 (z++) diventerà -9
+
+        // 1 + 2
+
+
+
+
+    </script>
+ 
+    <script>
+
+    
+I tipi di dato in javascript ce ne sono tanti e diversi ed è il valore che uso a destra della variabile che mi determina il tipo di variabile.
+Ma in realtà quello che determina il tipo di dato è come io compongo a destra dell'uguale il mio valore, se usi le virgolette è stringhe, se usi numero è number, in gergo si chiama letterale intero, virgolette testo virgolette è un letterale stringa così javascript associa il tipo di dato al letterale.
+Però io posso utilizzare anche il letterale function (funzione) associo un valore di tipo funzione e dopo posso anche richiamare questa variabile come funzione.
+Javascript da due modi per creare la funzione o con un nome che do alla funzione - function(fn2)- o con la variabile a cui viene agganciato un valore funzione.
+
+function chiamaUnaFunzione ( unaFunzione) {
+    unaFunzione()
+}
+
+ chiamaUnaFunzione (fn2)
+
+Posso farlo anche con il .FoarEach :
+Co questa strategia gli passo una funzione...
+            m2.forEach((function(v,k))){
+
+            console.log( mapCounter++ ); 
+            console.log( k );            
+            console.log( v );            
+            console.log('------------'); 
+        }
+
+Questa è la strategia migliore se voglio riutilizzarla (m2Fn) (il counter non c'entra con la spiegazione):
+
+        let mapCounter = 0
+        function m2Fn(v, k) {
+            console.log( mapCounter++ ); 
+            console.log( k );            
+            console.log( v );            
+            console.log('------------'); 
+        }
+
+Che io la salvi in una funzione poi gli passi la funzione o che la passi sotto forma di letterale è comunque uguale (anche le performance sono uguali). Comunque gli input della funzione devono essere sempre valori chiavi ( fa sempre parte del metodo .forEach delle Map).
+
+ADESSO TOCCA AI SET
+Qui posso fare un .forEach e gli passo una funzione,questo prende solo il valore in ingresso,faccio console.log(v) e stampo tutti i valori del mio set.
+
+        let s1 = new Set()
+        s1.add(10)
+        s1.add(20)
+        s1.add(30)
+        s1.add(40)
+
+        console.log( s1 );
+
+        s1.forEach( function(v) {
+            console.log(v);
+        } )
+
+Oppure gli passo la variabile che identifica la funzione e poi passo la variabile al .forEach , in questo caso stampa il doppio dei valori.
+
+
+       const iterateOverS1 = function(v) { console.log( v + 10 ) }
+        s1.forEach(iterateOverS1)
+
+        const iterateOverSet = function(s) {
+ LinkBo   if( !(s instanceof Set) ) {
+                console.log('errore!');
+                return
+            }
+
+Qui creao una funzione che accetta in ingresso un parametro 's' che dovrà essere un set e poi richiamo il .forEach su questo set che gli ho passato in ingresso.
+
+            console.log('Iterazione sul set ' + s);
+            s.forEach( function(v) {
+                console.log(v)
+            })
+        }
+
+        iterateOverSet( s1 ) -- itera sull's1, questo è creato su una variabile
+        iterateOverSet( new Set([17, 5, 87]) ) --- itero sul set, questo è creato direttamente nel console.log
+        iterateOverSet('ciao') -- queso darà errore perchè .forEch non è un metodo delle stringhe.
+
+        Quindi dovrò fare :
+
+        if( !(s instanceof Set) ) {
+                console.log('errore!');
+                return
+            }
+                 ...questo lo scrivo dopo al LinkBo 
+                 che sta tra gli esempi precedenti. 
+Cosa creo?
+'Se non è una istanza di SET allora stampami errore e chiudi la funzione prematuramente fai return che mi fa uscire dalla funzione , otterrò la stampa con 'errore' ma non si blocca la mia applicazione. Ricapitolando gli dico se 's' non è una istanza di set stampa errore e chiudi la funzione prematuramente. Se non entro nell'if vuol dire che il mio set è una istanza di set vado avati e quindi posso richiamare il metodo .forEach perchè c'è l'ho dato che è un metodo di SET.
+
+
+</script>

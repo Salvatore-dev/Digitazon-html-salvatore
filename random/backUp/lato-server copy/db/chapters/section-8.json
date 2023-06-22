@@ -1,0 +1,166 @@
+{
+  "Efesini": {
+    "metaNumberBook": 55,
+    "Ef1": {
+      "empty": true,
+      "data": []
+    },
+    "Ef2": {
+      "empty": true,
+      "data": []
+    },
+    "Ef3": {
+      "empty": true,
+      "data": []
+    },
+    "Ef4": {
+      "empty": true,
+      "data": []
+    },
+    "Ef5": {
+      "empty": true,
+      "data": []
+    },
+    "Ef6": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Filippesi": {
+    "metaNumberBook": 56,
+    "Fil1": {
+      "empty": true,
+      "data": []
+    },
+    "Fil2": {
+      "empty": true,
+      "data": []
+    },
+    "Fil3": {
+      "empty": true,
+      "data": []
+    },
+    "Fil4": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Colossesi": {
+    "metaNumberBook": 57,
+    "Col1": {
+      "empty": true,
+      "data": []
+    },
+    "Col2": {
+      "empty": true,
+      "data": []
+    },
+    "Col3": {
+      "empty": true,
+      "data": []
+    },
+    "Col4": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "1Tessalonicesi": {
+    "metaNumberBook": 58,
+    "1Ts1": {
+      "empty": true,
+      "data": []
+    },
+    "1Ts2": {
+      "empty": true,
+      "data": []
+    },
+    "1Ts3": {
+      "empty": true,
+      "data": []
+    },
+    "1Ts4": {
+      "empty": true,
+      "data": []
+    },
+    "1Ts5": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "2Tessalonicesi": {
+    "metaNumberBook": 59,
+    "2Ts1": {
+      "empty": true,
+      "data": []
+    },
+    "2Ts2": {
+      "empty": true,
+      "data": []
+    },
+    "2Ts3": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "1Timoteo": {
+    "metaNumberBook": 60,
+    "1Tm1": {
+      "empty": true,
+      "data": []
+    },
+    "1Tm2": {
+      "empty": true,
+      "data": []
+    },
+    "1Tm3": {
+      "empty": true,
+      "data": []
+    },
+    "1Tm4": {
+      "empty": true,
+      "data": []
+    },
+    "1Tm5": {
+      "empty": true,
+      "data": []
+    },
+    "1Tm6": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "2Timoteo": {
+    "metaNumberBook": 61,
+    "2Tm1": {
+      "empty": true,
+      "data": []
+    },
+    "2Tm2": {
+      "empty": true,
+      "data": []
+    },
+    "2Tm3": {
+      "empty": true,
+      "data": []
+    },
+    "2Tm4": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Tito": {
+    "metaNumberBook": 62,
+    "Tt1": {
+      "empty": true,
+      "data": []
+    },
+    "Tt2": {
+      "empty": true,
+      "data": []
+    },
+    "Tt3": {
+      "empty": true,
+      "data": []
+    }
+  }
+}

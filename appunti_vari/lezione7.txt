@@ -1,0 +1,125 @@
+                LE DATE
+
+Da: https://www.w3schools.com/js/js_dates.asp
+
+Operatore : new 
+
+Classe : Date() <-- ha un costruttore che accetta (potrebbe accettare) una data sotto forma di stringa:
+
+const d = new Date("2022-03-25"); 
+
+("2022-03-25") <-- questo è il formato americano. 
+
+const d = new Date();
+
+Posso compiere operazione ed ottenere informazioni su anno/mese/giorno.
+
+const d = new Date("2022-03-25"); 
+console.log(d)
+
+Posso avere altri costruttori dove al posto di passare la stringa posso passare dei numeri che mi determinano la caratteristica della data:
+const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+
+STAMPO LA DATA IN FORMATO ESTESO, internamente richiama una metodo che formatta la data.
+
+se volessi formattare la data potrei fare così:
+Attenzione la numerazione dei mesi parte da zero.
+ console.log( d.getDate() + '- ' + () d.getMonth () + 1) + '-' + d.getFullYear() )
+
+
+
+W3Schools non è completo, bisogna affidarsi ad mdn.
+
+https://www.w3schools.com/jsref/jsref_obj_date.asp
+
+
+Se utilizzo un altro costruttore posso fare così:
+
+const y = 2023
+
+const m = 3
+
+const day = 7
+
+(è un metodo arcodeed quello che sto usando ho usato un costruttore alternativo )
+
+const d2 = new Date (y, m, day)
+console.log(d2) ---> avrò la data di oggi
+
+Voglio sapere qual'è il giorno, da questa data prendo il giorno, per prendere oggi:
+
+uso il metodo now() che restituisce il numero di millisecondi che sono passati dal 1 gennaio 1970 fino ad ora. Quindi per vedere la data di oggi dovrei fare un calcolo con i millisecondi della data odierna.
+
+parse() - gli metto dentro una stringa e mi restituisce il numero di millisecondi:
+
+console.log( Date.parse( d2 ) ) --- DATA ODIERNA 7
+
+La data la scrivo in due modi o con i parametri o con una stringa, con la stringa gli dico la data con i parametri io gli dico la data scompattata in tre numeri . Dal momento che ho la data poi posso usare i suoi metodi per accedere ai singoli segmenti della data. 
+
+se io faccio date.now() non mi da la data a numero me la da sottoforma di millisecondi...quindi devo convertire il numero in una data visibile, per farlo il metodo è (la uso per calcolere dei periodi, trascorrenze, intervalli):  
+
+TERZO MODO DI UTILIZZARE IL COSTRUTTORE DI DATE, DARGLI IL NUMERO DI MILLISECONDI: 
+
+
+const  d3 = new Date (Date.now())
+console.log( d3 )
+se passo il nomero di millesecondi al costruttore date ottengo una data.
+
+const d3 = new Date( Date.now() )
+        const todayStr = d3.getDate() + '-' + (d3.getMonth()+1) + '-' + d3.getFullYear()
+
+Se cambia il valore dei millisecondi cambierà la data. Gli passo i millesecondi di un'altra data e lo prendo con IL MEDOTO PARSE.
+
+
+        const y = 1987
+        const m = 4
+        const day = 17
+   
+        const d2 = new Date( y, m, day )
+        console.log( d2.getDate() )
+        console.log( Date.now() )
+        console.log( Date.parse( d2 ) )
+
+        
+        const d3 = new Date( Date.parse(d2) )
+        const rdStr = d3.getDate() + '-' + (d3.getMonth()+1) + '-' + d3.getFullYear()
+
+        console.log( todayStr )
+
+        Se cambio l'anno, es.da const y mi calcola i millisecondi in negativo se scrivo una data precedere al 1960.
+
+FINE.
+
+<div>
+        Benvenuti, oggi è il... <span id="today"></span>
+    </div>
+
+    <script>
+        // primo constr (prende una str)
+        const d = new Date( "2022-04-25" )
+        console.log( d.getDate() + '-' + (d.getMonth() + 1) + '-' + d.getFullYear() )
+
+        // secondo const (int, int, int) - prende i nueri
+        const y = 1987
+        const m = 4
+        const day = 17
+   
+        const d2 = new Date( y, m, day )
+        console.log( d2.getDate() )
+        console.log( Date.now() )
+        console.log( Date.parse( d2 ) )
+
+        // terzo constr (millisecondi)
+        const d3 = new Date( Date.parse(d2) )
+        const rdStr = d3.getDate() + '-' + (d3.getMonth()+1) + '-' + d3.getFullYear()
+
+        console.log( rdStr )
+
+        // prendo data di oggi
+        const d4 = new Date( Date.now() )
+        const todayStr = d4.getDate() + '-' + (d4.getMonth()+1) + '-' + d4.getFullYear()
+
+        document.getElementById('today').innerHTML = todayStr
+
+        console.log( Date.now() );
+    </script>

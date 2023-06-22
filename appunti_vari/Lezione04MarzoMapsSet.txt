@@ -1,0 +1,589 @@
+Array: è un dato vettoriale perchè ho più elementi all'interno di una variabile, quindi non ho un solo valore ma ho una collezione di valori. Non è un dato scalare.
+
+Definizione di dato scalare: è un dato che rappresenta/ha un solo valore.
+Vettoriale: collezione di valori.
+La stringa? Prendendola in considerazione come dato a se è un dato scalare, infatti io gli assegno un valore. Poi, posso prenderla come una collezione di singoli caratteri e posso iterarla come se fosse un array.
+
+#ARRAY:
+- ha sempre una lunghezza definita
+- il suo corpo(lunghezza) è definito e ridimensionabile
+- ha come proprietà solo numeri( i= indice è uguale ad un numero)
+- può contenere valori eterogenei
+- è un tipo di dato vettoriale 
+- per conoscere la lunghezza uso .length
+- PUSH/POP sono 'metodi' dell'array
+
+DUE nuovi tipi di dato che sono strutture dati. Sono dei costrutti del linguaggio che ci permetto di realizzare strutture dati.
+Queste strutture dati sono 
+MAPPE E SET(possono variare in base al linguaggio es Java - Javascript)
+
+DaW3School https://www.w3schools.com/js/js_object_maps.asp :
+
+MAPPA
+
+Descrizione: La mappa è un insieme di coppie (accoppaite) chiave-valore dove le chiavi possono essere qualsiasi tipo di dato.
+Potrei mettere come tipo di dato delle chiavi: delle stringhe, un booleano, un intero o altri tipi di dati che poi farò combaciare in un modo specifico (non importa ora).
+Per il momento mi concentro sulle 'stringhe'.
+
+Altra versione: è una struttura dati che al posto di avere le chiavi numeriche e i valori avà le chiavi di QUALSIASI tipo di dato dato e i valori.
+
+Altra caratteristica fondamentale:
+Una mappa ricorda l'ordine di inserimento dei nostri elementi. Ci sono delle strutture dati in cui i dati vengono inseriti in base a cosa decide il programma, ma non è il caso delle mappe in cui si mantiene l'ordine di inserimento.
+
+Come si crea una mappa?
+Viene prodotta con la sintassi
+newMap() ---> questa è una mappa vuota.
+
+new:operatore
+Map:nome struttura
+(): perchè le tonde? Perchè la MAP è una struttura dato che prende il nome di classe e una classe è un insieme di funzioni (chiamate metodi) e variabili (chiamate proprietà).
+Quindi prendo le caratteristiche definite all'interno di un tipo di dato.
+Quali sono le caratteristiche le definisco nella 
+
+Posso realizzare gli scheletri/template di strutture dati che poi mi permettono di realizzare delle istanze del tipo di dato. 
+
+ES: ciao è una istanza della classe stringhe potrebbe avere charAt o toUpperCase come proprietà, i metodi dipendono da quello che è definito all'interno della struttura dati.
+
+Mapp quindi è una struttura dato che ha dentro dei metodi e delle proprietà.
+
+Perchè metto le tonde? Perchè implicitamente (newMap()) richiamo un metodo che si chiama metodo costruttore che ogni volta che realizzo una struttura dato/istanza di una classe DEVO richiamare. 
+
+Se creo una mappa vuota poi posso riempirla.
+
+METODI SET E GET 
+
+Con questi metodi setto un valore o recuperare un valore per la mappa.
+
+La proprietà size mi restituisce il numero di elementi che sta nella mia mappa.
+
+
+COME SI COSTRUISCE UNA MAPPA VUOTA?
+Creo una costante che posso chiamare come voglio e siccome voglio creare una mappa gli assegno (al posto dell'array,strigga etc) la chiamata del costrutto new (è una keyword) inieme al metodo costruttore delle mappe in questo modo all'interno della variabile
+avrò in memoria una struttura dato di tipo map.
+
+ES:
+
+ let x = newMap() in memoria ho le caratterisctiche delle mappa.
+ let x = 10 in memoria ho il 10
+
+ // Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+METODO COSTRUTTORE - ESEMPIO
+Se gli passo una matrice inizializza una mappa con all'interno i dati presenti all'interno della matrice.
+
+Titolo: inizializzare una mappa
+        1° passaggio creo una mappa vuota
+        const m1 = new Map()
+        "siccome è vuota se faccio il console log  dice è un map e la size è zero
+        console.log( m1 )
+        
+   2° passaggio - per mettere gli elementi nella mappa deo usare il metodo SET, il metodo prende due parametri (possono essere eterogenei) una chiave ed un vaore
+        // scrittura
+        m1.set('name', 'Mario')
+        m1.set('lastname', 'Rossi')
+        m1.set('skills', ['javascript', 'java', 'php']) ---> aggiunta successiva
+
+        console.log( m1 ); 
+        console.log( m1.size ); -->2 numero elementi(coppie)
+
+        altra°FASE - lettura : qui gli do il nome della chiave
+        per fare un GET SPECIFICO devo conoscere il nome della chiave specifico 
+        console.log( m1.get('name') + ' ' + m1.get('lastname') ); --> Mario Rossi 
+
+        Posso assegnare a delle chiavi dei valori di tipo eterogeneo:
+        VAI(vedi) A LINEA 89
+              +
+        console.log(m1.get('name') + ' ' + m1.get('lastname') + ' ' + mi.get('skils'));
+
+Poi posso fare quello che voglio con le nozioni viste fin ora. Faccio un metodo che prende in ingresso una mappa (105) e mi restituisce quello che ho fatto.         
+
+function getMapInfo( map ) {
+console.log(m1.get('name') + ' ' + m1.get('lastname') + ' ' + ni.get('skils'));
+}
+getMapInfo( m1 ) ---> mi richiamerà la linea di codice. La linea di codice comporta la presenza di una mappa, mappa con quel tipo di caratteristiche, name, lastname, skils (ma mi servirebbe typescript).
+
+Creo una versione diversa:
+vedi 120 uso SHORTCUT S= S + ---> S+= (concateno al valore di s)
+vedi 125 .trim --> funzione delle stringhe che prendo la spazio e lo elimina
+se m2 è una mappa funziona se non lo è non funziona.
+Vedi riga 31 - perchè non ci sono le graffe? Posso ometterle quando il comando successivo è l'unico che mi serve che sia all'interno dell'if quando le ometto prende un solo comando ed è come se le avessi messe.
+
+        function getMapInfo( map ) {
+            if( map instanceof Map == false ) {
+                console.log('Errore! Devi utilizzare una mappa!');
+                return
+            }
+
+            let s = ''
+            
+            if( map.has('name') ) s += map.get('name') + ' '
+            if( map.has('lastname') ) s += map.get('lastname') + ' '
+            if( map.has('skills') ) s += map.get('skills')
+
+            console.log(s.trim());
+        }
+
+        getMapInfo( m1 ) ---> vedrò mario rossi più le sue skils(controlla)
+
+Ho a disposizione il metodo HAS che mi dà true / false (vedi 128 - 129) che la mappa ha la chiave - vedi 130: 
+        // check
+        console.log( m1.has('skills') );
+
+                  FINE
+            (anche se continuo a lavorare sempre sugli stessi esempi/elementi).
+------------------------------------------
+
+
+
+Creo un'altra mappa , gli aggiungo solo name e poi richiamo getmap... con m2, mi darà SOLO name. Poi gli aggiungo le skils e mi aggiungerà anche le skils, il controllo in riga mi permetterà di evitare che l'applicazione crashi qualsiasi sia l'utilizzo in fase di chiamata.
+
+        const m2 = new Map()
+        m2.set('name', 'Luigi')
+        m2.set('skills', ['php'])
+
+        getMapInfo( m2 )
+        console.log('-------------------');
+------------------------------------------
+Cosa vuol dire ITERARE? Ripetere.
+Fare una azione più volte su tutti gli elementi di una struttura.
+Andare ad iterare su tutti gli elementi della mappa e gli elementi sono delle coppie chiave-valore, metto in pratica il 'passare una funzione come PARAMTERO'!
+ Per iterare ho bisogno di usare il metodo (perchè metodo? è una funzione delle mappe) forEach che prende come tipo di dato proprio una funzione. Il metodo è diverso dal ciclo for, il ciclo lo personalizzo come voglio posso anche fare il ciclo invertito con il metodo NO , lo faccio su tutti e non posso impostare una partenza, lo faccio in senso crescsente, non posso saltarli e perciò sono obbligato a farli tutti. Se volessi usare un altro metodo dovrei usare il metofo FOROFF ma anche con questo non posso saltare le iterazioni perchè non ho dei numeri! Non posso dirgli saltami la seconda, la seconda nel mio esempio è LASTNAME cosa dovrei fare? Al momento non mi serve quindi me ne sbatto i coglioni, non si può modellare,FINE! VEDI LINEA 167.   - m1.forEach( iterateOnMap ) -
+ 
+        //  1STEP dell'iterazione
+Questa funzione deve prendere due valore, la chiave ed il valore,  m1.forEach mi garantisce che la funzione venga richiamata per ogni accoppiata che c'è nella mappa , le graffe (160) è come se fossero le iterazioni di un ciclo.
+Attenzione il primo parametro è il valore il secondo è la kiave (160).
+Dentro la funzione ovviamente posso fare quello che voglio:
+
+        function iterateOnMap(v, k) {
+            if( typeof v == 'string' ) {
+                console.log( 'la chiave ' + k + ' ha un valore stringa' );
+            }
+            else if( Array.isArray(v) ) {
+                console.log( 'la chiave ' + k + ' ha un valore array' );
+            }
+        }
+
+La funzione viene richiamata per ogni valore che ho nella mappa:
+
+        m1.forEach( iterateOnMap )
+
+        
+
+DESCRIZIONE ALTRO : Array.isArray questo mi dice se il mio tipo di dato è un array oppure no. Object mi dice se è un oggetto o no. Array.isArray è il più specifico.
+
+ULTIMA OPERAZIONE DELLE MAPPE : LA CANCELLAZIONE:
+
+        // cancellazione
+        console.log( m1.delete('name') );
+        console.log( m1 );
+
+Questo è una iterazione sull'array con il metodo forEach ( importa poco ma ne tengo conto) : 
+Domanda: perchè prende prima il valore e poi la chiave se ricavo il valore se ho la chiave? 
+Risposta: perchè questa funzione non l'ho fatta io ma un altro sviluppatore di javascrip e ha deciso cosi, perchè? perchè ad esempio nel caso dell'array della mia chiave nel 90% dei casi, quando uso FOREACH, me ne sbatto! Voglio iterare sui valorei. Quindi ha deciso di mettere come primo argomento il valore e oprzionalmente ha dato la possibilità di passare la chiave; per mantenere la CONSISTENZA con questo tipo di strategia implementata per gli array è stata implementata la stessa strategia per tutti gli altri FOARECH quindi se lo applico per la mappa avrò prima il valore e poi la chiave quindi è quello che riavrò e quello che mi serve è quasi sempre il valore. 
+Domanda: se conosco il valore posso richiamare a quale chiave corrispone?
+Risposta: NO dovresti farti un altro algoritmo, tipo: iteri su tutte le chiavi e vedere se quel valore combacia ma se hai due chiavi con lo stesso valore non sai quale prendi.
+
+        const labels = [ 'javascript', 'java', 'php' ]
+
+        function iterateOverLabels(v, k) {
+            console.log( k + ': ' + v );
+        }
+
+        labels.forEach( iterateOverLabels )
+
+        for(let i = 1; i < labels.length; i++) {
+            console.log( i + ': ' + labels[i] );
+        }
+
+        console.log( m1 instanceof Map );
+        console.log( m1 instanceof Set );
+
+
+Domanda: Quando utilizzo la mappa? 
+Risposta: La mappa la uso quando voglio creare una struttura dato composta, e assegnare a delle chiavi dei valori (dipende da me quando usarla). Quando voglio avere una collezione di coppie KIAVE-VALORE.
+Domanda: La chiave può avere anche valori(nomi) diversi? 
+Risposta: No la chiave deve essere univoca (sennò è un array), il nome posso inventarmelo.
+        getMapInfo( 10 )
+
+_________________________________________
+
+            ARGOMENTO NUMERO DUE 
+        -altro tipo di struttura dati-
+                    SET  
+
+            LA TEORAI DEI SET.
+ La teoria si riduce ad una sola caratteristica : un set è 'una collezione di valori univoci'. Non posso avere dei duplicati! Ogni valore può presentarsi una sola volta all'interno del set! Come si crea un set? 
+
+SINTASSI:
+
+Metodi (sono come quelli della mappa ma per la mappa ho entries() che funziona per una coppia di valori nel set ho values() perchè ho solo un valore perchè come chiami ho degli indici numerici - values..)
+
+- new Set() - il metodo costruttore anche qui è implicito e scatta quando uso il nome del tipo del dato, in questo caso inizializza un set vuoto.
+
+- add()
+
+- delete()
+
+- has()
+
+- forEach() --Il metodo forEach prende una funzione che prende un solo valore che sarà quello dei valori che ho all'interno del set.
+
+- values() -- Questo metodo mi restituisce un iteratore che poi posso utilizzare usando il metodo forof.
+
+Qual'è il metodo che manca?
+GET! Perchè? Perchè il SET internamente
+mantiene un ordine 'casto' non mantiene l'ordine
+di inserimento, non posso ad utilizzare s1.get(0) [linea 282].  
+Ecco perchè ho a disposizione i metodi for each e values perchè devo vedere il SET come un raggruppamento di valori più che come una lista come se fosse un array di valori tenuti con indici incrementali! in realtà vengono tenuto con indici incrementali però non so a quale indice fa riferimento a quale elemente e praticamente non ho il meto GET!
+
+non posso fare 
+console.log(s1.get);
+
+Proprietà :
+
+- size -->
+
+Come si produce un set?
+Come si utilizza il set?
+ESEMPIO W3School.
+
+Creo un set e aggiungo i valori (in questo caso) con .add e come vedo se aggiungo dei valori DUPLICATI questi non vengono presi avrò un solo numero a definirmeli.
+ 
+const letters = new Set();
+
+// Add Values to the Set
+letters.add("a"); 
+letters.add("b");
+letters.add("c");
+
+        const m3 = new Map([
+            ['front-end', ['html', 'css', 'js']],
+            ['back-end', ['php', 'java', 'node']],
+            ['rate', 10]
+        ])
+
+        m3.set('', '')
+
+        console.log( m3 );
+
+        let x 
+        x = 'ciao'
+    </script>
+
+
+LEZIONE 06 
+
+<div id="add">add to set</div>
+    <input type="text" id="set-value">
+
+<script>
+
+Creo new Set che in questo caso è vuoto 
+        const s1 = new Set()
+        console.log( s1 ); ---> come primo step ottengo un set vuoto che ha una size di zero, la size sarebbe come la lenth dell'array solo che nel caso dell strutture dato come SET e Map si chiama size.
+        aggiungo .add (dalla riga 11)
+
+        s1.add( 10 )
+        s1.add( 20 )
+        s1.add( 30 )
+        s1.add( 40 )
+        s1.add( 40 )
+        s1.add( 40 )
+
+        console.log( s1 ); ---> stampa , rimane sempre di quattro perchè il set è univoco, il 40 mi rimane solo una volta se avessi avuto un array il 40 si ripeteva n volte.
+
+        console.log( s1.size ); ---> restituisce la lunghezza del set
+        console.log( s1.has(30) ); --> questo mi dice se è vero che è presente il 30 (true)
+
+POI FACCIO UN FOREACH : s1.forEach e si aspetta una funzione che si aspetta un valore. I parametri che prende sono VALUE , KEY , SET.
+
+        s1.forEach
+
+
+
+Cosa scelgo di fare nel mio caso? 
+
+        function iterateOverSet(v,k) {
+            console.log( k + ':' + v );
+        }
+Vado a stampare e vedo che mi associa come chiave lo stesso valore, in questo caso crea INTERNAMENTE (non lo vedo) 0,1,2,3,4 ma non posso accedere a queste chiavi e quando tento di accere alla chiave mi restituisce il valore del valore, quindi in ultima analisi (v, questo --->k<---)  è un aliasi di questo ( --> k <-- + ... ) così anche per v / o forse è un alias di k + v, da capire. Questo perchè sennò lui dovrebbe esporre l'algoritmo che utilizza per generare le chiavi e come le va a generare, in questo caso è un set di 4 valori e quindi potrei avere anche 0,1,2,3,4 e sarebbero riferiti all'orgineordine di inserimento che ho messo, ma se fosse un set di centinai di entri li va a smistare come dice lui, col forEach sono sicuro che li itero tutti dal primo all'ultimo e ho a disposizione tutti i valori cosi in unltima analisi la K non mi serve, solo il valore (v) . Quindi :
+
+       function iterateOverSet(v) {
+        console.log(v)
+       }
+       
+       s1.forEach(iterateOverSet)
+
+ ALTRA NOZIONE.
+ Come faccio [325] a stabilire (dentro) se è una mappa? Non posso utilizzare TYPEOF ma posso utilizzare un costrutto che si chiama 'instanceof'.
+
+ function getMapInfo( map ) {
+            if( map instanceof Map == false ) {
+                console.log('Errore! Devi utilizzare una mappa!');
+                return
+            }
+
+            let s = ''
+            
+            if( map.has('name') ) s += map.get('name') + ' '
+            if( map.has('lastname') ) s += map.get('lastname') + ' '
+            if( map.has('skills') ) s += map.get('skills')
+
+            console.log(s.trim());
+        }
+
+        getMapInfo( m1 ) ---> vedrò mario rossi più le sue skils(controlla)
+SE FACCIO:
+
+console.log(m1 instanceof Map); --> Questo da true
+
+console.log(m1 instanceof Set); --> Questo mi da false (perchè m1 è una mappa)
+
+Domanda: come faccio a sapere se m1 è una mappa?
+Risposta: dipende qual'è il valroe che contiene nella sua memoria!
+
+Quindi ne consegue che io posso fare:
+'se map istance of map e faccio == false allora posso fare console log errore devi utilizzare una mappa e poi faccio return, praticamente non eseguo let s , se entro nell'if stampo un errore e poi faccio return.
+
+function getMapInfo( map ) {
+
+            if( map instanceof Map == false ) {
+                console.log('Errore! Devi utilizzare una mappa!');
+                return
+            }
+
+            let s = ''
+            
+            if( map.has('name') ) s += map.get('name') + ' '
+            if( map.has('lastname') ) s += map.get('lastname') + ' '
+            if( map.has('skills') ) s += map.get('skills')
+
+            console.log(s.trim());
+        }
+
+Se io faccio :  getMapInfo( 10 ) ---> mi dice errore dei utilizzare una mappa, non entra nemmeno nella funzione perchè segue le istruzioni...
+Ne consegue che anche nel caso di set io posso fare:
+
+            if( s1 instanceof Set )
+            s1.forEach( iterateOverSet )
+
+insomma 'nstanceof' mi permettere di verificare che l'operando di sinistra sia una struttura dato dell'operando di destra.
+
+Poi anche nel SET ho a disposizione la capacità di cancellare: 
+
+        s1.delete(20) 
+        console.log( s1 ); ---> mi da {10,30,40} ho tolto il numero 20 dal set
+
+Domanda: Cosa cambia da istanceof a typeof  Risposta: Quest'ultimo restituisce una stringa che ti dice il tipo di dato dell'oggetto es se lo faccio restituisce object (x i dati non scalari)      se voglio verificare se eè una istanza di SET uso istanceof che mi restituisce un Booleano (è un check), va a verificare la classe.
+
+        console.log( typeof s1 ); ---> object
+
+
+
+        let s2 = new Set([30, 40, 'ciao', 'x', 'ciao'])
+        console.log( s2 );
+
+        let count = 1
+        const setValue = document.getElementById('set-value')
+        document.getElementById('add').addEventListener('click', function() {
+            s2.add( 'nuovo valore ' + count++ )
+            s2.add( setValue.value )
+            console.log( s2 );
+        })
+
+_______________________________________________
+
+COME GENERARE UN SET ED UNA MAPPA CON DEI VALORI INIZIALIZZATI SENZA CHE POI VADA AD UTILIZZARE IL METODO SET.
+
+Fino a questo punto sono andato a realizzare una mappa che prima era vuota e poi gli ho aggiunto dei valori , quindi ho due fasi in questa inizializzazione.
+
+1.Step - creazione mappa vuota
+2.Step - aggiunta valori che riempiono la mappa
+
+Posso assegnare dei valori a questa mappa proprio in fase di realizzazione come con il set. 
+
+Come vedo qui in fase di realizzazione posso passare un ARRAY DI ARRAY -- una matrice.
+
+// Create a Map
+const fruits = new Map([
+  ["apples", 500],
+  ["bananas", 300],
+  ["oranges", 200]
+]);
+
+Questo è un alias di richiamare 
+Set per ognuno di queste chiavi. 
+
+L'array globale mi tiene le coppie il singolo sotto array è la singola entry.
+
+const m3 = new Map( [
+        ['front-ent', ['html , 'css', 'js']],
+        ['back-end', ['php' , 'java', 'node']]
+        ['rate', 10]
+        ])
+La prima parentesi quadra è la mappa in se, la seconda che comprende da front-ent a dopo la quadra di js è la coppia. Front ent è chiave e il valore è tra le quadre...i valori sono Array,Array,Numero.
+
+Se faccio: console.log(m3); ---> avrò la mappa 
+
+Quindi ho creato la mappa senza dover fare :
+
+m3.set('','') X3 VOLTE...l'ho fatto in fase di inizializzazione.
+
+Perchè ho a disposizione tutte e due le strategie?
+Potrei
+- creare una mappa vuota e poi aggiungere dei valori;
+- potrei creare una mappa già completa senza aggiungere valori;
+- potrei creare una mappa con dei valori e poi aggiungernee altri.
+
+Così come posso fare:
+let x 
+oppure
+x = 'ciao'
+è lo stesso identico principio.
+
+Allo stesso modo nel SET posso passare un ARRAY per realizzare un set già con dei valori.
+
+   let s2 = new Set([30, 40, 'ciao', 'x', 'ciao'])
+        console.log( s2 ); ---> ho la variante dell array che gli ho passato in ingresso con ii valori univoci, senza che abbia occorrenza di richiamare più volte il metodo set.
+
+        (l'add lo utilizzo se ho necessità di aggiungere dei valori, se voglio aggiungere qualcosa all'array posso inserire un add DOPO.)
+        
+        Posso farlo anche in modo asincrono.
+        Cioè:
+
+
+        <body>
+        +IDEA:
+        Lo chiamo ADD scrivo 'add to set' , mi appare  nel Dom  +IDEA quando clicco  sau ' add to set ' .. aggiungo al set.
+
+        poi [creo, linea 485 ..sto aggiungendo qualcosa di asincrono che non c'è inizialmente ma scatta condizionalmente ad un evento non sincronamente col programma]
+
+        <div id="add">add to set</div>
+
+        <input type="text" id="set-value">
+
+        </script>
+
+        ....
+        ....
+        ....
+
+        Qui posso fare che se clicco 
+        s2.add 
+        ogni volto che lo aggiungo .. potrei fare un contatore 
+         
+         questo è il contatore:
+        //let count = 1
+        const setValue = document.getElementById('set-value')
+
+        
+         
+        document.getElementById('add').addEventListener('click', function() {
+            //s2.add( 'nuovo valore ' + count++ )
+            s2.add( setValue.value ) ----> con questo vado ad accedere il suo valore in lettura e poi me lo recupero
+            console.log( s2 );
+        })       
+        
+
+        con questo ogni volta che clicco aumenta il set e viene messo un nuovo valore...questo per capire che quando ho una struttura dati posso andarla a modellare sincronamente o asincronamente.
+
+        se poi lo chiamo set value e gli metto il valore che c'è nell'input al posto di quello che c'è gìà poi posso prendere il valore di quell'elemento 
+       </script>
+    
+</body>
+</html>
+
+UN POSSIBILE UTILIZZO DELLA MAPPA (INVENZIONE DI RICCARDO)
+
+<style>
+        * {
+            box-sizing: border-box;
+        }
+
+        #container {
+            display: flex;
+            gap: 10px;
+        }
+
+        #container div {
+            width: 200px; height: 200px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+
+        #add {
+            background-color: lightgray;
+            padding: 10px;
+            display: inline-flex;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="container"></div>
+
+    <div>
+        <div id="add">Add to Map</div>
+        <input type="text" id="k">
+        <input type="text" id="v">
+    </div>
+
+    <script>
+        const m1 = new Map()
+       
+        m1.set('name', 'Mario')
+        m1.set('lastname', 'Rossi')
+        m1.set('skills', ['javascript', 'java', 'php'])
+        m1.set('rate', 10)
+
+        // app
+        function $(id) {
+            return document.getElementById(id)
+        }
+
+        const elContainer = $('container')
+        const elAdd = $('add')
+        const elK = $('k')
+        const elV = $('v')
+
+        function addElement(k, v) {
+            const box = document.createElement('div')
+            box.innerHTML = '<b>' + k + '</b>: ' + v
+
+            elContainer.appendChild(box)
+        }
+
+        m1.forEach(function(v, k) {
+            // ...
+           addElement(k, v)
+        })
+
+        elAdd.addEventListener('click', function() {
+            const key = k.value, val = v.value
+            m1.set(key, val)
+            addElement(key, val)
+        })
+
+
+        /*
+        function uc(s) {
+            return s.toUpperCase()
+        }
+
+        const s = 'ciao'
+        console.log( s.toUpperCase() );
+        console.log( uc(s) );
+        */
+
+        
+    </script>
+    
+</body>
+</html>

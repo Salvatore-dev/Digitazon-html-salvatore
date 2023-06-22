@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 
 app.get('/metadata/books', metadata.getBooks)
 app.get('/metadata/versions', metadata.getVersions)
-app.get('/metadata/indexes', metadata.getIndexVersion)
+app.get('/metadata/index-CEI2008', metadata.getIndexVersion)
 
 app.get('/books/:book/chapters/:chapter', getChapter)
 app.get('/books/:book/chapters/:chapter/verses/:verse', getVerse)

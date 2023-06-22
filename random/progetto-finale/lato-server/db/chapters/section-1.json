@@ -1,0 +1,3643 @@
+{
+  "Genesi": {
+    "metaNumberBook": 0,
+    "Gen1": {
+      "empty": true,
+      "data": []
+    },
+    "Gen2": {
+      "empty": true,
+      "data": []
+    },
+    "Gen3": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il serpente era il più astuto di tutti gli animali selvatici che Dio aveva fatto e disse alla donna: \"È vero che Dio ha detto: \"Non dovete mangiare di alcun albero del giardino\"?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Rispose la donna al serpente: \"Dei frutti degli alberi del giardino noi possiamo mangiare,",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "ma del frutto dell'albero che sta in mezzo al giardino Dio ha detto: \"Non dovete mangiarne e non lo dovete toccare, altrimenti morirete\"\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma il serpente disse alla donna: \"Non morirete affatto!",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Anzi, Dio sa che il giorno in cui voi ne mangiaste si aprirebbero i vostri occhi e sareste come Dio, conoscendo il bene e il male\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora la donna vide che l'albero era buono da mangiare, gradevole agli occhi e desiderabile per acquistare saggezza; prese del suo frutto e ne mangiò, poi ne diede anche al marito, che era con lei, e anch'egli ne mangiò.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora si aprirono gli occhi di tutti e due e conobbero di essere nudi; intrecciarono foglie di fico e se ne fecero cinture.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Poi udirono il rumore dei passi del Signore Dio che passeggiava nel giardino alla brezza del giorno, e l'uomo, con sua moglie, si nascose dalla presenza del Signore Dio, in mezzo agli alberi del giardino.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma il Signore Dio chiamò l'uomo e gli disse: \"Dove sei?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Rispose: \"Ho udito la tua voce nel giardino: ho avuto paura, perché sono nudo, e mi sono nascosto\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Riprese: \"Chi ti ha fatto sapere che sei nudo? Hai forse mangiato dell'albero di cui ti avevo comandato di non mangiare?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Rispose l'uomo: \"La donna che tu mi hai posto accanto mi ha dato dell'albero e io ne ho mangiato\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il Signore Dio disse alla donna: \"Che hai fatto?\". Rispose la donna: \"Il serpente mi ha ingannata e io ho mangiato\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora il Signore Dio disse al serpente: \"Poiché hai fatto questo, maledetto tu fra tutto il bestiame e fra tutti gli animali selvatici! Sul tuo ventre camminerai e polvere mangerai per tutti i giorni della tua vita.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Io porrò inimicizia fra te e la donna, fra la tua stirpe e la sua stirpe: questa ti schiaccerà la testa e tu le insidierai il calcagno\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Alla donna disse: \"Moltiplicherò i tuoi dolori e le tue gravidanze, con dolore partorirai figli. Verso tuo marito sarà il tuo istinto, ed egli ti dominerà\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "All'uomo disse: \"Poiché hai ascoltato la voce di tua moglie e hai mangiato dell'albero di cui ti avevo comandato: \"Non devi mangiarne\", maledetto il suolo per causa tua! Con dolore ne trarrai il cibo per tutti i giorni della tua vita.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Spine e cardi produrrà per te e mangerai l'erba dei campi.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Con il sudore del tuo volto mangerai il pane, finché non ritornerai alla terra, perché da essa sei stato tratto: polvere tu sei e in polvere ritornerai!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'uomo chiamò sua moglie Eva, perché ella fu la madre di tutti i viventi.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il Signore Dio fece all'uomo e a sua moglie tuniche di pelli e li vestì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Poi il Signore Dio disse: \"Ecco, l'uomo è diventato come uno di noi quanto alla conoscenza del bene e del male. Che ora egli non stenda la mano e non prenda anche dell'albero della vita, ne mangi e viva per sempre!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "23",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il Signore Dio lo scacciò dal giardino di Eden, perché lavorasse il suolo da cui era stato tratto.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "24",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Scacciò l'uomo e pose a oriente del giardino di Eden i cherubini e la fiamma della spada guizzante, per custodire la via all'albero della vita.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen3"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Gen4": {
+      "empty": true,
+      "data": []
+    },
+    "Gen5": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Questo è il libro della discendenza di Adamo. Nel giorno in cui Dio creò l'uomo, lo fece a somiglianza di Dio;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "maschio e femmina li creò, li benedisse e diede loro il nome di uomo nel giorno in cui furono creati.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Adamo aveva centotrenta anni quando generò un figlio a sua immagine, secondo la sua somiglianza, e lo chiamò Set.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dopo aver generato Set, Adamo visse ancora ottocento anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Adamo fu di novecentotrenta anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Set aveva centocinque anni quando generò Enos;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "dopo aver generato Enos, Set visse ancora ottocentosette anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Set fu di novecentododici anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Enos aveva novanta anni quando generò Kenan;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Enos, dopo aver generato Kenan, visse ancora ottocentoquindici anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Enos fu di novecentocinque anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Kenan aveva settanta anni quando generò Maalalèl;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Kenan, dopo aver generato Maalalèl, visse ancora ottocentoquaranta anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Kenan fu di novecentodieci anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Maalalèl aveva sessantacinque anni quando generò Iered;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Maalalèl, dopo aver generato Iered, visse ancora ottocentotrenta anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Maalalèl fu di ottocentonovantacinque anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Iered aveva centosessantadue anni quando generò Enoc;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Iered, dopo aver generato Enoc, visse ancora ottocento anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Iered fu di novecentosessantadue anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Enoc aveva sessantacinque anni quando generò Matusalemme.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Enoc camminò con Dio; dopo aver generato Matusalemme, visse ancora per trecento anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "23",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Enoc fu di trecentosessantacinque anni.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "24",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Enoc camminò con Dio, poi scomparve perché Dio l'aveva preso.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "25",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Matusalemme aveva centoottantasette anni quando generò Lamec;",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "26",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Matusalemme, dopo aver generato Lamec, visse ancora settecentoottantadue anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "27",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Matusalemme fu di novecentosessantanove anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "28",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Lamec aveva centoottantadue anni quando generò un figlio",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "29",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "e lo chiamò Noè, dicendo: \"Costui ci consolerà del nostro lavoro e della fatica delle nostre mani, a causa del suolo che il Signore ha maledetto\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "30",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Lamec, dopo aver generato Noè, visse ancora cinquecentonovantacinque anni e generò figli e figlie.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "31",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'intera vita di Lamec fu di settecentosettantasette anni; poi morì.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Genesi",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "32",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Noè aveva cinquecento anni quando generò Sem, Cam e Iafet.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Gen",
+            "booknum": 0,
+            "univbooknum": "1",
+            "originalquery": "Gen5"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Gen6": {
+      "empty": true,
+      "data": []
+    },
+    "Gen7": {
+      "empty": true,
+      "data": []
+    },
+    "Gen8": {
+      "empty": true,
+      "data": []
+    },
+    "Gen9": {
+      "empty": true,
+      "data": []
+    },
+    "Gen10": {
+      "empty": true,
+      "data": []
+    },
+    "Gen11": {
+      "empty": true,
+      "data": []
+    },
+    "Gen12": {
+      "empty": true,
+      "data": []
+    },
+    "Gen13": {
+      "empty": true,
+      "data": []
+    },
+    "Gen14": {
+      "empty": true,
+      "data": []
+    },
+    "Gen15": {
+      "empty": true,
+      "data": []
+    },
+    "Gen16": {
+      "empty": true,
+      "data": []
+    },
+    "Gen17": {
+      "empty": true,
+      "data": []
+    },
+    "Gen18": {
+      "empty": true,
+      "data": []
+    },
+    "Gen19": {
+      "empty": true,
+      "data": []
+    },
+    "Gen20": {
+      "empty": true,
+      "data": []
+    },
+    "Gen21": {
+      "empty": true,
+      "data": []
+    },
+    "Gen22": {
+      "empty": true,
+      "data": []
+    },
+    "Gen23": {
+      "empty": true,
+      "data": []
+    },
+    "Gen24": {
+      "empty": true,
+      "data": []
+    },
+    "Gen25": {
+      "empty": true,
+      "data": []
+    },
+    "Gen26": {
+      "empty": true,
+      "data": []
+    },
+    "Gen27": {
+      "empty": true,
+      "data": []
+    },
+    "Gen28": {
+      "empty": true,
+      "data": []
+    },
+    "Gen29": {
+      "empty": true,
+      "data": []
+    },
+    "Gen30": {
+      "empty": true,
+      "data": []
+    },
+    "Gen31": {
+      "empty": true,
+      "data": []
+    },
+    "Gen32": {
+      "empty": true,
+      "data": []
+    },
+    "Gen33": {
+      "empty": true,
+      "data": []
+    },
+    "Gen34": {
+      "empty": true,
+      "data": []
+    },
+    "Gen35": {
+      "empty": true,
+      "data": []
+    },
+    "Gen36": {
+      "empty": true,
+      "data": []
+    },
+    "Gen37": {
+      "empty": true,
+      "data": []
+    },
+    "Gen38": {
+      "empty": true,
+      "data": []
+    },
+    "Gen39": {
+      "empty": true,
+      "data": []
+    },
+    "Gen40": {
+      "empty": true,
+      "data": []
+    },
+    "Gen41": {
+      "empty": true,
+      "data": []
+    },
+    "Gen42": {
+      "empty": true,
+      "data": []
+    },
+    "Gen43": {
+      "empty": true,
+      "data": []
+    },
+    "Gen44": {
+      "empty": true,
+      "data": []
+    },
+    "Gen45": {
+      "empty": true,
+      "data": []
+    },
+    "Gen46": {
+      "empty": true,
+      "data": []
+    },
+    "Gen47": {
+      "empty": true,
+      "data": []
+    },
+    "Gen48": {
+      "empty": true,
+      "data": []
+    },
+    "Gen49": {
+      "empty": true,
+      "data": []
+    },
+    "Gen50": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Esodo": {
+    "metaNumberBook": 1,
+    "Es1": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Questi sono i nomi dei figli d'Israele entrati in Egitto; essi vi giunsero insieme a Giacobbe, ognuno con la sua famiglia:",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ruben, Simeone, Levi e Giuda,",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ìssacar, Zàbulon e Beniamino,",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dan e Nèftali, Gad e Aser.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Tutte le persone discendenti da Giacobbe erano settanta. Giuseppe si trovava già in Egitto.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Giuseppe poi morì e così tutti i suoi fratelli e tutta quella generazione.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "I figli d'Israele prolificarono e crebbero, divennero numerosi e molto forti, e il paese ne fu pieno.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora sorse sull'Egitto un nuovo re, che non aveva conosciuto Giuseppe.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Egli disse al suo popolo: \"Ecco che il popolo dei figli d'Israele è più numeroso e più forte di noi.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Cerchiamo di essere avveduti nei suoi riguardi per impedire che cresca, altrimenti, in caso di guerra, si unirà ai nostri avversari, combatterà contro di noi e poi partirà dal paese\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Perciò vennero imposti loro dei sovrintendenti ai lavori forzati, per opprimerli con le loro angherie, e così costruirono per il faraone le città-deposito, cioè Pitom e Ramses.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma quanto più opprimevano il popolo, tanto più si moltiplicava e cresceva, ed essi furono presi da spavento di fronte agli Israeliti.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Per questo gli Egiziani fecero lavorare i figli d'Israele trattandoli con durezza.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Resero loro amara la vita mediante una dura schiavitù, costringendoli a preparare l'argilla e a fabbricare mattoni, e ad ogni sorta di lavoro nei campi; a tutti questi lavori li obbligarono con durezza.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il re d'Egitto disse alle levatrici degli Ebrei, delle quali una si chiamava Sifra e l'altra Pua:",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "\"Quando assistete le donne ebree durante il parto, osservate bene tra le due pietre: se è un maschio, fatelo morire; se è una femmina, potrà vivere\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma le levatrici temettero Dio: non fecero come aveva loro ordinato il re d'Egitto e lasciarono vivere i bambini.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il re d'Egitto chiamò le levatrici e disse loro: \"Perché avete fatto questo e avete lasciato vivere i bambini?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Le levatrici risposero al faraone: \"Le donne ebree non sono come le egiziane: sono piene di vitalità. Prima che giunga da loro la levatrice, hanno già partorito!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dio beneficò le levatrici. Il popolo aumentò e divenne molto forte.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "E poiché le levatrici avevano temuto Dio, egli diede loro una discendenza.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 1,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora il faraone diede quest'ordine a tutto il suo popolo: \"Gettate nel Nilo ogni figlio maschio che nascerà, ma lasciate vivere ogni femmina\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es1"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Es2": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Un uomo della famiglia di Levi andò a prendere in moglie una discendente di Levi.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "La donna concepì e partorì un figlio; vide che era bello e lo tenne nascosto per tre mesi.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma non potendo tenerlo nascosto più oltre, prese per lui un cestello di papiro, lo spalmò di bitume e di pece, vi adagiò il bambino e lo depose fra i giunchi sulla riva del Nilo.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "La sorella del bambino si pose a osservare da lontano che cosa gli sarebbe accaduto.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ora la figlia del faraone scese al Nilo per fare il bagno, mentre le sue ancelle passeggiavano lungo la sponda del Nilo. Ella vide il cestello fra i giunchi e mandò la sua schiava a prenderlo.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'aprì e vide il bambino: ecco, il piccolo piangeva. Ne ebbe compassione e disse: \"È un bambino degli Ebrei\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "La sorella del bambino disse allora alla figlia del faraone: \"Devo andare a chiamarti una nutrice tra le donne ebree, perché allatti per te il bambino?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "\"Va'\", rispose la figlia del faraone. La fanciulla andò a chiamare la madre del bambino.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "La figlia del faraone le disse: \"Porta con te questo bambino e allattalo per me; io ti darò un salario\". La donna prese il bambino e lo allattò.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Quando il bambino fu cresciuto, lo condusse alla figlia del faraone. Egli fu per lei come un figlio e lo chiamò Mosè, dicendo: \"Io l'ho tratto dalle acque!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Un giorno Mosè, cresciuto in età, si recò dai suoi fratelli e notò i loro lavori forzati. Vide un Egiziano che colpiva un Ebreo, uno dei suoi fratelli.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Voltatosi attorno e visto che non c'era nessuno, colpì a morte l'Egiziano e lo sotterrò nella sabbia.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il giorno dopo uscì di nuovo e vide due Ebrei che litigavano; disse a quello che aveva torto: \"Perché percuoti il tuo fratello?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Quegli rispose: \"Chi ti ha costituito capo e giudice su di noi? Pensi forse di potermi uccidere, come hai ucciso l'Egiziano?\". Allora Mosè ebbe paura e pensò: \"Certamente la cosa si è risaputa\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il faraone sentì parlare di questo fatto e fece cercare Mosè per metterlo a morte. Allora Mosè fuggì lontano dal faraone e si fermò nel territorio di Madian e sedette presso un pozzo.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il sacerdote di Madian aveva sette figlie. Esse vennero ad attingere acqua e riempirono gli abbeveratoi per far bere il gregge del padre.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma arrivarono alcuni pastori e le scacciarono. Allora Mosè si levò a difendere le ragazze e fece bere il loro bestiame.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Tornarono dal loro padre Reuèl e questi disse loro: \"Come mai oggi avete fatto ritorno così in fretta?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Risposero: \"Un uomo, un Egiziano, ci ha liberato dalle mani dei pastori; lui stesso ha attinto per noi e ha fatto bere il gregge\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Quegli disse alle figlie: \"Dov'è? Perché avete lasciato là quell'uomo? Chiamatelo a mangiare il nostro cibo!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Così Mosè accettò di abitare con quell'uomo, che gli diede in moglie la propria figlia Sipporà.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ella gli partorì un figlio ed egli lo chiamò Ghersom, perché diceva: \"Vivo come forestiero in terra straniera!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "23",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dopo molto tempo il re d'Egitto morì. Gli Israeliti gemettero per la loro schiavitù, alzarono grida di lamento e il loro grido dalla schiavitù salì a Dio.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "24",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dio ascoltò il loro lamento, Dio si ricordò della sua alleanza con Abramo, Isacco e Giacobbe.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 2,
+            "versedescr": "",
+            "verse": "25",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dio guardò la condizione degli Israeliti, Dio se ne diede pensiero.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es2"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Es3": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Mentre Mosè stava pascolando il gregge di Ietro, suo suocero, sacerdote di Madian, condusse il bestiame oltre il deserto e arrivò al monte di Dio, l'Oreb.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "L'angelo del Signore gli apparve in una fiamma di fuoco dal mezzo di un roveto. Egli guardò ed ecco: il roveto ardeva per il fuoco, ma quel roveto non si consumava.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Mosè pensò: \"Voglio avvicinarmi a osservare questo grande spettacolo: perché il roveto non brucia?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il Signore vide che si era avvicinato per guardare; Dio gridò a lui dal roveto: \"Mosè, Mosè!\". Rispose: \"Eccomi!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Riprese: \"Non avvicinarti oltre! Togliti i sandali dai piedi, perché il luogo sul quale tu stai è suolo santo!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "E disse: \"Io sono il Dio di tuo padre, il Dio di Abramo, il Dio di Isacco, il Dio di Giacobbe\". Mosè allora si coprì il volto, perché aveva paura di guardare verso Dio.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il Signore disse: \"Ho osservato la miseria del mio popolo in Egitto e ho udito il suo grido a causa dei suoi sovrintendenti: conosco le sue sofferenze.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Sono sceso per liberarlo dal potere dell'Egitto e per farlo salire da questa terra verso una terra bella e spaziosa, verso una terra dove scorrono latte e miele, verso il luogo dove si trovano il Cananeo, l'Ittita, l'Amorreo, il Perizzita, l'Eveo, il Gebuseo.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ecco, il grido degli Israeliti è arrivato fino a me e io stesso ho visto come gli Egiziani li opprimono.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Perciò va'! Io ti mando dal faraone. Fa' uscire dall'Egitto il mio popolo, gli Israeliti!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Mosè disse a Dio: \"Chi sono io per andare dal faraone e far uscire gli Israeliti dall'Egitto?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Rispose: \"Io sarò con te. Questo sarà per te il segno che io ti ho mandato: quando tu avrai fatto uscire il popolo dall'Egitto, servirete Dio su questo monte\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Mosè disse a Dio: \"Ecco, io vado dagli Israeliti e dico loro: \"Il Dio dei vostri padri mi ha mandato a voi\". Mi diranno: \"Qual è il suo nome?\". E io che cosa risponderò loro?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dio disse a Mosè: \"Io sono colui che sono!\". E aggiunse: \"Così dirai agli Israeliti: \"Io-Sono mi ha mandato a voi\"\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Dio disse ancora a Mosè: \"Dirai agli Israeliti: \"Il Signore, Dio dei vostri padri, Dio di Abramo, Dio di Isacco, Dio di Giacobbe, mi ha mandato a voi\". Questo è il mio nome per sempre; questo è il titolo con cui sarò ricordato di generazione in generazione.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Va'! Riunisci gli anziani d'Israele e di' loro: \"Il Signore, Dio dei vostri padri, Dio di Abramo, di Isacco e di Giacobbe, mi è apparso per dirmi: Sono venuto a visitarvi e vedere ciò che viene fatto a voi in Egitto.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "E ho detto: Vi farò salire dalla umiliazione dell'Egitto verso la terra del Cananeo, dell'Ittita, dell'Amorreo, del Perizzita, dell'Eveo e del Gebuseo, verso una terra dove scorrono latte e miele\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Essi ascolteranno la tua voce, e tu e gli anziani d'Israele andrete dal re d'Egitto e gli direte: \"Il Signore, Dio degli Ebrei, si è presentato a noi. Ci sia permesso di andare nel deserto, a tre giorni di cammino, per fare un sacrificio al Signore, nostro Dio\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Io so che il re d'Egitto non vi permetterà di partire, se non con l'intervento di una mano forte.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Stenderò dunque la mano e colpirò l'Egitto con tutti i prodigi che opererò in mezzo ad esso, dopo di che egli vi lascerà andare.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Farò sì che questo popolo trovi grazia agli occhi degli Egiziani: quando partirete, non ve ne andrete a mani vuote.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 3,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ogni donna domanderà alla sua vicina e all'inquilina della sua casa oggetti d'argento e oggetti d'oro e vesti; li farete portare ai vostri figli e alle vostre figlie e spoglierete l'Egitto\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es3"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Es4": {
+      "empty": true,
+      "data": []
+    },
+    "Es5": {
+      "empty": false,
+      "data": {
+        "results": [
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "1",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "In seguito, Mosè e Aronne vennero dal faraone e gli annunciarono: \"Così dice il Signore, il Dio d'Israele: \"Lascia partire il mio popolo, perché mi celebri una festa nel deserto!\"\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "2",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il faraone rispose: \"Chi è il Signore, perché io debba ascoltare la sua voce e lasciare partire Israele? Non conosco il Signore e non lascerò certo partire Israele!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "3",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ripresero: \"Il Dio degli Ebrei ci è venuto incontro. Ci sia dunque concesso di partire per un cammino di tre giorni nel deserto e offrire un sacrificio al Signore, nostro Dio, perché non ci colpisca di peste o di spada!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "4",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il re d'Egitto disse loro: \"Mosè e Aronne, perché distogliete il popolo dai suoi lavori? Tornate ai vostri lavori forzati!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "5",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il faraone disse: \"Ecco, ora che il popolo è numeroso nel paese, voi vorreste far loro interrompere i lavori forzati?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "6",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "In quel giorno il faraone diede questi ordini ai sovrintendenti del popolo e agli scribi:",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "7",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "\"Non darete più la paglia al popolo per fabbricare i mattoni, come facevate prima. Andranno a cercarsi da sé la paglia.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "8",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Però voi dovete esigere il numero di mattoni che facevano finora, senza ridurlo. Sono fannulloni; per questo protestano: \"Vogliamo partire, dobbiamo sacrificare al nostro Dio!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "9",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Pesi dunque la schiavitù su questi uomini e lavorino; non diano retta a parole false!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "10",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "I sovrintendenti del popolo e gli scribi uscirono e riferirono al popolo: \"Così dice il faraone: \"Io non vi fornisco più paglia.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "11",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Andate voi stessi a procurarvela dove ne troverete, ma non diminuisca la vostra produzione\"\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "12",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Il popolo si sparse in tutto il territorio d'Egitto a raccogliere stoppie da usare come paglia.",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "13",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ma i sovrintendenti li sollecitavano dicendo: \"Portate a termine il vostro lavoro: ogni giorno lo stesso quantitativo come quando avevate la paglia\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "14",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Bastonarono gli scribi degli Israeliti, quelli che i sovrintendenti del faraone avevano costituito loro capi, dicendo: \"Perché non avete portato a termine né ieri né oggi il vostro numero di mattoni come prima?\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "15",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora gli scribi degli Israeliti vennero dal faraone a reclamare, dicendo: \"Perché tratti così noi tuoi servi?",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "16",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Non viene data paglia ai tuoi servi, ma ci viene detto: \"Fate i mattoni!\". E ora i tuoi servi sono bastonati e la colpa è del tuo popolo!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "17",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Rispose: \"Fannulloni siete, fannulloni! Per questo dite: \"Vogliamo partire, dobbiamo sacrificare al Signore\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "18",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Ora andate, lavorate! Non vi sarà data paglia, ma dovrete consegnare lo stesso numero di mattoni\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "19",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Gli scribi degli Israeliti si videro in difficoltà, sentendosi dire: \"Non diminuirete affatto il numero giornaliero dei mattoni\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "20",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Usciti dalla presenza del faraone, quando incontrarono Mosè e Aronne che stavano ad aspettarli,",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "21",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "dissero loro: \"Il Signore guardi a voi e giudichi, perché ci avete resi odiosi agli occhi del faraone e agli occhi dei suoi ministri, mettendo loro in mano la spada per ucciderci!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "22",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Allora Mosè si rivolse al Signore e disse: \"Signore, perché hai maltrattato questo popolo? Perché dunque mi hai inviato?",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          },
+          {
+            "testament": 1,
+            "section": 1,
+            "book": "Esodo",
+            "chapter": 5,
+            "versedescr": "",
+            "verse": "23",
+            "verseequiv": "",
+            "verseorigin": null,
+            "text": "Da quando sono venuto dal faraone per parlargli in tuo nome, egli ha fatto del male a questo popolo, e tu non hai affatto liberato il tuo popolo!\".",
+            "title1": "",
+            "title2": "",
+            "title3": "",
+            "version": "CEI2008",
+            "bookabbrev": "Es",
+            "booknum": 1,
+            "univbooknum": "2",
+            "originalquery": "Es5"
+          }
+        ],
+        "errors": [],
+        "info": {
+          "ENDPOINT_VERSION": "3.0",
+          "detectedNotation": "EUROPEAN",
+          "bibleVersionsInfo": {
+            "CEI2008": "Conferenza Episcopale Italiana|2008|it|1|CATHOLIC|Fondazione di Religione “Santi Francesco d’Assisi e Caterina da Siena”|source: https://www.bibbiaedu.it"
+          }
+        }
+      }
+    },
+    "Es6": {
+      "empty": true,
+      "data": []
+    },
+    "Es7": {
+      "empty": true,
+      "data": []
+    },
+    "Es8": {
+      "empty": true,
+      "data": []
+    },
+    "Es9": {
+      "empty": true,
+      "data": []
+    },
+    "Es10": {
+      "empty": true,
+      "data": []
+    },
+    "Es11": {
+      "empty": true,
+      "data": []
+    },
+    "Es12": {
+      "empty": true,
+      "data": []
+    },
+    "Es13": {
+      "empty": true,
+      "data": []
+    },
+    "Es14": {
+      "empty": true,
+      "data": []
+    },
+    "Es15": {
+      "empty": true,
+      "data": []
+    },
+    "Es16": {
+      "empty": true,
+      "data": []
+    },
+    "Es17": {
+      "empty": true,
+      "data": []
+    },
+    "Es18": {
+      "empty": true,
+      "data": []
+    },
+    "Es19": {
+      "empty": true,
+      "data": []
+    },
+    "Es20": {
+      "empty": true,
+      "data": []
+    },
+    "Es21": {
+      "empty": true,
+      "data": []
+    },
+    "Es22": {
+      "empty": true,
+      "data": []
+    },
+    "Es23": {
+      "empty": true,
+      "data": []
+    },
+    "Es24": {
+      "empty": true,
+      "data": []
+    },
+    "Es25": {
+      "empty": true,
+      "data": []
+    },
+    "Es26": {
+      "empty": true,
+      "data": []
+    },
+    "Es27": {
+      "empty": true,
+      "data": []
+    },
+    "Es28": {
+      "empty": true,
+      "data": []
+    },
+    "Es29": {
+      "empty": true,
+      "data": []
+    },
+    "Es30": {
+      "empty": true,
+      "data": []
+    },
+    "Es31": {
+      "empty": true,
+      "data": []
+    },
+    "Es32": {
+      "empty": true,
+      "data": []
+    },
+    "Es33": {
+      "empty": true,
+      "data": []
+    },
+    "Es34": {
+      "empty": true,
+      "data": []
+    },
+    "Es35": {
+      "empty": true,
+      "data": []
+    },
+    "Es36": {
+      "empty": true,
+      "data": []
+    },
+    "Es37": {
+      "empty": true,
+      "data": []
+    },
+    "Es38": {
+      "empty": true,
+      "data": []
+    },
+    "Es39": {
+      "empty": true,
+      "data": []
+    },
+    "Es40": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Levitico": {
+    "metaNumberBook": 2,
+    "Lv1": {
+      "empty": true,
+      "data": []
+    },
+    "Lv2": {
+      "empty": true,
+      "data": []
+    },
+    "Lv3": {
+      "empty": true,
+      "data": []
+    },
+    "Lv4": {
+      "empty": true,
+      "data": []
+    },
+    "Lv5": {
+      "empty": true,
+      "data": []
+    },
+    "Lv6": {
+      "empty": true,
+      "data": []
+    },
+    "Lv7": {
+      "empty": true,
+      "data": []
+    },
+    "Lv8": {
+      "empty": true,
+      "data": []
+    },
+    "Lv9": {
+      "empty": true,
+      "data": []
+    },
+    "Lv10": {
+      "empty": true,
+      "data": []
+    },
+    "Lv11": {
+      "empty": true,
+      "data": []
+    },
+    "Lv12": {
+      "empty": true,
+      "data": []
+    },
+    "Lv13": {
+      "empty": true,
+      "data": []
+    },
+    "Lv14": {
+      "empty": true,
+      "data": []
+    },
+    "Lv15": {
+      "empty": true,
+      "data": []
+    },
+    "Lv16": {
+      "empty": true,
+      "data": []
+    },
+    "Lv17": {
+      "empty": true,
+      "data": []
+    },
+    "Lv18": {
+      "empty": true,
+      "data": []
+    },
+    "Lv19": {
+      "empty": true,
+      "data": []
+    },
+    "Lv20": {
+      "empty": true,
+      "data": []
+    },
+    "Lv21": {
+      "empty": true,
+      "data": []
+    },
+    "Lv22": {
+      "empty": true,
+      "data": []
+    },
+    "Lv23": {
+      "empty": true,
+      "data": []
+    },
+    "Lv24": {
+      "empty": true,
+      "data": []
+    },
+    "Lv25": {
+      "empty": true,
+      "data": []
+    },
+    "Lv26": {
+      "empty": true,
+      "data": []
+    },
+    "Lv27": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Numeri": {
+    "metaNumberBook": 3,
+    "Nm1": {
+      "empty": true,
+      "data": []
+    },
+    "Nm2": {
+      "empty": true,
+      "data": []
+    },
+    "Nm3": {
+      "empty": true,
+      "data": []
+    },
+    "Nm4": {
+      "empty": true,
+      "data": []
+    },
+    "Nm5": {
+      "empty": true,
+      "data": []
+    },
+    "Nm6": {
+      "empty": true,
+      "data": []
+    },
+    "Nm7": {
+      "empty": true,
+      "data": []
+    },
+    "Nm8": {
+      "empty": true,
+      "data": []
+    },
+    "Nm9": {
+      "empty": true,
+      "data": []
+    },
+    "Nm10": {
+      "empty": true,
+      "data": []
+    },
+    "Nm11": {
+      "empty": true,
+      "data": []
+    },
+    "Nm12": {
+      "empty": true,
+      "data": []
+    },
+    "Nm13": {
+      "empty": true,
+      "data": []
+    },
+    "Nm14": {
+      "empty": true,
+      "data": []
+    },
+    "Nm15": {
+      "empty": true,
+      "data": []
+    },
+    "Nm16": {
+      "empty": true,
+      "data": []
+    },
+    "Nm17": {
+      "empty": true,
+      "data": []
+    },
+    "Nm18": {
+      "empty": true,
+      "data": []
+    },
+    "Nm19": {
+      "empty": true,
+      "data": []
+    },
+    "Nm20": {
+      "empty": true,
+      "data": []
+    },
+    "Nm21": {
+      "empty": true,
+      "data": []
+    },
+    "Nm22": {
+      "empty": true,
+      "data": []
+    },
+    "Nm23": {
+      "empty": true,
+      "data": []
+    },
+    "Nm24": {
+      "empty": true,
+      "data": []
+    },
+    "Nm25": {
+      "empty": true,
+      "data": []
+    },
+    "Nm26": {
+      "empty": true,
+      "data": []
+    },
+    "Nm27": {
+      "empty": true,
+      "data": []
+    },
+    "Nm28": {
+      "empty": true,
+      "data": []
+    },
+    "Nm29": {
+      "empty": true,
+      "data": []
+    },
+    "Nm30": {
+      "empty": true,
+      "data": []
+    },
+    "Nm31": {
+      "empty": true,
+      "data": []
+    },
+    "Nm32": {
+      "empty": true,
+      "data": []
+    },
+    "Nm33": {
+      "empty": true,
+      "data": []
+    },
+    "Nm34": {
+      "empty": true,
+      "data": []
+    },
+    "Nm35": {
+      "empty": true,
+      "data": []
+    },
+    "Nm36": {
+      "empty": true,
+      "data": []
+    }
+  },
+  "Deuteronomio": {
+    "metaNumberBook": 4,
+    "Dt1": {
+      "empty": true,
+      "data": []
+    },
+    "Dt2": {
+      "empty": true,
+      "data": []
+    },
+    "Dt3": {
+      "empty": true,
+      "data": []
+    },
+    "Dt4": {
+      "empty": true,
+      "data": []
+    },
+    "Dt5": {
+      "empty": true,
+      "data": []
+    },
+    "Dt6": {
+      "empty": true,
+      "data": []
+    },
+    "Dt7": {
+      "empty": true,
+      "data": []
+    },
+    "Dt8": {
+      "empty": true,
+      "data": []
+    },
+    "Dt9": {
+      "empty": true,
+      "data": []
+    },
+    "Dt10": {
+      "empty": true,
+      "data": []
+    },
+    "Dt11": {
+      "empty": true,
+      "data": []
+    },
+    "Dt12": {
+      "empty": true,
+      "data": []
+    },
+    "Dt13": {
+      "empty": true,
+      "data": []
+    },
+    "Dt14": {
+      "empty": true,
+      "data": []
+    },
+    "Dt15": {
+      "empty": true,
+      "data": []
+    },
+    "Dt16": {
+      "empty": true,
+      "data": []
+    },
+    "Dt17": {
+      "empty": true,
+      "data": []
+    },
+    "Dt18": {
+      "empty": true,
+      "data": []
+    },
+    "Dt19": {
+      "empty": true,
+      "data": []
+    },
+    "Dt20": {
+      "empty": true,
+      "data": []
+    },
+    "Dt21": {
+      "empty": true,
+      "data": []
+    },
+    "Dt22": {
+      "empty": true,
+      "data": []
+    },
+    "Dt23": {
+      "empty": true,
+      "data": []
+    },
+    "Dt24": {
+      "empty": true,
+      "data": []
+    },
+    "Dt25": {
+      "empty": true,
+      "data": []
+    },
+    "Dt26": {
+      "empty": true,
+      "data": []
+    },
+    "Dt27": {
+      "empty": true,
+      "data": []
+    },
+    "Dt28": {
+      "empty": true,
+      "data": []
+    },
+    "Dt29": {
+      "empty": true,
+      "data": []
+    },
+    "Dt30": {
+      "empty": true,
+      "data": []
+    },
+    "Dt31": {
+      "empty": true,
+      "data": []
+    },
+    "Dt32": {
+      "empty": true,
+      "data": []
+    },
+    "Dt33": {
+      "empty": true,
+      "data": []
+    },
+    "Dt34": {
+      "empty": true,
+      "data": []
+    }
+  }
+}

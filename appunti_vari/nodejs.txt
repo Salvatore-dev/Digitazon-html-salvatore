@@ -1,0 +1,203 @@
+Node.js è un database che lavora in single threaded, ovvero aspetta che la corrente richiesta da parte di un client venga terminata prima di partire con un'altra richiesta, per questo motivo l'efficienza lato database è importantissima e si preferisce l'efficienza dell'algoritmo rispetto alla sua leggibilità sempre nel minImo comprensibile.
+
+SEMVER: semantic versioning
+Il semver permette di comprendere la determinata versione di un modulo.
+2.30.0 > major 2 - minor 30 - patch 0 | 2 > major 2 - minor 0 - patch 0
+- Quando viene risolto un bug di piccola importanza ma utile a tutti gli utenti viene aumentata la patch.
+- Mettiamo che viene trovato un problema con una funzione che per qualche motivo da una soluzione sbagliata allora viene aumentato il minor per definire che c'è stato un cambio di una certa entità.
+- Mettiamo che è stata rivista totalmente una libreria e sono state modificate moltissime cose che non permettono più la retrocompatibilità allora la versione verrà modificata alla 3.0.0
+
+REST API (Representational State Transfer): è una specifica (insieme di regole) tramite le quali esponi le operazioni di crud su una risorsa.
+Rest richiede che un client effettui una richiesta al server per recuperare o modificare i dati sul server.
+Una richiesta generalmente consiste in:
+- un verbo HTTP che definisce il tipo di operazione del CRUD da eseguire, i verbi sono 4:
+    - CREATE (post): crea una nuova risorsa
+    - READ (get): recupera una risorsa specifica
+    - UPDATE (put): setta tutti i nuovi attributi relativi ad una risorsa specifica
+    - DELETE (delete): rimuove una risorsa specifica
+- un percorso verso una risorsa
+- un headers che consente al client di trasmettere informazioni sulla richiesta
+- un body del messaggio facoltativo contenente dati
+Ci sono altri verbi HTTP aggiuntivi che sono:
+    - PATCH: aggiorna parzialmente uno o più attributi relativi ad una risorsa
+        Differenza tra Patch e Put:
+        GET /users/1
+        {
+            "username": "skwee357",
+            "email": "example1@gmail.com"
+        }
+        PATCH /users/1
+        {
+            "email": "example2@gmail.com"
+        }
+        GET /users/1
+        {
+            "username": "skwee357",
+            "email": "example2@gmail.com"
+        }
+        PUT /users/1
+        {
+            "email": "example3@gmail.com"
+        }
+        GET /users/1
+        {
+            "email": "example3@gmail.com"
+        }
+    - HEAD: ritorna info riguarda la risorsa (version/length/type), insomma l'headers
+    - OPTIONS: ritorna informazioni riguardo l'API (methods/content type)
+
+Status Code: è un numero che rappresenta un concetto
+200 -> risposta avvenuta con successo da parte del server ad una richiesta del client
+404 -> errore da parte del client nella richiesta perchè ha richiesto al server un endpoint (risorsa) che non esiste
+500 -> errore da parte del server, il programmatore non ha previsto la gestione di quella determinata richiesta da parte del client
+
+app.listen(port, () => {}): definisce la porta alla quale collegare il tunnel server-client, possono essere specificate molte altre cose come l'Host, Backlog, ...
+
+===========
+
+ASYNC-AWAIT:
+- https://www.freecodecamp.org/italian/news/async-await-javascript-tutorial-come-attendere-il-completamento-di-una-funzione-in-js/
+I generatori ci permettono di mettere in pausa l'esecuzione di una funzione asincrona gestita in modo asincrono. Non stiamo bloccando così l'esecuzione sincrona di js perchè il generatore restituisce il controllo a js. Quando la promise si risolve attraverso il generatore restituiamo il controllo alla funzione con il valore della promise risolta.
+
+PROMISE:
+- https://medium.com/webeetle/la-programmazione-asincrona-in-node-js-le-promises-98c9707c10c4
+Una promise è semplicemente un oggetto che può produrre un risultato, o un errore, di una operazione asincrona in un determinato momento nel futuro.
+Una promise può trovarsi in quattro stati possibili:
+- Pending: quando l’operazione asincrona non è ancora terminata
+- Rejected: quando l’operazione asincrona è terminata con un errore. La funzione onRejected() viene invocata
+- Fulfilled: quando l’operazione asincrona è terminata con un esito positivo. La funzione onFulfilled() viene invocata
+- Settled: quando l’operazione asincrona non è in pending (con un errore o con successo)
+Le promises devono seguire una serie di regole ben definite, quali:
+- una promise è un oggetto che fornisce un metodo .then() conforme allo standard
+- una promise in pending può passare a uno stato risolta o respinta
+- una promise risolta o respinta è saldata e non deve passare in nessun altro stato
+- una promise una volta saldata deve avere un valore (che può essere undefined) e quel valore non deve cambiare
+
+Se una funzione è asincrona e non restituisce una promise non è possibile convertire il suo funzionamento in sincrono ma si può solo convertire la sua natura o wrapparla in una promise.
+
+NEW PROMISE:
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/Promise
+- https://www.freecodecamp.org/news/javascript-promise-tutorial-how-to-resolve-or-reject-promises-in-js/
+Il costruttore new Promise crea un'istanza che viene risolta o respinta in base alla funzione che viene fornita come argomento.
+Questo costruttore è utilizzato solitamente per wrappare funzioni che non restituiscono ancora una promise.
+La funzione fornita al costruttore riceverà due argomenti:
+    new Promise((resolve, reject) => {
+        ...
+    })
+Resolve e Reject sono due callback che non ritornano niente ma vengono eseguite una volta che tutto quello che presente nella funziona asincrona wrappata viene eseguito. Verrà eseguita la funzione resolve se la ciò che la funzione fa avrà successo altrimenti verrà invocata la funzione reject
+
+TRY-CATCH-FINALLY: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+try: è il primo blocco che viene eseguito
+catch(err): se il try genera un'eccezione viene eseguito il catch | catch accetto un parametro in ingresso che rappresenta il valore per il quale è stata lanciata l'eccezione
+finally: viene sempre eseguito prima che il flusso di controllo esca dall'intero costrutto
+    Finally è particolare perchè termina l'esecuzione di codice presente al di sotto dello scope che lui crea, significa che funziona come un return ovvero tutto quello presente sotto di lui non viene più eseguito.
+    Inoltre overwrita le informazioni ritornate da un eventuale try o catch, es:
+        function doIt() {
+            try {
+                return 1
+            } finally {
+                return 2
+            }
+        }
+        doIt() // returns 2
+Try-catch-finally devono sempre avere le parentesi graffe, non è possibile rimuoverle nel caso si voglia scrivere il codice su una sola riga.
+
+THROW: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw)
+L'istruzione throw genera un'eccezione definita dall'utente. L'esecuzione della funzione corrente verrà interrotta (le istruzioni successive a throw non verranno eseguite) e il controllo verrà passato al primo blocco catch nello stack di chiamate. Se non esiste alcun blocco catch tra le funzioni chiamanti, il programma terminerà.
+Throw può essere scritto senza o con il costruttore:
+- throw string/number/boolean
+- throw new Error(qualcosa)
+
+----------
+
+FETCH:
+La fetch è una funzione globale che incomincia il processo di fetching verso una risorsa e ritorna una promise che viene soddisfatta una volta che la risposta è disponibile (saldata).
+
+REQUEST: è un oggetto che contiene diverse proprietà che sono informazioni riguardante la richiesta HTTP da parte del client. Tra queste proprietà abbiamo:
+- .body: informazioni riguardanti eventuali post e update
+- .params: il parametro (solitamente :id) inserito nell'URL
+- .query: le relative coppie chiave-valore passate dal client
+- .headers: contenente le coppie chiave-valore utilizzate come "token di accesso"
+
+RESPONSE: è un oggetto che comprende tutte le informazioni che il server ci passa in base alla richiesta in aggiunta di informazioni di default.
+Proprità che solitamente vengono passate dal server:
+- .status(...): lo status code che lo sviluppatore decide di inviare al client in relazione alla chiamata
+- .send(...): l'oggetto che viene passato
+    Solitamente se lo status è 404 viene inviato un oggetto del genere:
+    .send({
+        data: {}, -> per definire che non esiste o non è stato trovato
+        error : true, -> ?
+        message : "todo not found" -> un messaggio più esplicato per far comprendere maggiormente al client di che errore si tratta
+    })
+Proprietà che solitamente il client è in grado di visualizzare:
+- .status: lo stato passato come res.status
+- .data: l'oggetto passato come res.send
+
+----------
+
+PROCESS: è un oggetto globale di Node.js a cui si può accedere da qualsiasi file senza doverlo importare e fornisce diverse informazioni riguardo il runtime del programma. Tra le sue proprietà abbiamo:
+- .argv: è un array che presenta due elementi di default più tutti gli altri che gli passiamo dal terminale:
+    - dove risiede il programma dal quale abbiamo lanciato lo script -> \\Program Files\\nodejs\\node.exe
+    - la path dal quale stiamo eseguendo lo script -> \\Users\\danie\\Desktop\\...
+    - tutto ciò che passiamo dopo che lanciamo lo script dal nostro terminale -> es. node script 5 ciao ...
+2 metodi per prendere process.arg[2]:
+- const [a, b, ...params] = process.argv
+- const params = process.argv.splice(2)
+
+EXPORT: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export)
+IMPORT: (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+Sono stati realizzati nel 2015 con l'uscita dell'ES6 che ha portato anche all'introduzione in javascript dei file come moduli.
+Ogni file rappresenta un modulo dal quale è possibile estrarre funzioni, oggetti, ... ed importarli in altri moduli dove se ne ha necessità.
+Node.js non supporta direttamente l'import-export dell'ES6 ma presenta una funzionalià sperimentale che permette di integrare l'import-export ma è necessario aggiungere al package.json la proprietà "type": "module".
+Inoltre è stata introdotta una nuova estensione ai file .js ovvero .cjs e .mjs; .cjs definisce che stiamo trattando quel file come modulo CommonJs mentre .mjs definisce che stiamo trattando quei file come modulo ECMAScript.
+Node.js tratterà i file .js in base al sistema di moduli definito ovvero di default CommonJS ma se specifichiamo nel package.json: "type": "module" tratterà i file come moduli ECMAScript.
+Concetto fondamentale è che quando si vuole importare un modulo per un'utilità di side-effect bisogna importarlo nel seguente modo:
+    import 'path/modulo.name'
+Il path rappresenta il percorso non per raggiungere il suddetto file dal file nel quale ci troviamo ma prendendo come punto di riferimento la cartella dalla quale abbiamo lanciati l'eseguibile.
+
+ASSERT:
+A partire dalla versione 16.14.0 di node.js è stata introdotta la necessità di aggiungere: assert { type: 'json' } quando un file json veniva importato.
+È stato introdotta questa minor per migliorare la sicurezza nell'importazione di moduli json.
+Nel marzo del 2023 questa funzionalità è stata sostituita dallo script: with { type: 'json' } ma quella precedente è ancora supportata perchè non tutti i browser hanno avuto ancora il tempo di adattarsi.
+
+---
+session / cookie
+app.use(
+    session({
+        // It holds the secret key for session
+        secret: "How the fuck it works",
+        // Forces the session to be saved (if true) back to the session store
+        resave: false,
+        // Forces a session that is "uninitialized" to be saved to the store
+        saveUninitialized: false,
+        cookie: {
+            // Session expires after 1 min of inactivity
+            expires: 15000
+        }
+    })
+)
+req.session.mySessionData = 'session started'
+---
+
+---
+cors:
+npm install cors
+import cors from 'cors'
+app.use(cors())
+https://expressjs.com/en/resources/middleware/cors.html
+-
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*') <- questo è un middleware
+  next()
+})
+---
+
+DB CHE TIENE MEMORIA DI ALTRI DUE DB:
+{
+    "3-1": {
+      "idu": "3",
+      "idt": "1",
+      "completed": true
+    },
+    ...
+}

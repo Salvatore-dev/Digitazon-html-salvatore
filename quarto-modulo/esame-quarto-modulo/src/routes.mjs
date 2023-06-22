@@ -1,6 +1,7 @@
 import axios from "axios";
 import fs from "node:fs/promises";
 import Photoazon from "../db/Potoazon.json" assert { type: "json" };
+
 const DB_PATH = "./db/Potoazon.json";
 
 function actuallyDate() {
@@ -112,7 +113,7 @@ export const updateAlbum = async (req, res) =>{
 }
 
 export const searchPhoto = async (req, res) =>{
-   const dati = await fs.readFile(DB_PATH);
+  const dati = await fs.readFile(DB_PATH);
   const albums = JSON.parse(dati.toString());
   //let albums = await fs.readFile(DB_PATH);
   const query = req.query.name
