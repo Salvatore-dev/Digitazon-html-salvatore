@@ -15,14 +15,12 @@ const vesionIndexLuzzi =
 
 export const getBooks = (req, res) => {
   try {
-    res
-      .send({
-        message:
-          "accedi ai libri con .data.result; accedi alle lingue con .data.languages",
-        data: books,
-        origins: biblebooks,
-      })
-      .status(200);
+    res.status(200).send({
+      message:
+        "accedi ai libri con .data.result; accedi alle lingue con .data.languages",
+      data: books,
+      origins: biblebooks,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -35,14 +33,12 @@ export const getBooks = (req, res) => {
 
 export const getVersions = (req, res) => {
   try {
-    res
-      .send({
-        message:
-          'accedi alle versioni valide con .data."validversions; accedi si nome completi delle versioni con .data.validversions_fullname',
-        data: versions,
-        origins: bibleversions,
-      })
-      .status(200);
+    res.status(200).send({
+      message:
+        'accedi alle versioni valide con .data."validversions; accedi si nome completi delle versioni con .data.validversions_fullname',
+      data: versions,
+      origins: bibleversions,
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send({
@@ -55,19 +51,17 @@ export const getVersions = (req, res) => {
 
 export const getIndexVersion = (req, res) => {
   try {
-    res
-      .send({
-        message: "controlla struttura dati",
-        data: {
-          Cei: indexCei2008,
-          Luzzi: indexLuzzi,
-        },
-        origins: {
-          Cei: versionIndexCEI,
-          Luzzi: vesionIndexLuzzi,
-        },
-      })
-      .status(200);
+    res.status(200).send({
+      message: "controlla struttura dati, accedi Cei con .data.Cei; accedi LUZZI con .data.Luzzi",
+      data: {
+        Cei: indexCei2008,
+        Luzzi: indexLuzzi,
+      },
+      origins: {
+        Cei: versionIndexCEI,
+        Luzzi: vesionIndexLuzzi,
+      },
+    });
   } catch (error) {
     console.log(error);
     res.status(500).send({

@@ -1,25 +1,58 @@
 import fs from "node:fs/promises";
+import bcrypt from "bcrypt"; // installare 
 import session from "express-session";
-import users from "../db/users.json" assert { type: "json" };
 
 const DB_PATH_USERS = "./db/users.json";
 //const dati = await fs.readFile(DB_PATH_USERS);
 //const users = JSON.parse(dati.toString());
+
+async function getPasswordCrypted(password) {
+  try {
+    const saltRounds = 10;
+    const hashedPassword = await bcrypt.hash(password, saltRounds);
+    //console.log("Password criptata:", hashedPassword);
+    return hashedPassword;
+  } catch (error) {
+    console.error("Si è verificato un errore:", error);
+  }
+}
+
+async function comparePassword(PlaintTexPassword, hashedPassword) {
+  try {
+    const isMatch = await bcrypt.compare(PlaintTexPassword, hashedPassword);
+    //console.log('Le password corrispondono?', isMatch);
+    return isMatch;
+  } catch (error) {
+    console.error("Si è verificato un errore:", error);
+  }
+}
 export const login = async (req, res) => {
   try {
     //console.log(req.body);
-    const response = req.body;
+    const username = req.body.username;
+    const password = req.body.password;
     const dati = await fs.readFile(DB_PATH_USERS);
     const users = JSON.parse(dati.toString());
     //console.log(response.password);
-    if (
-      response.username == users[response.username].username &&
-      users[response.username].password
-    ) {
-      req.session.user = response.username;
-      res.status(200).send({
-        message: "authenticated user",
-      });
+    const usersNames = Object.keys(users)
+
+    if (usersNames.includes(username)) {
+      const checkPassword = await comparePassword(
+        password,
+        users[username].password
+      );
+      if (checkPassword) {
+        req.session.user = username;
+        res.status(200).send({
+          message: "authenticated user",
+        });
+      } else {
+        res.status(403).send({
+          data: {},
+          error: true,
+          message: "user not found",
+        });
+      }
     } else {
       res.status(403).send({
         data: {},
@@ -51,7 +84,8 @@ export const getUser = async (req, res) => {
     const users = JSON.parse(dati.toString());
     const userToFind = req.body.username;
     console.log(userToFind);
-    if (users[userToFind]) {
+    const usersNames = Object.keys(users)
+    if (usersNames.includes(userToFind)) {
       res.status(200).send({
         data: users[userToFind],
         message: "user datails",
@@ -73,10 +107,16 @@ export const getUser = async (req, res) => {
 export const signup = async (req, res) => {
   try {
     const userToAdd = req.body;
+    console.log(userToAdd.password);
+
     const newUsername = userToAdd.username;
     const dati = await fs.readFile(DB_PATH_USERS);
     const users = JSON.parse(dati.toString());
-    if (!users[newUsername]) {
+    const usersNames = Object.keys(users)
+    if (!usersNames.includes(newUsername)) {
+      const cryptPassword = await getPasswordCrypted(userToAdd.password);
+      userToAdd.password = cryptPassword;
+      userToAdd["favoriteVerses"] = [];
       users[newUsername] = userToAdd;
       await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
       res.status(201).send({
@@ -101,9 +141,20 @@ export const upDateFavoritesVerse = async (req, res) => {
     const userToFind = req.body.username;
     const newfavorite = req.body.data;
     console.log(newfavorite);
-    if (users[userToFind]) {
+    const usersNames = Object.keys(users)
+    if (usersNames.includes(userToFind)) {
       const favorites = users[userToFind].favoriteVerses;
-      favorites.push(newfavorite); // gestire richiesrta di due vavoriti uguali
+      if (favorites.includes(newfavorite)) {
+        res
+        .status(200) // controllare status appropiato
+        .send({
+          data: {},
+          error: true,
+          message: "resource already exist",
+        }).end()
+        return
+      }
+      favorites.push(newfavorite);
       users[userToFind].favoriteVerses = favorites;
       await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
       res

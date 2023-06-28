@@ -33,7 +33,7 @@ export const getKeyword = async (req, res) => {
           query: "keywordsearch",
           keyword: query.keyword,
           version: "LUZZI",
-          appid: "italy", // valutare cosa inserire
+          //appid: "italy", // valutare cosa inserire
         }
       ); // vedere questione appid parametro#
       const mySerach = response.data;
@@ -69,18 +69,27 @@ export const getVerse = async (req, res) => {
   //console.log(abbreviations);
   const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
   console.log(indexRequest);
-  const abbreviation = abbreviations[indexRequest];
-  //console.log(abbreviation);
-  const limitChapter = chaptersLimit[indexRequest];
-  const limitVersesChapter = verseLimit[indexRequest][chapterRequest - 1];
+
+  let abbreviation = "";
+  let limitChapter = "";
+  let limitVersesChapter =''
+
+  if (indexRequest >= 0) {
+    abbreviation = abbreviations[indexRequest];
+    //console.log(abbreviation);
+    limitChapter = chaptersLimit[indexRequest];
+    limitVersesChapter = verseLimit[indexRequest][chapterRequest - 1];
+  }
+
   //console.log(limitVersesChapter);
-  const chapterTofind = abbreviation + chapterRequest;
+
   try {
     if (
       indexRequest >= 0 &&
       chapterRequest <= limitChapter &&
       verseRequest <= limitVersesChapter
     ) {
+      const chapterTofind = abbreviation + chapterRequest;
       const chapter = await findChapter(chapterTofind);
       console.log(chapter);
       if (chapter) {
@@ -93,7 +102,7 @@ export const getVerse = async (req, res) => {
         const response = await axios.post(`https://query.bibleget.io/v3/`, {
           query: chapterTofind,
           version: "LUZZI",
-          //appid: "italy",
+          appid: "salvatoretosich@libero.it",
         }); // vedere questione appid parametro#
         const mySearch = response.data;
         console.log(mySearch);

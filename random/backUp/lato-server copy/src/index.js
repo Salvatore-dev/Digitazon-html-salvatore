@@ -50,7 +50,7 @@ app.get('/books/:book/chapters/:chapter/verses/:verse', getVerse)
 app.get('/books/keywords/search', getKeyword)
 
 app.post("/users/session", login)
-app.delete("/users/session", logout)
+app.delete("/users/session", sessionChecked, logout)
 
 app.post("/users/signup", signup)
 

@@ -58,6 +58,10 @@ function findFile(nameBook) {
 export const getChapter = async (req, res) => {
   const bookRequest = req.params.book; // attenzione al nome del libro deve corrispondere anche nella maiuscola iniziale
   const chapterRequest = req.params.chapter;
+  let versionMetaData= "3"
+  if (bookRequest == "Ester") {
+    versionMetaData = "1"
+  }
   console.log(bookRequest);
   console.log(chapterRequest);
   //console.log(abbreviations);
@@ -79,28 +83,31 @@ export const getChapter = async (req, res) => {
       let chapter = chapters[bookRequest][chapterToFind];
       if (chapter.empty) {
         let response = await axios.get(
-          `https://query.bibleget.io/v3/?query=${chapterToFind}&version=CEI2008` // vedere questione appid parametro
+          `https://query.bibleget.io/v${versionMetaData}/?query=${chapterToFind}&version=CEI2008` // vedere questione appid parametro
         );
         let newUpdate = response.data;
         chapters[bookRequest][chapterToFind].data = newUpdate;
         chapters[bookRequest][chapterToFind].empty = false;
         await fs.writeFile(DB_PATH, JSON.stringify(chapters, null, "  "));
         res
+          .status(201)
           .send({
             data: chapters[bookRequest][chapterToFind].data,
             message: "chapter created",
-          })
-          .status(200);
+          });
+          
       } else {
         res
+          .status(200)
           .send({
             data: chapter.data,
             message: "chapter found",
-          })
-          .status(200);
+          });
       }
     } else {
-      res.send({
+      res
+      .status(200) // verifica codice
+      .send({
         data: {},
         error: true,
         message: "book or chapter not found",
@@ -109,11 +116,12 @@ export const getChapter = async (req, res) => {
   } catch (error) {
     console.log(error);
     res
+      .status(500) // controllare migliore codice di status
       .send({
         data: {},
         error: true,
         message: "server problem",
       })
-      .status(500); // controllare migliore codice di status
+      
   }
 };

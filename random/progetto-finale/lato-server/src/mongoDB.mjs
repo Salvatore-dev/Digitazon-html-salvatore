@@ -80,10 +80,10 @@ export async function findKeyword(keyTofind) {
     const keyword = await keywords.findOne(query); //options (secondo paramentro, possibile per ordinare la ricerca)
     // since this method returns the matched document, not a cursor, print it directly
     //console.log(keyword);
-    return keyword
+    return keyword;
   } catch (error) {
     console.log(error);
-    return false
+    return false;
   } finally {
     await client.close();
   }
@@ -120,11 +120,79 @@ export async function findChapter(chapterTofind) {
     const chapter = await chapters.findOne(query); //options (secondo paramentro, possibile per ordinare la ricerca)
     // since this method returns the matched document, not a cursor, print it directly
     //console.log(keyword);
-    return chapter
+    return chapter;
   } catch (error) {
     console.log(error);
-    return false
+    return false;
   } finally {
+    await client.close();
+  }
+}
+
+export async function insertUser(user) {
+  // funzione che serve per inserire documento nel data base
+  try {
+    await client.connect();
+    const database = client.db("BibleAppDB"); // riferimento al nome database dato in sede di registrazione a mongodb
+    const usersCollection = database.collection("users"); // fa riferimento ad una collection da creare su interfacciagrafica di mongodb
+
+    const result = await usersCollection.insertOne(user);
+    console.log(`A document was inserted with the _id: ${result.insertedId}`);
+  } catch (error) {
+    console.log(error); // qui da gestire lerrore quando abbiamo un eccezione dal DB, nell'esercizio abbiamo impostato un id univoco associato allusername, se si manda una post con username uguale da errore
+  } finally {
+    await client.close();
+  }
+}
+
+export async function findUser(usernameToFind) {
+  try {
+    await client.connect();
+    const database = client.db("BibleAppDB");
+    const chapters = database.collection("users");
+    const query = { username: usernameToFind };
+    // const options = {
+    //   // sort matched documents in descending order by rating
+    //   sort: { "imdb.rating": -1 },
+    //   // Include only the `title` and `imdb` fields in the returned document
+    //   projection: { _id: 0, title: 1, imdb: 1 },
+    // };
+    const user = await chapters.findOne(query); //options (secondo paramentro, possibile per ordinare la ricerca)
+    // since this method returns the matched document, not a cursor, print it directly
+    //console.log(keyword);
+    return user;
+  } catch (error) {
+    console.log(error);
+    return false;
+  } finally {
+    await client.close();
+  }
+}
+
+export async function upDateFavorite(userToUpdate, insertNewData ) {
+  try {
+    await client.connect();
+    const database = client.db("BibleAppDB");
+    const users = database.collection("users");
+    // create a filter for a movie to update
+    const filter = { username: userToUpdate };
+    //console.log(users);
+    // this option instructs the method to create a document if no documents match the filter
+    const options = { upsert: false };
+    // create a document that sets the plot of the movie
+    const updateDoc = {
+      $set: {
+        favoriteVerses: insertNewData
+      },
+    };
+    const result = await users.updateOne(filter, updateDoc, options);
+    console.log(
+      `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
+    );
+  } catch(error){
+    console.log(error);
+  }
+   finally {
     await client.close();
   }
 }

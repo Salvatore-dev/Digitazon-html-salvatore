@@ -13,7 +13,7 @@ app.use(cors())
 
 import * as metadata from "./ruotesMetaData.mjs"
 import { getChapter } from './routes-chapters.mjs'
-import { getUser, login, logout, signup, upDateFavoritesVerse } from './routes-users.mjs';
+import { getUser, login, logout, removeFavoritesVerse, signup, upDateFavoritesVerse } from './routes-users.mjs';
 import { getKeyword, getVerse } from './ruotesSearches.mjs';
 
 app.use(
@@ -28,7 +28,7 @@ app.use(
 console.log(process.env.SECRET_SESSION);
 // c'e nella session uno user? // questa funzione deve essere posta nelle rotte che vogliamo proteggere
 function sessionChecked(req, res, next) {
-  console.log(req.session.user);
+  console.log('utente in sessione', req.session.user);
   if (req.session.user) {
     next();
   } else {
@@ -49,17 +49,16 @@ app.get('/books/:book/chapters/:chapter', getChapter)
 app.get('/books/:book/chapters/:chapter/verses/:verse', getVerse)
 app.get('/books/keywords/search', getKeyword)
 
-app.post("/users/session", login)
-app.delete("/users/session", logout)
-
 app.post("/users/signup", signup)
+app.post("/users/session", login)
+app.delete("/users/session", sessionChecked, logout)
+
 
 // todo prendimi dal bd // questa rotta deve essere protetta da autorizzazione serve un middleware prima delle rotte da controllare
 app.post("/user/profile", sessionChecked, getUser); // domanda ad alberto in effetti restituisce un utente e potrebbe essere una get, passare username in chiaro?
+app.put("/user/profile/favorite", sessionChecked, upDateFavoritesVerse)
+app.patch("/user/profile/favorite", sessionChecked, removeFavoritesVerse) // /users/:username/profile
 
-
-
-app.put("/user/profile/newfavorite", sessionChecked, upDateFavoritesVerse)
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)

@@ -1,15 +1,10 @@
 {
-  "Giocondo23": {
-    "username": "giocondo23",
-    "password": "12345",
+  "GiovanniCry2": {
+    "username": "GiovanniCry2",
+    "password": "$2b$10$x6WUf92Kx1h990uhuMxWVufrl2.xkGpCYX/3ZoKUD4hkbuSPd.tK6",
     "favoriteVerses": [
-      "Mt1,2-3",
-      "Mt1,2-3"
+      "Mt2,4-5",
+      "Mt2,9"
     ]
-  },
-  "RiccardoGio86": {
-    "username": "RiccardoGio86",
-    "password": "12sdf5",
-    "favoriteVerses": []
   }
 }
