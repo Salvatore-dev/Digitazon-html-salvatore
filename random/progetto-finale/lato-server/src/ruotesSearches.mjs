@@ -9,11 +9,12 @@ import {
 } from "./mongoDB.mjs";
 
 import Luzzi from "../db/metadata/index-version-LUZZI.json" assert { type: "json" };
+import CEI2008 from "../db/metadata/index-version-Cei2008.json" assert { type: "json" };
 
-const books = Luzzi.indexes.LUZZI.biblebooks;
-const abbreviations = Luzzi.indexes.LUZZI.abbreviations;
-const chaptersLimit = Luzzi.indexes.LUZZI.chapter_limit;
-const verseLimit = Luzzi.indexes.LUZZI.verse_limit;
+const books = CEI2008.indexes.CEI2008.biblebooks;
+const abbreviations = CEI2008.indexes.CEI2008.abbreviations;
+const chaptersLimit = CEI2008.indexes.CEI2008.chapter_limit;
+const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
 
 export const getKeyword = async (req, res) => {
   const query = req.query;
@@ -32,8 +33,8 @@ export const getKeyword = async (req, res) => {
         {
           query: "keywordsearch",
           keyword: query.keyword,
-          version: "LUZZI",
-          //appid: "italy", // valutare cosa inserire
+          version: "CEI2008",
+          appid: "salvatore.tosich.dev@gmail.com",
         }
       ); // vedere questione appid parametro#
       const mySerach = response.data;
@@ -63,10 +64,15 @@ export const getVerse = async (req, res) => {
 
   const bookRequest = query.book; // attenzione al nome del libro deve corrispondere anche nella maiuscola iniziale
   const chapterRequest = query.chapter; // deve essere un numero
-  const verseRequest = query.verse; // deve essere un numero
+  const verseRequest = query.verse; // deve essere un numero // non accetta richieste di versetti multipli come 2-3
   console.log(bookRequest);
   console.log(chapterRequest);
   //console.log(abbreviations);
+
+  let versionMetaData= "3"
+  if (bookRequest == "Ester") {
+    versionMetaData = "1"
+  }
   const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
   console.log(indexRequest);
 
@@ -99,10 +105,10 @@ export const getVerse = async (req, res) => {
           message: "chapter founded",
         });
       } else {
-        const response = await axios.post(`https://query.bibleget.io/v3/`, {
+        const response = await axios.post(`https://query.bibleget.io/v${versionMetaData}/`, {
           query: chapterTofind,
-          version: "LUZZI",
-          appid: "salvatoretosich@libero.it",
+          version: "CEI2008",
+          appid: "salvatore.tosich.dev@gmail.com",
         }); // vedere questione appid parametro#
         const mySearch = response.data;
         console.log(mySearch);

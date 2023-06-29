@@ -33,14 +33,14 @@ const Login = () => {
   }
 
     return(
-        <>
+        <div className="form-users">
         <h1>Login</h1>
         <div className="login-container">
             <input type="text" placeholder="Username" name="username" value={username} onChange={(e)=> setUsername(e.target.value)} />
             <input type="password" placeholder="Password" name="psw" value={password} onChange={(e)=> setPassword(e.target.value)}/>
             <button type="submit" onClick={sendValues}>Login</button>
         </div>
-      </>
+      </div>
     ) 
   };
 

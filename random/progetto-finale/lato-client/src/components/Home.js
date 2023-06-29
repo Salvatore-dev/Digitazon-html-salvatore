@@ -1,40 +1,102 @@
-const Home = () => {
+import { useEffect, useState } from "react";
+import axios from "axios";
+import CEI2008 from "../data/index-version-Cei2008.json";
+const books = CEI2008.indexes.CEI2008.biblebooks;
+const abbreviations = CEI2008.indexes.CEI2008.abbreviations;
+const chaptersLimit = CEI2008.indexes.CEI2008.chapter_limit;
+const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
+
+const Home = ({ keyword, control }) => {
+  const [text, setText] = useState([]);
+  const [textVerse, setTextVerse] = useState([]);
+  const [check, setcheck] = useState(true);
+  //const [typeSearch, setTypeSearch] = useState(control)
+
+  useEffect(() => {
+    const fetchdata = async () => {
+      if (control) {
+        try {
+          const responses = await axios.get(
+            `http://localhost:8000/books/keywords/search?keyword=${keyword}`
+          ); //esempio di ricerca per versetti
+          console.log(responses.data); // Puoi fare qualcosa con la risposta qui
+          const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
+          setText(results); // immagazzino il risultato come array
+        } catch (error) {
+          console.error(error);
+        }
+        console.log(keyword);
+      } else {
+        try {
+          const request = keyword;
+          const verse = request.split(",")[1];
+          const toDecompose = request.split(",")[0];
+
+          const regex = /^(\d?[A-Za-z]+)(\d+)$/; // /^(\d?[A-Za-z]+)(\d+)$/
+          const match = toDecompose.match(regex);
+          let book = "";
+          let chapter = "";
+          if (match) {
+            book = match[1]; // Abbreviazione del libro
+            chapter = parseInt(match[2], 10); // Numero del capitolo
+
+            console.log("Abbreviazione del libro:", book);
+            const indexRequest = abbreviations.indexOf(book);
+            book = books[indexRequest];
+            console.log("Numero del capitolo:", chapter);
+            setcheck(true);
+          } else {
+            console.log("Formato della stringa non valido");
+            setcheck(false);
+          }
+          if (check) {
+            const responses = await axios.get(
+              `http://localhost:8000/books/${book}/chapters/${chapter}/verses/${verse}`
+            ); //esempio di ricerca per versetti
+            console.log(responses.data); // Puoi fare qualcosa con la risposta qui
+            const  results  = responses.data.data; // accedo direttamente all'array contenente i dati
+            setTextVerse(results); // immagazzino il risultato come array
+          } else {
+            console.log("richiesta invalida");
+          }
+        } catch (error) {
+          console.error(error);
+        }
+      }
+    };
+    fetchdata();
+  }, [keyword]);
+
+  //console.log("qui sono nella home i text del risultato ricerca", text);
+  //console.log("qui sono nella home i text del risultato ricerca", textVerse);
   return (
-    <>
-      <div>
-        La Sacra Scrittura, conosciuta anche come la Bibbia, è uno dei testi più
-        importanti e influenti nella storia umana. Composta da diversi libri
-        scritti da autori di epoche e culture diverse, la Bibbia è considerata
-        sacra da ebrei e cristiani in tutto il mondo. La Bibbia è divisa in due
-        sezioni principali: l'Antico Testamento e il Nuovo Testamento. L'Antico
-        Testamento contiene testi che risalgono a oltre duemila anni fa e
-        rappresenta la raccolta delle scritture sacre degli ebrei. Questa
-        sezione è composta da varie forme letterarie, come la narrativa storica,
-        i detti sapienziali, i libri profetici e i salmi. Contiene inoltre
-        importanti storie come la creazione del mondo, l'Esodo dall'Egitto, le
-        leggi di Mosè e i profeti che hanno annunciato la venuta del Messia. Il
-        Nuovo Testamento, invece, narra la vita e gli insegnamenti di Gesù
-        Cristo, il fondatore del cristianesimo. È composto dai quattro Vangeli
-        (Matteo, Marco, Luca e Giovanni), che raccontano la vita di Gesù, la sua
-        morte e risurrezione. Seguono gli Atti degli Apostoli, che descrivono
-        l'espansione della prima comunità cristiana, e le lettere degli apostoli
-        Paolo, Pietro, Giovanni e altri, che offrono istruzioni e insegnamenti
-        per le prime comunità cristiane. La Bibbia affronta una vasta gamma di
-        temi, tra cui la spiritualità, l'etica, la moralità, la storia, la
-        giustizia e la salvezza. Molti credenti la considerano la parola
-        rivelata di Dio e trovano in essa ispirazione, guida e conforto per la
-        loro vita quotidiana. Tuttavia, è importante sottolineare che la
-        comprensione della Bibbia richiede un approccio attento e una
-        considerazione del contesto storico e culturale in cui è stata scritta.
-        È un testo complesso che può essere interpretato in modi diversi da
-        diverse tradizioni e comunità di fede. Studiare la Bibbia può essere
-        un'esperienza affascinante e gratificante, permettendoti di scoprire le
-        profonde verità spirituali, l'ampiezza della conoscenza umana e la
-        ricchezza delle esperienze umane che essa contiene. Molti studiosi
-        dedicano una vita intera all'esplorazione di questo testo sacro, aprendo
-        nuove prospettive e sfide intellettuali lungo il percorso.
+    <div className="body-main">
+      <div className="body-text">
+        {/* <h1>{text[0].originalquery}</h1>  */}
+        {control && text ? 
+          text.map((el) => (
+            <div className="verse-research">
+              <p>
+                <span>{el.originalquery}: </span>
+                {el.text}
+              </p>
+            </div> // aggiungere bottone sggiunta preferiti
+          )
+        ) : ( null
+        )}
+        {!control && textVerse
+          ? textVerse.map((el) => (
+              <div className="verse-search">
+                <p>
+                  <span>{el.originalquery},{el.verse}: </span>
+                  {el.text}
+                </p>
+              </div>
+            ))
+          : null}
       </div>
-    </>
+      <div className="profile">qui deve andare il profilo con i preferiti</div>
+    </div>
   );
 };
 

@@ -10,21 +10,124 @@ html, body {
 }
 
 :root {
-  --blue: #1e90ff;
-  --second-color: #cfb4b4;
+  --layout-color: black;
+  --character-color: #eeb701;
+  --second-character-color: rgb(149, 229, 240);
+  --text-color: black;
+  --alert-color: red;
+  --second-text-color: white;
+  --text-area: #f1f1f1;
+  --second-text-area:  #ddd;
+  --background-text-area: rgb(246, 252, 246);
 }
 header {
-  background-color: #f1f1f1;
   padding: 20px;
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.logo p {
+font-variant: small-caps;
+font-size: xx-large;
+color: var(--text-color);
 }
 
+.logo span {
+  font-variant: small-caps;
+  font-size: x-large;
+  font-weight: bolder;
+  color: var(--text-color);
+}
+.header-verse{
+  width: 30%;
+}
+.header-verse {
+  font-style: oblique;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.select-menu label {
+  color: var(--text-color);
+}
+.topnav{
+  background-color: var(--layout-color);
+}
+.topnav a {
+  color: var(--second-text-color);
+}
+.topnav a:hover {
+  background-color: var(--second-character-color);
+  color: var(--text-color);
+}
+
+.slider {
+  background-color: var(--second-character-color);
+}
+.slider:before{
+  background-color: var(--text-color);
+}
+.switch input:checked+.slider{
+  background-color: var(--character-color);
+}
+.switch input:focus+.slider {
+  box-shadow: 0 0 1px var(--layout-color);
+}
+.search-area > div > span {
+  color: var(--second-text-color);
+}
+.search-text input[type=text]{
+  border: 1px solid var(--second-character-color);
+  background-color: var(--text-area);
+  border: 1px solid var(--second-character-color);
+}
+
+.search-text button:hover {
+  background: var(--character-color);
+}
+
+.search-text button {
+  color: var(--second-text-color);
+  background-color: var(--character-color);
+}
+.search-text button:hover{
+  background-color: var(--second-character-color);
+}
+.form-users input[type=text], input[type=password] {
+  background-color: var(--text-area);
+}
+.form-users input[type=text]:focus, input[type=password]:focus {
+  background-color: var(--second-text-area);
+}
+.form-users button {
+  color: var(--text-color);
+  background-color: var(--character-color);
+}
+.form-users .cancelbtn{
+  background-color: var(--alert-color);
+}
+.body-main{
+  display: flex;
+  
+}
+
+.body-text {
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  background-color: var(--background-text-area);
+}
+.profile{
+  width: 30%;
+  margin-left: 5%;
+}
 footer {
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: var(--second-color);
-  color: white;
+  background-color: var(--layout-color);
+  color: var(--second-text-color);
   text-align: center;
 }
 
