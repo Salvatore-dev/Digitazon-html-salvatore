@@ -62,16 +62,68 @@ export const getVerse = async (req, res) => {
   const query = req.params;
   //console.log(query);
 
+  function controlRequest(str) {
+    const regex = /^(\d+)(?:-(\d+))?$/;
+    const match = str.match(regex);
+  
+    if (match) {
+      const verse1 = parseInt(match[1], 10); // non serve il parse
+      const verse2 = parseInt(match[2], 10);
+      
+      if (verse2) {
+        return [verse1, verse2];
+      } else {
+        return verse1;
+      }
+    } else {
+      return null;
+    }
+  }
   const bookRequest = query.book; // attenzione al nome del libro deve corrispondere anche nella maiuscola iniziale
   const chapterRequest = query.chapter; // deve essere un numero
-  const verseRequest = query.verse; // deve essere un numero // non accetta richieste di versetti multipli come 2-3
+  let verseRequest = NaN; // deve essere un numero // non accetta richieste di versetti multipli come 2-3
+  const dataVerse = controlRequest(query.verse);
+  let verse1 = null
+  let verse2 = null
+  if ( Array.isArray(dataVerse) ) {
+    if (dataVerse[0] < dataVerse[1]) {
+      verseRequest = dataVerse[1]
+      verse1 = dataVerse[0]
+      verse2 = dataVerse[1]
+    } else {
+      res
+      .status(200) // controllare codice da restituire
+      .send({
+        data: {},
+        error: true,
+        message: "invalid request",
+      }).end()
+      return
+    }
+    
+  } else {
+    if (!dataVerse) {
+      res
+      .status(200) // controllare codice da restituire
+      .send({
+        data: {},
+        error: true,
+        message: "invalid request",
+      }).end()
+      return
+    } else {
+      verseRequest = dataVerse
+    }
+  }
   console.log(bookRequest);
   console.log(chapterRequest);
   //console.log(abbreviations);
 
   let versionMetaData= "3"
+  let checkEster = false
   if (bookRequest == "Ester") {
     versionMetaData = "1"
+    checkEster = true
   }
   const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
   console.log(indexRequest);
@@ -98,26 +150,48 @@ export const getVerse = async (req, res) => {
       const chapterTofind = abbreviation + chapterRequest;
       const chapter = await findChapter(chapterTofind);
       console.log(chapter);
+      
       if (chapter) {
-        const result = chapter.results.filter((v) => v.verse == verseRequest); // confronto tra un numero e una stringa il terso uguale non funzionerebbe
+        let result = false
+        if (verse1 || verse2) {
+          result = chapter.results.filter((v) => v.verse >= verse1 && v.verse <= verse2)
+        } else {
+          result = chapter.results.filter((v) => v.verse == verseRequest)
+        }
+        ; // confronto tra un numero e una stringa il terso uguale non funzionerebbe
         res.status(200).send({
           data: result,
           message: "chapter founded",
         });
       } else {
-        const response = await axios.post(`https://query.bibleget.io/v${versionMetaData}/`, {
+        let response =false
+        if (checkEster) {
+          response = await axios.get(
+            `https://query.bibleget.io/v${versionMetaData}/?query=${chapterTofind}&version=CEI2008` // vedere questione appid parametro
+          );
+        } else {
+          response = await axios.post(`https://query.bibleget.io/v${versionMetaData}/`, {
           query: chapterTofind,
           version: "CEI2008",
           appid: "salvatore.tosich.dev@gmail.com",
         }); // vedere questione appid parametro#
+        }
+       
         const mySearch = response.data;
         console.log(mySearch);
         const chapter = { chapter: chapterTofind };
         const newChapter = { ...chapter, ...mySearch };
         insertChapters(newChapter);
-        const result = newChapter.results.filter(
-          (v) => v.verse == verseRequest
-        ); // si confrontano un numero e una stringa il terzo uguale non funzionerebbe
+        let result = false
+        if (verse1 || verse2) {
+          result = newChapter.results.filter(
+            (v) => v.verse >= verse1 && v.verse <= verse2
+          );
+        } else {
+          result = newChapter.results.filter(
+            (v) => v.verse == verseRequest
+          );// si confrontano un numero e una stringa il terzo uguale non funzionerebbe
+        }
         res.status(201).send({
           data: result,
           message: "chapter created",
@@ -129,7 +203,7 @@ export const getVerse = async (req, res) => {
         .send({
           data: {},
           error: true,
-          message: "invalid request",
+          message: "invalid request, sono qui",
         });
     }
   } catch (error) {

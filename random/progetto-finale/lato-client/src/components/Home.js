@@ -1,18 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { RequestInvalid } from "./Request-invalid";
+import Text from "./Text";
 import CEI2008 from "../data/index-version-Cei2008.json";
 const books = CEI2008.indexes.CEI2008.biblebooks;
 const abbreviations = CEI2008.indexes.CEI2008.abbreviations;
 const chaptersLimit = CEI2008.indexes.CEI2008.chapter_limit;
 const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
 
-const Home = ({ keyword, control }) => {
-  const [text, setText] = useState([]);
+const Home = ({ keyword, control, newChapter }) => {
+  const [textKeyword, setTextKeyword] = useState([]);
+  const [checkKeyword, setCheckKeyword] = useState(false)
   const [textVerse, setTextVerse] = useState([]);
-  const [check, setcheck] = useState(true);
+  const [checkVerse, setCheckVerse] = useState(false);
   //const [typeSearch, setTypeSearch] = useState(control)
 
+  const [sendChapter, setSendChapter] = useState([])
+  const [checkChapter, setCheckChapter] = useState(false)
+
   useEffect(() => {
+    if (keyword === "") {
+      return;
+    }
     const fetchdata = async () => {
       if (control) {
         try {
@@ -21,9 +30,11 @@ const Home = ({ keyword, control }) => {
           ); //esempio di ricerca per versetti
           console.log(responses.data); // Puoi fare qualcosa con la risposta qui
           const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
-          setText(results); // immagazzino il risultato come array
+          setTextKeyword(results); // immagazzino il risultato come array
+          setCheckKeyword(true)
         } catch (error) {
           console.error(error);
+          setCheckKeyword(false)
         }
         console.log(keyword);
       } else {
@@ -36,6 +47,7 @@ const Home = ({ keyword, control }) => {
           const match = toDecompose.match(regex);
           let book = "";
           let chapter = "";
+          let check = false
           if (match) {
             book = match[1]; // Abbreviazione del libro
             chapter = parseInt(match[2], 10); // Numero del capitolo
@@ -44,28 +56,63 @@ const Home = ({ keyword, control }) => {
             const indexRequest = abbreviations.indexOf(book);
             book = books[indexRequest];
             console.log("Numero del capitolo:", chapter);
-            setcheck(true);
+            console.log(verse);
+            setCheckVerse(true);
+            check = true
+            console.log("dovrebbe essere true", checkVerse);
           } else {
             console.log("Formato della stringa non valido");
-            setcheck(false);
+            setCheckVerse(false);
           }
           if (check) {
             const responses = await axios.get(
               `http://localhost:8000/books/${book}/chapters/${chapter}/verses/${verse}`
             ); //esempio di ricerca per versetti
             console.log(responses.data); // Puoi fare qualcosa con la risposta qui
-            const  results  = responses.data.data; // accedo direttamente all'array contenente i dati
+            const results = responses.data.data; // accedo direttamente all'array contenente i dati
             setTextVerse(results); // immagazzino il risultato come array
+            setCheckVerse(true);
           } else {
             console.log("richiesta invalida");
+            setCheckVerse(false)
           }
         } catch (error) {
           console.error(error);
+          setCheckVerse(false);
         }
       }
     };
     fetchdata();
   }, [keyword]);
+
+  useEffect(() => {
+    if (newChapter) {
+      //console.log("sono nella home", newChapter);
+      const book = newChapter.book;
+      //console.log(book);
+      const chapter = newChapter.chapter?.split(" ")[1];
+      //console.log(chapter);
+      const fetchChapter = async () => {
+        try {
+          const data = await axios.get(
+            `http://localhost:8000/books/${book}/chapters/${chapter}`
+          );
+          const result = data.data.data;
+          console.log(result);
+          if (result.error) {
+            setCheckChapter(false)
+          } else{
+            setSendChapter(result.results)
+            setCheckChapter(true)
+          }
+        } catch (error) {
+          console.log(error);
+          setCheckChapter(false)
+        }
+      };
+      fetchChapter();
+    }
+  }, [newChapter]);
 
   //console.log("qui sono nella home i text del risultato ricerca", text);
   //console.log("qui sono nella home i text del risultato ricerca", textVerse);
@@ -73,27 +120,17 @@ const Home = ({ keyword, control }) => {
     <div className="body-main">
       <div className="body-text">
         {/* <h1>{text[0].originalquery}</h1>  */}
-        {control && text ? 
-          text.map((el) => (
-            <div className="verse-research">
-              <p>
-                <span>{el.originalquery}: </span>
-                {el.text}
-              </p>
-            </div> // aggiungere bottone sggiunta preferiti
-          )
-        ) : ( null
+        {control && textKeyword && checkKeyword ? (
+          <Text data={textKeyword} />
+        ) : (
+          <RequestInvalid />
         )}
-        {!control && textVerse
-          ? textVerse.map((el) => (
-              <div className="verse-search">
-                <p>
-                  <span>{el.originalquery},{el.verse}: </span>
-                  {el.text}
-                </p>
-              </div>
-            ))
-          : null}
+        {!control && textVerse && checkVerse ? (
+         <Text data={textVerse} />
+        ) : (
+          null
+        )}
+        {checkChapter? (<Text data={sendChapter}/>): null}
       </div>
       <div className="profile">qui deve andare il profilo con i preferiti</div>
     </div>

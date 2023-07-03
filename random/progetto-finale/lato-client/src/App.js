@@ -1,11 +1,12 @@
 import "./App.css";
 import "./SignUp.css";
 import "./navBar.css"
+import "./request-invalid.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 
-import Layout from "./components/Layout";
+import PanelControl from "./components/PanelControl";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Login from "./components/Login";
@@ -19,7 +20,8 @@ function App() {
 
 const [research, setResearch] = useState('')
 const [typeSearch, setTypeSearch] = useState(true)
-console.log("qui sto nell APP data research", research);
+const [getChapter, setGetChapter] = useState(null)
+//console.log("qui sto nell APP data research", research);
 function handleData(params) {
   setResearch(params)
 }
@@ -32,8 +34,8 @@ function handleSearch(params) {
       <div>
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Layout getData={handleData} controlSearch={handleSearch} />}>
-            <Route index element={<Home keyword={research} control={typeSearch} />} />
+          <Route path="/" element={<PanelControl getData={handleData} controlSearch={handleSearch} sendChapter={setGetChapter} />}>
+            <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter}/>} />
             <Route path="/login" element={<Login />} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="*" element={<NoPage />} />

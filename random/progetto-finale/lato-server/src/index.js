@@ -2,6 +2,7 @@ import express  from 'express'
 import session from "express-session";
 import 'dotenv/config' // per usare pocess.env nell'applicazione
 import {run} from './mongoDB.mjs'
+import { main } from './provoMDB.mjs';
 const app = express()
 const port = 8000
 
@@ -64,4 +65,5 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })
  //run()
+ //main().catch(console.error);
  console.log(process.env.NAME_DB_MONGO);

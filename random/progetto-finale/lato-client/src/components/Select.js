@@ -1,32 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Select from "react-select";
 
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
-
-export default function Selects({ chose }) {
+export default function Selects({ chose, data, selectData }) {
   const [selectedOption, setSelectedOption] = useState(null);
-  console.log(selectedOption);
+    console.log(selectedOption);
+  
+
+  if (selectedOption && data) {
+     selectData(selectedOption.value);
+  } else {
+    selectData('')
+  }
+ 
+
+  const options = [{ value: "<- select - >", label: "<- select - >" }];
+    if (data) {
+      data.forEach((el) => {
+        options.push({ value: el, label: el });
+      });
+    } 
 
   return (
     <div className="select-menu">
-      <label style={{ fontSize: "13px" }}>
+      <label style={{ fontSize: "13px"}}>
         {" "}
-        {chose}
+        <span style={{color: "white"}}>{chose}</span>
         <Select
           styles={{
             control: (baseStyles, state) => ({
               ...baseStyles,
               borderColor: state.isFocused ? "grey" : "white",
+              width: "180px",
             }),
           }}
           menuPosition="fixed"
           menuPlacement="auto"
-          defaultValue={selectedOption}
+          defaultValuevalue={data ? selectedOption: "<- select - >"}
           onChange={setSelectedOption}
+          isClearable={false}
           options={options}
         />
       </label>

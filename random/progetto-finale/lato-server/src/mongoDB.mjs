@@ -2,6 +2,8 @@
 import { MongoClient, ServerApiVersion } from "mongodb";
 const uri = process.env.MONGO_SECOND_URI;
 
+const collection = process.env.MONGODB_SECOND_NAME_COLLECTION
+
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
   serverApi: {
@@ -67,7 +69,7 @@ export async function fechUsers() {
 export async function findKeyword(keyTofind) {
   try {
     await client.connect();
-    const database = client.db("BibleAppDB");
+    const database = client.db(collection);
     const keywords = database.collection("searchKeywords");
     // Query for a movie that has the title 'The Room'
     const query = { keyword: keyTofind };
@@ -93,7 +95,7 @@ export async function insertChapters(chapter) {
   // funzione che serve per inserire documento nel data base
   try {
     await client.connect();
-    const database = client.db("BibleAppDB"); // riferimento al nome database dato in sede di registrazione a mongodb
+    const database = client.db(collection); // riferimento al nome database dato in sede di registrazione a mongodb
     const usersCollection = database.collection("chapters"); // fa riferimento ad una collection da creare su interfacciagrafica di mongodb
 
     const result = await usersCollection.insertOne(chapter);
@@ -108,7 +110,7 @@ export async function insertChapters(chapter) {
 export async function findChapter(chapterTofind) {
   try {
     await client.connect();
-    const database = client.db("BibleAppDB");
+    const database = client.db(collection);
     const chapters = database.collection("chapters");
     const query = { chapter: chapterTofind };
     // const options = {
@@ -133,7 +135,7 @@ export async function insertUser(user) {
   // funzione che serve per inserire documento nel data base
   try {
     await client.connect();
-    const database = client.db("BibleAppDB"); // riferimento al nome database dato in sede di registrazione a mongodb
+    const database = client.db(collection); // riferimento al nome database dato in sede di registrazione a mongodb
     const usersCollection = database.collection("users"); // fa riferimento ad una collection da creare su interfacciagrafica di mongodb
 
     const result = await usersCollection.insertOne(user);
@@ -148,7 +150,7 @@ export async function insertUser(user) {
 export async function findUser(usernameToFind) {
   try {
     await client.connect();
-    const database = client.db("BibleAppDB");
+    const database = client.db(collection);
     const chapters = database.collection("users");
     const query = { username: usernameToFind };
     // const options = {
@@ -172,7 +174,7 @@ export async function findUser(usernameToFind) {
 export async function upDateFavorite(userToUpdate, insertNewData ) {
   try {
     await client.connect();
-    const database = client.db("BibleAppDB");
+    const database = client.db(collection);
     const users = database.collection("users");
     // create a filter for a movie to update
     const filter = { username: userToUpdate };

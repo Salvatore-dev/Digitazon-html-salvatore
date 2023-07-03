@@ -3,7 +3,7 @@ const b = a.filter((e)=> e <9 && e >2)
 
 console.log(b);
 
-function getNumbers(str) {
+function controlRequest(str) {
     const regex = /^(\d+)(?:-(\d+))?$/;
     const match = str.match(regex);
   
@@ -21,5 +21,13 @@ function getNumbers(str) {
     }
   }
   
-  const c = getNumbers('2')
+  const c = controlRequest('2')
   console.log(c);
+let t = null
+  //console.log(NaN <= "54");
+
+  if (!t) {
+    console.log('vero');
+  } else {
+    console.log('false');
+  }
