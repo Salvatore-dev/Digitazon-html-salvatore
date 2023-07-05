@@ -1,4 +1,11 @@
 * {box-sizing: border-box}
+
+.form-users {
+  width: 70%;
+  margin-left: 10%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 /* Full-width input fields */
 .form-users input[type=text], input[type=password] {
   width: 100%;

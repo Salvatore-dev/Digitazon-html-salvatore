@@ -46,7 +46,10 @@ export const login = async (req, res) => {
       );
       if (checkPassword) {
         req.session.user = username;
+        console.log("sono nel route user", req.session.user);
         res.status(200).send({
+          data: username,
+          check: true,
           message: "authenticated user",
         });
       } else {
@@ -73,6 +76,7 @@ export const logout = async (req, res) => {
     // deve cancellare l'utente dalla sessione
     req.session.destroy(function err() {
       res.status(200).send({
+        check:true,
         message: "user not logged in",
       });
     });
@@ -85,8 +89,8 @@ export const getUser = async (req, res) => {
   try {
     //const dati = await fs.readFile(DB_PATH_USERS);
     //const users = JSON.parse(dati.toString());
-    const userToFind = req.body.username;
-    console.log(userToFind);
+    const userToFind = req.params.username;
+    console.log("sono nella route verifico username", userToFind);
     //const usersNames = Object.keys(users)
     const user = await findUser(userToFind)
     if (user) {
@@ -126,6 +130,7 @@ export const signup = async (req, res) => {
       insertUser(userToAdd)
       //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
       res.status(201).send({
+        check: true,
         message: "user created",
       });
     } else {
@@ -153,14 +158,16 @@ export const upDateFavoritesVerse = async (req, res) => {
   try {
     //const dati = await fs.readFile(DB_PATH_USERS);
     //const users = JSON.parse(dati.toString());
-    const userToFind = req.body.username;
-    const newfavorite = req.body.data;
+    const userToFind = req.params.username;
+    const newfavorite = req.body;
+    console.log(userToFind);
     console.log(newfavorite);
     //const usersNames = Object.keys(users)
     const user = await findUser(userToFind)
     if (user) {
       const favorites = user.favoriteVerses;
-      if (favorites.includes(newfavorite)) {
+      const checkFavorite = favorites.filter((el)=> el.verse == newfavorite.verse)
+      if (checkFavorite.length > 0) {
         res
         .status(200) // controllare status appropiato
         .send({
@@ -175,10 +182,11 @@ export const upDateFavoritesVerse = async (req, res) => {
       //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
       await upDateFavorite(userToFind, favorites)
       res
-        .status(200) // controllare status appropiato
+        .status(201) // controllare status appropiato
         .send({
           data: favorites,
           message: "resource Added",
+          check: true
         });
     } else {
       res
@@ -199,14 +207,16 @@ export const removeFavoritesVerse = async (req, res) => {
     //const dati = await fs.readFile(DB_PATH_USERS);
     //const users = JSON.parse(dati.toString());
     console.log(req.body);
-    const userToFind = req.body.username;
-    const favoriteToRemove = req.body.data;
+    const userToFind = req.params.username;
+    console.log(userToFind);
+    const favoriteToRemove = req.body;
     console.log(favoriteToRemove);
     //const usersNames = Object.keys(users)
     const user = await findUser(userToFind)
     if (user) {
       const favorites = user.favoriteVerses;
-      if (!favorites.includes(favoriteToRemove)) {
+      const checkFavorite = favorites.filter((el)=> el.verse == favoriteToRemove.verse)
+      if (checkFavorite.length = 0) {
         res
         .status(200) // controllare status appropiato
         .send({
@@ -217,15 +227,17 @@ export const removeFavoritesVerse = async (req, res) => {
         return
       }
       console.log(favorites);
-      favorites.splice(favorites.indexOf(favoriteToRemove), 1);
+      const newFavorite = favorites.filter((el)=> el.verse != favoriteToRemove.verse)
+      //favorites.splice(favorites.indexOf(favoriteToRemove), 1);
       //user.favoriteVerses = favorites;
       //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
-      await upDateFavorite(userToFind, favorites)
+      await upDateFavorite(userToFind, newFavorite)
       res
-        .status(200) // controllare status appropiato
+        .status(201) // controllare status appropiato
         .send({
-          data: favorites,
+          data: newFavorite,
           message: "modified resource",
+          check: true
         });
     } else {
       res

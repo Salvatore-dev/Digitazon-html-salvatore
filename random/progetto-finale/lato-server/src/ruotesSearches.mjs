@@ -18,7 +18,7 @@ const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
 
 export const getKeyword = async (req, res) => {
   const query = req.query;
-  console.log(query);
+  //console.log(query);
   try {
     const keyword = await findKeyword(query.keyword);
     //console.log(keyword);
@@ -115,8 +115,8 @@ export const getVerse = async (req, res) => {
       verseRequest = dataVerse
     }
   }
-  console.log(bookRequest);
-  console.log(chapterRequest);
+  //console.log(bookRequest);
+  //console.log(chapterRequest);
   //console.log(abbreviations);
 
   let versionMetaData= "3"
@@ -126,7 +126,7 @@ export const getVerse = async (req, res) => {
     checkEster = true
   }
   const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
-  console.log(indexRequest);
+  //console.log(indexRequest);
 
   let abbreviation = "";
   let limitChapter = "";
@@ -149,7 +149,7 @@ export const getVerse = async (req, res) => {
     ) {
       const chapterTofind = abbreviation + chapterRequest;
       const chapter = await findChapter(chapterTofind);
-      console.log(chapter);
+      //console.log(chapter);
       
       if (chapter) {
         let result = false
@@ -178,7 +178,7 @@ export const getVerse = async (req, res) => {
         }
        
         const mySearch = response.data;
-        console.log(mySearch);
+        //console.log(mySearch);
         const chapter = { chapter: chapterTofind };
         const newChapter = { ...chapter, ...mySearch };
         insertChapters(newChapter);

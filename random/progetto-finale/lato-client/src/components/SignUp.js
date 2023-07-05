@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import { useNavigate } from "react-router-dom";
+
+
+
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -10,6 +14,7 @@ const SignUp = () => {
   const [repeatPassword, setRepeatPassword] = useState("");
   const [checkPassword, setCheckPassword] = useState(false);
   const [checkSignUp, setCheckSignUp] = useState(false)
+  const navigate = useNavigate();
 
   function resetValues() {
     setName("");
@@ -44,14 +49,31 @@ const SignUp = () => {
       console.log(response);
       console.log(data.status);
       const status = data.status
+      if (response?.check) {
+        setCheckSignUp(true)
+      } else {
+        setCheckSignUp(false)
+        if (status == "200") {
+          console.log('spiacente, username gia utilizzato, riprova');
+        }
+      }
 
     } catch (error) {
       console.log(error);
+      console.log(error.response.status);
       
     }
     // Effettua la chiamata API o altre operazioni con i dati
     
      
+  }
+  function Redirect () {
+
+    return (
+      <div className="redirect">
+        <button onClick={()=> navigate('/login')}>Vai alla Login</button>
+      </div>
+    )
   }
 
   return (
@@ -59,12 +81,13 @@ const SignUp = () => {
       <h1>SignUp</h1>
       <p>Please fill in this form to create an account.</p>
       <hr />
-      <label htmlFor="name">
+      <label htmlFor="given-name">
         <b>Name</b>
       </label>
       <input
         type="text"
         value={name}
+        autoComplete="name"
         onChange={(e) => setName(e.target.value)}
         placeholder="Enter your Name"
         name="name"
@@ -76,6 +99,7 @@ const SignUp = () => {
       <input
         type="text"
         value={lastname}
+        autoComplete="family-name"
         onChange={(e) => setLastname(e.target.value)}
         placeholder="Enter your Lastname"
         name="lastname"
@@ -87,6 +111,7 @@ const SignUp = () => {
       <input
         type="text"
         value={username}
+        autoComplete="username"
         onChange={(e) => setUsername(e.target.value)}
         placeholder="Enter your Username"
         name="username"
@@ -98,6 +123,7 @@ const SignUp = () => {
       <input
         type="text"
         value={email}
+        autoComplete="email"
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Enter Email"
         name="email"
@@ -109,6 +135,7 @@ const SignUp = () => {
       <input
         type="password"
         value={password}
+        autoComplete="new-password"
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Enter Password"
         name="psw"
@@ -120,6 +147,7 @@ const SignUp = () => {
       <input
         type="password"
         value={repeatPassword}
+        autoComplete="new-password"
         onChange={(e) => setRepeatPassword(e.target.value)}
         placeholder="Repeat Password"
         style={{ color: checkPassword ? "black" : "red" }}
@@ -138,6 +166,7 @@ const SignUp = () => {
         ) : (
           <div>le password non corrispondono</div>
         )}
+        {checkSignUp && (<Redirect/>)}
       </div>
     </div>
   );

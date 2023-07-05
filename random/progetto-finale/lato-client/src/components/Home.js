@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { RequestInvalid } from "./Request-invalid";
+import UserProfile from "./User";
 import Text from "./Text";
 import CEI2008 from "../data/index-version-Cei2008.json";
 const books = CEI2008.indexes.CEI2008.biblebooks;
@@ -8,7 +9,7 @@ const abbreviations = CEI2008.indexes.CEI2008.abbreviations;
 const chaptersLimit = CEI2008.indexes.CEI2008.chapter_limit;
 const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
 
-const Home = ({ keyword, control, newChapter }) => {
+const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
   const [textKeyword, setTextKeyword] = useState([]);
   const [checkKeyword, setCheckKeyword] = useState(false)
   const [textVerse, setTextVerse] = useState([]);
@@ -17,6 +18,8 @@ const Home = ({ keyword, control, newChapter }) => {
 
   const [sendChapter, setSendChapter] = useState([])
   const [checkChapter, setCheckChapter] = useState(false)
+  const [favorites, setFavorites] = useState([])
+  const [favoritesB, setFavoritesB] = useState([])
 
   useEffect(() => {
     if (keyword === "") {
@@ -121,18 +124,20 @@ const Home = ({ keyword, control, newChapter }) => {
       <div className="body-text">
         {/* <h1>{text[0].originalquery}</h1>  */}
         {control && textKeyword && checkKeyword ? (
-          <Text data={textKeyword} />
+          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} />
         ) : (
           <RequestInvalid />
         )}
         {!control && textVerse && checkVerse ? (
-         <Text data={textVerse} />
+         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} />
         ) : (
           null
         )}
-        {checkChapter? (<Text data={sendChapter}/>): null}
+        {checkChapter? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB}/>): null}
       </div>
-      <div className="profile">qui deve andare il profilo con i preferiti</div>
+      <div className="profile">
+        <UserProfile profile={getUserLogin} profileSession={checkSession} newFavorite={favorites} upDateFavorite={setFavoritesB}/>
+      </div>
     </div>
   );
 };

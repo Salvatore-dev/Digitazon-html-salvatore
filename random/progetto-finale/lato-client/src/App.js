@@ -1,5 +1,5 @@
 import "./App.css";
-import "./SignUp.css";
+import "./forms-users.css";
 import "./navBar.css"
 import "./request-invalid.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -22,6 +22,9 @@ const [research, setResearch] = useState('')
 const [typeSearch, setTypeSearch] = useState(true)
 const [getChapter, setGetChapter] = useState(null)
 //console.log("qui sto nell APP data research", research);
+
+const[userLogin, setUserLogin] = useState('')
+const[checkLogin, setCheckLogin] = useState(false)
 function handleData(params) {
   setResearch(params)
 }
@@ -35,8 +38,8 @@ function handleSearch(params) {
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<PanelControl getData={handleData} controlSearch={handleSearch} sendChapter={setGetChapter} />}>
-            <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter}/>} />
-            <Route path="/login" element={<Login />} />
+            <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter} getUserLogin={userLogin} checkSession={checkLogin} />} />
+            <Route path="/login" element={<Login sendUsername={setUserLogin} checkSession={setCheckLogin}/>} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="*" element={<NoPage />} />
           </Route>

@@ -62,11 +62,11 @@ export const getChapter = async (req, res) => {
   if (bookRequest == "Ester") {
     versionMetaData = "1"
   }
-  console.log(bookRequest);
-  console.log(chapterRequest);
+  //console.log(bookRequest);
+  //console.log(chapterRequest);
   //console.log(abbreviations);
   const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
-  console.log(indexRequest);
+  //console.log(indexRequest);
   try {
     if (
       books.includes(bookRequest) &&

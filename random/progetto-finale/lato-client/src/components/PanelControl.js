@@ -26,6 +26,8 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
 
   const [requestChapter, setRequestChapter] = useState({});
   //console.log(requestChapter);
+
+  
   useEffect(() => {
     console.log("sono nel panel", requestChapter);
     sendChapter(requestChapter)
@@ -86,11 +88,11 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
   }, [chapter]);
 
 
-  console.log("questo e il change testament", changeTestament);
-  console.log("questo e il change book", changeBook);
-  console.log("questo e il chapter", chapter);
-  console.log("questo e il change chapter", changeChapter);
-  console.log("questo e il requestChapter", requestChapter);
+  // console.log("questo e il change testament", changeTestament);
+  // console.log("questo e il change book", changeBook);
+  // console.log("questo e il chapter", chapter);
+  // console.log("questo e il change chapter", changeChapter);
+  // console.log("questo e il requestChapter", requestChapter);
   useEffect(() => {
     //console.log("===================================================");
     if (changeTestament && changeBook && chapter!== '' && changeChapter) {
