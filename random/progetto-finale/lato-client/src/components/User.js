@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export default function UserProfile({ profile, profileSession, newFavorite, upDateFavorite}) {
+export default function UserProfile({ profile, profileSession, newFavorite, upDateFavorite, getProfile}) {
   const [username, setUsername] = useState("");
   console.log("sono nella user verifico profile", profile);
   const [checkSession, setCheckSession] = useState(false);
@@ -16,6 +16,7 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
     }
   }, [newFavorite])
 
+
   
   useEffect(() => {
     setUsername(profile);
@@ -26,26 +27,32 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
     setCheckSession(profileSession);
   }, [profileSession]);
 
-  useEffect(() => {
-    async function sendUsername(params) {
-      try {
-        if (checkSession) {
-          const data = await axios.get(
-            `http://localhost:8000/users/${username}/profile`
-            // { withCredentials: true }
-          );
-          const result = data?.data?.data?.favoriteVerses;
-          console.log("controllo qui sono in attesa di risposta",  result);
-          setFavorites(result);
-        } else {
-          console.log("utente non in sessione");
-        }
-      } catch (error) {
-        console.log(error);
-      }
+  useEffect(()=>{
+    if (getProfile) {
+      setFavorites(getProfile.favoriteVerses)
     }
-    sendUsername();
-  }, [profileSession]);
+  }, [getProfile])
+
+  // useEffect(() => {
+  //   async function sendUsername(params) {
+  //     try {
+  //       if (checkSession) {
+  //         const data = await axios.get(
+  //           `http://localhost:8000/users/${username}/profile`
+  //           // { withCredentials: true }
+  //         );
+  //         const result = data?.data?.data?.favoriteVerses;
+  //         console.log("controllo qui sono in attesa di risposta",  result);
+  //         setFavorites(result);
+  //       } else {
+  //         console.log("utente non in sessione");
+  //       }
+  //     } catch (error) {
+  //       console.log(error);
+  //     }
+  //   }
+  //   sendUsername();
+  // }, [profileSession]);
 
   async function removeFavorite(favorite) {
     if (username) {
@@ -75,7 +82,7 @@ console.log("controllo favorites in user", favorites);
     <div className="user-detail">
       {favorites ? (
         <div>
-          <h2>Benvenuto {profile}</h2>
+          <h2>Benvenuto {username}</h2>
           {favorites?.length >= 1 ? (
             <div className="list-favorites">
               <h4>Ecco i tuoi brani preferiti: </h4>

@@ -1,3 +1,4 @@
+import React from "react";
 import { Outlet, Link } from "react-router-dom";
 import "font-awesome/css/font-awesome.min.css";
 import { useEffect, useState } from "react";
@@ -128,6 +129,9 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
   }, [typeSearch]);
   const minLength = 4;
   console.log("il chec sul tipo di ricerca", typeSearch);
+
+
+
   return (
     <div className="layout">
       <nav className="topnav">
@@ -185,6 +189,8 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
           </li>
           <li>
             <Link to="/login">Login</Link>
+          </li>
+          <li>
           </li>
         </ul>
       </nav>

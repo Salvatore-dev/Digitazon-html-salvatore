@@ -2,6 +2,8 @@ import "./App.css";
 import "./forms-users.css";
 import "./navBar.css"
 import "./request-invalid.css"
+import "./areaText.css"
+import "./user-detail.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Outlet, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
@@ -41,6 +43,7 @@ function handleSearch(params) {
             <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter} getUserLogin={userLogin} checkSession={checkLogin} />} />
             <Route path="/login" element={<Login sendUsername={setUserLogin} checkSession={setCheckLogin}/>} />
             <Route path="/signUp" element={<SignUp />} />
+            {/* <Route path="/logout" element={<RemoveSession />} /> */}
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

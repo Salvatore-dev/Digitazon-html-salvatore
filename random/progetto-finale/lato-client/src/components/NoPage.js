@@ -1,10 +1,11 @@
 const NoPage = () => {
+    
     return (
-
-        <>
-            <h1>404</h1>
-            <p>mi dovresti vedere se la pagina non esiste</p>
-        </>
+        <div>
+        <h1>Errore 404 - Pagina non trovata</h1>
+        <p>La pagina che stai cercando non è disponibile.</p>
+        <p>Torna alla <a href="/">pagina principale</a>.</p>
+      </div>
     )
 };
 

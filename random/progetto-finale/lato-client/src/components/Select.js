@@ -35,7 +35,7 @@ export default function Selects({ chose, data, selectData }) {
           }}
           menuPosition="fixed"
           menuPlacement="auto"
-          defaultValuevalue={data ? selectedOption: "<- select - >"}
+          defaultValuevalue={"<- select - >"} //data ? selectedOption: 
           onChange={setSelectedOption}
           isClearable={false}
           options={options}

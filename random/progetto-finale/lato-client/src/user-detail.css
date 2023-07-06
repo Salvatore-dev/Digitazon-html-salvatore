@@ -1,0 +1,37 @@
+.user-detail {
+    margin-top: 20px;
+  }
+  
+  .user-detail h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .user-detail .list-favorites {
+    margin-top: 10px;
+  }
+  
+  .user-detail .list-favorites h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .user-detail p {
+    margin: 0;
+  }
+  
+  .user-detail span {
+    font-weight: bold;
+  }
+  
+  .user-detail input[type="submit"] {
+    padding: 5px 10px;
+    color: white;
+    border: none;
+    cursor: pointer;
+    background-color: red;
+  }
+  
+  .user-detail input[type="submit"]:hover {
+    opacity: 0.8;
+  }

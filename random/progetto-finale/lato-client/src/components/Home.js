@@ -20,6 +20,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
   const [checkChapter, setCheckChapter] = useState(false)
   const [favorites, setFavorites] = useState([])
   const [favoritesB, setFavoritesB] = useState([])
+  const [profileUser, setprofileUser] = useState(false)
 
   useEffect(() => {
     if (keyword === "") {
@@ -124,19 +125,19 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
       <div className="body-text">
         {/* <h1>{text[0].originalquery}</h1>  */}
         {control && textKeyword && checkKeyword ? (
-          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} />
+          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} />
         ) : (
           <RequestInvalid />
         )}
         {!control && textVerse && checkVerse ? (
-         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} />
+         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} />
         ) : (
           null
         )}
-        {checkChapter? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB}/>): null}
+        {checkChapter? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser}/>): null}
       </div>
       <div className="profile">
-        <UserProfile profile={getUserLogin} profileSession={checkSession} newFavorite={favorites} upDateFavorite={setFavoritesB}/>
+        <UserProfile profile={getUserLogin} profileSession={checkSession} newFavorite={favorites} upDateFavorite={setFavoritesB} getProfile={profileUser}/>
       </div>
     </div>
   );
