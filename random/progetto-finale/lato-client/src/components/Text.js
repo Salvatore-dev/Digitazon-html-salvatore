@@ -8,6 +8,7 @@ export default function Text({
   upDateFavorite,
   newfavorite,
   sendProfile,
+  controlSession,
 }) {
   const [text, setText] = useState([]);
   //const [disableCheck, setDisableCheck] = useState(false);
@@ -24,7 +25,7 @@ export default function Text({
   useEffect(() => {
     setUser(username);
   }, [username]);
-
+let cont = 0
   useEffect(() => {
     // qui posso inserire la chiamata dei preferiti utente
     async function getFavorites() {
@@ -37,6 +38,7 @@ export default function Text({
           const result = data?.data?.data?.favoriteVerses;
           setFavorites(result.map((el) => el.verse));
           sendProfile(data?.data?.data);
+          console.log("sono nel text conrollo chiamate" , cont++);
 
           console.log("vedo i preferiti utente", result);
         } catch (error) {
@@ -79,7 +81,7 @@ export default function Text({
               text: favorite?.text,
             }
           );
-          const result = data.data;
+          const result = data?.data;
           console.log("visulalizzo il risultato", result);
           if (result.check) {
             setFavorites(result.data.map((el) => el.verse));
@@ -93,6 +95,7 @@ export default function Text({
   }
 
   useEffect(() => {
+    setText([])
     setText(data);
   }, [data]);
 
@@ -110,7 +113,7 @@ export default function Text({
               )
                 ? "red"
                 : "green",
-              display: !username && "none",
+              display: !controlSession && "none",
             }}
             type="submit"
             value={
