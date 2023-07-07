@@ -5,8 +5,10 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Selects from "./Select";
 
-export default function PanelControl({ getData, controlSearch, sendChapter }) {
+export default function PanelControl({ getData, controlSearch, sendChapter, controlSession, setControlSession }) {
   const [metadata, setMetadata] = useState(null);
+  const [checkSession, setCheckSession] = useState(false)
+  const [checkLogout, setCheckLogout] = useState(false)
 
   const [imput, setImput] = useState("");
   const [search, setSearch] = useState("");
@@ -28,10 +30,14 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
   const [requestChapter, setRequestChapter] = useState({});
   //console.log(requestChapter);
 
-  
+  useEffect(()=>{
+    setCheckSession(controlSession)
+  }, [controlSession])
+console.log("controllo session in panel", checkSession);
+
   useEffect(() => {
     console.log("sono nel panel", requestChapter);
-    sendChapter(requestChapter)
+    sendChapter(requestChapter);
   }, [requestChapter]);
 
   useEffect(() => {
@@ -88,7 +94,6 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
     }
   }, [chapter]);
 
-
   // console.log("questo e il change testament", changeTestament);
   // console.log("questo e il change book", changeBook);
   // console.log("questo e il chapter", chapter);
@@ -96,7 +101,7 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
   // console.log("questo e il requestChapter", requestChapter);
   useEffect(() => {
     //console.log("===================================================");
-    if (changeTestament && changeBook && chapter!== '' && changeChapter) {
+    if (changeTestament && changeBook && chapter !== "" && changeChapter) {
       //console.log("------------------------------------------------");
       const result = {
         book: book,
@@ -130,6 +135,21 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
   const minLength = 4;
   console.log("il chec sul tipo di ricerca", typeSearch);
 
+  async function logout () {
+    console.log('ciao');
+    try {
+      const response = await axios.delete("http://localhost:8000/users/session");
+      const result = response.data;
+      console.log("Sono nella logout", result);
+      if (result.check) {
+        setControlSession(false)
+        setCheckLogout(false)
+       // setCheckSession(false)
+      }
+    } catch (error) {
+      console.error("Errore durante il logout:", error);
+    }
+  }
 
 
   return (
@@ -185,13 +205,21 @@ export default function PanelControl({ getData, controlSearch, sendChapter }) {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/signUp">SignUp</Link>
+            <Link style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/signUp">SignUp</Link>
           </li>
           <li>
-            <Link to="/login">Login</Link>
+            <Link style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/login">Login</Link>
           </li>
           <li>
+            {/* <Link style={{display: !checkSession && "none", pointerEvents: !checkSession && "none"}} to="/logout">Loguot</Link> */}
+            <a className="logout" style={{display: !checkSession && "none", pointerEvents: checkLogout &&  "none"}} href="#" onClick={()=> setCheckLogout(true)} >Loguot</a>
           </li>
+          {checkLogout && (
+            <>
+            <li><a onClick={()=> setCheckLogout(false)}>Rimani in sessione</a></li>
+            <li><a onClick={logout}>Esci dalla sessione</a></li>
+            </>
+          )}
         </ul>
       </nav>
       <Outlet />

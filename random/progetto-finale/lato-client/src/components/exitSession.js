@@ -2,7 +2,7 @@ import axios from "axios";
 
 export default function RemoveSession () {
     
-  async function handleClick() {
+  async function handleClick () {
     console.log('ciao');
     try {
       const responses = await axios.get(

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { RequestInvalid } from "./Request-invalid";
+import Introduction from "./Introduction";
 import UserProfile from "./User";
 import Text from "./Text";
 import CEI2008 from "../data/index-version-Cei2008.json";
@@ -74,6 +75,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             ); //esempio di ricerca per versetti
             console.log(responses.data); // Puoi fare qualcosa con la risposta qui
             const results = responses.data.data; // accedo direttamente all'array contenente i dati
+            setSendChapter([]) // per azzerare la ricerca capitolo
             setTextVerse(results); // immagazzino il risultato come array
             setCheckVerse(true);
           } else {
@@ -106,6 +108,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
           if (result.error) {
             setCheckChapter(false)
           } else{
+            setTextVerse([]) // per azzerarare la ricerca versetto
             setSendChapter(result.results)
             setCheckChapter(true)
           }
@@ -117,24 +120,35 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
       fetchChapter();
     }
   }, [newChapter]);
+console.log("controllo capitoli", checkChapter);
+console.log("controllo versi", checkVerse);
+console.log("contollo argomento", checkKeyword)
+  // useEffect(()=>{ // verificare funzionamento
+  //   if (checkChapter) {
+  //     setCheckVerse(false)
+      
+  //   }
+  // }, [checkChapter])
 
   //console.log("qui sono nella home i text del risultato ricerca", text);
   //console.log("qui sono nella home i text del risultato ricerca", textVerse);
   return (
     <div className="body-main">
       <div className="body-text">
+        {!sendChapter && !checkKeyword && !checkVerse ? (<Introduction/>): null}
         {/* <h1>{text[0].originalquery}</h1>  */}
         {control && textKeyword && checkKeyword ? (
-          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} />
+          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession} />
         ) : (
-          <RequestInvalid />
+          null
+         // <RequestInvalid />
         )}
         {!control && textVerse && checkVerse ? (
-         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} />
+         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession} />
         ) : (
           null
         )}
-        {checkChapter? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser}/>): null}
+        {checkChapter || !checkVerse? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession}/>): null}
       </div>
       <div className="profile">
         <UserProfile profile={getUserLogin} profileSession={checkSession} newFavorite={favorites} upDateFavorite={setFavoritesB} getProfile={profileUser}/>

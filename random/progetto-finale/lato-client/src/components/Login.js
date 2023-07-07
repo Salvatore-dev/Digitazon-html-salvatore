@@ -11,14 +11,15 @@ const Login = ({sendUsername, checkSession}) => {
   const [status, setStatus] = useState(200);
 
   useEffect(()=>{
-    if (checkLogin) {
+    //if (checkLogin) {
       sendUsername(response)
-      checkSession(true)
+     // checkSession(true)
       console.log("sono nella login", response);
       
-    }else {
-      checkSession(false)
-    }
+   // }
+    // else {
+    //   checkSession(false)
+    // }
   }, [response])//, checkLogin
 
   async function sendValues() {
@@ -41,12 +42,15 @@ const Login = ({sendUsername, checkSession}) => {
       if (response.check) {
         setResponse(response.data)
         setCheckLogin(true)
+       // checkSession(true)
       } else {
         setCheckLogin(false)
+       // checkSession(false)
       }
     } catch (error) {
       console.log(error);
       setCheckLogin(false)
+      //checkSession(false)
       setStatus(error.response.status); // se il server mi restituisce 403 la risposta entra nel cach, cosi prendo lo status
     }
     // Effettua la chiamata API o altre operazioni con i dati
@@ -61,7 +65,9 @@ const Login = ({sendUsername, checkSession}) => {
     )
   }
   
-
+  useEffect(() => {
+    checkSession(checkLogin)
+  }, [checkLogin])
   return (
     <div className="form-users">
       <h1>Login</h1>

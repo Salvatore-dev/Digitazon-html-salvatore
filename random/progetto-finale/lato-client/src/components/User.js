@@ -4,7 +4,7 @@ import axios from "axios";
 
 export default function UserProfile({ profile, profileSession, newFavorite, upDateFavorite, getProfile}) {
   const [username, setUsername] = useState("");
-  console.log("sono nella user verifico profile", profile);
+  console.log("sono nella user verifico session", profile);
   const [checkSession, setCheckSession] = useState(false);
   const [favorites, setFavorites] = useState(null);
 
@@ -23,7 +23,7 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
   }, [profile]);
 
   useEffect(() => {
-    console.log("profile session", profileSession);
+    console.log("profile verifico cosa e ", profileSession);
     setCheckSession(profileSession);
   }, [profileSession]);
 
@@ -80,7 +80,7 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
 console.log("controllo favorites in user", favorites);
   return (
     <div className="user-detail">
-      {favorites ? (
+      {favorites && checkSession ? ( // && checkSession
         <div>
           <h2>Benvenuto {username}</h2>
           {favorites?.length >= 1 ? (

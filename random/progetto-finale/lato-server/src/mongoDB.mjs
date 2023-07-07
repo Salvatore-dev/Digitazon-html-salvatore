@@ -47,25 +47,6 @@ export async function insertKeyword(keyword) {
   }
 }
 
-export async function fechUsers() {
-  try {
-    await client.connect();
-    const database = client.db(process.env.NAME_DB_MONGO); // riferimento al nome database dato in sede di registrazione a mongodb
-    const usersCollection = database.collection("users");
-
-    const findUsers = await usersCollection.find().toArray();
-    // for await (const doc of cursor) {
-    //   console.dir(doc);
-    // }
-    console.log(findUsers);
-    return findUsers;
-  } catch (error) {
-    console.log(error);
-  } finally {
-    await client.close();
-  }
-}
-
 export async function findKeyword(keyTofind) {
   try {
     await client.connect();

@@ -1,0 +1,40 @@
+.introduction {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .introduction h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .introduction h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .introduction p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .introduction li {
+    list-style-type: none;
+    padding: 0.4rem;
+  }
+  .introduction ol.list-book {
+    margin-left: 30px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+  
+  .introduction span {
+    font-size: 12px;
+    color: gray;
+  }
+  
+  .introduction br {
+    margin-bottom: 10px;
+  }
+  
