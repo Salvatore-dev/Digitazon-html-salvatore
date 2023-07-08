@@ -16,6 +16,7 @@ import NoPage from "./components/NoPage";
 import SignUp from "./components/SignUp";
 import Foot from "./components/Footer";
 import Logout from "./components/Loguot";
+import InvalidRequest from "./components/InvalidRequest";
 
 //const url = '../public/assets/tocco3.jpg' // da eliminare vedere se ci sono problemi al restart se eliminato
 function App() {
@@ -27,23 +28,27 @@ const [getChapter, setGetChapter] = useState(null)
  //const [checkSession, setCheckSession] = useState(false) // false non e in sessione
 const[userLogin, setUserLogin] = useState('')
 const[checkLogin, setCheckLogin] = useState(false)
-function handleData(params) {
-  setResearch(params)
-}
-function handleSearch(params) {
-  setTypeSearch(params)
-}
+
+
+
+// function handleData(params) {
+//   setResearch(params)
+// }
+// function handleSearch(params) {
+//   setTypeSearch(params)
+// }
   return (
     <>
       <Header />
       <div>
         <BrowserRouter>
         <Routes>
-          <Route path="/" element={<PanelControl getData={handleData} controlSearch={handleSearch} sendChapter={setGetChapter} controlSession={checkLogin} setControlSession={setCheckLogin}/>}>
+          <Route path="/" element={<PanelControl getData={setResearch} controlSearch={setTypeSearch} sendChapter={setGetChapter} controlSession={checkLogin} setControlSession={setCheckLogin}/>}>
             <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter} getUserLogin={userLogin} checkSession={checkLogin} />} />
             <Route path="/login" element={<Login sendUsername={setUserLogin} checkSession={setCheckLogin}/>} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/logout" element={<Logout />} />
+            <Route path="/invalid" element={<InvalidRequest/>}/>
             <Route path="*" element={<NoPage />} />
           </Route>
         </Routes>

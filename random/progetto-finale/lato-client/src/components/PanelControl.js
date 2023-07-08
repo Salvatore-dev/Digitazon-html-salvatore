@@ -27,7 +27,7 @@ export default function PanelControl({ getData, controlSearch, sendChapter, cont
   const [changeBook, setChangeBook] = useState(false);
   const [changeChapter, setChangeChapter] = useState(false);
 
-  const [requestChapter, setRequestChapter] = useState({});
+  const [requestChapter, setRequestChapter] = useState(null);
   //console.log(requestChapter);
 
   useEffect(()=>{
@@ -101,7 +101,7 @@ console.log("controllo session in panel", checkSession);
   // console.log("questo e il requestChapter", requestChapter);
   useEffect(() => {
     //console.log("===================================================");
-    if (changeTestament && changeBook && chapter !== "" && changeChapter) {
+    if (changeTestament && changeBook && chapter && changeChapter) { // chapter !== ""
       //console.log("------------------------------------------------");
       const result = {
         book: book,
@@ -117,7 +117,9 @@ console.log("controllo session in panel", checkSession);
   }
 
   useEffect(() => {
-    getData(search);
+    if (search) {
+      getData(search)
+    }
   }, [search]);
 
   function handleCheck() {
@@ -216,8 +218,8 @@ console.log("controllo session in panel", checkSession);
           </li>
           {checkLogout && (
             <>
-            <li><a onClick={()=> setCheckLogout(false)}>Rimani in sessione</a></li>
-            <li><a onClick={logout}>Esci dalla sessione</a></li>
+            <li><a href="#" onClick={()=> setCheckLogout(false)}>Rimani in sessione</a></li>
+            <li><a href="#" onClick={logout}>Esci dalla sessione</a></li>
             </>
           )}
         </ul>

@@ -90,7 +90,7 @@ export const getUser = async (req, res) => {
     //const dati = await fs.readFile(DB_PATH_USERS);
     //const users = JSON.parse(dati.toString());
     const userToFind = req.params.username;
-    console.log("sono nella route verifico username", userToFind);
+    console.log("sono nella route verifico username", userToFind, req.params);
     //const usersNames = Object.keys(users)
     const user = await findUser(userToFind)
     if (user) {

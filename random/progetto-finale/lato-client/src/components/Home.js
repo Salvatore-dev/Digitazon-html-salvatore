@@ -11,40 +11,68 @@ const chaptersLimit = CEI2008.indexes.CEI2008.chapter_limit;
 const verseLimit = CEI2008.indexes.CEI2008.verse_limit;
 
 const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
-  const [textKeyword, setTextKeyword] = useState([]);
-  const [checkKeyword, setCheckKeyword] = useState(false)
-  const [textVerse, setTextVerse] = useState([]);
+  const [textKeyword, setTextKeyword] = useState(null); // null ? o []
+  const [checkKeyword, setCheckKeyword] = useState(false);
+  const [textVerse, setTextVerse] = useState(null); // null? o []
   const [checkVerse, setCheckVerse] = useState(false);
+  const [chapter, setChapter] = useState(null);
+  const [newKeyword, setNewKeyword] = useState("");
   //const [typeSearch, setTypeSearch] = useState(control)
 
-  const [sendChapter, setSendChapter] = useState([])
-  const [checkChapter, setCheckChapter] = useState(false)
-  const [favorites, setFavorites] = useState([])
-  const [favoritesB, setFavoritesB] = useState([])
-  const [profileUser, setprofileUser] = useState(false)
+  const [sendChapter, setSendChapter] = useState([]);
+  const [checkChapter, setCheckChapter] = useState(false);
+  const [favorites, setFavorites] = useState([]);
+  const [favoritesB, setFavoritesB] = useState([]);
+  const [profileUser, setProfileUser] = useState(null);
+
+  const [user, setUser] = useState("");
 
   useEffect(() => {
-    if (keyword === "") {
+    if (getUserLogin) {
+      setUser(getUserLogin);
+    }
+  }, [getUserLogin]);
+
+  useEffect(() => {
+    if (keyword) {
+      setNewKeyword(keyword);
+    }
+  }, [keyword]);
+
+  useEffect(() => {
+    setChapter(newChapter);
+  }, [newChapter]);
+
+  useEffect(() => {
+    if (newKeyword === "") {
       return;
     }
     const fetchdata = async () => {
-      if (control) {
-        try {
-          const responses = await axios.get(
-            `http://localhost:8000/books/keywords/search?keyword=${keyword}`
-          ); //esempio di ricerca per versetti
-          console.log(responses.data); // Puoi fare qualcosa con la risposta qui
-          const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
-          setTextKeyword(results); // immagazzino il risultato come array
-          setCheckKeyword(true)
-        } catch (error) {
-          console.error(error);
-          setCheckKeyword(false)
+      if (control && newKeyword) {
+        // invece di controll
+        const checkKeyword = newKeyword.search(/\d/) !== -1;
+        if (!checkKeyword && newKeyword.length >= 3) {
+          try {
+            const responses = await axios.get(
+              `http://localhost:8000/books/keywords/search?keyword=${newKeyword}`
+            ); //esempio di ricerca per versetti
+            console.log(responses.data); // Puoi fare qualcosa con la risposta qui
+            const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
+            setTextKeyword(results); // immagazzino il risultato come array
+            setCheckKeyword(true);
+          } catch (error) {
+            console.error(error);
+            setCheckKeyword(false);
+          }
+          console.log(newKeyword);
+        } else {
+          setCheckKeyword(false);
+          console.log("keyword non corretta");
+          return;
         }
-        console.log(keyword);
       } else {
         try {
-          const request = keyword;
+          const request = newKeyword;
           const verse = request.split(",")[1];
           const toDecompose = request.split(",")[0];
 
@@ -52,35 +80,40 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
           const match = toDecompose.match(regex);
           let book = "";
           let chapter = "";
-          let check = false
+          let check = false;
           if (match) {
             book = match[1]; // Abbreviazione del libro
             chapter = parseInt(match[2], 10); // Numero del capitolo
 
-            console.log("Abbreviazione del libro:", book);
+            //console.log("Abbreviazione del libro:", book);
             const indexRequest = abbreviations.indexOf(book);
             book = books[indexRequest];
-            console.log("Numero del capitolo:", chapter);
-            console.log(verse);
+            //console.log("Numero del capitolo:", chapter);
+            //console.log(verse);
             setCheckVerse(true);
-            check = true
-            console.log("dovrebbe essere true", checkVerse);
-          } else {
-            console.log("Formato della stringa non valido");
-            setCheckVerse(false);
-          }
-          if (check) {
+            //check = true;
+            //console.log("dovrebbe essere true", checkVerse);
+            // } else {
+            //   console.log("Formato della stringa non valido");
+            //   setCheckVerse(false);
+            // }
+            // if (check) {
             const responses = await axios.get(
               `http://localhost:8000/books/${book}/chapters/${chapter}/verses/${verse}`
             ); //esempio di ricerca per versetti
             console.log(responses.data); // Puoi fare qualcosa con la risposta qui
-            const results = responses.data.data; // accedo direttamente all'array contenente i dati
-            setSendChapter([]) // per azzerare la ricerca capitolo
-            setTextVerse(results); // immagazzino il risultato come array
-            setCheckVerse(true);
+            if (responses.data?.error) {
+              console.log("richiesta invalida");
+              setCheckVerse(false);
+            } else {
+              const results = responses.data.data; // accedo direttamente all'array contenente i dati
+              setSendChapter([]); // per azzerare la ricerca capitolo
+              setTextVerse(results); // immagazzino il risultato come array
+              setCheckVerse(true);
+            }
           } else {
             console.log("richiesta invalida");
-            setCheckVerse(false)
+            setCheckVerse(false);
           }
         } catch (error) {
           console.error(error);
@@ -89,10 +122,10 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
       }
     };
     fetchdata();
-  }, [keyword]);
+  }, [newKeyword]);
 
   useEffect(() => {
-    if (newChapter) {
+    if (chapter) {
       //console.log("sono nella home", newChapter);
       const book = newChapter.book;
       //console.log(book);
@@ -103,55 +136,110 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
           const data = await axios.get(
             `http://localhost:8000/books/${book}/chapters/${chapter}`
           );
-          const result = data.data.data;
+          const result = data.data;
           console.log(result);
           if (result.error) {
-            setCheckChapter(false)
-          } else{
-            setTextVerse([]) // per azzerarare la ricerca versetto
-            setSendChapter(result.results)
-            setCheckChapter(true)
+            setCheckChapter(false);
+            console.log("richiesta capitolo");
+          } else {
+            setTextVerse(null); // per azzerarare la ricerca versetto
+            setSendChapter(result.data.results);
+            setCheckChapter(true);
           }
         } catch (error) {
           console.log(error);
-          setCheckChapter(false)
+          setCheckChapter(false);
         }
       };
       fetchChapter();
     }
-  }, [newChapter]);
-console.log("controllo capitoli", checkChapter);
-console.log("controllo versi", checkVerse);
-console.log("contollo argomento", checkKeyword)
+  }, [chapter]);
+  console.log("controllo capitoli", checkChapter);
+  console.log("controllo versi", checkVerse);
+  console.log("contollo argomento", checkKeyword);
   // useEffect(()=>{ // verificare funzionamento
   //   if (checkChapter) {
   //     setCheckVerse(false)
-      
+
   //   }
   // }, [checkChapter])
 
   //console.log("qui sono nella home i text del risultato ricerca", text);
   //console.log("qui sono nella home i text del risultato ricerca", textVerse);
+
+  useEffect(() => {
+    // user alias username
+    // qui posso inserire la chiamata dei preferiti utente
+    async function getFavorites() {
+      if (user) {
+        // invece di username
+        try {
+          const data = await axios.get(
+            `http://localhost:8000/users/${user}/profile`
+          );
+          const result = data?.data?.data?.favoriteVerses;
+          setFavoritesB(result.map((el) => el.verse)); // set favorites alias  new favorite // alias setFavoritesB
+          setProfileUser(data?.data?.data); // send profile // alias setprofileUser
+          console.log("sono nel text conrollo chiamate  =================");
+
+          console.log("vedo i preferiti utente", result);
+        } catch (error) {
+          console.log("sono nella chiamata preferiti", error);
+        }
+      }
+    }
+    getFavorites();
+  }, [user]); // invece di username
+
   return (
     <div className="body-main">
       <div className="body-text">
-        {!sendChapter && !checkKeyword && !checkVerse ? (<Introduction/>): null}
+        {!checkChapter && !checkKeyword && !checkVerse ? (
+          <Introduction />
+        ) : null}
         {/* <h1>{text[0].originalquery}</h1>  */}
-        {control && textKeyword && checkKeyword ? (
-          <Text data={textKeyword} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession} />
-        ) : (
-          null
-         // <RequestInvalid />
-        )}
+        {
+          control && textKeyword && checkKeyword ? (
+            <Text
+              data={textKeyword}
+              username={user}
+              upDateFavorite={setFavorites}
+              newfavorite={favoritesB}
+              sendProfile={setProfileUser}
+              controlSession={checkSession}
+            />
+          ) : null
+          // <RequestInvalid />
+        }
         {!control && textVerse && checkVerse ? (
-         <Text data={textVerse} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession} />
-        ) : (
-          null
-        )}
-        {checkChapter || !checkVerse? (<Text data={sendChapter} username={getUserLogin} upDateFavorite={setFavorites} newfavorite={favoritesB} sendProfile={setprofileUser} controlSession={checkSession}/>): null}
+          <Text
+            data={textVerse}
+            username={user}
+            upDateFavorite={setFavorites}
+            newfavorite={favoritesB}
+            sendProfile={setProfileUser}
+            controlSession={checkSession}
+          />
+        ) : null}
+        {checkChapter || (!checkVerse && control) ? (
+          <Text
+            data={sendChapter}
+            username={user}
+            upDateFavorite={setFavorites}
+            newfavorite={favoritesB}
+            sendProfile={setProfileUser}
+            controlSession={checkSession}
+          />
+        ) : null}
       </div>
       <div className="profile">
-        <UserProfile profile={getUserLogin} profileSession={checkSession} newFavorite={favorites} upDateFavorite={setFavoritesB} getProfile={profileUser}/>
+        <UserProfile
+          profile={user}
+          profileSession={checkSession}
+          newFavorite={favorites}
+          upDateFavorite={setFavoritesB}
+          getProfile={profileUser}
+        />
       </div>
     </div>
   );

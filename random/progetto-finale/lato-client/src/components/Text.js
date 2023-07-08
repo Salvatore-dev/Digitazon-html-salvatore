@@ -4,16 +4,16 @@ import axios from "axios";
 
 export default function Text({
   data,
-  username,
+  username, // da lasciare
   upDateFavorite,
-  newfavorite,
-  sendProfile,
+  newfavorite, // da lasciare
+  sendProfile, // inutile da lascia re dopo la modifica
   controlSession,
 }) {
   const [text, setText] = useState([]);
-  //const [disableCheck, setDisableCheck] = useState(false);
+  //const [resetSearch, setResetSeach] = useState(false);
   //const [controlcheck, setControlCheck] = useState(false);
-  const [user, setUser] = useState(""); // invece di stringa vuota
+  const [user, setUser] = useState(""); // invece di stringa vuota // da lasciare
   const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
@@ -25,29 +25,29 @@ export default function Text({
   useEffect(() => {
     setUser(username);
   }, [username]);
-let cont = 0
-  useEffect(() => {
-    // qui posso inserire la chiamata dei preferiti utente
-    async function getFavorites() {
-      if (user) {
-        // invece di username
-        try {
-          const data = await axios.get(
-            `http://localhost:8000/users/${user}/profile`
-          );
-          const result = data?.data?.data?.favoriteVerses;
-          setFavorites(result.map((el) => el.verse));
-          sendProfile(data?.data?.data);
-          console.log("sono nel text conrollo chiamate" , cont++);
 
-          console.log("vedo i preferiti utente", result);
-        } catch (error) {
-          console.log("sono nella chiamata preferiti", error);
-        }
-      }
-    }
-    getFavorites();
-  }, [user]); // invece di username
+  // useEffect(() => { // user alias username
+  //   // qui posso inserire la chiamata dei preferiti utente
+  //   async function getFavorites() {
+  //     if (user) {
+  //       // invece di username
+  //       try {
+  //         const data = await axios.get(
+  //           `http://localhost:8000/users/${user}/profile`
+  //         );
+  //         const result = data?.data?.data?.favoriteVerses;
+  //         setFavorites(result.map((el) => el.verse)); // set favorites alias  new favorite
+  //         sendProfile(data?.data?.data); // send profile
+  //         console.log("sono nel text conrollo chiamate  =================" );
+
+  //         console.log("vedo i preferiti utente", result);
+  //       } catch (error) {
+  //         console.log("sono nella chiamata preferiti", error);
+  //       }
+  //     }
+  //   }
+  //   getFavorites();
+  // }, [user]); // invece di username
 
   //console.log("controllo preferiti", user);
 
@@ -57,7 +57,7 @@ let cont = 0
       if (favorites.includes(selectedVerse)) {
         try {
           const data = await axios.patch(
-            `http://localhost:8000/users/${username}/profile/favorite`,
+            `http://localhost:8000/users/${user}/profile/favorite`,
             {
               verse: selectedVerse,
               text: favorite?.text,
@@ -95,7 +95,8 @@ let cont = 0
   }
 
   useEffect(() => {
-    setText([])
+    //setText([])
+    console.log("''''''''''''''", data);
     setText(data);
   }, [data]);
 
