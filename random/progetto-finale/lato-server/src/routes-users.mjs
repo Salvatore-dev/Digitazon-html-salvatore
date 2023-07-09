@@ -37,7 +37,7 @@ export const login = async (req, res) => {
     //console.log(response.password);
     //const usersNames = Object.keys(users)
     const user = await findUser(username)
-    console.log(user);
+    console.log("sono nella get user gestisci....", user);
 
     if (user) {
       const checkPassword = await comparePassword(
@@ -48,7 +48,7 @@ export const login = async (req, res) => {
         req.session.user = username;
         console.log("sono nel route user", req.session.user);
         res.status(200).send({
-          data: username,
+          data: user,
           check: true,
           message: "authenticated user",
         });

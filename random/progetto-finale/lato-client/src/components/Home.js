@@ -18,6 +18,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
   const [chapter, setChapter] = useState(null);
   const [newKeyword, setNewKeyword] = useState("");
   //const [typeSearch, setTypeSearch] = useState(control)
+  const [sendVerses, setSendVerses] = useState([]);
 
   const [sendChapter, setSendChapter] = useState([]);
   const [checkChapter, setCheckChapter] = useState(false);
@@ -29,7 +30,12 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
 
   useEffect(() => {
     if (getUserLogin) {
-      setUser(getUserLogin);
+      console.log("controllare dati", getUserLogin);
+      console.log("controllo username", getUserLogin.username);
+      console.log("controllo preferiti", getUserLogin.favoriteVerses);
+      setUser(getUserLogin.username);
+      setFavoritesB(getUserLogin.favoriteVerses);
+      setProfileUser(getUserLogin)
     }
   }, [getUserLogin]);
 
@@ -58,7 +64,8 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             ); //esempio di ricerca per versetti
             console.log(responses.data); // Puoi fare qualcosa con la risposta qui
             const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
-            setTextKeyword(results); // immagazzino il risultato come array
+            //setTextKeyword(results); // immagazzino il risultato come array
+            setSendVerses(results)
             setCheckKeyword(true);
           } catch (error) {
             console.error(error);
@@ -107,8 +114,9 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
               setCheckVerse(false);
             } else {
               const results = responses.data.data; // accedo direttamente all'array contenente i dati
-              setSendChapter([]); // per azzerare la ricerca capitolo
-              setTextVerse(results); // immagazzino il risultato come array
+              //setSendChapter([]); // per azzerare la ricerca capitolo
+              //setTextVerse(results); // immagazzino il risultato come array
+              setSendVerses(results)
               setCheckVerse(true);
             }
           } else {
@@ -142,8 +150,9 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             setCheckChapter(false);
             console.log("richiesta capitolo");
           } else {
-            setTextVerse(null); // per azzerarare la ricerca versetto
-            setSendChapter(result.data.results);
+            //setTextVerse(null); // per azzerarare la ricerca versetto
+            //setSendChapter(result.data.results);
+            setSendVerses(result.data.results)
             setCheckChapter(true);
           }
         } catch (error) {
@@ -167,38 +176,47 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
   //console.log("qui sono nella home i text del risultato ricerca", text);
   //console.log("qui sono nella home i text del risultato ricerca", textVerse);
 
-  useEffect(() => {
-    // user alias username
-    // qui posso inserire la chiamata dei preferiti utente
-    async function getFavorites() {
-      if (user) {
-        // invece di username
-        try {
-          const data = await axios.get(
-            `http://localhost:8000/users/${user}/profile`
-          );
-          const result = data?.data?.data?.favoriteVerses;
-          setFavoritesB(result.map((el) => el.verse)); // set favorites alias  new favorite // alias setFavoritesB
-          setProfileUser(data?.data?.data); // send profile // alias setprofileUser
-          console.log("sono nel text conrollo chiamate  =================");
+  // useEffect(() => {
+  //   // user alias username
+  //   // qui posso inserire la chiamata dei preferiti utente
+  //   async function getFavorites() {
+  //     if (user) {
+  //       // invece di username
+  //       try {
+  //         const data = await axios.get(
+  //           `http://localhost:8000/users/${user}/profile`
+  //         );
+  //         const result = data?.data?.data?.favoriteVerses;
+  //         setFavoritesB(result.map((el) => el.verse)); // set favorites alias  new favorite // alias setFavoritesB
+  //         setProfileUser(data?.data?.data); // send profile // alias setprofileUser
+  //         console.log("sono nel text conrollo chiamate  =================");
 
-          console.log("vedo i preferiti utente", result);
-        } catch (error) {
-          console.log("sono nella chiamata preferiti", error);
-        }
-      }
-    }
-    getFavorites();
-  }, [user]); // invece di username
+  //         console.log("vedo i preferiti utente", result);
+  //       } catch (error) {
+  //         console.log("sono nella chiamata preferiti", error);
+  //       }
+  //     }
+  //   }
+  //   getFavorites();
+  // }, []); // invece di username
 
   return (
     <div className="body-main">
       <div className="body-text">
         {!checkChapter && !checkKeyword && !checkVerse ? (
           <Introduction />
-        ) : null}
+        ) : (
+          <Text
+          data={sendVerses}
+          username={user}
+          upDateFavorite={setFavorites}
+          newfavorite={favoritesB}
+          sendProfile={setProfileUser}
+          controlSession={checkSession}
+        />
+        )}
         {/* <h1>{text[0].originalquery}</h1>  */}
-        {
+        {/* {
           control && textKeyword && checkKeyword ? (
             <Text
               data={textKeyword}
@@ -230,7 +248,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             sendProfile={setProfileUser}
             controlSession={checkSession}
           />
-        ) : null}
+        ) : null} */}
       </div>
       <div className="profile">
         <UserProfile

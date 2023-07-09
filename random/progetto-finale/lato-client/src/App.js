@@ -26,7 +26,7 @@ const [typeSearch, setTypeSearch] = useState(true)
 const [getChapter, setGetChapter] = useState(null)
 //console.log("qui sto nell APP data research", research);
  //const [checkSession, setCheckSession] = useState(false) // false non e in sessione
-const[userLogin, setUserLogin] = useState('')
+const[profile, setProfile] = useState(null)
 const[checkLogin, setCheckLogin] = useState(false)
 
 
@@ -34,6 +34,7 @@ const[checkLogin, setCheckLogin] = useState(false)
 // function handleData(params) {
 //   setResearch(params)
 // }
+
 // function handleSearch(params) {
 //   setTypeSearch(params)
 // }
@@ -44,8 +45,8 @@ const[checkLogin, setCheckLogin] = useState(false)
         <BrowserRouter>
         <Routes>
           <Route path="/" element={<PanelControl getData={setResearch} controlSearch={setTypeSearch} sendChapter={setGetChapter} controlSession={checkLogin} setControlSession={setCheckLogin}/>}>
-            <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter} getUserLogin={userLogin} checkSession={checkLogin} />} />
-            <Route path="/login" element={<Login sendUsername={setUserLogin} checkSession={setCheckLogin}/>} />
+            <Route index element={<Home keyword={research} control={typeSearch} newChapter={getChapter} getUserLogin={profile} checkSession={checkLogin} />} />
+            <Route path="/login" element={<Login sendData={setProfile} checkSession={setCheckLogin}/>} />
             <Route path="/signUp" element={<SignUp />} />
             <Route path="/logout" element={<Logout />} />
             <Route path="/invalid" element={<InvalidRequest/>}/>

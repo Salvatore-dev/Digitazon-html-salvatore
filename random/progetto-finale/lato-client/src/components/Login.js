@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({sendUsername, checkSession}) => {
+const Login = ({sendData, checkSession}) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ const Login = ({sendUsername, checkSession}) => {
 
   useEffect(()=>{
     //if (checkLogin) {
-      sendUsername(response)
+      sendData(response)
      // checkSession(true)
       console.log("sono nella login", response);
       

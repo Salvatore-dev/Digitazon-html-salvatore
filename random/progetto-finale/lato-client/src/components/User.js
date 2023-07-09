@@ -79,23 +79,23 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
   }
 console.log("controllo favorites in user", favorites);
   return (
-    <div className="user-detail">
+    <div className="user-detail" style={{display: !checkSession && "none" }}>
       {favorites && checkSession ? ( // && checkSession
         <div>
           <h2>Benvenuto {username}</h2>
           {favorites?.length >= 1 ? (
-            <div className="list-favorites">
+            <div className="favorites">
               <h4>Ecco i tuoi brani preferiti: </h4>
               <br></br>
               {favorites.map((el, i) => (
-                <div key={i}>
+                <div className="list-favorites" key={i}>
                   <p key={i}>
                     <span key={i + 100}>{el.verse}: </span>
                     {el.text}
-                  </p>{" "}
+                  </p>
                   <input
                   key={i+200}
-                    style={{ backgroundColor: "red" }}
+                    // style={{ backgroundColor: "red" }}
                     type="submit"
                     value={"Rimuovi dai preferiti"}
                     name="remove-favorite"

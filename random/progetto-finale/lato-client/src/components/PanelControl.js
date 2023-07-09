@@ -9,6 +9,7 @@ export default function PanelControl({ getData, controlSearch, sendChapter, cont
   const [metadata, setMetadata] = useState(null);
   const [checkSession, setCheckSession] = useState(false)
   const [checkLogout, setCheckLogout] = useState(false)
+  //const [checkExit, setCheckExit] = useState(false)
 
   const [imput, setImput] = useState("");
   const [search, setSearch] = useState("");
@@ -146,6 +147,7 @@ console.log("controllo session in panel", checkSession);
       if (result.check) {
         setControlSession(false)
         setCheckLogout(false)
+        setCheckSession(false)
        // setCheckSession(false)
       }
     } catch (error) {
@@ -153,7 +155,8 @@ console.log("controllo session in panel", checkSession);
     }
   }
 
-
+ console.log('controllo check session', checkSession);
+ console.log('controllo check louot', checkLogout);
   return (
     <div className="layout">
       <nav className="topnav">
@@ -202,24 +205,23 @@ console.log("controllo session in panel", checkSession);
           </form>
         </div>
 
-        <ul>
+        <ul className="links-navbar">
           <li>
-            <Link to="/">Home</Link>
+            <Link id="home" style={{pointerEvents: checkLogout && "none" }} to="/">{checkLogout? "Sicuro?" : "Home"}</Link>
           </li>
           <li>
-            <Link style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/signUp">SignUp</Link>
+            <Link id="signup" style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/signUp">SignUp</Link>
           </li>
           <li>
-            <Link style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/login">Login</Link>
+            <Link id="login" style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/login">Login</Link>
           </li>
           <li>
-            {/* <Link style={{display: !checkSession && "none", pointerEvents: !checkSession && "none"}} to="/logout">Loguot</Link> */}
-            <a className="logout" style={{display: !checkSession && "none", pointerEvents: checkLogout &&  "none"}} href="#" onClick={()=> setCheckLogout(true)} >Loguot</a>
+            <a id="logout" style={{display: (!checkSession || checkLogout) && "none", pointerEvents: checkLogout &&  "none"}} href="#" onClick={()=> setCheckLogout(true)} >Loguot</a>
           </li>
           {checkLogout && (
             <>
-            <li><a href="#" onClick={()=> setCheckLogout(false)}>Rimani in sessione</a></li>
-            <li><a href="#" onClick={logout}>Esci dalla sessione</a></li>
+            <li><a id="continue-session" href="#" onClick={()=> setCheckLogout(false)}>Continua</a></li>
+            <li><a id="exit-session" href="#" onClick={logout}>Esci</a></li>
             </>
           )}
         </ul>

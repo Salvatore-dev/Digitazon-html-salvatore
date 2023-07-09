@@ -3,25 +3,26 @@
   overflow: hidden;
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.topnav ul {
+.links-navbar {
   display: flex;
 }
 
-.topnav li {
+
+.links-navbar li {
   list-style: none;
 }
 
-/* Style the topnav links */
-.topnav a {
+.links-navbar a {
   display: flex;
   display: block;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
+
+
 
 .custom-select {
   display: flex;
@@ -31,7 +32,7 @@
 /* The switch - the box around the slider */
 .switch {
   position: relative;
-  width: 40px;
+  width: 50px;
   display: flex;
   height: 24px;
   margin-bottom: 5px;
