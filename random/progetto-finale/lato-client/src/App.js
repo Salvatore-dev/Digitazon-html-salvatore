@@ -1,10 +1,10 @@
 import "./App.css";
-import "./forms-users.css";
-import "./navBar.css"
-import "./request-invalid.css"
-import "./areaText.css"
-import "./user-detail.css"
-import "./introduction.css"
+import "./data/forms-users.css";
+import "./data/navBar.css"
+import "./data/request-invalid.css"
+import "./data/areaText.css"
+import "./data/user-detail.css"
+import "./data/introduction.css"
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState } from "react";
 

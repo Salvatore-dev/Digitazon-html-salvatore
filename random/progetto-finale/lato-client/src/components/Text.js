@@ -94,11 +94,6 @@ export default function Text({
             <input
               key={i + 100}
               style={{
-                // backgroundColor: favorites.includes(
-                //   `${el.bookabbrev}${el.chapter},${el.verse}`
-                // )
-                //   ? "red"
-                //   : "green",
                 display: !controlSession && "none",
                 pointerEvents: !checkUpdate && "none",
               }}

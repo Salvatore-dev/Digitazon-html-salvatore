@@ -35,9 +35,9 @@ const Foot = () => {
           <p>
             Questo progetto è stato realizzato anche grazie alle risorse
             "open-source" messe a disposizione da "BibleGet-I-O":{" "}
-            <a href="https://www.bibleget.io/">www.bibleget.io</a>, attraverso i
+            <a href="https://www.bibleget.io/" target="_blank" >www.bibleget.io</a>, attraverso i
             seguenti{" "}
-            <a href="https://github.com/BibleGet-I-O/endpoint">Endpoints</a>.
+            <a href="https://github.com/BibleGet-I-O/endpoint" target="_blank" >Endpoints</a>.
           </p>
           <p>
             Grazie a tutti per il fantastico corso di web developer! Siete stati

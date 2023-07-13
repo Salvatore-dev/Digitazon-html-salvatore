@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import background from "../assets/pergamena-3.jpg"
+import background2 from "../assets/pergamena-1.jpg"
 
 export default function UserProfile({
   profile,
@@ -65,7 +67,12 @@ export default function UserProfile({
   }
   console.log("controllo favorites in user", favorites);
   return (
-    <div className="user-detail" style={{ display: !checkSession && "none" }}>
+    <div className="user-detail" style={{ display: !checkSession && "none",
+    backgroundImage: `url(${background})`,
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+    }}>
       {favorites && checkSession ? (
         <div>
           <h2>Benvenuto/a {username}</h2>

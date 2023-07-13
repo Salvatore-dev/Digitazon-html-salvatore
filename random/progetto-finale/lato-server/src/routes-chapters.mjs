@@ -21,8 +21,10 @@ export const getChapter = async (req, res) => {
   //console.log(bookRequest);
   //console.log(chapterRequest);
   //console.log(abbreviations);
-  const indexRequest = books.indexOf(bookRequest); 
   //console.log(indexRequest);
+  //console.log(books.includes(bookRequest));
+  //console.log(chapterLimit[indexRequest]);
+  const indexRequest = books.indexOf(bookRequest);
   try {
     if (
       books.includes(bookRequest) &&
@@ -63,22 +65,18 @@ export const getChapter = async (req, res) => {
         });
       }
     } else {
-      res
-        .status(400) // verifica codice / 200
-        .send({
-          data: {},
-          error: true,
-          message: "book or chapter not found",
-        });
+      res.status(400).send({
+        data: {},
+        error: true,
+        message: "book or chapter not found",
+      });
     }
   } catch (error) {
     console.log(error);
-    res
-      .status(500) // controllare migliore codice di status
-      .send({
-        data: {},
-        error: true,
-        message: "server problem",
-      });
+    res.status(500).send({
+      data: {},
+      error: true,
+      message: "server problem",
+    });
   }
 };

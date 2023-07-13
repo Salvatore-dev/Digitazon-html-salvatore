@@ -186,8 +186,14 @@ const SignUp = () => {
           className="signupbtn"
           type="submit"
           style={{
+            display: "flex",
+            justifyContent: "center",
             pointerEvents:
-              (!checkPassword || !checkForm || !checkUsername || awaitSignup || checkSignUp) &&
+              (!checkPassword ||
+                !checkForm ||
+                !checkUsername ||
+                awaitSignup ||
+                checkSignUp) &&
               "none",
             backgroundColor:
               (!checkPassword || !checkForm) && "rgb(218, 218, 0)",
@@ -197,11 +203,16 @@ const SignUp = () => {
         >
           {checkSignUp
             ? "Complimenti registrazione effettuata con successo"
+            : awaitSignup
+            ? "Loading..."
             : !checkPassword
             ? "Le password non corrispondono"
             : !checkForm
             ? "inserisci i dati nel modulo di registrazione"
             : "Sign Up"}
+          {awaitSignup && (
+            <div className="loader" style={{ marginLeft: "10px" }}></div>
+          )}
         </button>
         {checkSignUp && <Redirect />}
       </div>

@@ -42,7 +42,8 @@ header {
 .logo span {
   font-variant: small-caps;
   font-size: x-large;
-  font-weight: bolder;
+  font-weight: 900;
+  font-style: italic;
   color: var(--text-color);
 }
 
@@ -239,7 +240,7 @@ input[type=password]:focus {
 
 .user-detail input:active {
   background-color: var(--alert-color);
-  box-shadow: 0 5px var(--second-character-color);
+  box-shadow: 0 5px var(--alert-color-hover);
 }
 
 .area-text input {

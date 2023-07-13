@@ -63,22 +63,25 @@ export default function PanelControl({
   //console.log(metadata);
 
   useEffect(() => {
-    setChapters(null);
-    setChangeBook(false);
-    setChangeChapter(false);
-    setChangeTestament(true);
-    if (testament === "Antico Testamento") {
-      setBooks(metadata.data.Cei.indexes.CEI2008.biblebooks.slice(0, 46));
+    if (metadata) {
+      setChapters(null);
+      setChangeBook(false);
+      setChangeChapter(false);
+      setChangeTestament(true);
+      if (testament === "Antico Testamento") {
+        setBooks(metadata.data.Cei.indexes.CEI2008.biblebooks.slice(0, 46));
+      }
+      if (testament === "Nuovo Testamento") {
+        setBooks(metadata.data.Cei.indexes.CEI2008.biblebooks.slice(46));
+      }
     }
-    if (testament === "Nuovo Testamento") {
-      setBooks(metadata.data.Cei.indexes.CEI2008.biblebooks.slice(46));
-    }
-  }, [testament]); 
+  }, [testament]);
 
   useEffect(() => {
     if (book) {
       setChapter("");
-      const index = books.indexOf(book);
+      const Books = metadata.data.Cei.indexes.CEI2008.biblebooks;
+      const index = Books?.indexOf(book);
       const limitChapter =
         metadata.data.Cei.indexes.CEI2008.chapter_limit[index];
       let Chapters = [];
@@ -100,7 +103,7 @@ export default function PanelControl({
     } else {
       setChangeChapter(false);
     }
-  }, [chapter]); 
+  }, [chapter]);
 
   console.log("questo e il change testament", changeTestament);
   console.log("questo e il change book", changeBook);
@@ -121,15 +124,17 @@ export default function PanelControl({
   }, [chapter]);
 
   function handleSearch() {
-    setSearch(imput);
-    sendChapter(null); 
+    if (imput) {
+      setSearch(imput);
+      sendChapter(null);
+    }
   }
 
   useEffect(() => {
     if (search) {
       getData(search);
     }
-  }, [search]); 
+  }, [search]);
 
   function handleCheck() {
     if (typeSearch) {
@@ -142,7 +147,7 @@ export default function PanelControl({
   }
   useEffect(() => {
     controlSearch(typeSearch);
-  }, [typeSearch]); 
+  }, [typeSearch]);
 
   const minLength = 4;
   console.log("il chec sul tipo di ricerca", typeSearch);

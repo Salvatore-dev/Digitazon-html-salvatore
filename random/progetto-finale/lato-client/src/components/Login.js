@@ -114,6 +114,8 @@ const Login = ({ sendData, checkSession }) => {
         <button
           type="submit"
           style={{
+            display: "flex",
+            justifyContent: "center",
             pointerEvents: (!checkForm || status !== 200) && "none",
             backgroundColor: !checkForm && "rgb(218, 218, 0)",
             color: !checkForm && "black",
@@ -123,9 +125,14 @@ const Login = ({ sendData, checkSession }) => {
         >
           {checkLogin
             ? "Complimenti acesso effettuato con successo"
+            : awaitLogin
+            ? "Loading..."
             : checkForm
             ? "Login"
             : "Inserici i dati nel modulo di accesso"}
+          {awaitLogin && (
+            <div className="loader" style={{ marginLeft: "10px" }}></div>
+          )}
         </button>
         {checkLogin && <Redirect />}
       </div>
