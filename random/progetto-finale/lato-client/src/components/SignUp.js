@@ -13,6 +13,7 @@ const SignUp = () => {
   const [checkSignUp, setCheckSignUp] = useState(false);
   const [checkForm, setCheckForm] = useState(false);
   const [checkUsername, setCheckUsername] = useState(true);
+  const [awaitSignup, setAwaitSignup] = useState(false);
   const navigate = useNavigate();
 
   function resetValues() {
@@ -44,6 +45,7 @@ const SignUp = () => {
   console.log("controllo form", checkForm);
 
   async function sendValues() {
+    setAwaitSignup(true);
     const dataToSend = {
       username: username,
       name: name,
@@ -65,24 +67,25 @@ const SignUp = () => {
       if (response?.check) {
         setCheckSignUp(true);
         setCheckUsername(true);
+        setAwaitSignup(false);
       } else {
         setCheckSignUp(false);
         setCheckUsername(false);
+        setAwaitSignup(false);
       }
     } catch (error) {
-      console.log(error);
-      console.log(error.response.status);
+      //console.log(error);
+      //console.log(error.response.status);
+      setAwaitSignup(false);
+      setCheckSignUp(false);
+      setCheckUsername(false);
+      setAwaitSignup(false);
     }
   }
   function Redirect() {
     return (
       <div className="redirect">
-        <button
-          style={{ backgroundColor: "green" }}
-          onClick={() => navigate("/login")}
-        >
-          Vai alla Login
-        </button>
+        <button onClick={() => navigate("/login")}>Vai alla Login</button>
       </div>
     );
   }
@@ -166,22 +169,35 @@ const SignUp = () => {
         required
       />
       <div className="clearfix">
-        <button type="button" onClick={resetValues} className="cancelbtn">
+        <button
+          className="cancelbtn"
+          style={{
+            display: checkSignUp && "none",
+            pointerEvents: awaitSignup && "none",
+          }}
+          type="button"
+          onClick={resetValues}
+        >
           {checkUsername
             ? "Cancel"
             : "Spiacente usernamen già utilizzato, riprova"}
         </button>
         <button
+          className="signupbtn"
           type="submit"
           style={{
             pointerEvents:
-              (!checkPassword || !checkForm || !checkUsername) && "none",
-            backgroundColor: (!checkPassword || !checkForm) && "yellow",
+              (!checkPassword || !checkForm || !checkUsername || awaitSignup || checkSignUp) &&
+              "none",
+            backgroundColor:
+              (!checkPassword || !checkForm) && "rgb(218, 218, 0)",
+            color: (!checkPassword || !checkForm) && "black",
           }}
           onClick={sendValues}
-          className="signupbtn"
         >
-          {!checkPassword
+          {checkSignUp
+            ? "Complimenti registrazione effettuata con successo"
+            : !checkPassword
             ? "Le password non corrispondono"
             : !checkForm
             ? "inserisci i dati nel modulo di registrazione"

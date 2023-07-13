@@ -2,30 +2,32 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({sendData, checkSession}) => {
+const Login = ({ sendData, checkSession }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [checkForm, setCheckForm] = useState(false)
+  const [checkForm, setCheckForm] = useState(false);
   const [response, setResponse] = useState({});
-  const [checkLogin, setCheckLogin] = useState(false)
+  const [checkLogin, setCheckLogin] = useState(false);
   const [status, setStatus] = useState(200);
+  const [awaitLogin, setAwaitLogin] = useState(false);
 
-  useEffect(()=>{
-      sendData(response)
-      console.log("sono nella login", response);
-  }, [response])
+  useEffect(() => {
+    sendData(response);
+    console.log("sono nella login", response);
+  }, [response]);
 
   useEffect(() => {
     if (username && password) {
-      setCheckForm(true)
-    } else{
-      setCheckForm(false)
+      setCheckForm(true);
+    } else {
+      setCheckForm(false);
     }
-  }, [username, password])
+  }, [username, password]);
 
   async function sendValues() {
-    axios.defaults.withCredentials = true
+    axios.defaults.withCredentials = true;
+    setAwaitLogin(true);
     const dataToSend = {
       username: username,
       password: password,
@@ -42,36 +44,38 @@ const Login = ({sendData, checkSession}) => {
       console.log("sono nella login", data.status);
       setStatus(data.status);
       if (response.check) {
-        setResponse(response.data)
-        setCheckLogin(true)
+        setResponse(response.data);
+        setCheckLogin(true);
+        setAwaitLogin(false);
       } else {
-        setCheckLogin(false)
+        setCheckLogin(false);
+        setAwaitLogin(false);
       }
     } catch (error) {
       console.log(error);
-      setCheckLogin(false)
+      setCheckLogin(false);
+      setAwaitLogin(false);
       setStatus(error.response.status); // se il server mi restituisce 403 la risposta entra nel cach, cosi prendo lo status
     }
     // Effettua la chiamata API o altre operazioni con i dati
     console.log(status);
   }
-  function Redirect () {
-
+  function Redirect() {
     return (
       <div className="redirect">
-        <button onClick={()=> navigate('/')}>Vai alla Home</button>
+        <button onClick={() => navigate("/")}>Vai alla Home</button>
       </div>
-    )
+    );
   }
-  
+
   useEffect(() => {
-    checkSession(checkLogin)
-  }, [checkLogin])
+    checkSession(checkLogin);
+  }, [checkLogin]);
 
   function resetValues() {
     setUsername("");
     setPassword("");
-    setStatus(200)
+    setStatus(200);
   }
 
   return (
@@ -94,14 +98,36 @@ const Login = ({sendData, checkSession}) => {
           autoComplete="on"
           onChange={(e) => setPassword(e.target.value)}
         />
-         <button type="button" onClick={resetValues} className="cancelbtn">
-          {status === 200? "Cancella": "La Username o la Password non corrispondono, ritenta!"}
+        <button
+          className="cancelbtn"
+          style={{
+            display: checkLogin && "none",
+            pointerEvents: awaitLogin && "none",
+          }}
+          type="button"
+          onClick={resetValues}
+        >
+          {status === 200
+            ? "Cancella"
+            : "La Username o la Password non corrispondono, ritenta!"}
         </button>
-        <button type="submit" style={{pointerEvents: (!checkForm || status !== 200) && "none",
-            backgroundColor: !checkForm && "yellow",}} onClick={sendValues}>
-          {checkForm? "Login": "Inserici i dati nel modulo di accesso"}
+        <button
+          type="submit"
+          style={{
+            pointerEvents: (!checkForm || status !== 200) && "none",
+            backgroundColor: !checkForm && "rgb(218, 218, 0)",
+            color: !checkForm && "black",
+            pointerEvents: (awaitLogin || checkLogin) && "none",
+          }}
+          onClick={sendValues}
+        >
+          {checkLogin
+            ? "Complimenti acesso effettuato con successo"
+            : checkForm
+            ? "Login"
+            : "Inserici i dati nel modulo di accesso"}
         </button>
-        {checkLogin && (<Redirect/>)}
+        {checkLogin && <Redirect />}
       </div>
     </div>
   );

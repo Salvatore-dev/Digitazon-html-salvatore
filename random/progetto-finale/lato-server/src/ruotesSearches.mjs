@@ -1,4 +1,3 @@
-import fs from "node:fs/promises";
 import axios from "axios";
 
 import {
@@ -8,7 +7,6 @@ import {
   insertChapters,
 } from "./mongoDB.mjs";
 
-import Luzzi from "../db/metadata/index-version-LUZZI.json" assert { type: "json" };
 import CEI2008 from "../db/metadata/index-version-Cei2008.json" assert { type: "json" };
 
 const books = CEI2008.indexes.CEI2008.biblebooks;
@@ -36,7 +34,7 @@ export const getKeyword = async (req, res) => {
           version: "CEI2008",
           appid: "salvatore.tosich.dev@gmail.com",
         }
-      ); // vedere questione appid parametro#
+      );
       const mySerach = response.data;
       const newKeyword = { ...query, ...mySerach };
       insertKeyword(newKeyword);
@@ -48,13 +46,11 @@ export const getKeyword = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res
-      .status(500) // vedi specificamente
-      .send({
-        data: {},
-        error: true,
-        message: "server problems",
-      });
+    res.status(500).send({
+      data: {},
+      error: true,
+      message: "server problems",
+    });
   }
 };
 
@@ -67,7 +63,7 @@ export const getVerse = async (req, res) => {
     const match = str.match(regex);
 
     if (match) {
-      const verse1 = parseInt(match[1], 10); // non serve il parse
+      const verse1 = parseInt(match[1], 10);
       const verse2 = parseInt(match[2], 10);
 
       if (verse2) {
@@ -79,9 +75,9 @@ export const getVerse = async (req, res) => {
       return null;
     }
   }
-  const bookRequest = query.book; // attenzione al nome del libro deve corrispondere anche nella maiuscola iniziale
-  const chapterRequest = query.chapter; // deve essere un numero
-  let verseRequest = NaN; // deve essere un numero // non accetta richieste di versetti multipli come 2-3
+  const bookRequest = query.book;
+  const chapterRequest = query.chapter;
+  let verseRequest = NaN;
   const dataVerse = controlRequest(query.verse);
   let verse1 = null;
   let verse2 = null;
@@ -92,7 +88,7 @@ export const getVerse = async (req, res) => {
       verse2 = dataVerse[1];
     } else {
       res
-        .status(200) // controllare codice da restituire
+        .status(400) // forse 400 / 200
         .send({
           data: {},
           error: true,
@@ -104,7 +100,7 @@ export const getVerse = async (req, res) => {
   } else {
     if (!dataVerse) {
       res
-        .status(200) // controllare codice da restituire
+        .status(400) // controllare codice da restituire 400 / 200
         .send({
           data: {},
           error: true,
@@ -160,7 +156,7 @@ export const getVerse = async (req, res) => {
           );
         } else {
           result = chapter.results.filter((v) => v.verse == verseRequest);
-        } // confronto tra un numero e una stringa il terso uguale non funzionerebbe
+        }
         res.status(200).send({
           data: result,
           message: "chapter founded",
@@ -168,8 +164,9 @@ export const getVerse = async (req, res) => {
       } else {
         let response = false;
         if (checkEster) {
+          // nota per Alberto: questo controllo mi serve per aggirare un bug della mia fonte, accedo ad un patch prededente perche nell'ultima i dati che si riferiscono al libro di "ester" sono inconsistenti
           response = await axios.get(
-            `https://query.bibleget.io/v${versionMetaData}/?query=${chapterTofind}&version=CEI2008` // vedere questione appid parametro
+            `https://query.bibleget.io/v${versionMetaData}/?query=${chapterTofind}&version=CEI2008`
           );
         } else {
           response = await axios.post(
@@ -179,7 +176,7 @@ export const getVerse = async (req, res) => {
               version: "CEI2008",
               appid: "salvatore.tosich.dev@gmail.com",
             }
-          ); // vedere questione appid parametro#
+          );
         }
 
         const mySearch = response.data;
@@ -193,7 +190,7 @@ export const getVerse = async (req, res) => {
             (v) => v.verse >= verse1 && v.verse <= verse2
           );
         } else {
-          result = newChapter.results.filter((v) => v.verse == verseRequest); // si confrontano un numero e una stringa il terzo uguale non funzionerebbe
+          result = newChapter.results.filter((v) => v.verse == verseRequest);
         }
         res.status(201).send({
           data: result,
@@ -202,7 +199,7 @@ export const getVerse = async (req, res) => {
       }
     } else {
       res
-        .status(200) // controllare codice da restituire
+        .status(400) // controllare codice da restituire 400 //
         .send({
           data: {},
           error: true,
@@ -211,12 +208,10 @@ export const getVerse = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res
-      .status(500) // vedi specificamente
-      .send({
-        data: {},
-        error: true,
-        message: "server problems",
-      });
+    res.status(500).send({
+      data: {},
+      error: true,
+      message: "server problems",
+    });
   }
 };

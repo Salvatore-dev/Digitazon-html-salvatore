@@ -1,71 +1,27 @@
-import fs from "node:fs/promises";
 import axios from "axios";
-
-//import BOOKS from "../db/metadata/biblebooks.json" assert { type: 'json' }
-import versions from "../db/metadata/bibleversions.json" assert { type: "json" };
 import indexCei2008 from "../db/metadata/index-version-Cei2008.json" assert { type: "json" };
+
+import { findChapter, insertChapters } from "./mongoDB.mjs";
 
 const books = indexCei2008.indexes.CEI2008.biblebooks;
 const abbreviations = indexCei2008.indexes.CEI2008.abbreviations;
 const chapterLimit = indexCei2008.indexes.CEI2008.chapter_limit;
 
-const FILE_CHAPTER = "section-9";
-
-// section-1 da 0 a 4
-// section-2 da 5 a 12
-// section-3 da 13 a 21
-// section-4 da 22 a 24
-// section-5 da 25 a 29
-// section-6 da 30 a 45 (fine antico testamento)
-// section-7 da 46 a 54
-// section-8 da 55 a 62
-// section-9 da 63 alla fine
-
 //console.log(books);
 
-function findFile(nameBook) {
-  const index = books.indexOf(nameBook);
-  if (index <= 4) {
-    return "section-1";
-  }
-  if (index > 4 && index <= 12) {
-    return "section-2";
-  }
-  if (index > 12 && index <= 21) {
-    return "section-3";
-  }
-  if (index > 21 && index <= 24) {
-    return "section-4";
-  }
-  if (index > 24 && index <= 29) {
-    return "section-5";
-  }
-  if (index > 29 && index <= 45) {
-    return "section-6";
-  }
-  if (index > 45 && index <= 54) {
-    return "section-7";
-  }
-  if (index > 54 && index <= 62) {
-    return "section-8";
-  }
-  if (index > 62 && index <= 72) {
-    return "section-9";
-  }
-}
-
-// una get dal client, che mi chiede un capitolo di un libro
 export const getChapter = async (req, res) => {
-  const bookRequest = req.params.book; // attenzione al nome del libro deve corrispondere anche nella maiuscola iniziale
+  const bookRequest = req.params.book;
   const chapterRequest = req.params.chapter;
-  let versionMetaData= "3"
+  let versionMetaData = "3";
+  let checkEster = false;
   if (bookRequest == "Ester") {
-    versionMetaData = "1"
+    versionMetaData = "1";
+    checkEster = true;
   }
   //console.log(bookRequest);
   //console.log(chapterRequest);
   //console.log(abbreviations);
-  const indexRequest = books.indexOf(bookRequest); // verificare cosa succede con index of se il libro non esiste in array
+  const indexRequest = books.indexOf(bookRequest); 
   //console.log(indexRequest);
   try {
     if (
@@ -73,45 +29,47 @@ export const getChapter = async (req, res) => {
       chapterRequest <= chapterLimit[indexRequest]
     ) {
       const abbreviation = abbreviations[indexRequest];
-      const section = findFile(bookRequest);
-
-      const DB_PATH = `./db/chapters/${section}.json`;
-
-      const data = await fs.readFile(DB_PATH);
-      const chapters = JSON.parse(data.toString());
       const chapterToFind = abbreviation + chapterRequest;
-      let chapter = chapters[bookRequest][chapterToFind];
-      if (chapter.empty) {
-        let response = await axios.get(
-          `https://query.bibleget.io/v${versionMetaData}/?query=${chapterToFind}&version=CEI2008` // vedere questione appid parametro
-        );
-        let newUpdate = response.data;
-        chapters[bookRequest][chapterToFind].data = newUpdate;
-        chapters[bookRequest][chapterToFind].empty = false;
-        await fs.writeFile(DB_PATH, JSON.stringify(chapters, null, "  "));
-        res
-          .status(201)
-          .send({
-            data: chapters[bookRequest][chapterToFind].data,
-            message: "chapter created",
-          });
-          
+      const chapter = await findChapter(chapterToFind);
+      if (!chapter) {
+        let response = false;
+        if (checkEster) {
+          // nota per Alberto: questo controllo mi serve per aggirare un bug della mia fonte, accedo ad un patch prededente perche nell'ultima i dati che si riferiscono al libro di "ester" sono inconsistenti
+          response = await axios.get(
+            `https://query.bibleget.io/v${versionMetaData}/?query=${chapterToFind}&version=CEI2008` // vedere questione appid parametro
+          );
+        } else {
+          response = await axios.post(
+            `https://query.bibleget.io/v${versionMetaData}/`,
+            {
+              query: chapterToFind,
+              version: "CEI2008",
+              appid: "salvatore.tosich.dev@gmail.com",
+            }
+          );
+        }
+        const newUpdate = response.data;
+        const chapter = { chapter: chapterToFind };
+        const newChapter = { ...chapter, ...newUpdate };
+        insertChapters(newChapter);
+        res.status(201).send({
+          data: newUpdate.results,
+          message: "chapter created",
+        });
       } else {
-        res
-          .status(200)
-          .send({
-            data: chapter.data,
-            message: "chapter found",
-          });
+        res.status(200).send({
+          data: chapter.results,
+          message: "chapter found",
+        });
       }
     } else {
       res
-      .status(200) // verifica codice
-      .send({
-        data: {},
-        error: true,
-        message: "book or chapter not found",
-      });
+        .status(400) // verifica codice / 200
+        .send({
+          data: {},
+          error: true,
+          message: "book or chapter not found",
+        });
     }
   } catch (error) {
     console.log(error);
@@ -121,7 +79,6 @@ export const getChapter = async (req, res) => {
         data: {},
         error: true,
         message: "server problem",
-      })
-      
+      });
   }
 };

@@ -1,11 +1,5 @@
-import fs from "node:fs/promises";
 import bcrypt from "bcrypt";
-import {findUser, insertUser, upDateFavorite } from "./mongoDB.mjs";
-import session from "express-session";
-
-const DB_PATH_USERS = "./db/users.json";
-//const dati = await fs.readFile(DB_PATH_USERS);
-//const users = JSON.parse(dati.toString());
+import { findUser, insertUser, upDateFavorite } from "./mongoDB.mjs";
 
 async function getPasswordCrypted(password) {
   try {
@@ -32,18 +26,12 @@ export const login = async (req, res) => {
     //console.log(req.body);
     const username = req.body.username;
     const password = req.body.password;
-    //const dati = await fs.readFile(DB_PATH_USERS);
-    //const users = JSON.parse(dati.toString());
     //console.log(response.password);
-    //const usersNames = Object.keys(users)
-    const user = await findUser(username)
+    const user = await findUser(username);
     console.log("sono nella get user gestisci....", user);
 
     if (user) {
-      const checkPassword = await comparePassword(
-        password,
-        user.password
-      );
+      const checkPassword = await comparePassword(password, user.password);
       if (checkPassword) {
         req.session.user = username;
         console.log("sono nel route user", req.session.user);
@@ -73,10 +61,9 @@ export const login = async (req, res) => {
 
 export const logout = async (req, res) => {
   try {
-    // deve cancellare l'utente dalla sessione
     req.session.destroy(function err() {
       res.status(200).send({
-        check:true,
+        check: true,
         message: "user not logged in",
       });
     });
@@ -85,32 +72,6 @@ export const logout = async (req, res) => {
   }
 };
 
-export const getUser = async (req, res) => {
-  try {
-    //const dati = await fs.readFile(DB_PATH_USERS);
-    //const users = JSON.parse(dati.toString());
-    const userToFind = req.params.username;
-    console.log("sono nella route verifico username", userToFind, req.params);
-    //const usersNames = Object.keys(users)
-    const user = await findUser(userToFind)
-    if (user) {
-      res.status(200).send({
-        data: user,
-        message: "user datails",
-      });
-    } else {
-      res
-        .status(200) // controllare status appropiato
-        .send({
-          data: {},
-          error: true,
-          message: "user not found",
-        });
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
 
 export const signup = async (req, res) => {
   try {
@@ -118,84 +79,69 @@ export const signup = async (req, res) => {
     console.log(userToAdd.password);
 
     const newUsername = userToAdd.username;
-    const user = await findUser(newUsername)
-    // const dati = await fs.readFile(DB_PATH_USERS);
-    // const users = JSON.parse(dati.toString());
-    //const usersNames = Object.keys(users)
+    const user = await findUser(newUsername);
     if (!user) {
       const cryptPassword = await getPasswordCrypted(userToAdd.password);
       userToAdd.password = cryptPassword;
       userToAdd["favoriteVerses"] = [];
-      //users[newUsername] = userToAdd;
-      insertUser(userToAdd)
-      //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
+      insertUser(userToAdd);
       res.status(201).send({
         check: true,
         message: "user created",
       });
     } else {
-      res
-        .status(200) // controllare status da restituire
-        .send({
-          data : {},
-          error: true,
-          message: "user already exists",
-        });
+      res.status(200).send({
+        data: {},
+        error: true,
+        message: "user already exists",
+      });
     }
   } catch (error) {
     console.log(error);
-    res
-        .status(500) // controllare status da restituire
-        .send({
-          data : {},
-          error: true,
-          message: "server problems",
-        });
+    res.status(500).send({
+      data: {},
+      error: true,
+      message: "server problems",
+    });
   }
 };
 
 export const upDateFavoritesVerse = async (req, res) => {
   try {
-    //const dati = await fs.readFile(DB_PATH_USERS);
-    //const users = JSON.parse(dati.toString());
     const userToFind = req.params.username;
     const newfavorite = req.body;
     console.log(userToFind);
     console.log(newfavorite);
-    //const usersNames = Object.keys(users)
-    const user = await findUser(userToFind)
+    const user = await findUser(userToFind);
     if (user) {
       const favorites = user.favoriteVerses;
-      const checkFavorite = favorites.filter((el)=> el.verse == newfavorite.verse)
+      const checkFavorite = favorites.filter(
+        (el) => el.verse == newfavorite.verse
+      );
       if (checkFavorite.length > 0) {
         res
-        .status(200) // controllare status appropiato
-        .send({
-          data: {},
-          error: true,
-          message: "resource already exist",
-        }).end()
-        return
+          .status(200)
+          .send({
+            data: {},
+            error: true,
+            message: "resource already exist",
+          })
+          .end();
+        return;
       }
       favorites.push(newfavorite);
-      //user.favoriteVerses = favorites;
-      //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
-      await upDateFavorite(userToFind, favorites)
-      res
-        .status(201) // controllare status appropiato
-        .send({
-          data: favorites,
-          message: "resource Added",
-          check: true
-        });
+      await upDateFavorite(userToFind, favorites);
+      res.status(201).send({
+        data: favorites,
+        message: "resource Added",
+        check: true,
+      });
     } else {
-      res
-        .status(200) // controllare status appropiato
-        .send({
-          data: {},
-          error: true,
-          message: "user not found",
-        });
+      res.status(200).send({
+        data: {},
+        error: true,
+        message: "user not found",
+      });
     }
   } catch (error) {
     console.log(error);
@@ -204,49 +150,44 @@ export const upDateFavoritesVerse = async (req, res) => {
 
 export const removeFavoritesVerse = async (req, res) => {
   try {
-    //const dati = await fs.readFile(DB_PATH_USERS);
-    //const users = JSON.parse(dati.toString());
-    console.log(req.body);
+    //console.log(req.body);
     const userToFind = req.params.username;
-    console.log(userToFind);
+    //console.log(userToFind);
     const favoriteToRemove = req.body;
     console.log(favoriteToRemove);
-    //const usersNames = Object.keys(users)
-    const user = await findUser(userToFind)
+    const user = await findUser(userToFind);
     if (user) {
       const favorites = user.favoriteVerses;
-      const checkFavorite = favorites.filter((el)=> el.verse == favoriteToRemove.verse)
-      if (checkFavorite.length = 0) {
+      const checkFavorite = favorites.filter(
+        (el) => el.verse == favoriteToRemove.verse
+      );
+      if ((checkFavorite.length = 0)) {
         res
-        .status(200) // controllare status appropiato
-        .send({
-          data: {},
-          error: true,
-          message: "resource not found",
-        }).end()
-        return
+          .status(200)
+          .send({
+            data: {},
+            error: true,
+            message: "resource not found",
+          })
+          .end();
+        return;
       }
       console.log(favorites);
-      const newFavorite = favorites.filter((el)=> el.verse != favoriteToRemove.verse)
-      //favorites.splice(favorites.indexOf(favoriteToRemove), 1);
-      //user.favoriteVerses = favorites;
-      //await fs.writeFile(DB_PATH_USERS, JSON.stringify(users, null, "  "));
-      await upDateFavorite(userToFind, newFavorite)
-      res
-        .status(201) // controllare status appropiato
-        .send({
-          data: newFavorite,
-          message: "modified resource",
-          check: true
-        });
+      const newFavorite = favorites.filter(
+        (el) => el.verse != favoriteToRemove.verse
+      );
+      await upDateFavorite(userToFind, newFavorite);
+      res.status(201).send({
+        data: newFavorite,
+        message: "modified resource",
+        check: true,
+      });
     } else {
-      res
-        .status(200) // controllare status appropiato
-        .send({
-          data: {},
-          error: true,
-          message: "user not found",
-        });
+      res.status(200).send({
+        data: {},
+        error: true,
+        message: "user not found",
+      });
     }
   } catch (error) {
     console.log(error);

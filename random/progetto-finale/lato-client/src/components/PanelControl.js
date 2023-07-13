@@ -5,11 +5,16 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Selects from "./Select";
 
-export default function PanelControl({ getData, controlSearch, sendChapter, controlSession, setControlSession }) {
+export default function PanelControl({
+  getData,
+  controlSearch,
+  sendChapter,
+  controlSession,
+  setControlSession,
+}) {
   const [metadata, setMetadata] = useState(null);
-  const [checkSession, setCheckSession] = useState(false)
-  const [checkLogout, setCheckLogout] = useState(false)
-  //const [checkExit, setCheckExit] = useState(false)
+  const [checkSession, setCheckSession] = useState(false);
+  const [checkLogout, setCheckLogout] = useState(false);
 
   const [imput, setImput] = useState("");
   const [search, setSearch] = useState("");
@@ -31,19 +36,19 @@ export default function PanelControl({ getData, controlSearch, sendChapter, cont
   const [requestChapter, setRequestChapter] = useState(null);
   //console.log(requestChapter);
 
-  useEffect(()=>{
-    setCheckSession(controlSession)
-  }, [controlSession])
-console.log("controllo session in panel", checkSession);
+  useEffect(() => {
+    setCheckSession(controlSession);
+  }, [controlSession]);
+  //console.log("controllo session in panel", checkSession);
 
   useEffect(() => {
     console.log("sono nel panel", requestChapter);
     sendChapter(requestChapter);
-    setImput("")
+    setImput("");
   }, [requestChapter]);
 
   useEffect(() => {
-    async function getMetadata(params) {
+    async function getMetadata() {
       try {
         const data = await axios.get("http://localhost:8000/metadata/indexes");
         const result = data.data;
@@ -68,7 +73,7 @@ console.log("controllo session in panel", checkSession);
     if (testament === "Nuovo Testamento") {
       setBooks(metadata.data.Cei.indexes.CEI2008.biblebooks.slice(46));
     }
-  }, [testament]);
+  }, [testament]); 
 
   useEffect(() => {
     if (book) {
@@ -88,22 +93,23 @@ console.log("controllo session in panel", checkSession);
 
   useEffect(() => {
     console.log("sono piu sopra", chapter);
+    console.log("sono piu sopra", changeBook);
     if (changeBook && chapter) {
-      console.log("sono piu sotto", chapter);
+      console.log("sono piu sotto====", chapter);
       setChangeChapter(true);
     } else {
       setChangeChapter(false);
     }
-  }, [chapter]);
+  }, [chapter]); 
 
   console.log("questo e il change testament", changeTestament);
   console.log("questo e il change book", changeBook);
   console.log("questo e il chapter", chapter);
-   console.log("questo e il change chapter", changeChapter);
-   console.log("questo e il requestChapter", requestChapter);
+  console.log("questo e il change chapter", changeChapter);
+  console.log("questo e il requestChapter", requestChapter);
   useEffect(() => {
     console.log("===================================================");
-    if (changeTestament && changeBook && chapter && changeChapter) { // chapter !== ""
+    if (changeTestament && changeBook && chapter && changeChapter) {
       console.log("------------------------------------------------");
       const result = {
         book: book,
@@ -116,14 +122,14 @@ console.log("controllo session in panel", checkSession);
 
   function handleSearch() {
     setSearch(imput);
-    sendChapter(null) // aggiunto dop2
+    sendChapter(null); 
   }
 
   useEffect(() => {
     if (search) {
-      getData(search)
+      getData(search);
     }
-  }, [search]);
+  }, [search]); 
 
   function handleCheck() {
     if (typeSearch) {
@@ -136,30 +142,32 @@ console.log("controllo session in panel", checkSession);
   }
   useEffect(() => {
     controlSearch(typeSearch);
-  }, [typeSearch]);
+  }, [typeSearch]); 
+
   const minLength = 4;
   console.log("il chec sul tipo di ricerca", typeSearch);
 
-  async function logout () {
-    axios.defaults.withCredentials = true
-    console.log('ciao');
+  async function logout() {
+    axios.defaults.withCredentials = true;
+    console.log("ciao");
     try {
-      const response = await axios.delete("http://localhost:8000/users/session");
+      const response = await axios.delete(
+        "http://localhost:8000/users/session"
+      );
       const result = response.data;
       console.log("Sono nella logout", result);
       if (result.check) {
-        setControlSession(false)
-        setCheckLogout(false)
-        setCheckSession(false)
-       // setCheckSession(false)
+        setControlSession(false);
+        setCheckLogout(false);
+        setCheckSession(false);
       }
     } catch (error) {
       console.error("Errore durante il logout:", error);
     }
   }
 
- console.log('controllo check session', checkSession);
- console.log('controllo check louot', checkLogout);
+  console.log("controllo check session", checkSession);
+  console.log("controllo check louot", checkLogout);
   return (
     <div className="layout">
       <nav className="topnav">
@@ -181,7 +189,9 @@ console.log("controllo session in panel", checkSession);
 
         <div className="search-area">
           <div style={{ display: "flex", alignItems: "center" }}>
-            <span>{typeSearch? "Scegli un argomento" : "Scegli un versetto"} :</span>
+            <span>
+              {typeSearch ? "Scegli un argomento" : "Scegli un versetto"} :
+            </span>
             <label className="switch">
               <input onChange={handleCheck} type="checkbox" />
               <span className="slider round"></span>
@@ -210,21 +220,63 @@ console.log("controllo session in panel", checkSession);
 
         <ul className="links-navbar">
           <li>
-            <Link id="home" style={{pointerEvents: checkLogout && "none" }} to="/">{checkLogout? "Sicuro?" : "Home"}</Link>
+            <Link
+              id="home"
+              style={{ pointerEvents: checkLogout && "none" }}
+              to="/"
+            >
+              {checkLogout ? "Sicuro?" : "Home"}
+            </Link>
           </li>
           <li>
-            <Link id="signup" style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/signUp">SignUp</Link>
+            <Link
+              id="signup"
+              style={{
+                display: checkSession && "none",
+                pointerEvents: checkSession && "none",
+              }}
+              to="/signUp"
+            >
+              SignUp
+            </Link>
           </li>
           <li>
-            <Link id="login" style={{display: checkSession && "none", pointerEvents: checkSession && "none"}} to="/login">Login</Link>
+            <Link
+              id="login"
+              style={{
+                display: checkSession && "none",
+                pointerEvents: checkSession && "none",
+              }}
+              to="/login"
+            >
+              Login
+            </Link>
           </li>
           <li>
-            <a id="logout" style={{display: (!checkSession || checkLogout) && "none", pointerEvents: checkLogout &&  "none"}} href="#" onClick={()=> setCheckLogout(true)} >Loguot</a>
+            <a
+              id="logout"
+              style={{
+                display: (!checkSession || checkLogout) && "none",
+                pointerEvents: checkLogout && "none",
+              }}
+              href="#"
+              onClick={() => setCheckLogout(true)}
+            >
+              Loguot
+            </a>
           </li>
           {checkLogout && (
             <>
-            <li><a id="continue-session" href="#" onClick={()=> setCheckLogout(false)}>Continua</a></li>
-            <li><a id="exit-session" href="#" onClick={logout}>Esci</a></li>
+              <li>
+                <a id="continue-session" onClick={() => setCheckLogout(false)}>
+                  Continua
+                </a>
+              </li>
+              <li>
+                <a id="exit-session" onClick={logout}>
+                  Esci
+                </a>
+              </li>
             </>
           )}
         </ul>

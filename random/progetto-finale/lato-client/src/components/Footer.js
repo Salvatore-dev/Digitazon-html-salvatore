@@ -1,13 +1,12 @@
 const Foot = () => {
   return (
     <footer>
-      <h1>Informazioni generali</h1>
       <div className="footer-informations">
         <div className="general-informations">
           <h2>Informazioni</h2>
           <div className="details-footer">
             <p>Nome del progetto: </p>
-            <span>"In origine fu la Parola</span>
+            <span>"In origine fu la Parola"</span>
           </div>
           <div className="details-footer">
             <p>Nome autore: </p>
@@ -24,8 +23,13 @@ const Foot = () => {
               Web Developer Full Stack" della "Digitazon Tech School".
             </span>
           </div>
+          <div className="details-footer">
+            <p>Note sul testo utilizzato: </p>
+            <span>I testi della Bibbia offerti si riferiscono alla traduzione italiana "CEI2008", della ""Conferenza Episcopale italiana".</span>
+          </div>
         </div>
-        <div className="space"></div>
+        <div className="space">
+        </div>
         <div className="mandatory citations">
           <h2>Ringraziamenti</h2>
           <p>
@@ -33,12 +37,14 @@ const Foot = () => {
             "open-source" messe a disposizione da "BibleGet-I-O":{" "}
             <a href="https://www.bibleget.io/">www.bibleget.io</a>, attraverso i
             seguenti{" "}
-            <a href="https://github.com/BibleGet-I-O/endpoint">Endpoints</a>
+            <a href="https://github.com/BibleGet-I-O/endpoint">Endpoints</a>.
           </p>
           <p>
-            Si ringraziano partcolarmente tutti i docenti intervenuti durante i
-            corsi, si è grati per la loro competenza, il loro impegno mi ha
-            aperto al mondo Web, vasto e affascinante.
+            Grazie a tutti per il fantastico corso di web developer! Siete stati
+            degli insegnanti straordinari, pazienti e appassionati. Ora posso
+            cimentarmi nella creazione di siti web grazie a voi. Sono grato per
+            le conoscenze acquisite e non vedo l'ora di mettere in pratica tutto
+            ciò che ho imparato. Grazie ancora!
           </p>
         </div>
       </div>

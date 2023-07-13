@@ -1,22 +1,27 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-export default function UserProfile({ profile, profileSession, newFavorite, upDateFavorite, getProfile}) {
+export default function UserProfile({
+  profile,
+  profileSession,
+  newFavorite,
+  upDateFavorite,
+  getProfile,
+}) {
   const [username, setUsername] = useState("");
   console.log("sono nella user verifico session", profile);
   const [checkSession, setCheckSession] = useState(false);
   const [favorites, setFavorites] = useState(null);
-  const [checkUpdate, setCheckUpdate] = useState(true)
+  const [checkUpdate, setCheckUpdate] = useState(true);
 
-  useEffect(()=>{
+  useEffect(() => {
     console.log("sono nella use effetct, new favorites", newFavorite);
-    if (newFavorite?.length > 0 ) {
+    if (newFavorite?.length > 0) {
       console.log("sono nella use effetct, new favorites 2", newFavorite);
-      setFavorites(newFavorite)
+      setFavorites(newFavorite);
     }
-  }, [newFavorite])
+  }, [newFavorite]);
 
-  
   useEffect(() => {
     setUsername(profile);
   }, [profile]);
@@ -26,16 +31,16 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
     setCheckSession(profileSession);
   }, [profileSession]);
 
-  useEffect(()=>{
+  useEffect(() => {
     if (getProfile) {
-      setFavorites(getProfile.favoriteVerses)
+      setFavorites(getProfile.favoriteVerses);
     }
-  }, [getProfile])
+  }, [getProfile]);
 
   async function removeFavorite(favorite) {
-    axios.defaults.withCredentials = true
+    axios.defaults.withCredentials = true;
     if (username) {
-      setCheckUpdate(false)
+      setCheckUpdate(false);
       try {
         const data = await axios.patch(
           `http://localhost:8000/users/${username}/profile/favorite`,
@@ -44,13 +49,13 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
             text: favorite?.text,
           }
         );
-        const result = data.data
+        const result = data.data;
         console.log("il risultato della remove", result);
         if (result.check) {
-          const a = result.data.map((el) => el.verse)
+          //const a = result.data.map((el) => el.verse)
           setFavorites(result.data);
-          upDateFavorite(result.data)
-          setCheckUpdate(true)
+          upDateFavorite(result.data);
+          setCheckUpdate(true);
           console.log("controllo cosa setto", result.data);
         }
       } catch (error) {
@@ -58,12 +63,12 @@ export default function UserProfile({ profile, profileSession, newFavorite, upDa
       }
     }
   }
-console.log("controllo favorites in user", favorites);
+  console.log("controllo favorites in user", favorites);
   return (
-    <div className="user-detail" style={{display: !checkSession && "none" }}>
-      {favorites && checkSession ? ( // && checkSession
+    <div className="user-detail" style={{ display: !checkSession && "none" }}>
+      {favorites && checkSession ? (
         <div>
-          <h2>Benvenuto {username}</h2>
+          <h2>Benvenuto/a {username}</h2>
           {favorites?.length >= 1 ? (
             <div className="favorites">
               <h4>Ecco i tuoi brani preferiti: </h4>
@@ -75,11 +80,10 @@ console.log("controllo favorites in user", favorites);
                     {el.text}
                   </p>
                   <input
-                  key={i+200}
-                    // style={{ backgroundColor: "red" }}
+                    key={i + 200}
                     type="submit"
-                    value={"Rimuovi dai preferiti"}
-                    style={{pointerEvents: !checkUpdate&& "none"}}
+                    value={"Rimuovi"}
+                    style={{ pointerEvents: !checkUpdate && "none" }}
                     name="remove-favorite"
                     onClick={() => removeFavorite(el)}
                   ></input>

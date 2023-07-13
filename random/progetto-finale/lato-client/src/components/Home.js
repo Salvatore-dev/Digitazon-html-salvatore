@@ -11,33 +11,29 @@ const books = CEI2008.indexes.CEI2008.biblebooks;
 const abbreviations = CEI2008.indexes.CEI2008.abbreviations;
 
 const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
-  //const [textKeyword, setTextKeyword] = useState(null); // null ? o []
   const [checkKeyword, setCheckKeyword] = useState(false);
-  //const [textVerse, setTextVerse] = useState(null); // null? o []
   const [checkVerse, setCheckVerse] = useState(false);
   const [chapter, setChapter] = useState(null);
   const [newKeyword, setNewKeyword] = useState("");
-  //const [typeSearch, setTypeSearch] = useState(control)
-  const [sendVerses, setSendVerses] = useState([]);
+  const [sendVerses, setSendVerses] = useState(null); // []
 
-  //const [sendChapter, setSendChapter] = useState([]);
   const [checkChapter, setCheckChapter] = useState(false);
   const [favorites, setFavorites] = useState([]);
   const [favoritesB, setFavoritesB] = useState([]);
   const [profileUser, setProfileUser] = useState(null);
-  const [invaliRequest, setInvalidRequest] = useState(false)
-  const [invalidKeyword, setInvalidKeyword] = useState(false)
+  const [invaliRequest, setInvalidRequest] = useState(false);
+  const [invalidKeyword, setInvalidKeyword] = useState(false);
 
   const [user, setUser] = useState("");
 
   useEffect(() => {
     if (getUserLogin) {
-      console.log("controllare dati", getUserLogin);
-      console.log("controllo username", getUserLogin.username);
-      console.log("controllo preferiti", getUserLogin.favoriteVerses);
+      //console.log("controllare dati", getUserLogin);
+      //console.log("controllo username", getUserLogin.username);
+      //console.log("controllo preferiti", getUserLogin.favoriteVerses);
       setUser(getUserLogin.username);
       setFavoritesB(getUserLogin.favoriteVerses);
-      setProfileUser(getUserLogin)
+      setProfileUser(getUserLogin);
     }
   }, [getUserLogin]);
 
@@ -58,49 +54,47 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
     const fetchdata = async () => {
       if (control && newKeyword) {
         // invece di controll
-        setInvalidRequest(false)
+        setInvalidRequest(false);
         const checkKeywordPlus = newKeyword.search(/\d/) !== -1;
-        setInvalidKeyword(checkKeywordPlus)
+        setInvalidKeyword(checkKeywordPlus);
         if (!checkKeyword && newKeyword.length >= 3 && !checkKeywordPlus) {
           try {
             const responses = await axios.get(
               `http://localhost:8000/books/keywords/search?keyword=${newKeyword}`
             ); //esempio di ricerca per versetti
-            console.log(responses.data); // Puoi fare qualcosa con la risposta qui
-            const { results } = responses.data.data; // accedo direttamente all'array contenente i dati
-            //setTextKeyword(results); // immagazzino il risultato come array
-            setSendVerses(results)
+            //console.log(responses.data);
+            const { results } = responses.data.data;
+            setSendVerses(results);
             setCheckKeyword(true);
-            setCheckVerse(false) // aggiunto dopo
-            setCheckChapter(false) // aggiunto dopo
+            setCheckVerse(false);
+            setCheckChapter(false);
           } catch (error) {
             console.error(error);
             setCheckKeyword(false);
-            setInvalidKeyword(true)
+            setInvalidKeyword(true);
           }
-          console.log(newKeyword);
-          console.log(" il plus", checkKeywordPlus);
+          // console.log(newKeyword);
+          //console.log(" il plus", checkKeywordPlus);
         } else {
-          console.log(newKeyword);
-          console.log(" il plus", checkKeywordPlus);
+          // console.log(newKeyword);
+          // console.log(" il plus", checkKeywordPlus);
           setCheckKeyword(false);
-          setCheckVerse(false) // aggiunto dopo2
-          setCheckChapter(false)// aggiunto dopo2
-          console.log("keyword non corretta");
+          setCheckVerse(false); // aggiunto dopo2
+          setCheckChapter(false); // aggiunto dopo2
+          //console.log("keyword non corretta");
           return;
         }
       } else {
         try {
-          setCheckKeyword(false)
+          setCheckKeyword(false);
           const request = newKeyword;
           const verse = request.split(",")[1];
           const toDecompose = request.split(",")[0];
 
-          const regex = /^(\d?[A-Za-z]+)(\d+)$/; // /^(\d?[A-Za-z]+)(\d+)$/
+          const regex = /^(\d?[A-Za-z]+)(\d+)$/;
           const match = toDecompose.match(regex);
           let book = "";
           let chapter = "";
-          let check = false;
           if (match) {
             book = match[1]; // Abbreviazione del libro
             chapter = parseInt(match[2], 10); // Numero del capitolo
@@ -110,7 +104,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             book = books[indexRequest];
             //console.log("Numero del capitolo:", chapter);
             //console.log(verse);
-            setCheckVerse(true); // da verifcare se necessario
+            setCheckVerse(true);
             const responses = await axios.get(
               `http://localhost:8000/books/${book}/chapters/${chapter}/verses/${verse}`
             ); //esempio di ricerca per versetti
@@ -118,37 +112,34 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             if (responses.data?.error) {
               console.log("richiesta invalida");
               setCheckVerse(false);
-              setCheckChapter(false)
-              setCheckKeyword(false)
-              setInvalidRequest(true)
+              setCheckChapter(false);
+              setCheckKeyword(false);
+              setInvalidRequest(true);
             } else {
-              const results = responses.data.data; // accedo direttamente all'array contenente i dati
-              //setSendChapter([]); // per azzerare la ricerca capitolo
-              //setTextVerse(results); // immagazzino il risultato come array
-              setSendVerses(results)
+              const results = responses.data.data;
+              setSendVerses(results);
               setCheckVerse(true);
-              setInvalidRequest(false)
-              setCheckKeyword(false) //aggiunto dopo
-              setCheckChapter(false) // aggiunto dopo
+              setInvalidRequest(false);
+              setCheckKeyword(false);
+              setCheckChapter(false);
             }
           } else {
             console.log("richiesta invalida");
             setCheckVerse(false);
-            setInvalidRequest(true)
-            setCheckChapter(false) // aggiunto dopo
-            setCheckKeyword(false) //aggiunto dopo2
+            setInvalidRequest(true);
+            setCheckChapter(false);
+            setCheckKeyword(false);
           }
         } catch (error) {
           console.error(error);
           setCheckVerse(false);
-          setInvalidRequest(true)
-          setCheckChapter(false) // aggiunto dopo
-          setCheckKeyword(false) //aggiunto dopo2
+          setInvalidRequest(true);
+          setCheckChapter(false);
+          setCheckKeyword(false);
         }
       }
     };
     fetchdata();
-    
   }, [newKeyword]);
 
   useEffect(() => {
@@ -169,12 +160,10 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
             setCheckChapter(false);
             console.log("richiesta capitolo");
           } else {
-            //setTextVerse(null); // per azzerarare la ricerca versetto
-            //setSendChapter(result.data.results);
-            setSendVerses(result.data.results)
+            setSendVerses(result.data);
             setCheckChapter(true);
-            setCheckKeyword(false) /// aggiunto dopo
-            setCheckVerse(false) // aggiunto dopo
+            setCheckKeyword(false);
+            setCheckVerse(false);
           }
         } catch (error) {
           console.log(error);
@@ -183,26 +172,33 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
       };
       fetchChapter();
     }
-  }, [chapter]);
-  console.log("controllo capitoli", checkChapter);
-  console.log("controllo versi", checkVerse);
-  console.log("contollo argomento", checkKeyword);
-  
+  }, [chapter]); 
+
+  // console.log("controllo capitoli", checkChapter);
+  // console.log("controllo versi", checkVerse);
+  // console.log("contollo argomento", checkKeyword);
+
   return (
     <div className="body-main">
       <div className="body-text">
         {!checkChapter && !checkKeyword && !checkVerse ? (
-          invaliRequest? <RequestInvalid/>: invalidKeyword? <NoKeyword/> :<Introduction />
+          invaliRequest ? (
+            <RequestInvalid />
+          ) : invalidKeyword ? (
+            <NoKeyword />
+          ) : (
+            <Introduction />
+          )
         ) : (
           <Text
-          data={sendVerses}
-          username={user}
-          upDateFavorite={setFavorites}
-          newfavorite={favoritesB}
-          controlKeyword={checkKeyword}
-          controlSession={checkSession}
-          keyword={newKeyword}
-        />
+            data={sendVerses}
+            username={user}
+            upDateFavorite={setFavorites}
+            newfavorite={favoritesB}
+            controlKeyword={checkKeyword}
+            controlSession={checkSession}
+            keyword={newKeyword}
+          />
         )}
       </div>
       <div className="profile">
