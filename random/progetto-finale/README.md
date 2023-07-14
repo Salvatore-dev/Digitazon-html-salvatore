@@ -1,6 +1,6 @@
 Napoli 14 luglio 2023
 
-Nome Progetto : "In Origina fu la Parola"
+Nome Progetto : "In origine fu la Parola"
 
 Autore: "Salvatore Tosich"
 
