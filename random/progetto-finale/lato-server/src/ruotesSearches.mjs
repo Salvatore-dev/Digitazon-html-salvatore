@@ -199,7 +199,7 @@ export const getVerse = async (req, res) => {
       }
     } else {
       res
-        .status(400) // controllare codice da restituire 400 //
+        .status(400) 
         .send({
           data: {},
           error: true,

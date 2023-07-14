@@ -40,7 +40,7 @@ import { getKeyword, getVerse } from './ruotesSearches.mjs';
 //console.log(process.env.SECRET_SESSION);
 
 function sessionChecked(req, res, next) {
-  console.log("verifico id", req.session.id);
+  //console.log("verifico id", req.session.id);
   console.log('utente in sessione', req.session.user);
   if (req.session.user) {
     next();

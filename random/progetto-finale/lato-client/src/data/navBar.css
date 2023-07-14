@@ -26,12 +26,17 @@
   padding-left: 10px;
 }
 
+
+.area-switch span {
+  margin-left: 15px;
+}
+
 .switch {
   position: relative;
-  width: 50px;
+  width: 45px;
   display: flex;
-  height: 24px;
-  margin-bottom: 5px;
+  height: 26px;
+  margin-right: 10px;
 }
 
 .switch input {
@@ -54,18 +59,19 @@
 .slider:before {
   position: absolute;
   content: "";
-  height: 16px;
-  width: 16px;
-  left: 3px;
-  bottom: 4px;
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  right: 1px;
+  bottom: 6px;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .switch input:checked+.slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+  -webkit-transform: translateX(22px);
+  -ms-transform: translateX(22px);
+  transform: translateX(22px);
 }
 
 /* Rounded sliders */

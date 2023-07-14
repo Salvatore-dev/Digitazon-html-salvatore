@@ -34,6 +34,12 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
       setUser(getUserLogin.username);
       setFavoritesB(getUserLogin.favoriteVerses);
       setProfileUser(getUserLogin);
+      setSendVerses(null)
+      setNewKeyword("")
+      setChapter(null)
+      setCheckChapter(false)
+      setCheckKeyword(false)
+      setCheckVerse(false)
     }
   }, [getUserLogin]);
 
@@ -61,7 +67,7 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
           try {
             const responses = await axios.get(
               `http://localhost:8000/books/keywords/search?keyword=${newKeyword}`
-            ); //esempio di ricerca per versetti
+            ); 
             //console.log(responses.data);
             const { results } = responses.data.data;
             setSendVerses(results);
@@ -145,20 +151,19 @@ const Home = ({ keyword, control, newChapter, getUserLogin, checkSession }) => {
   useEffect(() => {
     if (chapter) {
       //console.log("sono nella home", newChapter);
-      const book = newChapter.book;
+      const book = chapter?.book; // newcapter
       //console.log(book);
-      const chapter = newChapter.chapter?.split(" ")[1];
+      const Chapter = chapter?.chapter?.split(" ")[1]; // newchapter
       //console.log(chapter);
       const fetchChapter = async () => {
         try {
           const data = await axios.get(
-            `http://localhost:8000/books/${book}/chapters/${chapter}`
+            `http://localhost:8000/books/${book}/chapters/${Chapter}`
           );
           const result = data.data;
           console.log(result);
           if (result.error) {
             setCheckChapter(false);
-            console.log("richiesta capitolo");
           } else {
             setSendVerses(result.data);
             setCheckChapter(true);

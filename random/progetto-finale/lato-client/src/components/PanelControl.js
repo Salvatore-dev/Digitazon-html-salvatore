@@ -193,17 +193,19 @@ export default function PanelControl({
         </div>
 
         <div className="search-area">
-          <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="area-switch">
             <span>
-              {typeSearch ? "Scegli un argomento" : "Scegli un versetto"} :
+              {typeSearch ? "Scegli un argomento" : "Scegli un versetto"}
             </span>
+            
+          </div>
+
+          <form className="search-text">
+
             <label className="switch">
               <input onChange={handleCheck} type="checkbox" />
               <span className="slider round"></span>
             </label>
-          </div>
-
-          <form className="search-text">
             <label>
               <input
                 name="myInput"

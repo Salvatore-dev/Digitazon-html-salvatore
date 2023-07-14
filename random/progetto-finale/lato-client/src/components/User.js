@@ -75,7 +75,7 @@ export default function UserProfile({
     }}>
       {favorites && checkSession ? (
         <div>
-          <h2>Benvenuto/a {username}</h2>
+          <h2>Ciao <span>{username}</span></h2>
           {favorites?.length >= 1 ? (
             <div className="favorites">
               <h4>Ecco i tuoi brani preferiti: </h4>
