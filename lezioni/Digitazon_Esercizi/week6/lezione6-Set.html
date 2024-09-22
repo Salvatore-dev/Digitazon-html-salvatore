@@ -10,6 +10,7 @@
 
     <div id="add">add to set</div>
     <input type="text" id="set-value">
+    <div href="#" title="ciao" id="prova"></div>
 
     <script>
         const s1 = new Set()
@@ -47,6 +48,25 @@
             s2.add( setValue.value )
             console.log( s2 );
         })
+
+        const salvo = document.getElementById('prova')
+        salvo.innerText = "ciao salvo"
+
+        salvo.style.padding= '50px'
+        let check = true
+        salvo.addEventListener("click", function() {
+            if (check) {
+                salvo.style.backgroundColor = 'red'
+                check = false
+            } else {
+                salvo.style.backgroundColor = 'green'
+                check = true
+            }
+        })
+
+        const r = salvo.appendChild(document.createElement("section"))
+        r.innerText= "ri ciao"
+        
 
     </script>
     
